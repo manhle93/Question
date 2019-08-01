@@ -34,4 +34,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('request/{id}', 'GetRequestController@getRequest')->name('request');
+Route::get('getpackge','PlayController@getPackage')->name('get.package');
 

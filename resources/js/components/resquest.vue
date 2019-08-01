@@ -40,36 +40,8 @@
             </div>
             <div class="request"
                  style="width: 100%; height: 85%;background-image: url('/anh/khung_dichvu.png');background-size:100% 100%;padding-left: 10%;padding-top:5%">
-                <div style="width: 90%; height: 75%;background-color: red;border-radius:7px;">
-                    <p v-if="index==1">
-
-                    </p>
-                    <p v-if="index==2">
-
-                    </p>
-                    <p v-if="index==3">
-
-                    </p>
-                    <p v-if="index==4">
-
-                    </p>
-                    <p v-if="index==5">
-
-                    </p>
-                    <p v-if="index==6">
-
-                    </p>
-                    <p v-if="index==7">
-
-                    </p>
-                    <p v-if="index==8">
-
-                    </p>
-                    <p v-if="index==9">
-
-                    </p>
-                    <p v-if="index==10">
-
+                <div style="width: 90%; height: 75%;background-color: red;border-radius:7px;" v-for="(item,index) in question_data">
+                    <p v-if="index==turn">
                     </p>
                 </div>
             </div>
@@ -106,17 +78,22 @@
     Vue.use(CircularCountDownTimer);
 
     export default {
-        name: "resquest",
+        props:['question'],
+        name: "question",
         data: function () {
             return {
-                index: undefined,
+                turn:1,
                 teamAct: undefined,
                 team1: 0,
                 team2: 0,
                 team3: 0,
                 time: 3,
                 time_start:false,
+                question_data: undefined,
             };
+        },
+        mounted(){
+            this.question_data=this.question
         },
         methods: {
             playsound() {

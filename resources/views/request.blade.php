@@ -1,5 +1,5 @@
 <div id="app">
-<game-request></game-request>
+<game-request :question="{{$question}}"></game-request>
 </div>
 <script src="{{asset('js/app.js')}}"></script>
 

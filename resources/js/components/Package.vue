@@ -26,9 +26,9 @@
           </tr>
         </tbody>
     </table>
-    <button class="btn btn-danger" @click="chuyen">Nhập gói câu hỏi</button> 
+    <button class="btn btn-danger" @click="chuyen">Nhập gói câu hỏi</button>
     </div>
-    
+
 </template>
 
 <script>
@@ -38,7 +38,7 @@ export default {
         xoa(id){
             if(confirm("Bạn có chắc chắn muốn xóa toàn bộ gói câu hỏi")) {
             axios.delete('/package/'+ id +'/delete')
-            .then(res=>{window.location.href = "/package/"});
+            .then(res=>{window.location.href = "/reques/"+id});
             }
         },
         chuyen(){
@@ -48,7 +48,7 @@ export default {
             window.location.href = "/question/add/"
         }
     }
-    
+
 }
 </script>
 

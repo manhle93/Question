@@ -14,33 +14,8 @@
             </div>
             <div style="width: 100%; height: 70%; background-color: #1d68a7;padding-top: 30px;">
                 <div style="border: 3px solid blue; border-radius: 10px; margin-top: 10px; width: 50%;margin-left: 25%;" class="row" >
-                    <div class="col-md-12 grid-container" style="background-color: white;border-radius: 10px;">
-                        <div class="grid-item package-quest" @click="selectPakage(1)">1</div>
-                        <div class="grid-item package-quest" @click="selectPakage(2)">2</div>
-                        <div class="grid-item package-quest" @click="selectPakage(3)">3</div>
-                        <div class="grid-item package-quest" @click="selectPakage(4)">4</div>
-                        <div class="grid-item package-quest" @click="selectPakage(5)">5</div>
-                        <div class="grid-item package-quest" @click="selectPakage(6)">6</div>
-                        <div class="grid-item package-quest" @click="selectPakage(7)">7</div>
-                        <div class="grid-item package-quest" @click="selectPakage(8)">8</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">9</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">10</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">11</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">12</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">13</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">14</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">15</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">16</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">17</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">18</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">19</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">20</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">21</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">22</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">23</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">24</div>
-                        <div class="grid-item package-quest" @click="selectPakage(1)">25</div>
-
+                    <div class="col-md-12 grid-container" style="background-color: white;border-radius: 10px;" v-for="(item,index) in package">
+                        <div class="grid-item package-quest" @click="selectPakage(item.id)">{{index+1}}</div>
                     </div>
                 </div>
             </div>
@@ -56,7 +31,8 @@
             return {
                 start: false,
                 play: false,
-                isLoading: false
+                isLoading: false,
+                package:undefined
             };
         },
         watch: {
@@ -68,11 +44,14 @@
         },
         methods: {
             startGame(){
-                this.start = true;
+                axios.get('/getpackge')
+                    .then(res=>{
+                        this.package= res.data.result
+                        this.start = true;
+                    });
             },
             selectPakage(id){
-                this.play = true
-                console.log(id)
+                window.location.href = "/request/"+id
             }
         }
     };

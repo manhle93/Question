@@ -25,6 +25,5 @@
     },
     "dependencies": {
         "vue-circular-count-down-timer": "^1.0.4"
-        "izitoast": "^1.4.0"
     }
 }
