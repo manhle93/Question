@@ -1799,7 +1799,84 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['id'],
+  data: function data() {
+    return {
+      noidung: null,
+      dapandungA: "false",
+      dapandungB: "false",
+      dapandungC: "false",
+      dapandungD: "false",
+      dapanA: null,
+      dapanB: null,
+      dapanC: null,
+      dapanD: null,
+      data: []
+    };
+  },
+  methods: {
+    nhap: function nhap() {
+      this.data = [];
+      this.data.push({
+        'name': this.dapanA,
+        'dap_an': this.dapandungA
+      });
+      this.data.push({
+        'name': this.dapanB,
+        'dap_an': this.dapandungB
+      });
+      this.data.push({
+        'name': this.dapanC,
+        'dap_an': this.dapandungC
+      });
+      this.data.push({
+        'name': this.dapanD,
+        'dap_an': this.dapandungD
+      });
+      axios.post('/questionadd', {
+        package_id: this.id,
+        noidung: this.noidung,
+        dapan: this.data
+      }).then(function (res) {
+        alert("Nhập câu hỏi thành công");
+        location.reload();
+      });
+    }
+  },
+  watch: {
+    dapandungA: function dapandungA() {
+      if (this.dapandungA == "true") {
+        this.dapandungB = "false";
+        this.dapandungC = "false";
+        this.dapandungD = "false";
+      }
+    },
+    dapandungB: function dapandungB() {
+      if (this.dapandungB == "true") {
+        this.dapandungA = "false";
+        this.dapandungC = "false";
+        this.dapandungD = "false";
+      }
+    },
+    dapandungC: function dapandungC() {
+      if (this.dapandungC == "true") {
+        this.dapandungB = "false";
+        this.dapandungA = "false";
+        this.dapandungD = "false";
+      }
+    },
+    dapandungD: function dapandungD() {
+      if (this.dapandungD == "true") {
+        this.dapandungB = "false";
+        this.dapandungC = "false";
+        this.dapandungA = "false";
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -1891,9 +1968,10 @@ __webpack_require__.r(__webpack_exports__);
     chuyen: function chuyen() {
       window.location.href = "/package-add/";
     },
-    nhap: function nhap() {
-      window.location.href = "/question/add/";
-    }
+    nhap: function nhap(id) {
+      window.location.href = "/question/add/" + id;
+    },
+    view: function view() {}
   }
 });
 
@@ -41198,82 +41276,265 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("h1", [_vm._v(_vm._s(_vm.a))]),
+    _vm._v(" "),
+    _c("label", { staticClass: "label" }, [_vm._v("Câu hỏi")]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("textarea", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.noidung,
+            expression: "noidung"
+          }
+        ],
+        staticStyle: { width: "100%" },
+        attrs: { placeholder: "Nội dung câu hỏi", rows: "5" },
+        domProps: { value: _vm.noidung },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.noidung = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("label", { staticClass: "label" }, [_vm._v("Câu trả lời")]),
+    _vm._v(" "),
+    _c(
+      "table",
+      {
+        staticClass: "table table-bordered table-striped dataTable",
+        staticStyle: { "margin-top": "20px" },
+        attrs: { role: "grid" }
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("A")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapanA,
+                    expression: "dapanA"
+                  }
+                ],
+                staticStyle: { width: "100%" },
+                attrs: { placeholder: "câu trả lời", rows: "2", name: "name" },
+                domProps: { value: _vm.dapanA },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.dapanA = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapandungA,
+                    expression: "dapandungA"
+                  }
+                ],
+                attrs: { type: "radio", name: "dap_an", value: "true" },
+                domProps: { checked: _vm._q(_vm.dapandungA, "true") },
+                on: {
+                  change: function($event) {
+                    _vm.dapandungA = "true"
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("B")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapanB,
+                    expression: "dapanB"
+                  }
+                ],
+                staticStyle: { width: "100%" },
+                attrs: { placeholder: "câu trả lời", rows: "2", name: "name" },
+                domProps: { value: _vm.dapanB },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.dapanB = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapandungB,
+                    expression: "dapandungB"
+                  }
+                ],
+                attrs: { type: "radio", name: "dap_an", value: "true" },
+                domProps: { checked: _vm._q(_vm.dapandungB, "true") },
+                on: {
+                  change: function($event) {
+                    _vm.dapandungB = "true"
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("C")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapanC,
+                    expression: "dapanC"
+                  }
+                ],
+                staticStyle: { width: "100%" },
+                attrs: { placeholder: "câu trả lời", rows: "2", name: "name" },
+                domProps: { value: _vm.dapanC },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.dapanC = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapandungC,
+                    expression: "dapandungC"
+                  }
+                ],
+                attrs: { type: "radio", name: "dap_an", value: "true" },
+                domProps: { checked: _vm._q(_vm.dapandungC, "true") },
+                on: {
+                  change: function($event) {
+                    _vm.dapandungC = "true"
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("D")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapanD,
+                    expression: "dapanD"
+                  }
+                ],
+                staticStyle: { width: "100%" },
+                attrs: { placeholder: "câu trả lời", rows: "2", name: "name" },
+                domProps: { value: _vm.dapanD },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.dapanD = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.dapandungD,
+                    expression: "dapandungD"
+                  }
+                ],
+                attrs: { type: "radio", name: "dap_an", value: "true" },
+                domProps: { checked: _vm._q(_vm.dapandungD, "true") },
+                on: {
+                  change: function($event) {
+                    _vm.dapandungD = "true"
+                  }
+                }
+              })
+            ])
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c("button", { staticClass: "btn btn-danger", on: { click: _vm.nhap } }, [
+      _vm._v("Nhập câu hỏi")
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("label", { staticClass: "label" }, [_vm._v("Câu hỏi")]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("textarea", {
-          staticStyle: { width: "100%" },
-          attrs: { placeholder: "Nội dung câu hỏi", rows: "5" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Câu trả lời")]),
-      _vm._v(" "),
-      _c(
-        "table",
-        {
-          staticClass: "table table-bordered table-striped dataTable",
-          staticStyle: { "margin-top": "20px" },
-          attrs: { role: "grid" }
-        },
-        [
-          _c("thead", [
-            _c("tr", { attrs: { role: "row" } }, [
-              _c("th", [_vm._v("Phương án")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Câu trả lời")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Đáp án đúng")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("A")]),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td")
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("B")]),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td")
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("C")]),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td")
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("D")]),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td")
-            ])
-          ])
-        ]
-      )
+    return _c("thead", [
+      _c("tr", { attrs: { role: "row" } }, [
+        _c("th", { staticStyle: { width: "15%" } }, [_vm._v("Phương án")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Câu trả lời")]),
+        _vm._v(" "),
+        _c("th", { staticStyle: { width: "20%" } }, [_vm._v("Đáp án đúng")])
+      ])
     ])
   }
 ]
@@ -41367,7 +41628,14 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "button",
-                  { staticClass: "btn btn-success", on: { click: _vm.nhap } },
+                  {
+                    staticClass: "btn btn-success",
+                    on: {
+                      click: function($event) {
+                        return _vm.nhap(goi.id)
+                      }
+                    }
+                  },
                   [_vm._v("Nhập câu hỏi")]
                 ),
                 _vm._v(" "),

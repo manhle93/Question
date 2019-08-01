@@ -16,7 +16,7 @@
           <tr v-for="goi in gois">
             <td>{{goi.name}}</td>
             <td><p>xx Câu</p>
-            <button class="btn btn-success" @click="nhap">Nhập câu hỏi</button>
+            <button class="btn btn-success" @click="nhap(goi.id)">Nhập câu hỏi</button>
             <button class="btn btn-warning" @click="view">Toàn bộ câu hỏi</button>  </td>
             <td>
               <a class="btn btn-light" @click="xoa(goi.id)">
@@ -44,8 +44,11 @@ export default {
         chuyen(){
             window.location.href = "/package-add/"
         },
-        nhap(){
-            window.location.href = "/question/add/"
+        nhap(id){
+            window.location.href = "/question/add/" + id
+        },
+        view(){
+            
         }
     }
 
