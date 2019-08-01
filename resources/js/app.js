@@ -25,7 +25,9 @@ Vue.component('show-package', require('./components/Package.vue').default);
 Vue.component('add-question', require('./components/AddQuestion.vue').default);
 
 
-// Vue.component('game-play', require('./components/game.vue').default);
+Vue.component('game-play', require('./components/game.vue').default);
+Vue.component('game-request', require('./components/resquest.vue').default);
+
 
 
 /**

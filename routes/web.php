@@ -33,3 +33,5 @@ Route::get('play','PlayController@index')->name('game.play');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('request/{id}', 'GetRequestController@getRequest')->name('request');
+
