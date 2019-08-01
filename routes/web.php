@@ -28,7 +28,6 @@ Route::delete('question/{id}/delete', 'QuestionController@delete');
 
 
 
-
 Route::get('play','PlayController@index')->name('game.play');
 Auth::routes();
 

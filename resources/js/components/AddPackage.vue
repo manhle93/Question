@@ -32,7 +32,8 @@ export default {
             axios.post('/package/add', {name: this.name})
             .then(res=>{
                 this.show = true,
-                this.name = ''    
+                this.name = '',
+                alert("I am an alert box!")    
             })
         }, 
         chuyen(){

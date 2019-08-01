@@ -8,6 +8,7 @@ use App\Answer;
 
 class QuestionController extends Controller
 {
+    
     public function showFormAdd($id)
     {
         return view('question', ['id' => $id]);
