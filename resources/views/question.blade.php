@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
                 <div class="card-header label">NHẬP CÂU HỎI</div>
-                <add-question></add-question>
+                <add-question :id="{{$id}}"></add-question>
             </div>
         </div>
     </div>
