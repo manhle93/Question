@@ -29,6 +29,7 @@ Route::delete('question/{id}/delete', 'QuestionController@delete');
 
 
 
+Route::get('play','PlayController@index')->name('game.play');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
