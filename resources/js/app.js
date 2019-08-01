@@ -21,6 +21,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('game-play', require('./components/game.vue').default);
+Vue.component('game-request', require('./components/resquest.vue').default);
+
 
 
 /**
