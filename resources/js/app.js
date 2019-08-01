@@ -20,6 +20,11 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('add-package', require('./components/AddPackage.vue').default);
+Vue.component('show-package', require('./components/Package.vue').default);
+Vue.component('add-question', require('./components/AddQuestion.vue').default);
+
+
 Vue.component('game-play', require('./components/game.vue').default);
 Vue.component('game-request', require('./components/resquest.vue').default);
 

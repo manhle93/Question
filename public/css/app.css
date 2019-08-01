@@ -10644,3 +10644,10 @@ a.text-dark:focus {
   }
 }
 
+.label {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: center;
+}
+

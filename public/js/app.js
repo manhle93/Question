@@ -53985,6 +53985,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('add-package', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/AddPackage.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
+Vue.component('show-package', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/Package.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
+Vue.component('add-question', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/AddQuestion.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
 Vue.component('game-play', __webpack_require__(/*! ./components/game.vue */ "./resources/js/components/game.vue")["default"]);
 Vue.component('game-request', __webpack_require__(/*! ./components/resquest.vue */ "./resources/js/components/resquest.vue")["default"]);
 /**

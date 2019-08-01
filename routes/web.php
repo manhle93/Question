@@ -14,6 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('package/add', 'PackageController@add');
+Route::get('package', 'PackageController@show');
+Route::get('package-add', 'PackageController@showFormAdd');
+Route::post('package/{id}/edit', 'PackageController@edit');
+Route::delete('package/{id}/delete', 'PackageController@delete');
+
+Route::post('question-add', 'QuestionController@add');
+Route::get('question', 'QuestionController@show');
+Route::get('question/add/', 'QuestionController@showFormAdd');
+Route::post('question/{id}/edit', 'QuestionController@edit');
+Route::delete('question/{id}/delete', 'QuestionController@delete');
+
+
+
+
 Route::get('play','PlayController@index')->name('game.play');
 Auth::routes();
 
