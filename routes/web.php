@@ -16,12 +16,14 @@ Route::get('/', function () {
 });
 Route::post('package/add/', 'PackageController@add');
 Route::get('package', 'PackageController@show');
-Route::get('package-add', 'PackageController@showFormAdd');
+Route::get('packageadd', 'PackageController@showFormAdd');
 Route::post('package/{id}/edit', 'PackageController@edit');
 Route::delete('package/{id}/delete', 'PackageController@delete');
 
 Route::post('questionadd', 'QuestionController@add');
-Route::get('question', 'QuestionController@show');
+Route::get('question/{id}', 'QuestionController@show');
+Route::get('answer', 'QuestionController@showAnswer');
+
 Route::get('question/add/{id}', 'QuestionController@showFormAdd');
 Route::post('question/{id}/edit', 'QuestionController@edit');
 Route::delete('question/{id}/delete', 'QuestionController@delete');

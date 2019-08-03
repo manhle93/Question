@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Answer;
+use App\Package;
 
 class QuestionController extends Controller
 {
     
     public function showFormAdd($id)
     {
-        return view('question', ['id' => $id]);
+        $info = Package::where('id', $id)->first();
+        return view('question', ['id' => $id, 'name'=>$info]);
     }
     public function add(Request $request)
     {
@@ -34,6 +36,16 @@ class QuestionController extends Controller
         }
         return response()->json([
             'message' => "thanh cong"
+        ]);
+    }
+    public function show($id){
+     $question = Question::where('package_id', $id)->get();
+     return view('showquestion', ['question'=>$question]);
+    }
+    public function showAnswer(){
+        $answer = Answer::query()->get();
+        return response()->json([
+            'resuft'=>$answer,
         ]);
     }
 }

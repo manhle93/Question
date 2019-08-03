@@ -1,6 +1,10 @@
-<template>
+<template >
     <div>
-        <h1>{{a}}</h1>
+        <h2 style="font-family: 'Times New Roman'">{{name.name}}</h2>
+        <br>
+        <a href="/home"><button type="button" style="width: 450px; height: 50px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 20px;" class="btn btn-success">Trang chủ</button></a>
+        <a href="/package"><button type="button" style="width: 450px; height: 50px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 20px;" class="btn btn-warning">Các gói câu hỏi</button></a>
+        <hr>
         <label class="label">Câu hỏi</label>
         <br>
         <div class="row"><textarea placeholder="Nội dung câu hỏi" rows="5" style="width: 100%" v-model="noidung"></textarea></div>
@@ -46,7 +50,7 @@
 </template>
 <script>
 export default {
-     props: ['id'],
+     props: ['id', 'name'],
      data(){
          return{
             noidung:null,
@@ -69,6 +73,13 @@ export default {
               this.data.push({'name':this.dapanB,'dap_an':this.dapandungB})
                this.data.push({'name':this.dapanC,'dap_an':this.dapandungC})
                 this.data.push({'name':this.dapanD,'dap_an':this.dapandungD})
+                if(this.dapandungA == this.dapandungB && this.dapandungB == this.dapandungC && this.dapandungC == this.dapandungD)
+               { alert("Chưa nhập đáp án đúng");}
+               else{
+               if(this.noidung == null || this.dapanA == null || this.dapanB == null ||this.dapanC == null ||this.dapanD == null ||
+                 this.noidung == "" || this.dapanA == "" || this.dapanB == "" ||this.dapanC == "" ||this.dapanD == "")
+               {alert("Chưa nhập đủ nội dung");}
+               else{
              axios.post('/questionadd', {
                     package_id: this.id,
                     noidung:this.noidung,
@@ -77,6 +88,8 @@ export default {
                 alert("Nhập câu hỏi thành công");
                 location.reload();
              })
+             }
+             }
          }
      },
      watch:{

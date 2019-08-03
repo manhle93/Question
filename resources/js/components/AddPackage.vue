@@ -6,14 +6,15 @@
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+<br>
+<div>
+<a href="/home"><button type="button" style="width: 450px; height: 40px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 16px;" class="btn btn-primary">TRANG CHỦ</button></a>
+        <a href="/package"><button type="button" style="width: 450px; height: 40px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 16px;" class="btn btn-dark">DANH SÁCH GÓI CÂU HỎI</button></a>
+</div>
+<br>
         <label class="label">Tên gói</label>
-        <br>
         <input type="text" placeholder="Nhập tên gói câu hỏi" style="width: 300px" name="name" v-model="name">
-        <button class="btn btn-success" @click="luu">Nhập</button>  
-        <br>
-        <br>
-         <button class="btn btn-danger" @click="chuyen">Danh sách gói câu hỏi</button> 
-               
+        <button class="btn btn-success" @click="luu">Nhập</button>              
     </div>
 </template>
 <script>
@@ -33,12 +34,9 @@ export default {
             .then(res=>{
                 this.show = true,
                 this.name = '',
-                alert("I am an alert box!")    
+                alert("Tạo gói câu hỏi thành công!")    
             })
         }, 
-        chuyen(){
-             window.location.href = "/package/";
-        }
     }
 }
 </script>
