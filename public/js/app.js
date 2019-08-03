@@ -1384,7 +1384,7 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js");
+var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/axios/node_modules/is-buffer/index.js");
 
 /*global toString:true*/
 
@@ -1684,6 +1684,28 @@ module.exports = {
   extend: extend,
   trim: trim
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/node_modules/is-buffer/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/axios/node_modules/is-buffer/index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+module.exports = function isBuffer (obj) {
+  return obj != null && obj.constructor != null &&
+    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
 
 
 /***/ }),
@@ -1996,6 +2018,16 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
+/* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_circular_count_down_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-circular-count-down-timer */ "./node_modules/vue-circular-count-down-timer/dist/vue-count-down-timer.common.js");
+/* harmony import */ var vue_circular_count_down_timer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_circular_count_down_timer__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-awesome-countdown */ "./node_modules/vue-awesome-countdown/dist/vue-awesome-countdown.common.js");
+/* harmony import */ var vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4__);
 //
 //
 //
@@ -2028,6 +2060,120 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_circular_count_down_timer__WEBPACK_IMPORTED_MODULE_3___default.a);
+
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default.a, 'vac');
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['questions'],
   data: function data() {
@@ -6648,28 +6794,6 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/is-buffer/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/is-buffer/index.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 }
 
 
@@ -38002,6 +38126,597 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
   \*************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/vue-awesome-countdown/dist/vue-awesome-countdown.common.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/vue-awesome-countdown/dist/vue-awesome-countdown.common.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "fb15":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = i[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"ca0e2238-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/vue-awesome-countdown.vue?vue&type=template&id=d3947dfc&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.tag,_vm._g(_vm._b({tag:"components"},'components',_vm.attrs,false),_vm.$listeners),[_vm._t("prev",null,null,this._self),(_vm.state === 'beforeStart')?_vm._t("before",null,null,this._self):_vm._e(),(_vm.state === 'preheat')?_vm._t("preheat",null,null,this._self):_vm._e(),(_vm.state === 'process' || _vm.state === 'stoped')?_vm._t("process",null,null,this._self):_vm._e(),(_vm.state === 'finised')?_vm._t("finish",null,null,this._self):_vm._e(),_vm._t("default",null,null,this._self)],2)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/vue-awesome-countdown.vue?vue&type=template&id=d3947dfc&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/vue-awesome-countdown.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var vue_awesome_countdownvue_type_script_lang_js_ = ({
+  name: 'vue-awesome-countdown',
+  props: {
+    startTime: {
+      type: [String, Number, Date],
+      default: null,
+      validator: function(value) {
+        return new Date(value).toString() !== 'Invalid Date'
+      }
+    },
+    endTime: {
+      type: [String, Number, Date],
+      default: null,
+      validator: function(value) {
+        return new Date(value).toString() !== 'Invalid Date'
+      }
+    },
+    leftTime: {
+      type: Number,
+      default: 0
+    },
+    autoStart: {
+      type: Boolean,
+      default: true
+    },
+    speed: {
+      type: Number,
+      default: 1000,
+      validator: function(value) {
+        return value >= 0
+      }
+    },
+    tag: {
+      type: String,
+      default: 'span'
+    }
+  },
+  data() {
+    return {
+      state: 'beforeStart', //beforeStart, stoped, process, finised
+      attrs: {},
+      actualStartTime: null,
+      actualEndTime: null,
+      timeObj: {},
+      countdownTimer: null,
+      runTimes: 0,
+      usedTime: 0,
+      remainingTime: 0
+    }
+  },
+  watch: {
+    speed(curSpeed, oldSpeed) {
+      const vm = this
+      if (curSpeed < 0) {
+        curSpeed = 0
+      }
+      if (curSpeed !== oldSpeed) {
+        clearTimeout(vm.countdownTimer)
+        const now = new Date().getTime()
+        const runTimes = Math.floor((now - vm.actualStartTime) / curSpeed)
+        const nextTime = now % curSpeed
+        vm.runTimes = runTimes
+        vm.$nextTick(() => {
+          vm.countdownTimer = setTimeout(vm.doCountdown, nextTime)
+        })
+      }
+    }
+  },
+  created() {
+    const vm = this
+    const startTime = (vm.startTime && new Date(vm.startTime).getTime()) || 0
+    const firstTime = (startTime && startTime - new Date().getTime()) || 0
+    if (vm.autoStart) {
+      vm.state = 'preheat'
+      setTimeout(() => {
+        vm.startCountdown(true)
+      }, firstTime)
+    }
+  },
+  methods: {
+    startCountdown(restart) {
+      const vm = this
+      if (vm.state !== 'beforeStart' && vm.state !== 'stoped' && !restart) {
+        return
+      }
+      if (restart) {
+        vm.runTimes = 0
+        vm.actualStartTime = null
+        vm.$emit('start', vm)
+        vm.remainingTime = vm.leftTime
+      }
+      vm.actualEndTime = vm.endTime || new Date().getTime() + (vm.remainingTime || vm.leftTime)
+      vm.state = 'process'
+      vm.doCountdown()
+    },
+    stopCountdown() {
+      const vm = this
+      if (vm.state !== 'process') {
+        return
+      }
+      clearTimeout(vm.countdownTimer)
+      vm.remainingTime = vm.leftTime - (new Date().getTime() - vm.actualStartTime)
+      vm.$emit('stop', vm)
+      vm.state = 'stoped'
+    },
+    switchCountdown() {
+      const vm = this
+      if (vm.state === 'stoped' || vm.state === 'beforeStart') {
+        return vm.startCountdown()
+      }
+      if (vm.state === 'process') {
+        return vm.stopCountdown()
+      }
+    },
+    finishCountdown() {
+      const vm = this
+      vm.state = 'finised'
+      vm.timeObj = {}
+      vm.usedTime = new Date().getTime() - vm.actualStartTime
+      vm.$emit('finish', vm)
+    },
+    doCountdown() {
+      const vm = this
+      if (vm.state !== 'process') {
+        return
+      }
+      if (!vm.actualStartTime) {
+        vm.actualStartTime = new Date().getTime()
+      }
+      let leftTime = new Date(vm.actualEndTime).getTime() - new Date().getTime()
+      if (leftTime > 0) {
+        const t = {}
+        const leftSeconds = leftTime / 1000
+
+        const org = {
+          d: leftSeconds / 60 / 60 / 24,
+          h: (leftSeconds / 60 / 60) % 24,
+          m: (leftSeconds / 60) % 60,
+          s: leftSeconds % 60,
+          ms: leftTime % 1000
+        }
+
+        const txt = {
+          d: parseInt(org.d, 10).toString(),
+          h: parseInt(org.h, 10)
+            .toString()
+            .padStart(2, 0),
+          m: parseInt(org.m, 10)
+            .toString()
+            .padStart(2, 0),
+          s: parseInt(org.s, 10)
+            .toString()
+            .padStart(2, 0),
+          ms: org.ms.toString().padStart(3, 0)
+        }
+
+        const ceil = {
+          d: parseInt(Math.ceil(leftSeconds / 60 / 60 / 24), 10),
+          h: parseInt(Math.ceil(leftSeconds / 60 / 60), 10),
+          m: parseInt(Math.ceil(leftSeconds / 60), 10),
+          s: parseInt(Math.ceil(leftSeconds), 10)
+        }
+
+        t.endTime = vm.actualEndTime
+        t.speed = vm.speed
+        vm.usedTime = new Date().getTime() - vm.actualStartTime
+        t.leftTime = leftTime
+        vm.remainingTime = leftTime
+        vm.timeObj = Object.assign({}, t, txt, {
+          org,
+          ceil
+        })
+        vm.timeObj.org = org
+        vm.timeObj.ceil = ceil
+        vm.$emit('process', vm)
+      } else {
+        vm.finishCountdown()
+        return
+      }
+
+      let nextSpeed =
+        vm.speed +
+        (vm.actualStartTime + vm.runTimes++ * vm.speed - new Date().getTime())
+      if (nextSpeed < 0) {
+        nextSpeed = nextSpeed + vm.speed
+      }
+      vm.countdownTimer = setTimeout(vm.doCountdown, nextSpeed)
+    }
+  }
+});
+
+// CONCATENATED MODULE: ./src/vue-awesome-countdown.vue?vue&type=script&lang=js&
+ /* harmony default export */ var src_vue_awesome_countdownvue_type_script_lang_js_ = (vue_awesome_countdownvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/vue-awesome-countdown.vue
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  src_vue_awesome_countdownvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "vue-awesome-countdown.vue"
+/* harmony default export */ var vue_awesome_countdown = (component.exports);
+// CONCATENATED MODULE: ./src/vue-awesome-countdown.js
+
+
+const vac = {
+  install: function (Vue, options) {
+    const name = options || 'vac'
+    Vue.component(name, vue_awesome_countdown)
+    Vue.component('countdown', vue_awesome_countdown)
+  }
+}
+
+if (typeof window !== "undefined" && window.Vue) {
+  window.Vue.use(vac)
+}
+
+/* harmony default export */ var src_vue_awesome_countdown = (vac);
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_vue_awesome_countdown);
+
+
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=vue-awesome-countdown.common.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vue-circular-count-down-timer/dist/vue-count-down-timer.common.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/vue-circular-count-down-timer/dist/vue-count-down-timer.common.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "014b":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -38676,6 +39391,171 @@ render._withStripped = true
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ShowQuestion.vue?vue&type=template&id=0e10e86e& ***!
   \***************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/game.vue?vue&type=template&id=365215bd&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/game.vue?vue&type=template&id=365215bd& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "full-width" }, [
+    this.start == false
+      ? _c("div", { staticClass: "full-width", attrs: { id: "welcome" } }, [
+          _c("div", {
+            staticStyle: {
+              width: "100%",
+              height: "40%",
+              "background-image": "url('/img/panel.JPG')",
+              "background-size": "50% 100%",
+              "background-repeat": "no-repeat",
+              "background-position": "center"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticStyle: {
+                width: "100%",
+                height: "60%",
+                "background-color": "#1d68a7",
+                "padding-top": "30px"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticStyle: {
+                    "margin-left": "45%",
+                    "border-radius": "5px",
+                    width: "150px",
+                    height: "70px",
+                    cursor: "pointer"
+                  },
+                  attrs: { id: "start" }
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger",
+                      staticStyle: {
+                        width: "150px",
+                        height: "70px",
+                        "font-size": "23px",
+                        "font-weight": "bold",
+                        "font-family": "'Times New Roman'"
+                      },
+                      attrs: { type: "button" },
+                      on: { click: _vm.startGame }
+                    },
+                    [_vm._v("BẮT ĐẦU")]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    this.start == true && this.play == false
+      ? _c("div", { staticClass: "full-width" }, [
+          _c(
+            "div",
+            {
+              staticStyle: {
+                width: "100%",
+                height: "30%",
+                "background-image": "url('/img/panel2.JPG')",
+                "background-size": "100% 100%",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                color: "white",
+                "text-align": "center",
+                "font-size": "50px",
+                "padding-top": "40px"
+              }
+            },
+            [_vm._v("\n                Lựa chọn gói câu hỏi\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticStyle: {
+                width: "100%",
+                height: "70%",
+                "background-color": "#1d68a7",
+                "padding-top": "30px"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "row",
+                  staticStyle: {
+                    border: "3px solid blue",
+                    "border-radius": "10px",
+                    "margin-top": "10px",
+                    width: "50%",
+                    "margin-left": "25%"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-12 grid-container",
+                      staticStyle: {
+                        "background-color": "white",
+                        "border-radius": "10px"
+                      }
+                    },
+                    _vm._l(_vm.package, function(item, index) {
+                      return _c(
+                        "div",
+                        {
+                          staticClass: "grid-item package-quest",
+                          on: {
+                            click: function($event) {
+                              return _vm.selectPakage(item.id)
+                            }
+                          }
+                        },
+                        [_vm._v(_vm._s(index + 1))]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/resquest.vue?vue&type=template&id=e318d6e6&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/resquest.vue?vue&type=template&id=e318d6e6&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -38689,6 +39569,14 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    {
+      staticStyle: {
+        height: "100%",
+        width: "100%",
+        "overflow-y": "hidden",
+        "background-color": "#ffffff"
+      }
+    },
     [
       _c("h5", [_vm._v("Đang có: " + _vm._s(this.i) + " câu hỏi trong gói")]),
       _vm._v(" "),
@@ -38739,6 +39627,351 @@ var render = function() {
       _c("hr")
     ],
     2
+            "div",
+            {
+              staticClass: "point",
+              staticStyle: {
+                width: "100%",
+                height: "15%",
+                "margin-bottom": "10%"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticStyle: { width: "50%", height: "100%", float: "left" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "background-color": "#1d68a7",
+                        width: "15%",
+                        height: "50px",
+                        "margin-left": "5%",
+                        "border-radius": "7px",
+                        float: "left",
+                        color: "white",
+                        "text-align": "center",
+                        "padding-top": "10px",
+                        "font-size": "20px"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.activePoint(1)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", {
+                        staticStyle: {
+                          width: "10px",
+                          height: "10px",
+                          "background-color": "yellow",
+                          "border-radius": "50%",
+                          margin: "auto"
+                        }
+                      }),
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(this.team1) +
+                          "\n                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "background-color": "green",
+                        width: "15%",
+                        height: "50px",
+                        "margin-left": "2%",
+                        "border-radius": "7px",
+                        float: "left",
+                        color: "white",
+                        "text-align": "center",
+                        "padding-top": "10px",
+                        "font-size": "20px"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.activePoint(2)
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(this.team2) +
+                          "\n                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "background-color": "red",
+                        width: "15%",
+                        height: "50px",
+                        "margin-left": "2%",
+                        "border-radius": "7px",
+                        float: "left",
+                        color: "white",
+                        "text-align": "center",
+                        "padding-top": "10px",
+                        "font-size": "20px"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.activePoint(3)
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(this.team3) +
+                          "\n                "
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticStyle: { width: "50%", height: "100%", float: "left" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        border: "5px solid #ffc002",
+                        width: "100%",
+                        height: "150px",
+                        "margin-left": "2%",
+                        "border-radius": "30px",
+                        float: "left",
+                        "text-align": "center"
+                      }
+                    },
+                    [
+                      _c("h2", { staticStyle: { "margin-top": "10px" } }, [
+                        _vm._v("CÔNG ĐOÀN XÂY DỰNG VIỆT NAM")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "-------------------------______----------------------"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("P", { staticStyle: { "font-size": "20px" } }, [
+                        _vm._v(
+                          "Hội thi an toàn vệ sinh viên giỏi toàn quốc ngành xây dựng"
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "request",
+              staticStyle: {
+                width: "100%",
+                height: "85%",
+                padding: "1% 1%",
+                border: "10px White double",
+                "border-radius": "40px",
+                "background-color": "rgba(0, 123, 255, 0.75)"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticStyle: {
+                    width: "100%",
+                    height: "100%",
+                    "border-radius": "20px",
+                    "background-color": "rgb(0, 123, 255)"
+                  }
+                },
+                _vm._l(_vm.question_data, function(item, index) {
+                  return index == _vm.turn
+                    ? _c(
+                        "p",
+                        {
+                          staticStyle: {
+                            color: "white",
+                            "font-size": "25px",
+                            "margin-left": "15px",
+                            padding: "2% 2%"
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                    " +
+                              _vm._s(item.name) +
+                              "\n                "
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                }),
+                0
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticStyle: {
+            width: "100%",
+            height: "50%",
+            "margin-top": "10%",
+            "padding-left": "10%",
+            "padding-bottom": "5%",
+            "border-top": "5px #b3d7ff solid",
+            "border-radius": "30px"
+          }
+        },
+        [
+          _vm._l(_vm.question_data, function(item, index) {
+            return index == _vm.turn
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "grid-container",
+                    staticStyle: { width: "90%", float: "left" }
+                  },
+                  [
+                    _vm._l(item.answer, function(data, ind) {
+                      return _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          staticStyle: { width: "450px", height: "85px" },
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.addAnswer(data, ind, index)
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(data.name) +
+                              "\n            "
+                          )
+                        ]
+                      )
+                    }),
+                    _vm._v(" "),
+                    _vm.tinker == false && _vm.teamAct != undefined
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "modal fade",
+                            attrs: {
+                              id: "exampleModalCenter",
+                              tabindex: "-1",
+                              role: "dialog",
+                              "aria-labelledby": "exampleModalCenterTitle",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [_vm._m(0, true)]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.tinker == true && _vm.teamAct != undefined
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "modal fade",
+                            attrs: {
+                              id: "exampleModalCenter",
+                              tabindex: "-1",
+                              role: "dialog",
+                              "aria-labelledby": "exampleModalCenterTitle",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [_vm._m(1, true)]
+                        )
+                      : _vm._e()
+                  ],
+                  2
+                )
+              : _vm._e()
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticStyle: { width: "10%", float: "left", "margin-top": "5%" }
+            },
+            [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  staticStyle: {
+                    width: "120px",
+                    height: "50px",
+                    "margin-bottom": "20px"
+                  },
+                  attrs: {
+                    type: "button",
+                    "data-toggle": "modal",
+                    "data-target": "#exampleModalCenter"
+                  },
+                  on: { click: _vm.addPoint }
+                },
+                [_vm._v("\n                Kết quả\n            ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  staticStyle: { width: "120px", height: "50px" },
+                  attrs: { type: "button" },
+                  on: { click: _vm.next }
+                },
+                [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(this.continute) +
+                      " >>\n            "
+                  )
+                ]
+              )
+            ]
+          )
+        ],
+        2
+      )
+    ]
   )
 }
 var staticRenderFns = [
@@ -38755,6 +39988,85 @@ var staticRenderFns = [
         _c("th", { staticStyle: { width: "20%" } }, [_vm._v("Đáp án đúng")])
       ])
     ])
+    return _c(
+      "div",
+      {
+        staticClass: "modal-dialog modal-dialog-centered",
+        attrs: { role: "document" }
+      },
+      [
+        _c("div", { staticClass: "modal-content" }, [
+          _c("div", { staticClass: "modal-header" }, [
+            _c(
+              "button",
+              {
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "modal",
+                  "aria-label": "Close"
+                }
+              },
+              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "modal-body" }, [
+            _vm._v(
+              "\n                            Đáp án chưa chính xác\n                        "
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "modal-dialog modal-dialog-centered",
+        attrs: { role: "document" }
+      },
+      [
+        _c("div", { staticClass: "modal-content" }, [
+          _c("div", { staticClass: "modal-header" }, [
+            _c(
+              "button",
+              {
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "modal",
+                  "aria-label": "Close"
+                }
+              },
+              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal-body",
+              staticStyle: {
+                width: "500px",
+                height: "500px",
+                "font-size": "30px",
+                "text-align": "center"
+              }
+            },
+            [
+              _vm._v(
+                "\n                            Đáp án chính xác\n                        "
+              )
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

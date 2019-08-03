@@ -3,8 +3,10 @@
         <div id="welcome" class="full-width" v-if="this.start == false ">
             <div style="width: 100%; height: 40%; background-image: url('/img/panel.JPG'); background-size: 50% 100%; background-repeat: no-repeat;background-position: center; "></div>
             <div style="width: 100%; height: 60%;background-color: #1d68a7;padding-top: 30px;">
-                <div id="start" style="margin-left: 45%;background-color: red;border: 1px solid ghostwhite; border-radius: 5px; width: 150px;height:70px;cursor: pointer;">
-                    <div style="color: yellow; font-size: 30px;text-align: center;margin-top: 18px;" @click="startGame">Bắt Đầu</div>
+                <div id="start" style="margin-left: 45%; border-radius: 5px; width: 150px;height:70px;cursor: pointer;">
+                    <button style="width:150px;height:70px;font-size: 23px;font-weight: bold;font-family:'Times New Roman'" @click="startGame" type="button" class="btn btn-danger" >BẮT ĐẦU</button>
+
+<!--                    <div style="color: yellow; font-size: 30px;text-align: center;margin-top: 18px;" @click="startGame">Bắt Đầu</div>-->
                 </div>
             </div>
         </div>
@@ -14,8 +16,8 @@
             </div>
             <div style="width: 100%; height: 70%; background-color: #1d68a7;padding-top: 30px;">
                 <div style="border: 3px solid blue; border-radius: 10px; margin-top: 10px; width: 50%;margin-left: 25%;" class="row" >
-                    <div class="col-md-12 grid-container" style="background-color: white;border-radius: 10px;" v-for="(item,index) in package">
-                        <div class="grid-item package-quest" @click="selectPakage(item.id)">{{index+1}}</div>
+                    <div class="col-md-12 grid-container" style="background-color: white;border-radius: 10px;">
+                        <div class="grid-item package-quest" v-for="(item,index) in package" @click="selectPakage(item.id)">{{index+1}}</div>
                     </div>
                 </div>
             </div>
@@ -57,12 +59,6 @@
     };
 </script>
 <style>
-    #start:hover {
-        background-color: #09AF00 !important;
-    }
-    #start:hover div{
-        color: red !important;
-    }
     .full-width{
         height: 100%;
         width: 100%;
@@ -87,8 +83,5 @@
         font-size: 20px;
         font-weight: bold;
     }
-    .package-quest:hover {
-        background-color: #27864f;
-        cursor: pointer;
-    }
+
 </style>

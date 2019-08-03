@@ -9,7 +9,7 @@ class GetRequestController extends Controller
 {
     public function getRequest(Request $request, $id)
     {
-        $question = Question::query()->where('id',$id)->with('answer')->get();
+        $question = Question::query()->where('package_id',$id)->with('answer')->get();
        return view('request',[
            'question'=>$question
        ]);
