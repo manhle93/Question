@@ -2,7 +2,7 @@
     <div>
         <h5>Đang có: {{this.i}} câu hỏi trong gói</h5>
         <div v-for="(question,index) in questions" >
-            <h5>Câu {{index+1}}</h5><button type="button" class="btn btn-danger">Xóa</button>
+            <h5>Câu {{index+1}}</h5><button type="button" class="btn btn-danger" @click="xoa(question.id)">Xóa</button>
            <p>{{question.name}}</p> 
            <h6>Đáp án</h6>
            <div>
@@ -32,7 +32,7 @@
 </template>
 <script>
 export default {
-    props: ['questions'],
+    props: ['questions', 'package_id'],
     data(){
         return {            
             show: false,
@@ -41,8 +41,14 @@ export default {
         }
     },
     methods: {
-        
-    
+        xoa(id){
+          if(confirm("Xóa câu hỏi")){
+          axios.delete('/question/'+ id + '/delete/')
+          .then(res=>{
+            $(this.$el).fadeOut(800, ()=>{window.location.href= "/question/" + this.package_id });
+          })
+        }
+        }
     },
     mounted(){
             axios.get('/answer/')

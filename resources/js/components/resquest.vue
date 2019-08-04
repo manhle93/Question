@@ -1,28 +1,42 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-color: #ffffff;">
-        <div style="width: 100%; height: 50%;padding-left:7%;padding-right:7%;padding-top:2%;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-color: #FCF3CF;">
+        <div v-if="hidden== false"  style="height: 100%; width: 100%; overflow-y:hidden;background-color: #FCF3CF;">
+            <div style="width: 100%; height: 50%;padding-left:7%;padding-right:7%;padding-top:2%;">
             <div class="point" style="width: 100%; height: 15%;margin-bottom: 10%;">
-                <div style="width: 50%; height:100%;float:left;">
+                <div style="width: 60%; height:100%;float:left;">
                     <div
-                        style="background-color: #1d68a7;width: 15%;height: 75px;margin-left:5%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px"
+                        style="background-color: #1d68a7;width: 20%;height: 130px;margin-left:5%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px" v-bind:class="{boder:teamAct==1}"
                         @click="activePoint(1)">
                         <div style="width: 10px;height: 10px; background-color: yellow;border-radius:50%;margin:auto;"
                              v-if="teamAct==1"></div>
-                        <p style="font-size: 30px;">{{this.team1}}</p>
+                        <p style="font-size: 22px; font-family:'time new roman'; font-weight: bold; ">ĐỘI I</p>
+                        <p style="font-size:40px; font-family:'time new roman'; font-weight: bold;">{{this.team1}}</p>
                     </div>
                     <div
-                        style="background-color: green;width: 15%;height: 75px;margin-left:2%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px"
+                        style="background-color: green;width: 20%;height: 130px;margin-left:2%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px" 
+                        v-bind:class="{boder:teamAct==2}"
                         @click="activePoint(2)">
                         <div style="width: 10px;height: 10px; background-color: yellow;border-radius:50%;margin:auto;"
                              v-if="teamAct==2"></div>
-                        <p style="font-size: 30px;">{{this.team2}}</p>
+                             <p style="font-size: 22px; font-family:'time new roman'; font-weight: bold; ">ĐỘI II</p>
+                        <p style="font-size:40px; font-family:'time new roman'; font-weight: bold;">{{this.team2}}</p>
                     </div>
                     <div
-                        style="background-color: red;width: 15%;height: 75px;margin-left:2%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px"
+                        style="background-color: red;width: 20%;height: 130px;margin-left:2%;border-radius:7px;float: left;color: white;text-align: center;padding-top: 10px;font-size: 20px" v-bind:class="{boder:teamAct==3}"
                         @click="activePoint(3)">
                         <div style="width: 10px;height: 10px; background-color: yellow;border-radius:50%;margin:auto;"
                              v-if="teamAct==3"></div>
-                        <p style="font-size: 30px;">{{this.team3}}</p>
+                             <p style="font-size: 22px; font-family:'time new roman'; font-weight: bold; ">ĐỘI III</p>
+                        <p style="font-size:40px; font-family:'time new roman'; font-weight: bold;">{{this.team3}}</p>
+                    </div>
+                    <div style="border: 5px solid red; width: 150px;
+			height: 150px; text-align: center; padding-top: 4px
+			color: #fff;
+			-moz-border-radius: 200px;
+			-webkit-border-radius: 200px;
+			border-radius: 100px; float: left; margin-left:4%">
+                        <p style="font-size: 18px; font-family:'time new roman'; font-weight: bold;">Time</p>
+                        <div id="seconds">{{ totalTime }}</div>
                     </div>
                     <!--                    <h1 v-if="turn==0">-->
                     <!--                        <countdown :left-time="3000">-->
@@ -57,7 +71,13 @@
                     <!--                        style="text-align: center;"-->
                     <!--                    ></circular-count-down-timer>-->
                 </div>
-                <div
+                <div style="border: 0px solid red; width: 460px;height: 150px; text-align: center; float: right">
+                    <img src="http://congdoandatto.org.vn/portals/0/AttachFiles/2019/5/13/2019_5_13_8_56_43_636933346034574074_logo%20c%C3%B4ng%20%C4%91o%C3%A0n%202018.gif" 
+                     style="width: 140px; height: 120px; text-align: center;">
+                     <p style="font-size: 19px; font-family:'time new roman'; font-weight: bold; color: #1d68a7">CÔNG ĐOÀN XÂY DỰNG VIỆT NAM</p>
+                    <!-- <img src="http://www.congdoandlvn.org.vn/userfile/User/cuongnd_cd/images/2019/7/logott1.jpg" style="width: 450px; height: 150px; float: right"> -->
+                </div>
+                <!-- <div
                     style="width: 50%; height:165px;;float:left;border: 5px solid #ffc002;border-radius:30px;padding:2px 13px;">
                     <div style="width:25%;float:left;">
                         <img
@@ -69,81 +89,119 @@
                         <p>-------------------------______----------------------</p>
                         <P style="font-size:13px;">Hội thi an toàn vệ sinh viên giỏi toàn quốc ngành xây dựng</P>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="request"
                  style="width: 100%; height: 85%;padding: 1% 1%;border: 10px White double;border-radius: 40px;background-color: rgba(0, 123, 255, 0.75);">
-                <div style="width: 100%; height: 100%;border-radius:20px;background-color: rgb(0, 123, 255);">
-                    <p v-for="(item,index) in question_data" v-if="index==turn"
+                <div style="width: 100%; height: 100%;border-radius:20px;background-color: #1F618D;">
+                    <button type="button" style="width: 100%;border-radius:20px;font-size:20px; font-family:'time new roman'; font-weight: bold;" class="btn btn-warning">HỘI THI AN TOÀN VỆ SINH VIÊN TOÀN QUỐC NGÀNH XÂY DỰNG</button>
+                    <div v-for="(item,index) in question_data" v-if="index==turn"
                        style="color: white;font-size: 25px;margin-left: 15px;padding:2% 2%;">
-                        {{item.name}}
-                    </p>
+                       <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index +1}}</div>
+                        <p style="font-family:'time new roman'">{{item.name}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div
-            style="width: 100%; height: 50%; margin-top: 10%;padding-left:10%;padding-bottom: 5%; border-top: 5px #b3d7ff solid;border-radius:30px;">
-            <div style="width: 90%;float: left" class="grid-container" v-for="(item,index) in question_data"
-                 v-if="index==turn">
-                <button style="width:450px;height:85px;" type="button" class="btn btn-primary"
-                        v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)">
-                    {{data.name}}
-                </button>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                     v-if="tinker == false && teamAct !=undefined ">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Đáp án chưa chính xác
+            </div>
+            <div
+                style="width: 100%; height: 50%; margin-top: 10%;padding-left:10%;padding-bottom: 5%; border-top: 5px #b3d7ff solid;border-radius:30px;">
+                <div style="width: 90%;float: left; background-color: #FCF3CF" class="grid-container" v-for="(item,index) in question_data"
+                    v-if="index==turn">
+                    <button style="width:450px;height:85px; border-radius: 40px; border: #1A5276 solid 4px; font-family:'time new roman'; font-weight: bold; font-size: 22px" type="button" class="btn btn-primary"
+                            v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)" 
+                            v-bind:class="{'ind--0':ind === onclick}" >
+                            <p><span style="color: red; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span></p>
+                    </button>
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                        v-if="tinker == false && teamAct !=undefined ">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="width: 500px;height: 500px;font-size: 30px;text-align: center">
+                                    <img src="https://thumbs.gfycat.com/YoungPinkFirecrest-size_restricted.gif" style="width: 350px;height: 300px;">
+                                        </br>
+                                    <p><h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG CHÍNH XÁC</h2></p>
+                                    <P>+ 0</P>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                     v-if="tinker == true && teamAct != undefined ">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body"
-                                 style="width: 500px;height: 500px;font-size: 30px;text-align: center">
-                                Đáp án chính xác
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                        v-if="tinker == true && teamAct != undefined ">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body"
+                                    style="width: 500px;height: 450px;font-size: 30px;text-align: center">
+                                        <img src="https://cdn.dribbble.com/users/1238709/screenshots/4069900/success_celebration_800x600.gif" style="width: 350px;height: 300px;">
+                                        </br>
+                                    <p><h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN CHÍNH XÁC</h2></p>
+                                    <P>+ 10</P>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!--                <div class="grid-item" :disabled="disable"-->
-                <!--                     style="width: 450px; height: 85px;border: 3px yellow double;border-radius:20px;background-color: rgb(114, 6, 221);text-align: center;color: white"-->
-                <!--                     v-for="(data,ind) in item.answer" @click="addPoint(data)">-->
-                <!--                    <p style="margin-top: 5%;">{{data.name}}</p>-->
-                <!--                </div>-->
+                    <!--                <div class="grid-item" :disabled="disable"-->
+                    <!--                     style="width: 450px; height: 85px;border: 3px yellow double;border-radius:20px;background-color: rgb(114, 6, 221);text-align: center;color: white"-->
+                    <!--                     v-for="(data,ind) in item.answer" @click="addPoint(data)">-->
+                    <!--                    <p style="margin-top: 5%;">{{data.name}}</p>-->
+                    <!--                </div>-->
+                </div>
+                <div style="width: 10%;float: left;margin-top:5%;">
+                    <button style="width:120px;height:50px;margin-bottom:20px;font-weight: bold; font-family: 'time new roman'" type="button" class="btn btn-success"
+                            data-toggle="modal"
+                            data-target="#exampleModalCenter"
+                            @click="addPoint">
+                        KẾT QUẢ
+                    </button>
+                    <button style="width:120px;height:50px; font-weight: bold; font-family: 'time new roman'" type="button" class="btn btn-danger" @click="next">
+                        {{this.continute}}
+                    </button>
+                    <!--                <div style="border:1px yellowgreen solid;width:100px;height:50px;text-align: center;background-color: #1f6fb2;" @click="next">-->
+                    <!--                   <p style="margin-top:15%;font-weight: bold">{{this.continute}} >></p>-->
+                    <!--                </div>-->
+                </div>
             </div>
-            <div style="width: 10%;float: left;margin-top:5%;">
-                <button style="width:120px;height:50px;margin-bottom:20px;" type="button" class="btn btn-primary"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        @click="addPoint">
-                    Kết quả
-                </button>
-                <button style="width:120px;height:50px;" type="button" class="btn btn-danger" @click="next">
-                    {{this.continute}} >>
-                </button>
-                <!--                <div style="border:1px yellowgreen solid;width:100px;height:50px;text-align: center;background-color: #1f6fb2;" @click="next">-->
-                <!--                   <p style="margin-top:15%;font-weight: bold">{{this.continute}} >></p>-->
-                <!--                </div>-->
-            </div>
+        </div> 
+        <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true" >
+            <div class="full-width">
+                <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;" >
+                    <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
+                    <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;" >KẾT QUẢ</h4>
+                </div>
+                <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
+                    <div class="col-md-10" style=" margin: auto">
+                        <div class="row">
+                        <div style="background-color: blue;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
+                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI I</p>
+                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team1}}</p>
+                        </div>
+                        <div style="background-color: green;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI II</p>
+                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team2}}</p>
+                        </div>
+                        <div style="background-color: red; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI III</p>
+                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team3}}</p>
+                        </div>
+                        </div>
+                        <br></br><br></br>
+                        <div class="row"><button type="button" style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;" class="btn btn-dark" @click="chongoi">TIẾP TỤC</button></div>
+                    </div>
+                </div>
+          </div>
         </div>
     </div>
 </template>
@@ -164,6 +222,9 @@
         name: "question",
         data: function () {
             return {
+                onclick:undefined,
+                timer: null,
+                resetButton: false,
                 reset: false,
                 turn: 0,
                 teamAct: undefined,
@@ -171,9 +232,9 @@
                 team2: 0,
                 team3: 0,
                 time: 60,
-                time_start: false,
+                time_start: true,
                 question_data: undefined,
-                continute: "Kế tiếp",
+                continute: "KẾ TIẾP",
                 restart: undefined,
                 disable: undefined,
                 current_answer: undefined,
@@ -182,7 +243,9 @@
                 answer: undefined,
                 ind: undefined,
                 index: undefined,
-                hidden: true
+                hidden: true,
+                totalTime: 60,
+                hidden: false,
             };
         },
         created() {
@@ -191,17 +254,73 @@
         },
         mounted() {
             this.question_data = this.question
+            this.timer = setInterval(() => this.countdown(), 1000);
+            this.resetButton = true;
+            this.question_data.forEach(el=>{
+                el.answer.forEach((item, index, arr)=>{
+                    if(index==0){
+                       arr[index].phuong_an="A"
+                    }
+                     if(index==1){
+                       arr[index].phuong_an="B"
+                    }
+                     if(index==2){
+                       arr[index].phuong_an="C"
+                    }
+                     if(index==3){
+                       arr[index].phuong_an="D"
+                    }
+                })
+            })
+        },
+        computed: {
+            minutes: function() {
+            const minutes = Math.floor(this.totalTime / 60);
+            return this.padTime(minutes);
+            },
+            seconds: function() {
+            const seconds = this.totalTime - this.minutes * 60;
+            return this.padTime(seconds);
+            }
         },
         methods: {
+            startTimer: function() {
+                this.timer = setInterval(() => this.countdown(), 1000);
+                this.resetButton = true;
+            },
+            stopTimer: function() {
+                clearInterval(this.timer);
+                this.timer = null;
+                this.resetButton = true;
+            },
+            resetTimer: function() {
+                this.totalTime = 60;
+                clearInterval(this.timer);
+                this.timer = null;
+                this.resetButton = false;
+            },
+            padTime: function(time) {
+                return (time < 10 ? "0" : "") + time;
+            },
+            countdown: function() {
+            if (this.totalTime >= 1) {
+                this.totalTime--;
+            } else {
+                this.totalTime = 0;
+                this.resetTimer();
+                }
+            },
             addAnswer(answer, ind, index) {
-                console.log(3)
+                this.onclick = ind
                 if (this.teamAct != undefined) {
                     this.answer = answer
                     this.ind = ind
                     this.index = index
                 }
+                this.mauvang = !this.mauvang
             },
             next() {
+                this.onclick=undefined
                 this.answer = undefined
                 this.ind = undefined
                 this.index = undefined
@@ -209,24 +328,42 @@
                 if (this.turn < this.question_data.length - 1) {
                     this.turn = this.turn + 1
                     if (this.turn = this.question_data.length - 1) {
-                        this.continute = " Kết thúc"
+                        this.continute = " KẾT THÚC"
                     }
                 }
+                else{
+                    this.hidden = true
+                }
+                this.totalTime = 60
+                this.resetTimer()
+                this.startTimer()
                 this.teamAct = undefined
             },
             playsound() {
+                var audio = new Audio('/sound/dung.mp3') // path to file
+                audio.play()
                 var audio = new Audio('/sound/votay.mp3') // path to file
+                audio.play()
+            },
+            playSoundError(){
+                var audio = new Audio('/sound/sai.mp3') // path to file
                 audio.play()
             },
             activePoint(team) {
                 if (this.teamAct == team && this.teamAct != undefined) {
                     this.teamAct = undefined
+                    this.time_start =true
+                    this.startTimer()
+                    this.border = !this.border
                 } else {
                     this.teamAct = team
                     this.ads = true
+                    this.time_start = false
+                    this.stopTimer()
                 }
             },
             addPoint() {
+                 this.onclick=undefined;
                 if (this.teamAct != undefined) {
                     if (this.success == false) {
                         if (this.current_answer == undefined) {
@@ -247,6 +384,7 @@
                                 this.playsound()
                             } else {
                                 this.tinker = false
+                                this.playSoundError()
                                 this.question_data[this.index].answer.splice(this.ind, 1)
                             }
                         } else {
@@ -268,6 +406,7 @@
                                     this.playsound()
                                 } else {
                                     this.tinker = false
+                                    this.playSoundError()
                                     this.question_data[this.index].answer.splice(this.ind, 1)
                                 }
                             }
@@ -280,7 +419,17 @@
 
                 return restart;
             },
-        }
+            chongoi(){
+                  window.location.href = "/getallpackge"
+            }
+        },
+        // watch:{
+        //     totalTime: function(){
+        //         if(this.totalTime == 0){
+
+        //         }
+        //     }
+        // }
     }
 </script>
 
@@ -294,4 +443,18 @@
         clear: both;
         background-color: white;
     }
+    .ind--0 {
+        background-color: yellow;
+        color:blue;
+        font-weight: bold;
+    }
+    
+    #seconds {
+  font-size: 55px;
+  line-height: 1;
+  font-weight: bold;
+}
+.boder{
+    border:6px #F1C40F solid;
+}
 </style>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Package;
+use App\Answer;
+use App\Question;
 
 class PackageController extends Controller
 {
@@ -30,6 +32,8 @@ class PackageController extends Controller
 
     }
     public function delete($id){
+        Answer::where('package_id', $id)->delete();
+        Question::where('package_id', $id)->delete();
         Package::find($id)->delete();
         return response()->json([
             'message'=>'thành công'

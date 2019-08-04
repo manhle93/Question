@@ -17,4 +17,8 @@ class PlayController extends Controller
             'result' => $package,
         ],200);
     }
+    public function getAllPackage(){
+        $package=Package::query()->get();
+        return view('resetgame');
+    }
 }

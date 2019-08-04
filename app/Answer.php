@@ -9,7 +9,8 @@ class Answer extends Model
     protected $fillable = [
         'name',
         'question_id',
-        'dap_an'
+        'dap_an',
+        'package_id'
 
     ];
     public function question() {

@@ -1,16 +1,6 @@
 <template>
     <div class="full-width">
-        <div id="welcome" class="full-width" v-if="this.start == false ">
-            <div style="width: 100%; height: 40%; background-image: url('/img/panel.JPG'); background-size: 50% 100%; background-repeat: no-repeat;background-position: center; "></div>
-            <div style="width: 100%; height: 60%;background-color: #1d68a7;padding-top: 30px;">
-                <div id="start" style="margin-left: 45%; border-radius: 5px; width: 150px;height:70px;cursor: pointer;">
-                    <button style="width:150px;height:70px;font-size: 23px;font-weight: bold;font-family:'Times New Roman'" @click="startGame" type="button" class="btn btn-danger" >BẮT ĐẦU</button>
-
-<!--                    <div style="color: yellow; font-size: 30px;text-align: center;margin-top: 18px;" @click="startGame">Bắt Đầu</div>-->
-                </div>
-            </div>
-        </div>
-        <div class="full-width" v-if="this.start == true && this.play == false">
+        <div class="full-width">
             <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;" >
                 <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
                 <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;" >GÓI CÂU HỎI</h4>
@@ -43,16 +33,14 @@
         },
 
         mounted: function() {
-
+            axios.get('/getpackge')
+                .then(res=>{
+                    this.package= res.data.result
+                    this.start = true;
+                });
         },
         methods: {
-            startGame(){
-                axios.get('/getpackge')
-                    .then(res=>{
-                        this.package= res.data.result
-                        this.start = true;
-                    });
-            },
+
             selectPakage(id){
                 window.location.href = "/request/"+id
             }

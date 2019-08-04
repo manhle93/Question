@@ -26,8 +26,9 @@ Vue.component('add-question', require('./components/AddQuestion.vue').default);
 Vue.component('show-question', require('./components/ShowQuestion.vue').default);
 
 
-// Vue.component('game-play', require('./components/game.vue').default);
-// Vue.component('game-request', require('./components/resquest.vue').default);
+Vue.component('game-play', require('./components/game.vue').default);
+Vue.component('game-reset', require('./components/gamereset.vue').default);
+Vue.component('game-request', require('./components/resquest.vue').default);
 
 
 

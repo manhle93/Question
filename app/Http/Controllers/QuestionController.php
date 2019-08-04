@@ -29,6 +29,7 @@ class QuestionController extends Controller
                 $item['dap_an'] = false;
             }
             Answer::query()->create([
+                'package_id'=>$data['package_id'],
                 'name' => $item['name'],
                 'dap_an' => $item['dap_an'],
                 'question_id' => $question->id
@@ -40,12 +41,19 @@ class QuestionController extends Controller
     }
     public function show($id){
      $question = Question::where('package_id', $id)->get();
-     return view('showquestion', ['question'=>$question]);
+     return view('showquestion', ['question'=>$question, 'package_id'=>$id]);
     }
     public function showAnswer(){
         $answer = Answer::query()->get();
         return response()->json([
             'resuft'=>$answer,
+        ]);
+    }
+    public function delete($id){
+        Answer::where('question_id', $id)->delete();
+        Question::find($id)->delete();
+        return response()->json([
+            'message'=>'thành công'
         ]);
     }
 }
