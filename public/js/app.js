@@ -2129,6 +2129,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2137,7 +2147,8 @@ __webpack_require__.r(__webpack_exports__);
       start: false,
       play: false,
       isLoading: false,
-      "package": undefined
+      "package": undefined,
+      turn_id: undefined
     };
   },
   watch: {},
@@ -2147,12 +2158,14 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/getpackge').then(function (res) {
-        _this["package"] = res.data.result;
+        console.log(res.data.result);
+        _this["package"] = res.data.result[1];
+        _this.turn_id = res.data.result[0].id;
         _this.start = true;
       });
     },
     selectPakage: function selectPakage(id) {
-      window.location.href = "/request/" + id;
+      window.location.href = "/request/" + id + '/' + this.turn_id;
     }
   }
 });
@@ -2192,6 +2205,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['packages', 'turn', 'totalpoint'],
   data: function data() {
     return {
       start: false,
@@ -2202,16 +2216,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {},
   mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/getpackge').then(function (res) {
-      _this["package"] = res.data.result;
-      _this.start = true;
-    });
+    this["package"] = this.packages;
   },
   methods: {
     selectPakage: function selectPakage(id) {
-      window.location.href = "/request/" + id;
+      window.location.href = "/request/" + id + '/' + this.turn;
     }
   }
 });
@@ -2447,6 +2456,53 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2455,7 +2511,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_circular_count_down_timer__WE
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default.a, 'vac');
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['question'],
+  props: ['question', 'old_id'],
   name: "question",
   data: function data() {
     return _defineProperty({
@@ -2491,6 +2547,12 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
   mounted: function mounted() {
     var _this = this;
 
+    axios.get('/gettotalpoint/' + this.old_id).then(function (res) {
+      var data = res.data.result;
+      _this.team1 = data.total_point1;
+      _this.team2 = data.total_point2;
+      _this.team3 = data.total_point3;
+    });
     this.question_data = this.question;
     this.timer = setInterval(function () {
       return _this.countdown();
@@ -2685,7 +2747,15 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       return restart;
     },
     chongoi: function chongoi() {
-      window.location.href = "/getallpackge";
+      var _this3 = this;
+
+      axios.post('/updatepoint/' + this.old_id, {
+        point1: this.team1,
+        point2: this.team2,
+        point3: this.team3
+      }).then(function (res) {
+        window.location.href = "/getallpackge/" + _this3.old_id;
+      });
     }
   } // watch:{
   //     totalTime: function(){
@@ -7221,7 +7291,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.full-width{\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap:20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest{\n    width: 110px;\n    height: 60px;\n    border: 1px solid red;\n    border-radius: 5px;\n    background-color: #1901bbc2;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
+exports.push([module.i, "\n.full-width {\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest {\n    width: 110px;\n    height: 60px;\n    border: 1px solid red;\n    border-radius: 5px;\n    background-color: #1901bbc2;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
 
 // exports
 
@@ -7259,7 +7329,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n        display: grid;\n        grid-column-gap: 50px;\n        grid-row-gap: 10px;\n        grid-template-columns: auto auto;\n        padding: 10px;\n        clear: both;\n        background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n        background-color: yellow;\n        color:blue;\n        font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n  font-size: 55px;\n  line-height: 1;\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6]{\n    border:6px #F1C40F solid;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-color: yellow;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 6px #F1C40F solid;\n}\n", ""]);
 
 // exports
 
@@ -43035,7 +43105,7 @@ var render = function() {
                       attrs: { type: "button" },
                       on: { click: _vm.startGame }
                     },
-                    [_vm._v("BẮT ĐẦU")]
+                    [_vm._v("BẮT ĐẦU\n                ")]
                   )
                 ]
               )
@@ -43083,7 +43153,7 @@ var render = function() {
                     color: "white"
                   }
                 },
-                [_vm._v("GÓI CÂU HỎI")]
+                [_vm._v("\n                GÓI CÂU HỎI")]
               )
             ],
             1
@@ -43134,7 +43204,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v(_vm._s(index + 1))]
+                        [_vm._v(_vm._s(item.name) + "\n                    ")]
                       )
                     }),
                     0
@@ -43405,7 +43475,12 @@ var render = function() {
                                     "font-weight": "bold"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team1))]
+                                [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(this.team1)
+                                  )
+                                ]
                               )
                             ]
                           ),
@@ -43466,7 +43541,12 @@ var render = function() {
                                     "font-weight": "bold"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team2))]
+                                [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(this.team2)
+                                  )
+                                ]
                               )
                             ]
                           ),
@@ -43527,7 +43607,12 @@ var render = function() {
                                     "font-weight": "bold"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team3))]
+                                [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(this.team3)
+                                  )
+                                ]
                               )
                             ]
                           ),
@@ -43613,7 +43698,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "HỘI THI AN TOÀN VỆ SINH VIÊN TOÀN QUỐC NGÀNH XÂY DỰNG"
+                                "HỘI THI AN TOÀN VỆ SINH VIÊN TOÀN QUỐC NGÀNH XÂY DỰNG\n                        "
                               )
                             ]
                           ),
@@ -43640,7 +43725,13 @@ var render = function() {
                                           "font-weight": "bold"
                                         }
                                       },
-                                      [_vm._v("Câu " + _vm._s(index + 1))]
+                                      [
+                                        _vm._v(
+                                          "Câu " +
+                                            _vm._s(index + 1) +
+                                            "\n                            "
+                                        )
+                                      ]
                                     ),
                                     _vm._v(" "),
                                     _c(
@@ -43704,7 +43795,7 @@ var render = function() {
                                     border: "#1A5276 solid 4px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
-                                    "font-size": "22px"
+                                    "font-size": "1.5vb"
                                   },
                                   attrs: { type: "button" },
                                   on: {
@@ -43798,7 +43889,11 @@ var render = function() {
                                                       "font-weight": "bold"
                                                     }
                                                   },
-                                                  [_vm._v("KHÔNG CHÍNH XÁC")]
+                                                  [
+                                                    _vm._v(
+                                                      "KHÔNG CHÍNH\n                                        XÁC"
+                                                    )
+                                                  ]
                                                 ),
                                                 _c("p"),
                                                 _vm._v(" "),
@@ -43878,7 +43973,11 @@ var render = function() {
                                                       "font-weight": "bold"
                                                     }
                                                   },
-                                                  [_vm._v("ĐÁP ÁN CHÍNH XÁC")]
+                                                  [
+                                                    _vm._v(
+                                                      "ĐÁP ÁN CHÍNH\n                                        XÁC"
+                                                    )
+                                                  ]
                                                 ),
                                                 _c("p"),
                                                 _vm._v(" "),
@@ -44013,7 +44112,7 @@ var render = function() {
                           color: "white"
                         }
                       },
-                      [_vm._v("KẾT QUẢ")]
+                      [_vm._v("\n                        KẾT QUẢ")]
                     )
                   ],
                   1
@@ -44061,7 +44160,11 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v("ĐỘI I")]
+                                [
+                                  _vm._v(
+                                    "\n                                    ĐỘI I"
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44074,7 +44177,12 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team1))]
+                                [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(this.team1)
+                                  )
+                                ]
                               )
                             ]
                           ),
@@ -44102,7 +44210,11 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v("ĐỘI II")]
+                                [
+                                  _vm._v(
+                                    "\n                                    ĐỘI II"
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44115,7 +44227,12 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team2))]
+                                [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(this.team2)
+                                  )
+                                ]
                               )
                             ]
                           ),
@@ -44143,7 +44260,11 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v("ĐỘI III")]
+                                [
+                                  _vm._v(
+                                    "\n                                    ĐỘI III"
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44156,7 +44277,12 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [_vm._v(_vm._s(this.team3))]
+                                [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(this.team3)
+                                  )
+                                ]
                               )
                             ]
                           )
@@ -44183,7 +44309,7 @@ var render = function() {
                               attrs: { type: "button" },
                               on: { click: _vm.chongoi }
                             },
-                            [_vm._v("TIẾP TỤC")]
+                            [_vm._v("TIẾP TỤC\n                            ")]
                           )
                         ])
                       ]
@@ -44236,7 +44362,7 @@ var staticRenderFns = [
               color: "#1d68a7"
             }
           },
-          [_vm._v("CÔNG ĐOÀN XÂY DỰNG VIỆT NAM")]
+          [_vm._v("CÔNG\n                            ĐOÀN XÂY DỰNG VIỆT NAM")]
         )
       ]
     )
@@ -57149,8 +57275,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Question\Question\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Question\Question\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Question\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Question\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
