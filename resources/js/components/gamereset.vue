@@ -19,8 +19,8 @@
     import 'bootstrap/dist/css/bootstrap.min.css'
     import 'bootstrap/dist/js/bootstrap.min'
     export default {
+        props: ['packages','turn','totalpoint'],
         data: function() {
-
             return {
                 start: false,
                 play: false,
@@ -33,16 +33,12 @@
         },
 
         mounted: function() {
-            axios.get('/getpackge')
-                .then(res=>{
-                    this.package= res.data.result
-                    this.start = true;
-                });
+            this.package= this.packages
         },
         methods: {
 
             selectPakage(id){
-                window.location.href = "/request/"+id
+                window.location.href = "/request/"+id +'/'+ this.turn
             }
         }
     };

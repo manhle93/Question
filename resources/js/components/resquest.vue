@@ -2,25 +2,37 @@
     <div style="height: 100%; width: 100%; overflow-y:hidden;background-color: #FCF3CF;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true" >
             <div class="full-width">
-                <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;" >
-                    <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
-                    <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;" >KẾT QUẢ</h4>
+                <div
+                    style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;">
+                    <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
+                         style="width: 150px; height: 120px; padding-bottom: 25px">
+                    <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;">
+                        KẾT QUẢ</h4>
                 </div>
                 <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
                     <div class="col-md-10" style=" margin: auto">
                         <div class="row">
-                        <div style="background-color: blue;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
-                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI I</p>
-                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team1}}</p>
-                        </div>
-                        <div style="background-color: green;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
-                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI II</p>
-                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team2}}</p>
-                        </div>
-                        <div style="background-color: red; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
-                         <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">ĐỘI III</p>
-                        <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">{{this.team3}}</p>
-                        </div>
+                            <div
+                                style="background-color: blue;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
+                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                    ĐỘI I</p>
+                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                    {{this.team1}}</p>
+                            </div>
+                            <div
+                                style="background-color: green;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                    ĐỘI II</p>
+                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                    {{this.team2}}</p>
+                            </div>
+                            <div
+                                style="background-color: red; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                    ĐỘI III</p>
+                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                    {{this.team3}}</p>
+                            </div>
                         </div>
                         <br><br><br><br>
                         <div class="row"><button type="button" style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;" class="btn btn-dark" @click="chongoi">TIẾP TỤC </button></div>
@@ -28,7 +40,7 @@
                         <div class="row"><button type="button" style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;" class="btn btn-dark" @click="chongoi">LƯỢT CHƠI MỚI</button></div>
                     </div>
                 </div>
-          </div>
+            </div>
         </div>
         <div v-if="hidden== false" style="height: 100%; width: 100%; overflow-y:hidden;background-color: #240456;  overflow-x:hidden;">
             <div class="row">
@@ -168,7 +180,7 @@
     Vue.use(vueAwesomeCountdown, 'vac')
 
     export default {
-        props: ['question'],
+        props: ['question', 'old_id'],
         name: "question",
         data: function () {
             return {
@@ -204,61 +216,68 @@
             this.answer = undefined
         },
         mounted() {
+            axios.get('/gettotalpoint/'+this.old_id)
+                .then(res => {
+                    var data = res.data.result;
+                    this.team1 = data.total_point1;
+                    this.team2 = data.total_point2;
+                    this.team3 = data.total_point3;
+                });
             this.question_data = this.question
             this.timer = setInterval(() => this.countdown(), 1000);
             this.resetButton = true;
-            this.question_data.forEach(el=>{
-                el.answer.forEach((item, index, arr)=>{
-                    if(index==0){
-                       arr[index].phuong_an="A"
+            this.question_data.forEach(el => {
+                el.answer.forEach((item, index, arr) => {
+                    if (index == 0) {
+                        arr[index].phuong_an = "A"
                     }
-                     if(index==1){
-                       arr[index].phuong_an="B"
+                    if (index == 1) {
+                        arr[index].phuong_an = "B"
                     }
-                     if(index==2){
-                       arr[index].phuong_an="C"
+                    if (index == 2) {
+                        arr[index].phuong_an = "C"
                     }
-                     if(index==3){
-                       arr[index].phuong_an="D"
+                    if (index == 3) {
+                        arr[index].phuong_an = "D"
                     }
                 })
             })
         },
         computed: {
-            minutes: function() {
-            const minutes = Math.floor(this.totalTime / 60);
-            return this.padTime(minutes);
+            minutes: function () {
+                const minutes = Math.floor(this.totalTime / 60);
+                return this.padTime(minutes);
             },
-            seconds: function() {
-            const seconds = this.totalTime - this.minutes * 60;
-            return this.padTime(seconds);
+            seconds: function () {
+                const seconds = this.totalTime - this.minutes * 60;
+                return this.padTime(seconds);
             }
         },
         methods: {
-            startTimer: function() {
+            startTimer: function () {
                 this.timer = setInterval(() => this.countdown(), 1000);
                 this.resetButton = true;
             },
-            stopTimer: function() {
+            stopTimer: function () {
                 clearInterval(this.timer);
                 this.timer = null;
                 this.resetButton = true;
             },
-            resetTimer: function() {
+            resetTimer: function () {
                 this.totalTime = 60;
                 clearInterval(this.timer);
                 this.timer = null;
                 this.resetButton = false;
             },
-            padTime: function(time) {
+            padTime: function (time) {
                 return (time < 10 ? "0" : "") + time;
             },
-            countdown: function() {
-            if (this.totalTime >= 1) {
-                this.totalTime--;
-            } else {
-                this.totalTime = 0;
-                this.resetTimer();
+            countdown: function () {
+                if (this.totalTime >= 1) {
+                    this.totalTime--;
+                } else {
+                    this.totalTime = 0;
+                    this.resetTimer();
                 }
             },
             addAnswer(answer, ind, index) {
@@ -271,7 +290,7 @@
                 this.mauvang = !this.mauvang
             },
             next() {
-                this.onclick=undefined
+                this.onclick = undefined
                 this.answer = undefined
                 this.ind = undefined
                 this.index = undefined
@@ -282,8 +301,7 @@
                     if (this.turn = this.question_data.length - 1) {
                         this.continute = " KẾT THÚC"
                     }
-                }
-                else{
+                } else {
                     this.hidden = true
                 }
                 this.totalTime = 60
@@ -297,14 +315,14 @@
                 var audio = new Audio('/sound/votay.mp3') // path to file
                 audio.play()
             },
-            playSoundError(){
+            playSoundError() {
                 var audio = new Audio('/sound/sai.mp3') // path to file
                 audio.play()
             },
             activePoint(team) {
                 if (this.teamAct == team && this.teamAct != undefined) {
                     this.teamAct = undefined
-                    this.time_start =true
+                    this.time_start = true
                     this.startTimer()
                     this.border = !this.border
                 } else {
@@ -315,7 +333,7 @@
                 }
             },
             addPoint() {
-                 this.onclick=undefined;
+                this.onclick = undefined;
                 if (this.teamAct != undefined) {
                     if (this.success == false) {
                         if (this.current_answer == undefined) {
@@ -373,10 +391,14 @@
 
                 return restart;
             },
-            chongoi(){
-                 if(confirm("Điểm số 3 đội đưa về 0")){
-                 window.location.href = "/getallpackge"
-                 }
+            chongoi() {
+                axios.post('/updatepoint/'+this.old_id, {
+                    point1: this.team1,
+                    point2:this.team2,
+                    point3:this.team3
+                }).then(res=>{
+                    window.location.href = "/getallpackge/"+ this.old_id
+                })
             }
         },
     }
@@ -392,12 +414,13 @@
         clear: both;
         background-color: white;
     }
+
     .ind--0 {
         background-color:#E19C13;
         color:blue;
         font-weight: bold;
     }
-    
+
     #seconds {
   font-size: 55px;
   line-height: 1;

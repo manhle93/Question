@@ -34,7 +34,9 @@ Route::get('play','PlayController@index')->name('game.play');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('request/{id}', 'GetRequestController@getRequest')->name('request');
+Route::get('request/{id}/{turnid}', 'GetRequestController@getRequest')->name('request');
 Route::get('getpackge','PlayController@getPackage')->name('get.package');
-Route::get('getallpackge','PlayController@getAllPackage')->name('get.packageall');
+Route::get('getallpackge/{id}','PlayController@getAllPackage')->name('get.packageall');
+Route::post('updatepoint/{id}','PlayController@UpdatePackage')->name('update.packageall');
+Route::get('gettotalpoint/{id}','PlayController@getTotalPoint')->name('ge.total');
 
