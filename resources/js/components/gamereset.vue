@@ -8,7 +8,7 @@
             <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
                 <div style="border-radius: 20px; margin-top: 10px; width: 50%;margin-left: 25%;" class="row" >
                     <div class="col-md-12 grid-container" style="align: center; background-color: white;border-radius: 20px; border: 5px solid #F10F0F">
-                        <div class="grid-item package-quest" v-for="(item,index) in package" @click="selectPakage(item.id)">{{index+1}}</div>
+                        <div class="grid-item package-quest" v-for="(item,index) in package" @click="selectPakage(item.id)">{{item.name}}</div>
                     </div>
                 </div>
             </div>
