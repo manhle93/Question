@@ -18,7 +18,7 @@
             <th style="width: 20%">Đáp án đúng</th>
           </tr>
         </thead>
-         <tbody v-if="answer.question_id == question.id" v-for="answer in answers">
+         <tbody v-if="answer.question_id == question.id" v-for="(answer, index) in answers">
              <td>A</td>
           <td>{{answer.name}}</td>
           <td>{{answer.dap_an}}</td>

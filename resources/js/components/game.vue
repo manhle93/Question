@@ -12,7 +12,7 @@
         </div>
         <div class="full-width" v-if="this.start == true && this.play == false">
             <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;" >
-                <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
+                <img src="anh/logovuong.gif" style="width: 150px; height: 140px; padding-bottom: 25px">
                 <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;" >GÓI CÂU HỎI</h4>
             </div>
             <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">

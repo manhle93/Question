@@ -2397,56 +2397,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -2459,6 +2409,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
   name: "question",
   data: function data() {
     return _defineProperty({
+      isLoading: true,
       onclick: undefined,
       timer: null,
       resetButton: false,
@@ -2574,6 +2525,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.ind = undefined;
       this.index = undefined;
       this.success = false;
+      this.isLoading = true;
 
       if (this.turn < this.question_data.length - 1) {
         this.turn = this.turn + 1;
@@ -2642,6 +2594,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
               this.success = true;
               this.question_data[this.index].answer = [this.answer];
               this.playsound();
+              this.isLoading = false;
             } else {
               this.tinker = false;
               this.playSoundError();
@@ -2669,6 +2622,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
                 this.success = true;
                 this.question_data[this.index].answer = [this.answer];
                 this.playsound();
+                this.isLoading = false;
               } else {
                 this.tinker = false;
                 this.playSoundError();
@@ -2685,15 +2639,11 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       return restart;
     },
     chongoi: function chongoi() {
-      window.location.href = "/getallpackge";
+      if (confirm("Điểm số 3 đội đưa về 0")) {
+        window.location.href = "/getallpackge";
+      }
     }
-  } // watch:{
-  //     totalTime: function(){
-  //         if(this.totalTime == 0){
-  //         }
-  //     }
-  // }
-
+  }
 });
 
 /***/ }),
@@ -7259,7 +7209,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n        display: grid;\n        grid-column-gap: 50px;\n        grid-row-gap: 10px;\n        grid-template-columns: auto auto;\n        padding: 10px;\n        clear: both;\n        background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n        background-color: yellow;\n        color:blue;\n        font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n  font-size: 55px;\n  line-height: 1;\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6]{\n    border:6px #F1C40F solid;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n        display: grid;\n        grid-column-gap: 50px;\n        grid-row-gap: 10px;\n        grid-template-columns: auto auto;\n        padding: 10px;\n        clear: both;\n        background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n        background-color:#E19C13;\n        color:blue;\n        font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n  font-size: 55px;\n  line-height: 1;\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6]\n{\n    border: 4px white solid\n}\n", ""]);
 
 // exports
 
@@ -42921,7 +42871,7 @@ var render = function() {
               [
                 _vm._m(0, true),
                 _vm._v(" "),
-                _vm._l(_vm.answers, function(answer) {
+                _vm._l(_vm.answers, function(answer, index) {
                   return answer.question_id == question.id
                     ? _c("tbody", [
                         _c("td", [_vm._v("A")]),
@@ -43063,13 +43013,10 @@ var render = function() {
               _c("img", {
                 staticStyle: {
                   width: "150px",
-                  height: "120px",
+                  height: "140px",
                   "padding-bottom": "25px"
                 },
-                attrs: {
-                  src:
-                    "https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
-                }
+                attrs: { src: "anh/logovuong.gif" }
               }),
               _vm._v(" "),
               _c(
@@ -43300,670 +43247,11 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-color": "#FCF3CF"
+        "background-color": "#FCF3CF",
+        "overflow-x": "hidden"
       }
     },
     [
-      _vm.hidden == false
-        ? _c(
-            "div",
-            {
-              staticStyle: {
-                height: "100%",
-                width: "100%",
-                "overflow-y": "hidden",
-                "background-color": "#FCF3CF"
-              }
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticStyle: {
-                    width: "100%",
-                    height: "50%",
-                    "padding-left": "7%",
-                    "padding-right": "7%",
-                    "padding-top": "2%"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "point",
-                      staticStyle: {
-                        width: "100%",
-                        height: "15%",
-                        "margin-bottom": "10%"
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticStyle: {
-                            width: "60%",
-                            height: "100%",
-                            float: "left"
-                          }
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              class: { boder: _vm.teamAct == 1 },
-                              staticStyle: {
-                                "background-color": "#1d68a7",
-                                width: "20%",
-                                height: "130px",
-                                "margin-left": "5%",
-                                "border-radius": "7px",
-                                float: "left",
-                                color: "white",
-                                "text-align": "center",
-                                "padding-top": "10px",
-                                "font-size": "20px"
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.activePoint(1)
-                                }
-                              }
-                            },
-                            [
-                              _vm.teamAct == 1
-                                ? _c("div", {
-                                    staticStyle: {
-                                      width: "10px",
-                                      height: "10px",
-                                      "background-color": "yellow",
-                                      "border-radius": "50%",
-                                      margin: "auto"
-                                    }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "22px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v("ĐỘI I")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "40px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v(_vm._s(this.team1))]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              class: { boder: _vm.teamAct == 2 },
-                              staticStyle: {
-                                "background-color": "green",
-                                width: "20%",
-                                height: "130px",
-                                "margin-left": "2%",
-                                "border-radius": "7px",
-                                float: "left",
-                                color: "white",
-                                "text-align": "center",
-                                "padding-top": "10px",
-                                "font-size": "20px"
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.activePoint(2)
-                                }
-                              }
-                            },
-                            [
-                              _vm.teamAct == 2
-                                ? _c("div", {
-                                    staticStyle: {
-                                      width: "10px",
-                                      height: "10px",
-                                      "background-color": "yellow",
-                                      "border-radius": "50%",
-                                      margin: "auto"
-                                    }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "22px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v("ĐỘI II")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "40px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v(_vm._s(this.team2))]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              class: { boder: _vm.teamAct == 3 },
-                              staticStyle: {
-                                "background-color": "red",
-                                width: "20%",
-                                height: "130px",
-                                "margin-left": "2%",
-                                "border-radius": "7px",
-                                float: "left",
-                                color: "white",
-                                "text-align": "center",
-                                "padding-top": "10px",
-                                "font-size": "20px"
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.activePoint(3)
-                                }
-                              }
-                            },
-                            [
-                              _vm.teamAct == 3
-                                ? _c("div", {
-                                    staticStyle: {
-                                      width: "10px",
-                                      height: "10px",
-                                      "background-color": "yellow",
-                                      "border-radius": "50%",
-                                      margin: "auto"
-                                    }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "22px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v("ĐỘI III")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "40px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v(_vm._s(this.team3))]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticStyle: {
-                                border: "5px solid red",
-                                width: "150px",
-                                height: "150px",
-                                "text-align": "center",
-                                "padding-top": "4px",
-                                "-moz-border-radius": "200px",
-                                "-webkit-border-radius": "200px",
-                                "border-radius": "100px",
-                                float: "left",
-                                "margin-left": "4%"
-                              }
-                            },
-                            [
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    "font-size": "18px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold"
-                                  }
-                                },
-                                [_vm._v("Time")]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { attrs: { id: "seconds" } }, [
-                                _vm._v(_vm._s(_vm.totalTime))
-                              ])
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _vm._m(0)
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "request",
-                      staticStyle: {
-                        width: "100%",
-                        height: "85%",
-                        padding: "1% 1%",
-                        border: "10px White double",
-                        "border-radius": "40px",
-                        "background-color": "rgba(0, 123, 255, 0.75)"
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticStyle: {
-                            width: "100%",
-                            height: "100%",
-                            "border-radius": "20px",
-                            "background-color": "#1F618D"
-                          }
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning",
-                              staticStyle: {
-                                width: "100%",
-                                "border-radius": "20px",
-                                "font-size": "20px",
-                                "font-family": "'time new roman'",
-                                "font-weight": "bold"
-                              },
-                              attrs: { type: "button" }
-                            },
-                            [
-                              _vm._v(
-                                "HỘI THI AN TOÀN VỆ SINH VIÊN TOÀN QUỐC NGÀNH XÂY DỰNG"
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _vm._l(_vm.question_data, function(item, index) {
-                            return index == _vm.turn
-                              ? _c(
-                                  "div",
-                                  {
-                                    staticStyle: {
-                                      color: "white",
-                                      "font-size": "25px",
-                                      "margin-left": "15px",
-                                      padding: "2% 2%"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticStyle: {
-                                          color: "yellow",
-                                          "font-family": "'time new roman'",
-                                          "font-weight": "bold"
-                                        }
-                                      },
-                                      [_vm._v("Câu " + _vm._s(index + 1))]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "p",
-                                      {
-                                        staticStyle: {
-                                          "font-family": "'time new roman'"
-                                        }
-                                      },
-                                      [_vm._v(_vm._s(item.name))]
-                                    )
-                                  ]
-                                )
-                              : _vm._e()
-                          })
-                        ],
-                        2
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticStyle: {
-                    width: "100%",
-                    height: "50%",
-                    "margin-top": "10%",
-                    "padding-left": "10%",
-                    "padding-bottom": "5%",
-                    "border-top": "5px #b3d7ff solid",
-                    "border-radius": "30px"
-                  }
-                },
-                [
-                  _vm._l(_vm.question_data, function(item, index) {
-                    return index == _vm.turn
-                      ? _c(
-                          "div",
-                          {
-                            staticClass: "grid-container",
-                            staticStyle: {
-                              width: "90%",
-                              float: "left",
-                              "background-color": "#FCF3CF"
-                            }
-                          },
-                          [
-                            _vm._l(item.answer, function(data, ind) {
-                              return _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary",
-                                  class: { "ind--0": ind === _vm.onclick },
-                                  staticStyle: {
-                                    width: "450px",
-                                    height: "85px",
-                                    "border-radius": "40px",
-                                    border: "#1A5276 solid 4px",
-                                    "font-family": "'time new roman'",
-                                    "font-weight": "bold",
-                                    "font-size": "22px"
-                                  },
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.addAnswer(data, ind, index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _c("p", [
-                                    _c(
-                                      "span",
-                                      {
-                                        staticStyle: {
-                                          color: "red",
-                                          "margin-left": "20px",
-                                          float: "left",
-                                          "font-weight": "bold",
-                                          "font-size": "28px"
-                                        }
-                                      },
-                                      [_vm._v(_vm._s(data.phuong_an) + ":")]
-                                    ),
-                                    _c("span", [_vm._v(_vm._s(data.name))])
-                                  ])
-                                ]
-                              )
-                            }),
-                            _vm._v(" "),
-                            _vm.tinker == false && _vm.teamAct != undefined
-                              ? _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal fade",
-                                    attrs: {
-                                      id: "exampleModalCenter",
-                                      tabindex: "-1",
-                                      role: "dialog",
-                                      "aria-labelledby":
-                                        "exampleModalCenterTitle",
-                                      "aria-hidden": "true"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "modal-dialog modal-dialog-centered",
-                                        attrs: { role: "document" }
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-content" },
-                                          [
-                                            _vm._m(1, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              {
-                                                staticClass: "modal-body",
-                                                staticStyle: {
-                                                  width: "500px",
-                                                  height: "500px",
-                                                  "font-size": "30px",
-                                                  "text-align": "center"
-                                                }
-                                              },
-                                              [
-                                                _c("img", {
-                                                  staticStyle: {
-                                                    width: "350px",
-                                                    height: "300px"
-                                                  },
-                                                  attrs: {
-                                                    src:
-                                                      "https://thumbs.gfycat.com/YoungPinkFirecrest-size_restricted.gif"
-                                                  }
-                                                }),
-                                                _vm._v(" "),
-                                                _c("br"),
-                                                _vm._v(" "),
-                                                _c("p"),
-                                                _c(
-                                                  "h2",
-                                                  {
-                                                    staticStyle: {
-                                                      "font-family":
-                                                        "'time new roman'",
-                                                      "font-weight": "bold"
-                                                    }
-                                                  },
-                                                  [_vm._v("KHÔNG CHÍNH XÁC")]
-                                                ),
-                                                _c("p"),
-                                                _vm._v(" "),
-                                                _c("P", [_vm._v("+ 0")])
-                                              ],
-                                              1
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _vm.tinker == true && _vm.teamAct != undefined
-                              ? _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal fade",
-                                    attrs: {
-                                      id: "exampleModalCenter",
-                                      tabindex: "-1",
-                                      role: "dialog",
-                                      "aria-labelledby":
-                                        "exampleModalCenterTitle",
-                                      "aria-hidden": "true"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "modal-dialog modal-dialog-centered",
-                                        attrs: { role: "document" }
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-content" },
-                                          [
-                                            _vm._m(2, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              {
-                                                staticClass: "modal-body",
-                                                staticStyle: {
-                                                  width: "500px",
-                                                  height: "450px",
-                                                  "font-size": "30px",
-                                                  "text-align": "center"
-                                                }
-                                              },
-                                              [
-                                                _c("img", {
-                                                  staticStyle: {
-                                                    width: "350px",
-                                                    height: "300px"
-                                                  },
-                                                  attrs: {
-                                                    src:
-                                                      "https://cdn.dribbble.com/users/1238709/screenshots/4069900/success_celebration_800x600.gif"
-                                                  }
-                                                }),
-                                                _vm._v(" "),
-                                                _c("br"),
-                                                _vm._v(" "),
-                                                _c("p"),
-                                                _c(
-                                                  "h2",
-                                                  {
-                                                    staticStyle: {
-                                                      "font-family":
-                                                        "'time new roman'",
-                                                      "font-weight": "bold"
-                                                    }
-                                                  },
-                                                  [_vm._v("ĐÁP ÁN CHÍNH XÁC")]
-                                                ),
-                                                _c("p"),
-                                                _vm._v(" "),
-                                                _c("P", [_vm._v("+ 10")])
-                                              ],
-                                              1
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              : _vm._e()
-                          ],
-                          2
-                        )
-                      : _vm._e()
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticStyle: {
-                        width: "10%",
-                        float: "left",
-                        "margin-top": "5%"
-                      }
-                    },
-                    [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-success",
-                          staticStyle: {
-                            width: "120px",
-                            height: "50px",
-                            "margin-bottom": "20px",
-                            "font-weight": "bold",
-                            "font-family": "'time new roman'"
-                          },
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#exampleModalCenter"
-                          },
-                          on: { click: _vm.addPoint }
-                        },
-                        [
-                          _vm._v(
-                            "\n                        KẾT QUẢ\n                    "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger",
-                          staticStyle: {
-                            width: "120px",
-                            height: "50px",
-                            "font-weight": "bold",
-                            "font-family": "'time new roman'"
-                          },
-                          attrs: { type: "button" },
-                          on: { click: _vm.next }
-                        },
-                        [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(this.continute) +
-                              "\n                    "
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ],
-                2
-              )
-            ]
-          )
-        : _vm._e(),
-      _vm._v(" "),
       _vm.hidden == true
         ? _c(
             "div",
@@ -44183,7 +43471,29 @@ var render = function() {
                               attrs: { type: "button" },
                               on: { click: _vm.chongoi }
                             },
-                            [_vm._v("TIẾP TỤC")]
+                            [_vm._v("TIẾP TỤC ")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-dark",
+                              staticStyle: {
+                                margin: "auto",
+                                "font-size": "18px",
+                                height: "70px",
+                                width: "280px",
+                                "font-family": "'time new roman'",
+                                "font-weight": "bold"
+                              },
+                              attrs: { type: "button" },
+                              on: { click: _vm.chongoi }
+                            },
+                            [_vm._v("LƯỢT CHƠI MỚI")]
                           )
                         ])
                       ]
@@ -44191,6 +43501,734 @@ var render = function() {
                   ]
                 )
               ])
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.hidden == false
+        ? _c(
+            "div",
+            {
+              staticStyle: {
+                height: "100%",
+                width: "100%",
+                "overflow-y": "hidden",
+                "background-color": "#240456",
+                "overflow-x": "hidden"
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row", staticStyle: { "margin-top": "35px" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-3",
+                      staticStyle: {
+                        "border-right": "2px solid red",
+                        "border-top": "2px solid red"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticStyle: {
+                                width: "80px",
+                                height: "80px",
+                                border: "4px solid red",
+                                margin: "0px auto",
+                                "border-radius": "50%",
+                                "margin-right": "5px",
+                                "margin-left": "20px",
+                                "text-align": "center"
+                              }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: {
+                                    color: "white",
+                                    "margin-top": "16px",
+                                    "font-family": "'Tahoma'",
+                                    "font-weight": "bold",
+                                    "font-size": "30px"
+                                  }
+                                },
+                                [_vm._v(_vm._s(this.team1))]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              class: { boder: _vm.teamAct == 1 },
+                              staticStyle: {
+                                width: "150px",
+                                height: "60px",
+                                "background-color": "red",
+                                "margin-left": "0px",
+                                "margin-top": "10px",
+                                "text-align": "center",
+                                "font-family": "'Tahoma'",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                color: "white",
+                                "padding-top": "12px"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.activePoint(1)
+                                }
+                              }
+                            },
+                            [_vm._v("ĐỘI I")]
+                          ),
+                          _vm._v(" "),
+                          _vm.teamAct == 1
+                            ? _c("div", [
+                                _c("img", {
+                                  staticStyle: {
+                                    width: "50px",
+                                    height: "50px",
+                                    "margin-top": "15px",
+                                    "margin-left": "10px"
+                                  },
+                                  attrs: { src: "/anh/bell.png" }
+                                })
+                              ])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticStyle: {
+                                width: "80px",
+                                height: "80px",
+                                border: "4px solid green",
+                                margin: "0px auto",
+                                "border-radius": "50%",
+                                "margin-right": "5px",
+                                "margin-left": "20px",
+                                "text-align": "center"
+                              }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: {
+                                    color: "white",
+                                    "margin-top": "16px",
+                                    "font-family": "'Tahoma'",
+                                    "font-weight": "bold",
+                                    "font-size": "30px"
+                                  }
+                                },
+                                [_vm._v(_vm._s(this.team2))]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              class: { boder: _vm.teamAct == 2 },
+                              staticStyle: {
+                                width: "150px",
+                                height: "60px",
+                                "background-color": "green",
+                                "margin-left": "0px",
+                                "margin-top": "10px",
+                                "text-align": "center",
+                                "font-family": "'Tahoma'",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                color: "white",
+                                "padding-top": "12px"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.activePoint(2)
+                                }
+                              }
+                            },
+                            [_vm._v("ĐỘI II")]
+                          ),
+                          _vm._v(" "),
+                          _vm.teamAct == 2
+                            ? _c("div", [
+                                _c("img", {
+                                  staticStyle: {
+                                    width: "50px",
+                                    height: "50px",
+                                    "margin-top": "15px",
+                                    "margin-left": "10px"
+                                  },
+                                  attrs: { src: "/anh/bell.png" }
+                                })
+                              ])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticStyle: {
+                                width: "80px",
+                                height: "80px",
+                                border: "4px solid yellow",
+                                margin: "0px auto",
+                                "border-radius": "50%",
+                                "margin-right": "5px",
+                                "margin-left": "20px",
+                                "text-align": "center"
+                              }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: {
+                                    color: "white",
+                                    "margin-top": "16px",
+                                    "font-family": "'Tahoma'",
+                                    "font-weight": "bold",
+                                    "font-size": "30px"
+                                  }
+                                },
+                                [_vm._v(_vm._s(this.team3))]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              class: { boder: _vm.teamAct == 3 },
+                              staticStyle: {
+                                width: "150px",
+                                height: "60px",
+                                "background-color": "yellow",
+                                "margin-left": "0px",
+                                "margin-top": "10px",
+                                "text-align": "center",
+                                "font-family": "'Tahoma'",
+                                "font-weight": "bold",
+                                "font-size": "18px",
+                                color: "red",
+                                "padding-top": "12px"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.activePoint(3)
+                                }
+                              }
+                            },
+                            [_vm._v("ĐỘI III")]
+                          ),
+                          _vm._v(" "),
+                          _vm.teamAct == 3
+                            ? _c("div", [
+                                _c("img", {
+                                  staticStyle: {
+                                    width: "50px",
+                                    height: "50px",
+                                    "margin-top": "15px",
+                                    "margin-left": "10px"
+                                  },
+                                  attrs: { src: "/anh/bell.png" }
+                                })
+                              ])
+                            : _vm._e()
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          staticStyle: { margin: "auto", "margin-top": "50px" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticStyle: {
+                                width: "200px",
+                                height: "200",
+                                border: "6px solid red",
+                                margin: "auto",
+                                "border-radius": "50%",
+                                "text-align": "center"
+                              }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: {
+                                    color: "white",
+                                    "font-family": "'Tahoma'",
+                                    "font-weight": "bold",
+                                    "font-size": "18px",
+                                    "margin-top": "18px"
+                                  }
+                                },
+                                [_vm._v("Time")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticStyle: {
+                                    color: "white",
+                                    "font-family": "'Tahoma'",
+                                    "font-weight": "bold",
+                                    "font-size": "72px"
+                                  }
+                                },
+                                [_vm._v(_vm._s(_vm.totalTime))]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-9",
+                      staticStyle: { margin: "0 auto", "text-align": "center" }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _vm._m(2),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-md-12",
+                            staticStyle: {
+                              border: "4px solid yellow",
+                              width: "1000px",
+                              height: "200px",
+                              "border-radius": "40px",
+                              background:
+                                "linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6)"
+                            }
+                          },
+                          _vm._l(_vm.question_data, function(item, index) {
+                            return index == _vm.turn
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticStyle: {
+                                      color: "white",
+                                      "font-size": "25px"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticStyle: {
+                                          color: "yellow",
+                                          "font-family": "'time new roman'",
+                                          "font-weight": "bold"
+                                        }
+                                      },
+                                      [_vm._v("Câu " + _vm._s(index + 1))]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "p",
+                                      {
+                                        staticStyle: {
+                                          "font-family": "'time new roman'"
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(item.name))]
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          }),
+                          0
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-md-12",
+                            staticStyle: {
+                              height: "auto",
+                              "margin-top": "50px"
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              _vm._l(_vm.question_data, function(item, index) {
+                                return index == _vm.turn
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass: "grid-container",
+                                        staticStyle: {
+                                          width: "90%",
+                                          float: "left",
+                                          "background-color": "#240456"
+                                        }
+                                      },
+                                      [
+                                        _vm._l(item.answer, function(
+                                          data,
+                                          ind
+                                        ) {
+                                          return _c(
+                                            "button",
+                                            {
+                                              staticClass: "btn btn-primary",
+                                              class: {
+                                                "ind--0": ind === _vm.onclick
+                                              },
+                                              staticStyle: {
+                                                width: "450px",
+                                                height: "85px",
+                                                "border-radius": "40px",
+                                                border: "yellow solid 4px",
+                                                "font-family":
+                                                  "'time new roman'",
+                                                "font-weight": "bold"
+                                              },
+                                              attrs: { type: "button" },
+                                              on: {
+                                                click: function($event) {
+                                                  return _vm.addAnswer(
+                                                    data,
+                                                    ind,
+                                                    index
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("p", [
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    staticStyle: {
+                                                      color: "white",
+                                                      "margin-left": "20px",
+                                                      float: "left",
+                                                      "font-weight": "bold",
+                                                      "font-size": "28px"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(data.phuong_an) +
+                                                        ":"
+                                                    )
+                                                  ]
+                                                ),
+                                                _c("span", [
+                                                  _vm._v(_vm._s(data.name))
+                                                ])
+                                              ])
+                                            ]
+                                          )
+                                        }),
+                                        _vm._v(" "),
+                                        _vm.tinker == false &&
+                                        _vm.teamAct != undefined
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass: "modal fade",
+                                                attrs: {
+                                                  id: "exampleModalCenter",
+                                                  tabindex: "-1",
+                                                  role: "dialog",
+                                                  "aria-labelledby":
+                                                    "exampleModalCenterTitle",
+                                                  "aria-hidden": "true"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "modal-dialog modal-dialog-centered",
+                                                    attrs: { role: "document" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "modal-content"
+                                                      },
+                                                      [
+                                                        _vm._m(3, true),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "modal-body",
+                                                            staticStyle: {
+                                                              width: "500px",
+                                                              height: "500px",
+                                                              "font-size":
+                                                                "30px",
+                                                              "text-align":
+                                                                "center"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              staticStyle: {
+                                                                width: "350px",
+                                                                height: "300px"
+                                                              },
+                                                              attrs: {
+                                                                src:
+                                                                  "/anh/sai.gif"
+                                                              }
+                                                            }),
+                                                            _vm._v(" "),
+                                                            _c("br"),
+                                                            _vm._v(" "),
+                                                            _c("p"),
+                                                            _c(
+                                                              "h2",
+                                                              {
+                                                                staticStyle: {
+                                                                  "font-family":
+                                                                    "'time new roman'",
+                                                                  "font-weight":
+                                                                    "bold"
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "KHÔNG CHÍNH XÁC"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _c("p"),
+                                                            _vm._v(" "),
+                                                            _c("P", [
+                                                              _vm._v("+ 0")
+                                                            ])
+                                                          ],
+                                                          1
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        _vm.tinker == true &&
+                                        _vm.teamAct != undefined
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass: "modal fade",
+                                                attrs: {
+                                                  id: "exampleModalCenter",
+                                                  tabindex: "-1",
+                                                  role: "dialog",
+                                                  "aria-labelledby":
+                                                    "exampleModalCenterTitle",
+                                                  "aria-hidden": "true"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "modal-dialog modal-dialog-centered",
+                                                    attrs: { role: "document" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "modal-content"
+                                                      },
+                                                      [
+                                                        _vm._m(4, true),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "modal-body",
+                                                            staticStyle: {
+                                                              width: "500px",
+                                                              height: "450px",
+                                                              "font-size":
+                                                                "30px",
+                                                              "text-align":
+                                                                "center"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              staticStyle: {
+                                                                width: "350px",
+                                                                height: "300px"
+                                                              },
+                                                              attrs: {
+                                                                src:
+                                                                  "/anh/dung.gif"
+                                                              }
+                                                            }),
+                                                            _vm._v(" "),
+                                                            _c("br"),
+                                                            _vm._v(" "),
+                                                            _c("p"),
+                                                            _c(
+                                                              "h2",
+                                                              {
+                                                                staticStyle: {
+                                                                  "font-family":
+                                                                    "'time new roman'",
+                                                                  "font-weight":
+                                                                    "bold"
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "ĐÁP ÁN CHÍNH XÁC"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _c("p"),
+                                                            _vm._v(" "),
+                                                            _c("P", [
+                                                              _vm._v("+ 10")
+                                                            ])
+                                                          ],
+                                                          1
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e()
+                                      ],
+                                      2
+                                    )
+                                  : _vm._e()
+                              }),
+                              0
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-md-12",
+                            staticStyle: { "margin-top": "5px" }
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success",
+                                staticStyle: {
+                                  "font-weight": "bold",
+                                  "font-family": "'time new roman'"
+                                },
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModalCenter"
+                                },
+                                on: { click: _vm.addPoint }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            KẾT QUẢ\n                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger",
+                                staticStyle: {
+                                  "font-family": "'time new roman'"
+                                },
+                                attrs: {
+                                  type: "button",
+                                  disabled: _vm.isLoading
+                                },
+                                on: { click: _vm.next }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(this.continute) +
+                                    "\n                        "
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
             ]
           )
         : _vm._e()
@@ -44202,41 +44240,139 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm" }, [
+        _c(
+          "div",
+          { staticClass: "row", staticStyle: { "margin-top": "10px" } },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2",
+                staticStyle: { "text-align": "center", "padding-left": "50px" }
+              },
+              [
+                _c("div", {}, [
+                  _c("img", {
+                    staticStyle: { height: "90px", width: "100px" },
+                    attrs: { src: "/anh/logovuong.gif" }
+                  })
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-md-10",
+                staticStyle: { "margin-top": "15px", "padding-left": "70px" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticStyle: {
+                      "font-size": "20px",
+                      "font-family": "'Tahoma'",
+                      color: "yellow",
+                      "font-weight": "bold",
+                      "padding-bottom": "1px"
+                    }
+                  },
+                  [_vm._v("CÔNG ĐOÀN XÂY DỰNG VIỆT NAM ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticStyle: {
+                      "font-size": "20px",
+                      "font-family": "'time new roman'",
+                      color: "#797D7F",
+                      "font-weight": "bold"
+                    }
+                  },
+                  [_vm._v(" Vietnam National Union of Building Workers ")]
+                )
+              ]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm", staticStyle: { margin: "auto" } }, [
+        _c(
+          "div",
+          {
+            staticStyle: {
+              color: "yellow",
+              "font-family": "'Tahoma'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "22px"
+            }
+          },
+          [
+            _vm._v("HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI "),
+            _c("br"),
+            _vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG")
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
-        staticStyle: {
-          border: "0px solid red",
-          width: "460px",
-          height: "150px",
-          "text-align": "center",
-          float: "right"
-        }
+        staticClass: "row",
+        staticStyle: { margin: "0 auto", "margin-top": "15px" }
       },
       [
-        _c("img", {
-          staticStyle: {
-            width: "140px",
-            height: "120px",
-            "text-align": "center"
-          },
-          attrs: {
-            src:
-              "http://congdoandatto.org.vn/portals/0/AttachFiles/2019/5/13/2019_5_13_8_56_43_636933346034574074_logo%20c%C3%B4ng%20%C4%91o%C3%A0n%202018.gif"
-          }
-        }),
-        _vm._v(" "),
         _c(
-          "p",
+          "div",
           {
             staticStyle: {
-              "font-size": "19px",
-              "font-family": "'time new roman'",
+              margin: "0 auto",
+              color: "yellow",
+              "font-family": "'Garamond'",
               "font-weight": "bold",
-              color: "#1d68a7"
+              "font-size": "32px"
             }
           },
-          [_vm._v("CÔNG ĐOÀN XÂY DỰNG VIỆT NAM")]
+          [_vm._v("PHẦN THI TRẮC NGHIỆM KIẾN THỨC")]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "col-md-12",
+        staticStyle: { margin: "0 auto", "margin-bottom": "10px" }
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-warning",
+            staticStyle: {
+              color: "red",
+              "font-family": "'Tahoma'",
+              "font-weight": "bold",
+              "font-size": "18 px"
+            },
+            attrs: { type: "button" }
+          },
+          [_vm._v("Gói câu hỏi số: 10")]
         )
       ]
     )
