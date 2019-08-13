@@ -80,12 +80,12 @@
                 </div>
             </div>
             <div class="row" style="margin: 0 auto; margin-top: 15px;">
-                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 32px;">
+                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 38px;">
                     PHẦN THI TRẮC NGHIỆM KIẾN THỨC
                 </div>
             </div>
             <div class="row" style="margin-top: 35px;">
-                <div class="col-md-3" style="border-right: 2px solid red; border-top: 2px solid red">
+                <div class="col-md-3" style="border-right: 2px solid yellow; border-top: 2px solid yellow">
                     <div class="row" style="margin: auto; margin-top: 20px">
                         <div
                             style="width: 80px; height: 80px;border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
@@ -149,30 +149,30 @@
                     </div>
                 </div>
                 <div class="col-md-9" style="margin: 0 auto; text-align:center">
-                    <div class="row">
+                    <div class="row" style="margin: 0 auto; text-align:center">
                         <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
                             <button type="button" class="btn btn-warning"
-                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px;">Gói
-                                câu hỏi số: {{this.packageDetail.name}}
+                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #FFFF00">GÓI
+                                CÂU HỎI SỐ: {{this.packageDetail.name}}
                             </button>
                             <button
-                                style="width:40px;height:40px;margin-right:10px;"
+                                style="width:40px;height:40px;margin-right:10px;font-weight: bold;"
                                 type="button" class="btn btn-primary"
                                 v-for="(item,index) in question_data"
-                                v-bind:class="{'red':index < turn}">
+                                v-bind:class="{'red':index <= turn}">
                                 <p><span
                                     style="color: white;">{{index+1}}</span>
                                 </p>
                             </button>
                         </div>
-                        <div class="col-md-12"
-                             style="border: 4px solid yellow; width: 1000px; height: 200px; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
+                        <div  
+                             style="display: inline-block; border: 4px solid yellow; width: 1000px; height: 200px; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
-                                 style="color: white;font-size: 25px">
+                                 style="color: white;font-size: 28px">
                                 <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
                                     +1}}
                                 </div>
-                                <p style="font-family:'time new roman'">{{item.name}}</p>
+                                <p style="font-family:'time new roman';font-size: 26px">{{item.name}}</p>
                             </div>
                         </div>
                         <div class="col-md-12" style="height: auto; margin-top: 50px">
@@ -181,7 +181,7 @@
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:450px;height:85px; border-radius: 40px; border: yellow solid 4px; font-family:'time new roman'; font-weight: bold"
+                                        style="width:450px;height:85px; border-radius: 40px; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background: #08298A; "
                                         type="button" class="btn btn-primary"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick}">
@@ -240,14 +240,14 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top:5px;">
-                            <button style="font-weight: bold; font-family: 'time new roman'" type="button"
+                            <button style="font-weight: bold; font-family: 'time new roman'; float: left" type="button"
                                     class="btn btn-success"
                                     data-toggle="modal"
                                     data-target="#exampleModalCenter"
                                     @click="addPoint">
                                 KẾT QUẢ
                             </button>
-                            <button style="font-family: 'time new roman'" type="button" class="btn btn-danger"
+                            <button style="font-family: 'time new roman'; float: right" type="button" class="btn btn-danger"
                                     @click="next">
                                 {{this.continute}}
                             </button>
@@ -516,9 +516,8 @@
         clear: both;
         background-color: white;
     }
-
     .ind--0 {
-        background-color: #E19C13;
+        background-color: #E19C13 !important;
         color: blue;
         font-weight: bold;
     }
