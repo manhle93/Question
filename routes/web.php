@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');;
 Route::post('package/add/', 'PackageController@add');
 Route::get('package', 'PackageController@show');
 Route::get('packageadd', 'PackageController@showFormAdd');
@@ -39,4 +37,7 @@ Route::get('getpackge','PlayController@getPackage')->name('get.package');
 Route::get('getallpackge/{id}','PlayController@getAllPackage')->name('get.packageall');
 Route::post('updatepoint/{id}','PlayController@UpdatePackage')->name('update.packageall');
 Route::get('gettotalpoint/{id}','PlayController@getTotalPoint')->name('ge.total');
+Route::post('resetpoint/{id}','PlayController@resetPoint')->name('reset.point');
+Route::get('getdetailpackage/{id}','PlayController@getDetailPackage')->name('get.detailPackage');
+
 

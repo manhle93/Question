@@ -71,4 +71,36 @@ class PlayController extends Controller
             'result' => $totalpoint,
         ], 200);
     }
+    public function resetPoint(Request $request, $id){
+        $package = PackageOld::query()->findOrFail($id);
+        $package->update([
+            'point1' => 0,
+            'point2' => 0,
+            'point3' => 0,
+        ]);
+        $turn = Turn::query()->findOrFail($package->turn_id);
+        $turn->update([
+            'total_point1' => 0,
+            'total_point2' => 0,
+            'total_point3' => 0,
+        ]);
+        return response()->json([
+            'message' => 'thành công',
+        ], 200);
+    }
+    public function getDetailPackage(Request $request, $id){
+        $packageOld = PackageOld::query()->findOrFail($id);
+        if(isset($packageOld)){
+            $package=Package::query()->findOrFail($packageOld->package_id);
+            return response()->json([
+                'message' => 'thành công',
+                'result' => $package,
+            ], 200);
+        }
+        else{
+            return response()->json([
+                'message' => 'Khong ton tai goi cau hoi',
+            ], 400);
+        }
+    }
 }

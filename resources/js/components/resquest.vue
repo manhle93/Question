@@ -1,6 +1,6 @@
 <template>
     <div style="height: 100%; width: 100%; overflow-y:hidden;background-color: #FCF3CF;  overflow-x:hidden;">
-        <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true" >
+        <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
                     style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;">
@@ -35,92 +35,178 @@
                             </div>
                         </div>
                         <br><br><br><br>
-                        <div class="row"><button type="button" style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;" class="btn btn-dark" @click="chongoi">TIẾP TỤC </button></div>
+                        <div class="row">
+                            <button type="button"
+                                    style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;"
+                                    class="btn btn-dark" @click="chongoi">TIẾP TỤC
+                            </button>
+                        </div>
                         <br>
-                        <div class="row"><button type="button" style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;" class="btn btn-dark" @click="chongoi">LƯỢT CHƠI MỚI</button></div>
+                        <div class="row">
+                            <button type="button"
+                                    style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;"
+                                    class="btn btn-dark" @click="resetContinute">LƯỢT CHƠI MỚI
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div v-if="hidden== false" style="height: 100%; width: 100%; overflow-y:hidden;background-color: #240456;  overflow-x:hidden;">
+        <div v-if="hidden== false"
+             style="height: 100%; width: 100%; overflow-y:hidden;background-color: #240456;  overflow-x:hidden;">
             <div class="row">
                 <div class="col-sm">
                     <div class="row" style="margin-top: 10px">
-                      <div class="col-md-2" style="text-align:center; padding-left: 50px">
-                      <div style=""><img src="/anh/logovuong.gif" style="height: 90px; width: 100px"></div>
-                      </div>
-                      <div class="col-md-10" style="margin-top: 15px; padding-left: 70px" >
-                        <div style="font-size: 20px; font-family: 'Tahoma'; color: yellow; font-weight: bold; padding-bottom: 1px">CÔNG ĐOÀN XÂY DỰNG VIỆT NAM </div>
-                       <div style="font-size: 20px; font-family: 'time new roman'; color: #797D7F; font-weight: bold;"> Vietnam National Union of Building Workers </div>
-                      </div>
+                        <div class="col-md-2" style="text-align:center; padding-left: 50px">
+                            <div style=""><img src="/anh/logovuong.gif" style="height: 90px; width: 100px"></div>
+                        </div>
+                        <div class="col-md-10" style="margin-top: 15px; padding-left: 70px">
+                            <div
+                                style="font-size: 20px; font-family: 'Tahoma'; color: yellow; font-weight: bold; padding-bottom: 1px">
+                                CÔNG ĐOÀN XÂY DỰNG VIỆT NAM
+                            </div>
+                            <div
+                                style="font-size: 20px; font-family: 'time new roman'; color: #797D7F; font-weight: bold;">
+                                Vietnam National Union of Building Workers
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm" style="margin: auto">
-                    <div style="color: yellow; font-family: 'Tahoma';font-weight: bold; text-align: center;font-size: 22px;">HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI <br>TOÀN QUỐC NGÀNH XÂY DỰNG</div>
+                    <div
+                        style="color: yellow; font-family: 'Tahoma';font-weight: bold; text-align: center;font-size: 22px;">
+                        HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI <br>TOÀN QUỐC NGÀNH XÂY DỰNG
+                    </div>
                 </div>
             </div>
             <div class="row" style="margin: 0 auto; margin-top: 15px;">
-                    <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 32px;">PHẦN THI TRẮC NGHIỆM KIẾN THỨC</div>
+                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 32px;">
+                    PHẦN THI TRẮC NGHIỆM KIẾN THỨC
+                </div>
             </div>
             <div class="row" style="margin-top: 35px;">
                 <div class="col-md-3" style="border-right: 2px solid red; border-top: 2px solid red">
                     <div class="row" style="margin: auto; margin-top: 20px">
-                        <div style="width: 80px; height: 80px;border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"><div style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">{{this.team1}}</div></div>
-                        <div style="width: 150px; height: 60px;background-color: red; margin-left: 0px; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px;" @click="activePoint(1)" v-bind:class="{boder:teamAct==1}">ĐỘI I</div>
-                        <div v-if="teamAct==1"><img src="/anh/bell.png" style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/></div>
+                        <div
+                            style="width: 80px; height: 80px;border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div
+                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                                {{this.team1}}
+                            </div>
+                        </div>
+                        <div
+                            style="width: 150px; height: 60px;background-color: red; margin-left: 0px; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px;"
+                            @click="activePoint(1)" v-bind:class="{boder:teamAct==1}">ĐỘI I
+                        </div>
+                        <div v-if="teamAct==1"><img src="/anh/bell.png"
+                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        </div>
                     </div>
                     <div class="row" style="margin: auto; margin-top: 20px">
-                        <div style="width: 80px; height: 80px;border: 4px solid green; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"><div style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">{{this.team2}}</div></div>
-                        <div style="width: 150px; height: 60px;background-color: green; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px" @click="activePoint(2)" v-bind:class="{boder:teamAct==2}">ĐỘI II</div>
-                        <div v-if="teamAct==2"><img src="/anh/bell.png" style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/></div>
+                        <div
+                            style="width: 80px; height: 80px;border: 4px solid green; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div
+                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                                {{this.team2}}
+                            </div>
+                        </div>
+                        <div
+                            style="width: 150px; height: 60px;background-color: green; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px"
+                            @click="activePoint(2)" v-bind:class="{boder:teamAct==2}">ĐỘI II
+                        </div>
+                        <div v-if="teamAct==2"><img src="/anh/bell.png"
+                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        </div>
                     </div>
                     <div class="row" style="margin: auto; margin-top: 20px">
-                        <div style="width: 80px; height: 80px;border: 4px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"><div style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">{{this.team3}}</div></div>
-                        <div style="width: 150px; height: 60px;background-color: yellow; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: red" @click="activePoint(3)" v-bind:class="{boder:teamAct==3}">ĐỘI III</div>
-                        <div v-if="teamAct==3" ><img src="/anh/bell.png" style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/></div>
+                        <div
+                            style="width: 80px; height: 80px;border: 4px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div
+                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                                {{this.team3}}
+                            </div>
+                        </div>
+                        <div
+                            style="width: 150px; height: 60px;background-color: yellow; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: red"
+                            @click="activePoint(3)" v-bind:class="{boder:teamAct==3}">ĐỘI III
+                        </div>
+                        <div v-if="teamAct==3"><img src="/anh/bell.png"
+                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        </div>
 
                     </div>
                     <div class="row" style="margin: auto; margin-top: 50px ">
-                        <div style="width: 200px; height: 200;border: 6px solid red; margin: auto; border-radius: 50%; margin:auto; text-align:center">
-                            <div style="color: white;font-family: 'Tahoma';font-weight: bold;font-size: 18px; margin-top: 18px ">Time</div>
-                            <div style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">{{ totalTime }}</div>
+                        <div
+                            style="width: 200px; height: 200;border: 6px solid red; margin: auto; border-radius: 50%; margin:auto; text-align:center">
+                            <div
+                                style="color: white;font-family: 'Tahoma';font-weight: bold;font-size: 18px; margin-top: 18px ">
+                                Time
+                            </div>
+                            <div style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">{{
+                                totalTime }}
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-9" style="margin: 0 auto; text-align:center">
                     <div class="row">
-                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; "> 
-                            <button type="button" class="btn btn-warning" style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px;">Gói câu hỏi số: 10</button>
+                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
+                            <button type="button" class="btn btn-warning"
+                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px;">Gói
+                                câu hỏi số: {{this.packageDetail.name}}
+                            </button>
+                            <button
+                                style="width:40px;height:40px;margin-right:10px;"
+                                type="button" class="btn btn-primary"
+                                v-for="(item,index) in question_data"
+                                v-bind:class="{'red':index < turn}">
+                                <p><span
+                                    style="color: white;">{{index+1}}</span>
+                                </p>
+                            </button>
                         </div>
-                        <div class="col-md-12" style="border: 4px solid yellow; width: 1000px; height: 200px; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
-                            <div v-for="(item,index) in question_data" v-if="index==turn" style="color: white;font-size: 25px">
-                                <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index +1}}</div>
+                        <div class="col-md-12"
+                             style="border: 4px solid yellow; width: 1000px; height: 200px; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
+                            <div v-for="(item,index) in question_data" v-if="index==turn"
+                                 style="color: white;font-size: 25px">
+                                <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
+                                    +1}}
+                                </div>
                                 <p style="font-family:'time new roman'">{{item.name}}</p>
                             </div>
                         </div>
                         <div class="col-md-12" style="height: auto; margin-top: 50px">
                             <div>
-                                <div style="width: 90%;float: left; background-color: #240456" class="grid-container" v-for="(item,index) in question_data"
-                                    v-if="index==turn">
-                                    <button style="width:450px;height:85px; border-radius: 40px; border: yellow solid 4px; font-family:'time new roman'; font-weight: bold" type="button" class="btn btn-primary"
-                                            v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)" 
-                                            v-bind:class="{'ind--0':ind === onclick}" >
-                                            <p><span style="color: white; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span></p>
+                                <div style="width: 90%;float: left; background-color: #240456" class="grid-container"
+                                     v-for="(item,index) in question_data"
+                                     v-if="index==turn">
+                                    <button
+                                        style="width:450px;height:85px; border-radius: 40px; border: yellow solid 4px; font-family:'time new roman'; font-weight: bold"
+                                        type="button" class="btn btn-primary"
+                                        v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
+                                        v-bind:class="{'ind--0':ind === onclick}">
+                                        <p><span
+                                            style="color: white; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
+                                        </p>
                                     </button>
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                                        v-if="tinker == false && teamAct !=undefined ">
+                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                         v-if="tinker == false && teamAct !=undefined ">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <div class="modal-body" style="width: 500px;height: 500px;font-size: 30px;text-align: center">
+                                                <div class="modal-body"
+                                                     style="width: 500px;height: 500px;font-size: 30px;text-align: center">
                                                     <img src="/anh/sai.gif" style="width: 350px;height: 300px;">
-                                                        <br>
-                                                    <p><h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG CHÍNH XÁC</h2></p>
+                                                    <br>
+                                                    <p>
+                                                    <h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG
+                                                        CHÍNH XÁC</h2></p>
                                                     <P>+ 0</P>
                                                 </div>
                                             </div>
@@ -128,20 +214,23 @@
                                     </div>
 
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                                        v-if="tinker == true && teamAct != undefined ">
+                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                         v-if="tinker == true && teamAct != undefined ">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body"
-                                                    style="width: 500px;height: 450px;font-size: 30px;text-align: center">
-                                                        <img src="/anh/dung.gif" style="width: 350px;height: 300px;">
-                                                        <br>
-                                                    <p><h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN CHÍNH XÁC</h2></p>
+                                                     style="width: 500px;height: 450px;font-size: 30px;text-align: center">
+                                                    <img src="/anh/dung.gif" style="width: 350px;height: 300px;">
+                                                    <br>
+                                                    <p>
+                                                    <h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN
+                                                        CHÍNH XÁC</h2></p>
                                                     <P>+ 10</P>
                                                 </div>
                                             </div>
@@ -151,13 +240,15 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="margin-top:5px;">
-                            <button style="font-weight: bold; font-family: 'time new roman'" type="button" class="btn btn-success"
+                            <button style="font-weight: bold; font-family: 'time new roman'" type="button"
+                                    class="btn btn-success"
                                     data-toggle="modal"
                                     data-target="#exampleModalCenter"
                                     @click="addPoint">
                                 KẾT QUẢ
                             </button>
-                            <button style="font-family: 'time new roman'" type="button" class="btn btn-danger" @click="next" :disabled="isLoading">
+                            <button style="font-family: 'time new roman'" type="button" class="btn btn-danger"
+                                    @click="next">
                                 {{this.continute}}
                             </button>
                         </div>
@@ -184,8 +275,8 @@
         name: "question",
         data: function () {
             return {
-                isLoading:true,
-                onclick:undefined,
+                isLoading: true,
+                onclick: undefined,
                 timer: null,
                 resetButton: false,
                 reset: false,
@@ -209,6 +300,7 @@
                 hidden: true,
                 totalTime: 60,
                 hidden: false,
+                packageDetail: undefined,
             };
         },
         created() {
@@ -216,7 +308,12 @@
             this.answer = undefined
         },
         mounted() {
-            axios.get('/gettotalpoint/'+this.old_id)
+            axios.get('/getdetailpackage/' + this.old_id)
+                .then(res => {
+                    this.packageDetail = res.data.result;
+
+                });
+            axios.get('/gettotalpoint/' + this.old_id)
                 .then(res => {
                     var data = res.data.result;
                     this.team1 = data.total_point1;
@@ -295,10 +392,10 @@
                 this.ind = undefined
                 this.index = undefined
                 this.success = false
-                this.isLoading=true
+                this.isLoading = true
                 if (this.turn < this.question_data.length - 1) {
                     this.turn = this.turn + 1
-                    if (this.turn = this.question_data.length - 1) {
+                    if (this.turn == this.question_data.length - 1) {
                         this.continute = " KẾT THÚC"
                     }
                 } else {
@@ -352,7 +449,7 @@
                                 this.success = true
                                 this.question_data[this.index].answer = [this.answer]
                                 this.playsound()
-                                this.isLoading=false
+                                this.isLoading = false
                             } else {
                                 this.tinker = false
                                 this.playSoundError()
@@ -375,7 +472,7 @@
                                     this.success = true
                                     this.question_data[this.index].answer = [this.answer]
                                     this.playsound()
-                                    this.isLoading=false
+                                    this.isLoading = false
                                 } else {
                                     this.tinker = false
                                     this.playSoundError()
@@ -392,12 +489,17 @@
                 return restart;
             },
             chongoi() {
-                axios.post('/updatepoint/'+this.old_id, {
+                axios.post('/updatepoint/' + this.old_id, {
                     point1: this.team1,
-                    point2:this.team2,
-                    point3:this.team3
-                }).then(res=>{
-                    window.location.href = "/getallpackge/"+ this.old_id
+                    point2: this.team2,
+                    point3: this.team3
+                }).then(res => {
+                    window.location.href = "/getallpackge/" + this.old_id
+                })
+            },
+            resetContinute() {
+                axios.post('/resetpoint/' + this.old_id).then(res => {
+                    window.location.href = "/getallpackge/" + this.old_id
                 })
             }
         },
@@ -416,18 +518,21 @@
     }
 
     .ind--0 {
-        background-color:#E19C13;
-        color:blue;
+        background-color: #E19C13;
+        color: blue;
         font-weight: bold;
     }
 
     #seconds {
-  font-size: 55px;
-  line-height: 1;
-  font-weight: bold;
-}
-.boder
-{
-    border: 4px white solid
-}
+        font-size: 55px;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    .boder {
+        border: 4px white solid
+    }
+    .red {
+        background-color: red;
+    }
 </style>
