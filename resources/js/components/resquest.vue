@@ -54,8 +54,8 @@
         </div>
         <div v-if="hidden== false"
              style="height: 100%; width: 100%; overflow-y:hidden;background-color: #240456;  overflow-x:hidden;">
-            <div class="row">
-                <div class="col-sm">
+            <div class="row" style="height: 15%;">
+                <div class="col-md-8">
                     <div class="row" style="margin-top: 10px">
                         <div class="col-md-2" style="text-align:center; padding-left: 50px">
                             <div style=""><img src="/anh/logovuong.gif" style="height: 90px; width: 100px"></div>
@@ -72,70 +72,74 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm" style="margin: auto">
+                <div class="col-md-4" style="margin: auto">
                     <div
                         style="color: yellow; font-family: 'Tahoma';font-weight: bold; text-align: center;font-size: 22px;">
                         HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI <br>TOÀN QUỐC NGÀNH XÂY DỰNG
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin: 0 auto; margin-top: 15px;">
+            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%;">
                 <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 38px;">
                     PHẦN THI TRẮC NGHIỆM KIẾN THỨC
                 </div>
             </div>
-            <div class="row" style="margin-top: 35px;">
-                <div class="col-md-3" style="border-right: 2px solid yellow; border-top: 2px solid yellow">
-                    <div class="row" style="margin: auto; margin-top: 20px">
-                        <div
-                            style="width: 80px; height: 80px;border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
-                            <div
-                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+            <div class="row" style="margin-top: 20px;height: 90%">
+                <div class="col-md-3" style="border-right: 2px solid yellow; border-top: 2px solid yellow;padding-top: 30px;">
+                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto;">
+                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                             style="border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team1}}
                             </div>
                         </div>
                         <div
-                            style="width: 150px; height: 60px;background-color: red; margin-left: 0px; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px;"
-                            @click="activePoint(1)" v-bind:class="{boder:teamAct==1}">ĐỘI I
+                             style="background-color: red; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px;"
+                             @click="activePoint(1)" v-bind:class="{boder:teamAct==1,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI I
                         </div>
                         <div v-if="teamAct==1"><img src="/anh/bell.png"
                                                     style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
                         </div>
                     </div>
-                    <div class="row" style="margin: auto; margin-top: 20px">
-                        <div
-                            style="width: 80px; height: 80px;border: 4px solid green; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
-                            <div
-                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto;">
+                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                             style="border: 4px solid green; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team2}}
                             </div>
                         </div>
                         <div
-                            style="width: 150px; height: 60px;background-color: green; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px"
-                            @click="activePoint(2)" v-bind:class="{boder:teamAct==2}">ĐỘI II
+                             style="background-color: green; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px"
+                             @click="activePoint(2)" v-bind:class="{boder:teamAct==2,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI II
                         </div>
                         <div v-if="teamAct==2"><img src="/anh/bell.png"
                                                     style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
                         </div>
                     </div>
-                    <div class="row" style="margin: auto; margin-top: 20px">
-                        <div
-                            style="width: 80px; height: 80px;border: 4px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
-                            <div
-                                style="color: white; margin-top: 16px; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto;">
+                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                             style="border: 4px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                            <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
                             </div>
                         </div>
                         <div
-                            style="width: 150px; height: 60px;background-color: yellow; margin-left: 0px; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: red"
-                            @click="activePoint(3)" v-bind:class="{boder:teamAct==3}">ĐỘI III
+                             style="background-color: yellow; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: red"
+                             @click="activePoint(3)" v-bind:class="{boder:teamAct==3,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI III
                         </div>
                         <div v-if="teamAct==3"><img src="/anh/bell.png"
                                                     style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
                         </div>
 
                     </div>
-                    <div class="row" style="margin: auto; margin-top: 50px ">
+                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto; margin-top: 10px; ">
                         <div
                             style="width: 200px; height: 200;border: 6px solid red; margin: auto; border-radius: 50%; margin:auto; text-align:center">
                             <div
@@ -152,7 +156,8 @@
                     <div class="row" style="margin: 0 auto; text-align:center">
                         <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
                             <button type="button" class="btn btn-warning"
-                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #FFFF00">GÓI
+                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #FFFF00">
+                                GÓI
                                 CÂU HỎI SỐ: {{this.packageDetail.name}}
                             </button>
                             <button
@@ -165,8 +170,8 @@
                                 </p>
                             </button>
                         </div>
-                        <div  
-                             style="display: inline-block; border: 4px solid yellow; width: 1000px; height: 200px; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
+                        <div class="col-md-12" v-bind:class="{'max-height': height_a,'min-height': height_b}"
+                             style="display: inline-block; border: 4px solid yellow; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
                                  style="color: white;font-size: 28px">
                                 <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
@@ -175,16 +180,16 @@
                                 <p style="font-family:'time new roman';font-size: 26px">{{item.name}}</p>
                             </div>
                         </div>
-                        <div class="col-md-12" style="height: auto; margin-top: 50px">
+                        <div class="col-md-12" style="height: auto;">
                             <div>
-                                <div style="width: 90%;float: left; background-color: #240456" class="grid-container"
+                                <div style="width: 100%;float: left; background-color: #240456" class="grid-container"
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:450px;height:85px; border-radius: 40px; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background: #08298A; "
+                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background: #08298A; "
                                         type="button" class="btn btn-primary"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
-                                        v-bind:class="{'ind--0':ind === onclick}">
+                                        v-bind:class="{'ind--0':ind === onclick,'answer-max-height': height_a,'answer-min-height': height_b}">
                                         <p><span
                                             style="color: white; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
                                         </p>
@@ -244,11 +249,14 @@
                                     class="btn btn-success"
                                     data-toggle="modal"
                                     data-target="#exampleModalCenter"
-                                    @click="addPoint">
+                                    @click="addPoint"
+                                    v-bind:class="{'btn-max-height': height_a}">
                                 KẾT QUẢ
                             </button>
-                            <button style="font-family: 'time new roman'; float: right" type="button" class="btn btn-danger"
-                                    @click="next">
+                            <button style="font-family: 'time new roman'; float: right" type="button"
+                                    class="btn btn-danger"
+                                    @click="next"
+                                    v-bind:class="{'btn-max-height': height_a}">
                                 {{this.continute}}
                             </button>
                         </div>
@@ -301,6 +309,8 @@
                 totalTime: 60,
                 hidden: false,
                 packageDetail: undefined,
+                height_a: undefined,
+                height_b: undefined
             };
         },
         created() {
@@ -308,6 +318,13 @@
             this.answer = undefined
         },
         mounted() {
+            if (window.innerHeight >= 667) {
+                this.height_a = true;
+                this.height_b = false
+            } else {
+                this.height_a = false;
+                this.height_b = true
+            }
             axios.get('/getdetailpackage/' + this.old_id)
                 .then(res => {
                     this.packageDetail = res.data.result;
@@ -379,11 +396,11 @@
             },
             addAnswer(answer, ind, index) {
                 this.onclick = ind
-                if (this.teamAct != undefined) {
-                    this.answer = answer
-                    this.ind = ind
-                    this.index = index
-                }
+                // if (this.teamAct != undefined) {
+                this.answer = answer
+                this.ind = ind
+                this.index = index
+                // }
                 this.mauvang = !this.mauvang
             },
             next() {
@@ -516,6 +533,7 @@
         clear: both;
         background-color: white;
     }
+
     .ind--0 {
         background-color: #E19C13 !important;
         color: blue;
@@ -531,7 +549,69 @@
     .boder {
         border: 4px white solid
     }
+
     .red {
         background-color: red;
+    }
+
+    .min-height {
+        height: 200px;
+        margin-bottom: 50px;
+    }
+
+    .max-height {
+        height: 300px;
+        margin-bottom: 100px;
+    }
+
+    .answer-max-height {
+        height: 130px;
+        border-radius: 80px;
+        margin-top: 30px;
+    }
+
+    .answer-min-height {
+        height: 85px;
+        border-radius: 40px;
+    }
+
+    .btn-max-height {
+        margin-top: 30px;
+        height: 70px;
+        width: 125px;
+    }
+
+    .point-width {
+        width: 80px;
+        height: 80px;
+    }
+
+    .point-fullwidth {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bor-max-height {
+        height: 20%;
+    }
+
+    .bor-min-height {
+        height: 15%;
+    }
+
+    .team-min-height {
+        width: 150px;
+        height: 60px;
+    }
+    .team-max-height {
+        width: 200px;
+        height: 100px;
+        margin-left:20px;
+    }
+    .teampoint-fullwidth{
+        padding-top: 32px;
+    }
+    .teampoint-width{
+        padding-top: 15px;
     }
 </style>
