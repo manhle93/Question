@@ -1,5 +1,5 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-color: #FCF3CF;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://www.desktop-background.com/download/1280x720/2010/12/16/127271_1600x900-luxury-desktop-wallpapers_1600x900_h.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div v-if="hidden== false"
-             style="height: 100%; width: 100%; overflow-y:hidden;background-color: #240456;  overflow-x:hidden;">
+             style="height: 100%; width: 100%; overflow-y:hidden; overflow-x:hidden;">
             <div class="row" style="height: 15%;">
                 <div class="col-md-8">
                     <div class="row" style="margin-top: 10px">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 20px;height: 90%">
-                <div class="col-md-3" style="border-right: 2px solid yellow; border-top: 2px solid yellow;padding-top: 30px;">
+                <div class="col-md-3" style="padding-top: 30px;">
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto;">
                         <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
@@ -141,14 +141,8 @@
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto; margin-top: 10px; ">
                         <div
-                            style="width: 200px; height: 200;border: 6px solid red; margin: auto; border-radius: 50%; margin:auto; text-align:center">
-                            <div
-                                style="color: white;font-family: 'Tahoma';font-weight: bold;font-size: 18px; margin-top: 18px ">
-                                Time
-                            </div>
-                            <div style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">{{
-                                totalTime }}
-                            </div>
+                            style="padding-top:65px;width: 250px; height: 250px; margin:auto; text-align:center;background-image:url('/anh/aclock.gif'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
+                            {{totalTime }}
                         </div>
                     </div>
                 </div>
@@ -161,7 +155,7 @@
                                 CÂU HỎI SỐ: {{this.packageDetail.name}}
                             </button>
                             <button
-                                style="width:40px;height:40px;margin-right:10px;font-weight: bold;"
+                                style="background-color:#009688;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%;"
                                 type="button" class="btn btn-primary"
                                 v-for="(item,index) in question_data"
                                 v-bind:class="{'red':index <= turn}">
@@ -171,7 +165,7 @@
                             </button>
                         </div>
                         <div class="col-md-12" v-bind:class="{'max-height': height_a,'min-height': height_b}"
-                             style="display: inline-block; border: 4px solid yellow; border-radius: 40px; background: linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6);">
+                             style="display: inline-block; border: 4px solid yellow; border-radius: 40px;background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzanLEbTphxKQIYSx0JGuF8afw2wS_if2a79OkBI0qShlZKoRQDA');background-size:100% 100%; ">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
                                  style="color: white;font-size: 28px">
                                 <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
@@ -182,11 +176,11 @@
                         </div>
                         <div class="col-md-12" style="height: auto;">
                             <div>
-                                <div style="width: 100%;float: left; background-color: #240456" class="grid-container"
+                                <div style="width: 100%;float: left; background-color: #ffffff00" class="grid-container"
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background: #08298A; "
+                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background-image:url('http://sf.co.ua/14/02/wallpaper-442831.jpg');background-size:100% 100%; "
                                         type="button" class="btn btn-primary"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick,'answer-max-height': height_a,'answer-min-height': height_b}">
@@ -535,7 +529,7 @@
     }
 
     .ind--0 {
-        background-color: #E19C13 !important;
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/22/8657a596e736992.jpg') !important;
         color: blue;
         font-weight: bold;
     }
@@ -551,7 +545,7 @@
     }
 
     .red {
-        background-color: red;
+        background-color: red !important;
     }
 
     .min-height {
