@@ -84,7 +84,7 @@
                     PHẦN THI TRẮC NGHIỆM KIẾN THỨC
                 </div>
             </div>
-            <div class="row" style="margin-top: 20px;height: 90%">
+            <div class="row" style="margin-top: 10px;height: 90%">
                 <div class="col-md-3" style="padding-top: 30px;">
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto;">
@@ -555,7 +555,7 @@
 
     .max-height {
         height: 300px;
-        margin-bottom: 100px;
+        margin-bottom: 30px;
     }
 
     .answer-max-height {
@@ -586,7 +586,7 @@
     }
 
     .bor-max-height {
-        height: 20%;
+        height: 18%;
     }
 
     .bor-min-height {
