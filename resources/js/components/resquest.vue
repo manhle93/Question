@@ -1,10 +1,10 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://www.desktop-background.com/download/1280x720/2010/12/16/127271_1600x900-luxury-desktop-wallpapers_1600x900_h.jpg');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
                     style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;">
-                    <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
+                    <img src="anh/logovuong.png"
                          style="width: 150px; height: 120px; padding-bottom: 25px">
                     <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;">
                         KẾT QUẢ</h4>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%;">
+            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 40px">
                 <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 38px;">
                     PHẦN THI TRẮC NGHIỆM KIẾN THỨC
                 </div>

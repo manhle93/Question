@@ -2506,6 +2506,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -2544,7 +2546,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       index: undefined,
       hidden: true,
       totalTime: 60
-    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _ref;
+    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _ref;
   },
   created: function created() {
     this.tinker = false;
@@ -2552,6 +2554,14 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
   },
   mounted: function mounted() {
     var _this = this;
+
+    if (window.innerHeight >= 667) {
+      this.height_a = true;
+      this.height_b = false;
+    } else {
+      this.height_a = false;
+      this.height_b = true;
+    }
 
     axios.get('/getdetailpackage/' + this.old_id).then(function (res) {
       _this.packageDetail = res.data.result;
@@ -2629,13 +2639,11 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       }
     },
     addAnswer: function addAnswer(answer, ind, index) {
-      this.onclick = ind;
+      this.onclick = ind; // if (this.teamAct != undefined) {
 
-      if (this.teamAct != undefined) {
-        this.answer = answer;
-        this.ind = ind;
-        this.index = index;
-      }
+      this.answer = answer;
+      this.ind = ind;
+      this.index = index; // }
 
       this.mauvang = !this.mauvang;
     },
@@ -7342,7 +7350,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-color: #E19C13 !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: red;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/22/8657a596e736992.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: red !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 200px;\n    margin-bottom: 50px;\n}\n.max-height[data-v-e318d6e6] {\n    height: 300px;\n    margin-bottom: 30px;\n}\n.answer-max-height[data-v-e318d6e6] {\n    height: 130px;\n    border-radius: 80px;\n    margin-top: 30px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 85px;\n    border-radius: 40px;\n}\n.btn-max-height[data-v-e318d6e6] {\n    margin-top: 30px;\n    height: 70px;\n    width: 125px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.point-fullwidth[data-v-e318d6e6] {\n    width: 120px;\n    height: 120px;\n}\n.bor-max-height[data-v-e318d6e6] {\n    height: 18%;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.team-max-height[data-v-e318d6e6] {\n    width: 200px;\n    height: 100px;\n    margin-left:20px;\n}\n.teampoint-fullwidth[data-v-e318d6e6]{\n    padding-top: 32px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
 
 // exports
 
@@ -43380,7 +43388,8 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-color": "#FCF3CF",
+        "background-image": "url('/anh/nen.jpg')",
+        "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
     },
@@ -43417,10 +43426,7 @@ var render = function() {
                         height: "120px",
                         "padding-bottom": "25px"
                       },
-                      attrs: {
-                        src:
-                          "https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
-                      }
+                      attrs: { src: "anh/logovuong.png" }
                     }),
                     _vm._v(" "),
                     _c(
@@ -43673,7 +43679,6 @@ var render = function() {
                 height: "100%",
                 width: "100%",
                 "overflow-y": "hidden",
-                "background-color": "#240456",
                 "overflow-x": "hidden"
               }
             },
@@ -43684,31 +43689,37 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "row", staticStyle: { "margin-top": "35px" } },
+                {
+                  staticClass: "row",
+                  staticStyle: { "margin-top": "10px", height: "90%" }
+                },
                 [
                   _c(
                     "div",
                     {
                       staticClass: "col-md-3",
-                      staticStyle: {
-                        "border-right": "2px solid yellow",
-                        "border-top": "2px solid yellow"
-                      }
+                      staticStyle: { "padding-top": "30px" }
                     },
                     [
                       _c(
                         "div",
                         {
                           staticClass: "row",
-                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                          class: {
+                            "bor-max-height": _vm.height_a,
+                            "bor-min-height": _vm.height_b
+                          },
+                          staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
+                              class: {
+                                "point-fullwidth": _vm.height_a,
+                                "point-width": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "80px",
-                                height: "80px",
                                 border: "4px solid red",
                                 margin: "0px auto",
                                 "border-radius": "50%",
@@ -43721,9 +43732,12 @@ var render = function() {
                               _c(
                                 "div",
                                 {
+                                  class: {
+                                    "teampoint-fullwidth": _vm.height_a,
+                                    "teampoint-width": _vm.height_b
+                                  },
                                   staticStyle: {
                                     color: "white",
-                                    "margin-top": "16px",
                                     "font-family": "'Tahoma'",
                                     "font-weight": "bold",
                                     "font-size": "30px"
@@ -43743,12 +43757,13 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: { boder: _vm.teamAct == 1 },
+                              class: {
+                                boder: _vm.teamAct == 1,
+                                "team-max-height": _vm.height_a,
+                                "team-min-height": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "150px",
-                                height: "60px",
                                 "background-color": "red",
-                                "margin-left": "0px",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
@@ -43786,15 +43801,21 @@ var render = function() {
                         "div",
                         {
                           staticClass: "row",
-                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                          class: {
+                            "bor-max-height": _vm.height_a,
+                            "bor-min-height": _vm.height_b
+                          },
+                          staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
+                              class: {
+                                "point-fullwidth": _vm.height_a,
+                                "point-width": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "80px",
-                                height: "80px",
                                 border: "4px solid green",
                                 margin: "0px auto",
                                 "border-radius": "50%",
@@ -43807,9 +43828,12 @@ var render = function() {
                               _c(
                                 "div",
                                 {
+                                  class: {
+                                    "teampoint-fullwidth": _vm.height_a,
+                                    "teampoint-width": _vm.height_b
+                                  },
                                   staticStyle: {
                                     color: "white",
-                                    "margin-top": "16px",
                                     "font-family": "'Tahoma'",
                                     "font-weight": "bold",
                                     "font-size": "30px"
@@ -43829,12 +43853,13 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: { boder: _vm.teamAct == 2 },
+                              class: {
+                                boder: _vm.teamAct == 2,
+                                "team-max-height": _vm.height_a,
+                                "team-min-height": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "150px",
-                                height: "60px",
                                 "background-color": "green",
-                                "margin-left": "0px",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
@@ -43872,15 +43897,21 @@ var render = function() {
                         "div",
                         {
                           staticClass: "row",
-                          staticStyle: { margin: "auto", "margin-top": "20px" }
+                          class: {
+                            "bor-max-height": _vm.height_a,
+                            "bor-min-height": _vm.height_b
+                          },
+                          staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
+                              class: {
+                                "point-fullwidth": _vm.height_a,
+                                "point-width": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "80px",
-                                height: "80px",
                                 border: "4px solid yellow",
                                 margin: "0px auto",
                                 "border-radius": "50%",
@@ -43893,9 +43924,12 @@ var render = function() {
                               _c(
                                 "div",
                                 {
+                                  class: {
+                                    "teampoint-fullwidth": _vm.height_a,
+                                    "teampoint-width": _vm.height_b
+                                  },
                                   staticStyle: {
                                     color: "white",
-                                    "margin-top": "16px",
                                     "font-family": "'Tahoma'",
                                     "font-weight": "bold",
                                     "font-size": "30px"
@@ -43915,12 +43949,13 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: { boder: _vm.teamAct == 3 },
+                              class: {
+                                boder: _vm.teamAct == 3,
+                                "team-max-height": _vm.height_a,
+                                "team-min-height": _vm.height_b
+                              },
                               staticStyle: {
-                                width: "150px",
-                                height: "60px",
                                 "background-color": "yellow",
-                                "margin-left": "0px",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
@@ -43958,56 +43993,35 @@ var render = function() {
                         "div",
                         {
                           staticClass: "row",
-                          staticStyle: { margin: "auto", "margin-top": "50px" }
+                          class: {
+                            "bor-max-height": _vm.height_a,
+                            "bor-min-height": _vm.height_b
+                          },
+                          staticStyle: { margin: "auto", "margin-top": "10px" }
                         },
                         [
                           _c(
                             "div",
                             {
                               staticStyle: {
-                                width: "200px",
-                                height: "200",
-                                border: "6px solid red",
+                                "padding-top": "65px",
+                                width: "250px",
+                                height: "250px",
                                 margin: "auto",
-                                "border-radius": "50%",
-                                "text-align": "center"
+                                "text-align": "center",
+                                "background-image": "url('/anh/aclock.gif')",
+                                "background-size": "100% 100%",
+                                color: "white",
+                                "font-family": "'Tahoma'",
+                                "font-weight": "bold",
+                                "font-size": "72px"
                               }
                             },
                             [
-                              _c(
-                                "div",
-                                {
-                                  staticStyle: {
-                                    color: "white",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "18px",
-                                    "margin-top": "18px"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                            Time\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticStyle: {
-                                    color: "white",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "72px"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(_vm.totalTime) +
-                                      "\n                        "
-                                  )
-                                ]
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(_vm.totalTime) +
+                                  "\n                    "
                               )
                             ]
                           )
@@ -44058,7 +44072,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "GÓI\n                            CÂU HỎI SỐ: " +
+                                    "\n                            GÓI\n                            CÂU HỎI SỐ: " +
                                       _vm._s(this.packageDetail.name) +
                                       "\n                        "
                                   )
@@ -44072,10 +44086,12 @@ var render = function() {
                                     staticClass: "btn btn-primary",
                                     class: { red: index <= _vm.turn },
                                     staticStyle: {
+                                      "background-color": "#009688",
                                       width: "40px",
                                       height: "40px",
                                       "margin-right": "10px",
-                                      "font-weight": "bold"
+                                      "font-weight": "bold",
+                                      "border-radius": "50%"
                                     },
                                     attrs: { type: "button" }
                                   },
@@ -44097,14 +44113,18 @@ var render = function() {
                           _c(
                             "div",
                             {
+                              staticClass: "col-md-12",
+                              class: {
+                                "max-height": _vm.height_a,
+                                "min-height": _vm.height_b
+                              },
                               staticStyle: {
                                 display: "inline-block",
                                 border: "4px solid yellow",
-                                width: "1000px",
-                                height: "200px",
                                 "border-radius": "40px",
-                                background:
-                                  "linear-gradient(to left, #515DF6, #1609CF, #0E03A6, #080259, #060241,#0E03A6, #1609CF,#515DF6)"
+                                "background-image":
+                                  "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzanLEbTphxKQIYSx0JGuF8afw2wS_if2a79OkBI0qShlZKoRQDA')",
+                                "background-size": "100% 100%"
                               }
                             },
                             _vm._l(_vm.question_data, function(item, index) {
@@ -44157,10 +44177,7 @@ var render = function() {
                             "div",
                             {
                               staticClass: "col-md-12",
-                              staticStyle: {
-                                height: "auto",
-                                "margin-top": "50px"
-                              }
+                              staticStyle: { height: "auto" }
                             },
                             [
                               _c(
@@ -44175,9 +44192,9 @@ var render = function() {
                                         {
                                           staticClass: "grid-container",
                                           staticStyle: {
-                                            width: "90%",
+                                            width: "100%",
                                             float: "left",
-                                            "background-color": "#240456"
+                                            "background-color": "#ffffff00"
                                           }
                                         },
                                         [
@@ -44190,18 +44207,22 @@ var render = function() {
                                               {
                                                 staticClass: "btn btn-primary",
                                                 class: {
-                                                  "ind--0": ind === _vm.onclick
+                                                  "ind--0": ind === _vm.onclick,
+                                                  "answer-max-height":
+                                                    _vm.height_a,
+                                                  "answer-min-height":
+                                                    _vm.height_b
                                                 },
                                                 staticStyle: {
-                                                  width: "450px",
-                                                  height: "85px",
-                                                  "border-radius": "40px",
+                                                  width: "95%",
                                                   border: "yellow solid 2px",
                                                   "font-family":
                                                     "'time new roman'",
                                                   "font-weight": "bold",
                                                   "font-size": "18px",
-                                                  background: "#08298A"
+                                                  "background-image":
+                                                    "url('http://sf.co.ua/14/02/wallpaper-442831.jpg')",
+                                                  "background-size": "100% 100%"
                                                 },
                                                 attrs: { type: "button" },
                                                 on: {
@@ -44458,6 +44479,7 @@ var render = function() {
                                 "button",
                                 {
                                   staticClass: "btn btn-success",
+                                  class: { "btn-max-height": _vm.height_a },
                                   staticStyle: {
                                     "font-weight": "bold",
                                     "font-family": "'time new roman'",
@@ -44481,6 +44503,7 @@ var render = function() {
                                 "button",
                                 {
                                   staticClass: "btn btn-danger",
+                                  class: { "btn-max-height": _vm.height_a },
                                   staticStyle: {
                                     "font-family": "'time new roman'",
                                     float: "right"
@@ -44515,8 +44538,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm" }, [
+    return _c("div", { staticClass: "row", staticStyle: { height: "15%" } }, [
+      _c("div", { staticClass: "col-md-8" }, [
         _c(
           "div",
           { staticClass: "row", staticStyle: { "margin-top": "10px" } },
@@ -44584,7 +44607,7 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-sm", staticStyle: { margin: "auto" } }, [
+      _c("div", { staticClass: "col-md-4", staticStyle: { margin: "auto" } }, [
         _c(
           "div",
           {
@@ -44613,7 +44636,12 @@ var staticRenderFns = [
       "div",
       {
         staticClass: "row",
-        staticStyle: { margin: "0 auto", "margin-top": "15px" }
+        staticStyle: {
+          margin: "0 auto",
+          "margin-top": "15px",
+          height: "5%",
+          "margin-bottom": "40px"
+        }
       },
       [
         _c(
