@@ -40,7 +40,7 @@ class QuestionController extends Controller
         ]);
     }
     public function show($id){
-     $question = Question::where('package_id', $id)->get();
+     $question = Question::where('package_id', $id)->with('answer')->get();
      return view('showquestion', ['question'=>$question, 'package_id'=>$id]);
     }
     public function showAnswer(){

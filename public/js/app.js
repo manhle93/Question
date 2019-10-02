@@ -2050,8 +2050,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['questions', 'package_id'],
+  props: ["questions", "package_id"],
   data: function data() {
     return {
       show: false,
@@ -2064,26 +2066,49 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (confirm("Xóa câu hỏi")) {
-        axios["delete"]('/question/' + id + '/delete/').then(function (res) {
+        axios["delete"]("/question/" + id + "/delete/").then(function (res) {
           $(_this.$el).fadeOut(800, function () {
             window.location.href = "/question/" + _this.package_id;
           });
         });
+      }
+    },
+    phuongAn: function phuongAn(a) {
+      if (a == 0) {
+        return "A";
+      }
+
+      if (a == 1) {
+        return "B";
+      }
+
+      if (a == 2) {
+        return "C";
+      }
+
+      if (a == 3) {
+        return "D";
+      }
+    },
+    dapAnDung: function dapAnDung(d) {
+      if (d == 0) {
+        return "Sai";
+      } else {
+        return "Đúng";
       }
     }
   },
   mounted: function mounted() {
     var _this2 = this;
 
-    axios.get('/answer/').then(function (res) {
+    axios.get("/answer/").then(function (res) {
       _this2.answers = res.data.resuft;
     });
+    console.log(this.questions);
 
     for (var question in this.questions) {
       this.i++;
     }
-
-    ;
   }
 });
 
@@ -2522,6 +2547,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     var _ref;
 
     return _ref = {
+      loading: false,
       isLoading: true,
       onclick: undefined,
       timer: null,
@@ -2545,7 +2571,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       ind: undefined,
       index: undefined,
       hidden: true,
-      totalTime: 60
+      totalTime: 10
     }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _ref;
   },
   created: function created() {
@@ -2576,6 +2602,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     this.timer = setInterval(function () {
       return _this.countdown();
     }, 1000);
+    this.stopTimer();
     this.resetButton = true;
     this.question_data.forEach(function (el) {
       el.answer.forEach(function (item, index, arr) {
@@ -2608,6 +2635,15 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     }
   },
   methods: {
+    runTime: function runTime() {
+      if (this.loading == false) {
+        this.startTimer();
+        this.loading = true;
+      } else {
+        this.stopTimer();
+        this.loading = false;
+      }
+    },
     startTimer: function startTimer() {
       var _this2 = this;
 
@@ -2622,7 +2658,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.resetButton = true;
     },
     resetTimer: function resetTimer() {
-      this.totalTime = 60;
+      this.totalTime = 10;
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = false;
@@ -2648,6 +2684,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.mauvang = !this.mauvang;
     },
     next: function next() {
+      this.loading = false;
       this.onclick = undefined;
       this.answer = undefined;
       this.ind = undefined;
@@ -2665,9 +2702,8 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
         this.hidden = true;
       }
 
-      this.totalTime = 60;
+      this.totalTime = 10;
       this.resetTimer();
-      this.startTimer();
       this.teamAct = undefined;
     },
     playsound: function playsound() {
@@ -7350,7 +7386,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/22/8657a596e736992.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: red !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 200px;\n    margin-bottom: 50px;\n}\n.max-height[data-v-e318d6e6] {\n    height: 300px;\n    margin-bottom: 30px;\n}\n.answer-max-height[data-v-e318d6e6] {\n    height: 130px;\n    border-radius: 80px;\n    margin-top: 30px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 85px;\n    border-radius: 40px;\n}\n.btn-max-height[data-v-e318d6e6] {\n    margin-top: 30px;\n    height: 70px;\n    width: 125px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.point-fullwidth[data-v-e318d6e6] {\n    width: 120px;\n    height: 120px;\n}\n.bor-max-height[data-v-e318d6e6] {\n    height: 18%;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.team-max-height[data-v-e318d6e6] {\n    width: 200px;\n    height: 100px;\n    margin-left:20px;\n}\n.teampoint-fullwidth[data-v-e318d6e6]{\n    padding-top: 32px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('/anh/nenchoncautraloi.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: red !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 200px;\n    margin-bottom: 50px;\n}\n.max-height[data-v-e318d6e6] {\n    height: 300px;\n    margin-bottom: 30px;\n}\n.answer-max-height[data-v-e318d6e6] {\n    height: 130px;\n    border-radius: 80px;\n    margin-top: 30px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 85px;\n    border-radius: 40px;\n}\n.btn-max-height[data-v-e318d6e6] {\n    margin-top: 30px;\n    height: 70px;\n    width: 125px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.point-fullwidth[data-v-e318d6e6] {\n    width: 120px;\n    height: 120px;\n}\n.bor-max-height[data-v-e318d6e6] {\n    height: 18%;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.team-max-height[data-v-e318d6e6] {\n    width: 200px;\n    height: 100px;\n    margin-left:20px;\n}\n.teampoint-fullwidth[data-v-e318d6e6]{\n    padding-top: 32px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
 
 // exports
 
@@ -42983,6 +43019,7 @@ var render = function() {
       _vm._l(_vm.questions, function(question, index) {
         return _c("div", [
           _c("h5", [_vm._v("Câu " + _vm._s(index + 1))]),
+          _vm._v(" "),
           _c(
             "button",
             {
@@ -43012,16 +43049,14 @@ var render = function() {
               [
                 _vm._m(0, true),
                 _vm._v(" "),
-                _vm._l(_vm.answers, function(answer, index) {
-                  return answer.question_id == question.id
-                    ? _c("tbody", [
-                        _c("td", [_vm._v("A")]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(answer.name))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(answer.dap_an))])
-                      ])
-                    : _vm._e()
+                _vm._l(question.answer, function(answer, index) {
+                  return _c("tbody", [
+                    _c("td", [_vm._v(_vm._s(_vm.phuongAn(index)))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(answer.name))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(_vm.dapAnDung(answer.dap_an)))])
+                  ])
                 })
               ],
               2
@@ -43406,45 +43441,7 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "full-width" }, [
-                _c(
-                  "div",
-                  {
-                    staticStyle: {
-                      "background-color": "#1d68a7",
-                      width: "100%",
-                      "font-weight": "bold",
-                      height: "35%",
-                      "text-align": "center",
-                      "font-size": "50px",
-                      "padding-top": "20px"
-                    }
-                  },
-                  [
-                    _c("img", {
-                      staticStyle: {
-                        width: "150px",
-                        height: "120px",
-                        "padding-bottom": "25px"
-                      },
-                      attrs: { src: "anh/logovuong.png" }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "H4",
-                      {
-                        staticStyle: {
-                          "font-family": "'time new roman'",
-                          "font-weight": "bold",
-                          "text-align": "center",
-                          "font-size": "50px",
-                          color: "white"
-                        }
-                      },
-                      [_vm._v("\n                    KẾT QUẢ")]
-                    )
-                  ],
-                  1
-                ),
+                _vm._m(0),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -43683,9 +43680,9 @@ var render = function() {
               }
             },
             [
-              _vm._m(0),
-              _vm._v(" "),
               _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
               _vm._v(" "),
               _c(
                 "div",
@@ -43720,7 +43717,7 @@ var render = function() {
                                 "point-width": _vm.height_b
                               },
                               staticStyle: {
-                                border: "4px solid red",
+                                border: "2px solid yellow",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43763,14 +43760,16 @@ var render = function() {
                                 "team-min-height": _vm.height_b
                               },
                               staticStyle: {
-                                "background-color": "red",
+                                "background-color": "#043368",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
                                 "font-weight": "bold",
                                 "font-size": "18px",
                                 color: "white",
-                                "padding-top": "12px"
+                                "padding-top": "12px",
+                                border: "2px solid yellow",
+                                "border-radius": "5px"
                               },
                               on: {
                                 click: function($event) {
@@ -43816,7 +43815,7 @@ var render = function() {
                                 "point-width": _vm.height_b
                               },
                               staticStyle: {
-                                border: "4px solid green",
+                                border: "2px solid yellow",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43859,14 +43858,17 @@ var render = function() {
                                 "team-min-height": _vm.height_b
                               },
                               staticStyle: {
-                                "background-color": "green",
+                                "background-color": "#043368",
+                                "background-size": "100% 100%",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
                                 "font-weight": "bold",
                                 "font-size": "18px",
                                 color: "white",
-                                "padding-top": "12px"
+                                "padding-top": "12px",
+                                border: "2px solid yellow",
+                                "border-radius": "5px"
                               },
                               on: {
                                 click: function($event) {
@@ -43912,7 +43914,7 @@ var render = function() {
                                 "point-width": _vm.height_b
                               },
                               staticStyle: {
-                                border: "4px solid yellow",
+                                border: "2px solid yellow",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43955,14 +43957,17 @@ var render = function() {
                                 "team-min-height": _vm.height_b
                               },
                               staticStyle: {
-                                "background-color": "yellow",
+                                "background-color": "#043368",
+                                "background-size": "100% 100%",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
                                 "font-weight": "bold",
                                 "font-size": "18px",
-                                color: "red",
-                                "padding-top": "12px"
+                                color: "white",
+                                "padding-top": "12px",
+                                border: "2px solid yellow",
+                                "border-radius": "5px"
                               },
                               on: {
                                 click: function($event) {
@@ -43997,19 +44002,20 @@ var render = function() {
                             "bor-max-height": _vm.height_a,
                             "bor-min-height": _vm.height_b
                           },
-                          staticStyle: { margin: "auto", "margin-top": "10px" }
+                          staticStyle: { margin: "auto", "margin-top": "10px" },
+                          on: { click: _vm.runTime }
                         },
                         [
                           _c(
                             "div",
                             {
                               staticStyle: {
-                                "padding-top": "65px",
-                                width: "250px",
-                                height: "250px",
+                                "padding-top": "55px",
+                                width: "210px",
+                                height: "210px",
                                 margin: "auto",
                                 "text-align": "center",
-                                "background-image": "url('/anh/aclock.gif')",
+                                "background-image": "url('/anh/dongho.png')",
                                 "background-size": "100% 100%",
                                 color: "white",
                                 "font-family": "'Tahoma'",
@@ -44120,10 +44126,9 @@ var render = function() {
                               },
                               staticStyle: {
                                 display: "inline-block",
-                                border: "4px solid yellow",
+                                border: "2px solid yellow",
                                 "border-radius": "40px",
-                                "background-image":
-                                  "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzanLEbTphxKQIYSx0JGuF8afw2wS_if2a79OkBI0qShlZKoRQDA')",
+                                "background-image": "url('/anh/nencauhoi.jpg')",
                                 "background-size": "100% 100%"
                               }
                             },
@@ -44221,7 +44226,7 @@ var render = function() {
                                                   "font-weight": "bold",
                                                   "font-size": "18px",
                                                   "background-image":
-                                                    "url('http://sf.co.ua/14/02/wallpaper-442831.jpg')",
+                                                    "url('/anh/nencautraloi.jpg')",
                                                   "background-size": "100% 100%"
                                                 },
                                                 attrs: { type: "button" },
@@ -44278,86 +44283,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "modal-dialog modal-dialog-centered",
-                                                      attrs: {
-                                                        role: "document"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "modal-content"
-                                                        },
-                                                        [
-                                                          _vm._m(2, true),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "modal-body",
-                                                              staticStyle: {
-                                                                width: "500px",
-                                                                height: "500px",
-                                                                "font-size":
-                                                                  "30px",
-                                                                "text-align":
-                                                                  "center"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                staticStyle: {
-                                                                  width:
-                                                                    "350px",
-                                                                  height:
-                                                                    "300px"
-                                                                },
-                                                                attrs: {
-                                                                  src:
-                                                                    "/anh/sai.gif"
-                                                                }
-                                                              }),
-                                                              _vm._v(" "),
-                                                              _c("br"),
-                                                              _vm._v(" "),
-                                                              _c("p"),
-                                                              _c(
-                                                                "h2",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "font-family":
-                                                                      "'time new roman'",
-                                                                    "font-weight":
-                                                                      "bold"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "KHÔNG\n                                                    CHÍNH XÁC"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _c("p"),
-                                                              _vm._v(" "),
-                                                              _c("P", [
-                                                                _vm._v("+ 0")
-                                                              ])
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
+                                                [_vm._m(3, true)]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -44376,86 +44302,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "modal-dialog modal-dialog-centered",
-                                                      attrs: {
-                                                        role: "document"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "modal-content"
-                                                        },
-                                                        [
-                                                          _vm._m(3, true),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "modal-body",
-                                                              staticStyle: {
-                                                                width: "500px",
-                                                                height: "450px",
-                                                                "font-size":
-                                                                  "30px",
-                                                                "text-align":
-                                                                  "center"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                staticStyle: {
-                                                                  width:
-                                                                    "350px",
-                                                                  height:
-                                                                    "300px"
-                                                                },
-                                                                attrs: {
-                                                                  src:
-                                                                    "/anh/dung.gif"
-                                                                }
-                                                              }),
-                                                              _vm._v(" "),
-                                                              _c("br"),
-                                                              _vm._v(" "),
-                                                              _c("p"),
-                                                              _c(
-                                                                "h2",
-                                                                {
-                                                                  staticStyle: {
-                                                                    "font-family":
-                                                                      "'time new roman'",
-                                                                    "font-weight":
-                                                                      "bold"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "ĐÁP ÁN\n                                                    CHÍNH XÁC"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _c("p"),
-                                                              _vm._v(" "),
-                                                              _c("P", [
-                                                                _vm._v("+ 10")
-                                                              ])
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ]
-                                                  )
-                                                ]
+                                                [_vm._m(4, true)]
                                               )
                                             : _vm._e()
                                         ],
@@ -44534,6 +44381,49 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticStyle: {
+          "background-color": "#1d68a7",
+          width: "100%",
+          "font-weight": "bold",
+          height: "35%",
+          "text-align": "center",
+          "font-size": "50px",
+          "padding-top": "20px"
+        }
+      },
+      [
+        _c("img", {
+          staticStyle: {
+            width: "150px",
+            height: "120px",
+            "padding-bottom": "25px"
+          },
+          attrs: { src: "anh/logovuong.png" }
+        }),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "50px",
+              color: "white"
+            }
+          },
+          [_vm._v("\n                    KẾT QUẢ")]
+        )
+      ]
+    )
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -44668,39 +44558,141 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
+    return _c(
+      "div",
+      {
+        staticClass: "modal-dialog modal-dialog-centered",
+        attrs: { role: "document" }
+      },
+      [
+        _c("div", { staticClass: "modal-content" }, [
+          _c("div", { staticClass: "modal-header" }, [
+            _c(
+              "button",
+              {
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "modal",
+                  "aria-label": "Close"
+                }
+              },
+              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal-body",
+              staticStyle: {
+                width: "500px",
+                height: "500px",
+                "font-size": "30px",
+                "text-align": "center"
+              }
+            },
+            [
+              _c("img", {
+                staticStyle: { width: "350px", height: "300px" },
+                attrs: { src: "/anh/sai.gif" }
+              }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("p"),
+              _c(
+                "h2",
+                {
+                  staticStyle: {
+                    "font-family": "'time new roman'",
+                    "font-weight": "bold"
+                  }
+                },
+                [
+                  _vm._v(
+                    "KHÔNG\n                                                    CHÍNH XÁC"
+                  )
+                ]
+              ),
+              _c("p"),
+              _vm._v(" "),
+              _c("p", [_vm._v("+ 0")])
+            ]
+          )
+        ])
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
+    return _c(
+      "div",
+      {
+        staticClass: "modal-dialog modal-dialog-centered",
+        attrs: { role: "document" }
+      },
+      [
+        _c("div", { staticClass: "modal-content" }, [
+          _c("div", { staticClass: "modal-header" }, [
+            _c(
+              "button",
+              {
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "modal",
+                  "aria-label": "Close"
+                }
+              },
+              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal-body",
+              staticStyle: {
+                width: "500px",
+                height: "450px",
+                "font-size": "30px",
+                "text-align": "center"
+              }
+            },
+            [
+              _c("img", {
+                staticStyle: { width: "350px", height: "300px" },
+                attrs: { src: "/anh/dung.gif" }
+              }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("p"),
+              _c(
+                "h2",
+                {
+                  staticStyle: {
+                    "font-family": "'time new roman'",
+                    "font-weight": "bold"
+                  }
+                },
+                [
+                  _vm._v(
+                    "ĐÁP ÁN\n                                                    CHÍNH XÁC"
+                  )
+                ]
+              ),
+              _c("p"),
+              _vm._v(" "),
+              _c("p", [_vm._v("+ 10")])
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

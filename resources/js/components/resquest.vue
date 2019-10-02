@@ -6,7 +6,7 @@
                     style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;">
                     <img src="anh/logovuong.png"
                          style="width: 150px; height: 120px; padding-bottom: 25px">
-                    <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;">
+                    <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;">
                         KẾT QUẢ</h4>
                 </div>
                 <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
@@ -89,14 +89,14 @@
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto;">
                         <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
-                             style="border: 4px solid red; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team1}}
                             </div>
                         </div>
                         <div
-                             style="background-color: red; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px;"
+                             style="background-color: #043368 ; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI I
                         </div>
                         <div v-if="teamAct==1"><img src="/anh/bell.png"
@@ -106,14 +106,14 @@
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto;">
                         <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
-                             style="border: 4px solid green; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team2}}
                             </div>
                         </div>
                         <div
-                             style="background-color: green; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px"
+                             style="background-color: #043368 ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI II
                         </div>
                         <div v-if="teamAct==2"><img src="/anh/bell.png"
@@ -123,14 +123,14 @@
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto;">
                         <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
-                             style="border: 4px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
                             </div>
                         </div>
                         <div
-                             style="background-color: yellow; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: red"
+                             style="background-color: #043368;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI III
                         </div>
                         <div v-if="teamAct==3"><img src="/anh/bell.png"
@@ -139,9 +139,9 @@
 
                     </div>
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
-                         style="margin: auto; margin-top: 10px; ">
+                         style="margin: auto; margin-top: 10px; " @click="runTime">
                         <div
-                            style="padding-top:65px;width: 250px; height: 250px; margin:auto; text-align:center;background-image:url('/anh/aclock.gif'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
+                            style="padding-top:55px;width: 210px; height: 210px; margin:auto; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
                             {{totalTime }}
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                             </button>
                         </div>
                         <div class="col-md-12" v-bind:class="{'max-height': height_a,'min-height': height_b}"
-                             style="display: inline-block; border: 4px solid yellow; border-radius: 40px;background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzanLEbTphxKQIYSx0JGuF8afw2wS_if2a79OkBI0qShlZKoRQDA');background-size:100% 100%; ">
+                             style="display: inline-block; border: 2px solid yellow; border-radius: 40px;background-image:url('/anh/nencauhoi.jpg');background-size:100% 100%; ">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
                                  style="color: white;font-size: 28px">
                                 <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
@@ -180,7 +180,7 @@
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background-image:url('http://sf.co.ua/14/02/wallpaper-442831.jpg');background-size:100% 100%; "
+                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background-image:url('/anh/nencautraloi.jpg');background-size:100% 100%; "
                                         type="button" class="btn btn-primary"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick,'answer-max-height': height_a,'answer-min-height': height_b}">
@@ -206,7 +206,7 @@
                                                     <p>
                                                     <h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG
                                                         CHÍNH XÁC</h2></p>
-                                                    <P>+ 0</P>
+                                                    <p>+ 0</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
                                                     <p>
                                                     <h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN
                                                         CHÍNH XÁC</h2></p>
-                                                    <P>+ 10</P>
+                                                    <p>+ 10</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,6 +277,7 @@
         name: "question",
         data: function () {
             return {
+                loading: false,
                 isLoading: true,
                 onclick: undefined,
                 timer: null,
@@ -300,7 +301,7 @@
                 ind: undefined,
                 index: undefined,
                 hidden: true,
-                totalTime: 60,
+                totalTime: 10,
                 hidden: false,
                 packageDetail: undefined,
                 height_a: undefined,
@@ -333,6 +334,7 @@
                 });
             this.question_data = this.question
             this.timer = setInterval(() => this.countdown(), 1000);
+            this.stopTimer();
             this.resetButton = true;
             this.question_data.forEach(el => {
                 el.answer.forEach((item, index, arr) => {
@@ -362,6 +364,17 @@
             }
         },
         methods: {
+            runTime () {
+                if(this.loading == false){
+                    this.startTimer();
+                    this.loading = true
+                }
+                else{
+                    this.stopTimer();
+                    this.loading = false
+                }
+               
+            },
             startTimer: function () {
                 this.timer = setInterval(() => this.countdown(), 1000);
                 this.resetButton = true;
@@ -372,7 +385,7 @@
                 this.resetButton = true;
             },
             resetTimer: function () {
-                this.totalTime = 60;
+                this.totalTime = 10;
                 clearInterval(this.timer);
                 this.timer = null;
                 this.resetButton = false;
@@ -398,6 +411,7 @@
                 this.mauvang = !this.mauvang
             },
             next() {
+                this.loading =false
                 this.onclick = undefined
                 this.answer = undefined
                 this.ind = undefined
@@ -412,9 +426,8 @@
                 } else {
                     this.hidden = true
                 }
-                this.totalTime = 60
+                this.totalTime = 10
                 this.resetTimer()
-                this.startTimer()
                 this.teamAct = undefined
             },
             playsound() {
@@ -529,7 +542,7 @@
     }
 
     .ind--0 {
-        background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/60/22/8657a596e736992.jpg') !important;
+        background-image: url('/anh/nenchoncautraloi.jpg') !important;
         color: blue;
         font-weight: bold;
     }
