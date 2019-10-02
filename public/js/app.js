@@ -2533,6 +2533,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2591,6 +2592,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
 
     axios.get('/getdetailpackage/' + this.old_id).then(function (res) {
       _this.packageDetail = res.data.result;
+      console.log(_this.packageDetail);
     });
     axios.get('/gettotalpoint/' + this.old_id).then(function (res) {
       var data = res.data.result;
@@ -43423,7 +43425,7 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-image": "url('/anh/nen.jpg')",
+        "background-image": "url('/anh/nen2.jpg')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
@@ -43784,12 +43786,13 @@ var render = function() {
                             ? _c("div", [
                                 _c("img", {
                                   staticStyle: {
-                                    width: "50px",
-                                    height: "50px",
+                                    width: "60px",
+                                    height: "60px",
                                     "margin-top": "15px",
-                                    "margin-left": "10px"
+                                    "margin-left": "0px",
+                                    "object-fit": "fill"
                                   },
-                                  attrs: { src: "/anh/bell.png" }
+                                  attrs: { src: "/anh/bell2.gif" }
                                 })
                               ])
                             : _vm._e()
@@ -44063,27 +44066,29 @@ var render = function() {
                               }
                             },
                             [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning",
-                                  staticStyle: {
-                                    color: "red",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "18 px",
-                                    background: "#FFFF00"
-                                  },
-                                  attrs: { type: "button" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                            GÓI\n                            CÂU HỎI SỐ: " +
-                                      _vm._s(this.packageDetail.name) +
-                                      "\n                        "
+                              _vm.packageDetail
+                                ? _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-warning",
+                                      staticStyle: {
+                                        color: "red",
+                                        "font-family": "'Tahoma'",
+                                        "font-weight": "bold",
+                                        "font-size": "18 px",
+                                        background: "#FFFF00"
+                                      },
+                                      attrs: { type: "button" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            GÓI\n                            CÂU HỎI SỐ: " +
+                                          _vm._s(this.packageDetail.name) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   )
-                                ]
-                              ),
+                                : _vm._e(),
                               _vm._v(" "),
                               _vm._l(_vm.question_data, function(item, index) {
                                 return _c(

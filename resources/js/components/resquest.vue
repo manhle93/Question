@@ -1,5 +1,5 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen.jpg');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen2.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
@@ -99,8 +99,8 @@
                              style="background-color: #043368 ; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI I
                         </div>
-                        <div v-if="teamAct==1"><img src="/anh/bell.png"
-                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        <div v-if="teamAct==1"><img src="/anh/bell2.gif"
+                                                    style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
                         </div>
                     </div>
                     <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
@@ -150,6 +150,7 @@
                     <div class="row" style="margin: 0 auto; text-align:center">
                         <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
                             <button type="button" class="btn btn-warning"
+                            v-if="packageDetail"
                                     style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #FFFF00">
                                 GÓI
                                 CÂU HỎI SỐ: {{this.packageDetail.name}}
@@ -323,7 +324,7 @@
             axios.get('/getdetailpackage/' + this.old_id)
                 .then(res => {
                     this.packageDetail = res.data.result;
-
+                    console.log(this.packageDetail)
                 });
             axios.get('/gettotalpoint/' + this.old_id)
                 .then(res => {
