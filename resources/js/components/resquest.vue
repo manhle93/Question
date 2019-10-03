@@ -86,9 +86,9 @@
             </div>
             <div class="row" style="margin-top: 10px;height: 90%">
                 <div class="col-md-3" style="padding-top: 30px;">
-                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                    <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                        <div class="point-width"
                              style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
@@ -97,15 +97,15 @@
                         </div>
                         <div
                              style="background-color: #043368 ; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(1)" v-bind:class="{boder:teamAct==1,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI I
+                             @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI I
                         </div>
                         <div v-if="teamAct==1"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
                         </div>
                     </div>
-                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                    <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                        <div class="point-width"
                              style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
@@ -114,26 +114,26 @@
                         </div>
                         <div
                              style="background-color: #043368 ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(2)" v-bind:class="{boder:teamAct==2,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI II
+                             @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI II
                         </div>
-                        <div v-if="teamAct==2"><img src="/anh/bell.png"
+                        <div v-if="teamAct==2"><img src="/anh/bell2.png"
                                                     style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
                         </div>
                     </div>
-                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                    <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div v-bind:class="{'point-fullwidth': height_a,'point-width':height_b}"
+                        <div class="point-width"
                              style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
-                            <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                            <div class="teampoint-width"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
                             </div>
                         </div>
                         <div
                              style="background-color: #043368;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(3)" v-bind:class="{boder:teamAct==3,'team-max-height':height_a,'team-min-height':height_b}">ĐỘI III
+                             @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI III
                         </div>
-                        <div v-if="teamAct==3"><img src="/anh/bell.png"
+                        <div v-if="teamAct==3"><img src="/anh/bell2.png"
                                                     style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
                         </div>
 
@@ -159,13 +159,14 @@
                                 style="background-color:#009688;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%;"
                                 type="button" class="btn btn-primary"
                                 v-for="(item,index) in question_data"
+                                @click="change_question(index)"
                                 v-bind:class="{'red':index <= turn}">
                                 <p><span
                                     style="color: white;">{{index+1}}</span>
                                 </p>
                             </button>
                         </div>
-                        <div class="col-md-12" v-bind:class="{'max-height': height_a,'min-height': height_b}"
+                        <div class="col-md-12 min-height"
                              style="display: inline-block; border: 2px solid yellow; border-radius: 40px;background-image:url('/anh/nencauhoi.jpg');background-size:100% 100%; ">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
                                  style="color: white;font-size: 28px">
@@ -182,9 +183,9 @@
                                      v-if="index==turn">
                                     <button
                                         style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background-image:url('/anh/nencautraloi.jpg');background-size:100% 100%; "
-                                        type="button" class="btn btn-primary"
+                                        type="button" class="btn btn-primary answer-min-height"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
-                                        v-bind:class="{'ind--0':ind === onclick,'answer-max-height': height_a,'answer-min-height': height_b}">
+                                        v-bind:class="{'ind--0':ind === onclick}">
                                         <p><span
                                             style="color: white; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
                                         </p>
@@ -365,6 +366,9 @@
             }
         },
         methods: {
+            change_question (index) {
+                this.turn = index
+            },
             runTime () {
                 if(this.loading == false){
                     this.startTimer();
@@ -566,43 +570,14 @@
         height: 200px;
         margin-bottom: 50px;
     }
-
-    .max-height {
-        height: 300px;
-        margin-bottom: 30px;
-    }
-
-    .answer-max-height {
-        height: 130px;
-        border-radius: 80px;
-        margin-top: 30px;
-    }
-
     .answer-min-height {
         height: 85px;
         border-radius: 40px;
     }
-
-    .btn-max-height {
-        margin-top: 30px;
-        height: 70px;
-        width: 125px;
-    }
-
     .point-width {
         width: 80px;
         height: 80px;
     }
-
-    .point-fullwidth {
-        width: 120px;
-        height: 120px;
-    }
-
-    .bor-max-height {
-        height: 18%;
-    }
-
     .bor-min-height {
         height: 15%;
     }
@@ -610,14 +585,6 @@
     .team-min-height {
         width: 150px;
         height: 60px;
-    }
-    .team-max-height {
-        width: 200px;
-        height: 100px;
-        margin-left:20px;
-    }
-    .teampoint-fullwidth{
-        padding-top: 32px;
     }
     .teampoint-width{
         padding-top: 15px;
