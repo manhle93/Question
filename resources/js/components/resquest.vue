@@ -116,8 +116,8 @@
                              style="background-color: #043368 ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI II
                         </div>
-                        <div v-if="teamAct==2"><img src="/anh/bell2.png"
-                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        <div v-if="teamAct==2"><img src="/anh/bell2.gif"
+                                                    style="width: 60px; height: 60px;margin-top: 15px;"/>
                         </div>
                     </div>
                     <div class="row bor-min-height"
@@ -133,8 +133,8 @@
                              style="background-color: #043368;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid yellow; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI III
                         </div>
-                        <div v-if="teamAct==3"><img src="/anh/bell2.png"
-                                                    style="width: 50px; height: 50px;margin-top: 15px; margin-left: 10px"/>
+                        <div v-if="teamAct==3"><img src="/anh/bell2.gif"
+                                                    style="width: 60px; height: 60px;margin-top: 15px;"/>
                         </div>
 
                     </div>
@@ -368,6 +368,7 @@
         methods: {
             change_question (index) {
                 this.turn = index
+                this.success = false
             },
             runTime () {
                 if(this.loading == false){
