@@ -3,10 +3,11 @@
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
-                    style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 20px;">
-                    <img src="anh/logovuong.png"
-                         style="width: 150px; height: 120px; padding-bottom: 25px">
-                    <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white;">
+                    style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 50px;">
+                    <!-- <img src="anh/logovuong.png"
+                         style="width: 150px; height: 120px; padding-bottom: 25px"> -->
+                         
+                    <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white">
                         KẾT QUẢ</h4>
                 </div>
                 <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
@@ -80,9 +81,9 @@
                 </div>
             </div>
             <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 40px">
-                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 38px;">
-                    PHẦN THI TRẮC NGHIỆM KIẾN THỨC
-                </div>
+                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 30px;">
+PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
+                    </div>
             </div>
             <div class="row" style="margin-top: 10px;height: 90%">
                 <div class="col-md-3" style="padding-top: 30px;">
@@ -279,6 +280,8 @@
         name: "question",
         data: function () {
             return {
+                statusaudio: false,
+                audiodongho: undefined,
                 loading: false,
                 isLoading: true,
                 onclick: undefined,
@@ -382,15 +385,22 @@
                
             },
             startTimer: function () {
+                this.playSoundTickTock()
                 this.timer = setInterval(() => this.countdown(), 1000);
                 this.resetButton = true;
             },
             stopTimer: function () {
+                if(this.statusaudio == true){
+                this.audiodongho.pause()
+                }
                 clearInterval(this.timer);
                 this.timer = null;
                 this.resetButton = true;
             },
             resetTimer: function () {
+                if(this.statusaudio == true){
+                this.audiodongho.pause()
+                }
                 this.totalTime = 10;
                 clearInterval(this.timer);
                 this.timer = null;
@@ -446,6 +456,11 @@
                 var audio = new Audio('/sound/sai.mp3') // path to file
                 audio.play()
             },
+            playSoundTickTock() {
+                this.audiodongho = new Audio('/sound/ticktock.mp3');
+                this.statusaudio = true
+                this.audiodongho.play()
+            },
             activePoint(team) {
                 if (this.teamAct == team && this.teamAct != undefined) {
                     this.teamAct = undefined
@@ -483,7 +498,7 @@
                             } else {
                                 this.tinker = false
                                 this.playSoundError()
-                                this.question_data[this.index].answer.splice(this.ind, 1)
+                                // this.question_data[this.index].answer.splice(this.ind, 1)
                             }
                         } else {
                             if (this.current_answer !== this.answer) {
@@ -506,7 +521,7 @@
                                 } else {
                                     this.tinker = false
                                     this.playSoundError()
-                                    this.question_data[this.index].answer.splice(this.ind, 1)
+                                    // this.question_data[this.index].answer.splice(this.ind, 1)
                                 }
                             }
                         }
