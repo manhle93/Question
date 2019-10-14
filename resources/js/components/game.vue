@@ -17,8 +17,8 @@
         <div class="full-width" v-if="this.start == true && this.play == false">
             <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 47%; text-align: center;font-size: 50px;padding-top: 20px;" >
                 <img src="anh/logovuong.gif" style="width: 150px; height: 140px; padding-bottom: 25px">
-                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: #ce0b0b;" >HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI</h4>
-                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: #ce0b0b;" >TOÀN QUỐC NGÀNH XÂY DỰNG</h4>
+                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: yellow;" >HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI</h4>
+                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: yellow;" >TOÀN QUỐC NGÀNH XÂY DỰNG</h4>
                 <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 25px; color: white;" >PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ</h4>
                 <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 25px; color: white;" >KỸ THUẬT ATVSLĐ</h4>
             </div>

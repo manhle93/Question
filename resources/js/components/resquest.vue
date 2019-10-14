@@ -16,21 +16,21 @@
                             <div
                                 style="background-color: blue;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
-                                    ĐỘI I</p>
+                                    ĐỘI 1</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team1}}</p>
                             </div>
                             <div
                                 style="background-color: green;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
-                                    ĐỘI II</p>
+                                    ĐỘI 2</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team2}}</p>
                             </div>
                             <div
                                 style="background-color: red; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
-                                    ĐỘI III</p>
+                                    ĐỘI 3</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team3}}</p>
                             </div>
@@ -98,7 +98,7 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                         </div>
                         <div
                              style="background-color: #043368 ; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI I
+                             @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI 1
                         </div>
                         <div v-if="teamAct==1"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
@@ -109,13 +109,13 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                         <div class="point-width"
                              style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
-                                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
+                                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 10px">
                                 {{this.team2}}
                             </div>
                         </div>
                         <div
                              style="background-color: #043368 ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI II
+                             @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
                         <div v-if="teamAct==2"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
@@ -132,7 +132,7 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                         </div>
                         <div
                              style="background-color: #043368;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid yellow; border-radius: 5px"
-                             @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI III
+                             @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
                         <div v-if="teamAct==3"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
@@ -183,7 +183,7 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 18px;background-image:url('/anh/nencautraloi.jpg');background-size:100% 100%; "
+                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 20px;background-image:url('/anh/nencautraloi.jpg');background-size:100% 100%; "
                                         type="button" class="btn btn-primary answer-min-height"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick}">
