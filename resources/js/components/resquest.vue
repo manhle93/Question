@@ -1,5 +1,5 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen2.jpg');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen3.png');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
@@ -14,21 +14,21 @@
                     <div class="col-md-10" style=" margin: auto">
                         <div class="row">
                             <div
-                                style="background-color: blue;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
+                                style="background-color: #28B463;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 1</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team1}}</p>
                             </div>
                             <div
-                                style="background-color: green;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                style="background-color: #C0392B;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 2</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team2}}</p>
                             </div>
                             <div
-                                style="background-color: red; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                style="background-color: blue; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
                                 <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 3</p>
                                 <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
@@ -55,7 +55,7 @@
         </div>
         <div v-if="hidden== false"
              style="height: 100%; width: 100%; overflow-y:hidden; overflow-x:hidden;">
-            <div class="row" style="height: 15%;">
+            <!-- <div class="row" style="height: 15%;">
                 <div class="col-md-8">
                     <div class="row" style="margin-top: 10px">
                         <div class="col-md-2" style="text-align:center; padding-left: 50px">
@@ -79,59 +79,70 @@
                         HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI <br>TOÀN QUỐC NGÀNH XÂY DỰNG
                     </div>
                 </div>
-            </div>
-            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 40px">
-                <div style="margin: 0 auto;color: yellow; font-family: 'Garamond';font-weight: bold; font-size: 30px;">
-PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
+            </div> -->
+            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px">
+                <div class="col-md-3" style="margin: 0 auto">
+                <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto; margin-top: 10px; " @click="runTime">
+                    <div
+                        style="padding-top:55px;width: 210px; height: 210px; margin:auto; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
+                        {{totalTime }}
                     </div>
+                </div>
+                </div>
+                <div class="col-md-9" style="margin: 0 auto;color: black; font-family: 'Garamond';font-weight: bold; font-size: 60px; text-align:center">
+                        PHẦN THI TRẮC NGHIỆM
+                </div>
             </div>
             <div class="row" style="margin-top: 10px;height: 90%">
-                <div class="col-md-3" style="padding-top: 30px;">
+                <div class="col-md-3" style="padding-top: 150px;">
                     <div class="row bor-min-height"
                          style="margin: auto;">
                         <div class="point-width"
-                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid black;background-color: #28B463; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team1}}
                             </div>
                         </div>
                         <div
-                             style="background-color: #043368 ; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
+                             style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI 1
                         </div>
                         <div v-if="teamAct==1"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
                         </div>
                     </div>
+                    <br>
                     <div class="row bor-min-height"
                          style="margin: auto;">
                         <div class="point-width"
-                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid black;background-color: #C0392B ; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 10px">
                                 {{this.team2}}
                             </div>
                         </div>
                         <div
-                             style="background-color: #043368 ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid yellow; border-radius: 5px"
+                             style="background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
                         <div v-if="teamAct==2"><img src="/anh/bell2.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
                         </div>
                     </div>
+                    <br>
                     <div class="row bor-min-height"
                          style="margin: auto;">
                         <div class="point-width"
-                             style="border: 2px solid yellow; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid black;background-color: blue; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div class="teampoint-width"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
                             </div>
                         </div>
                         <div
-                             style="background-color: #043368;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid yellow; border-radius: 5px"
+                             style="background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
                         <div v-if="teamAct==3"><img src="/anh/bell2.gif"
@@ -139,25 +150,41 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                         </div>
 
                     </div>
-                    <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                    <!-- <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto; margin-top: 10px; " @click="runTime">
                         <div
                             style="padding-top:55px;width: 210px; height: 210px; margin:auto; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
                             {{totalTime }}
                         </div>
+                    </div> -->
+                    <div class="col-md-12" style="margin-top:130px;">
+                        <button style="font-weight: bold; font-family: 'time new roman'; float: left" type="button"
+                                class="btn btn-success"
+                                data-toggle="modal"
+                                data-target="#exampleModalCenter"
+                                @click="addPoint"
+                                v-bind:class="{'btn-max-height': height_a}">
+                            KẾT QUẢ
+                        </button>
+                        <button style="font-family: 'time new roman'; float: right" type="button"
+                                class="btn btn-danger"
+                                @click="next"
+                                v-bind:class="{'btn-max-height': height_a}">
+                            {{this.continute}}
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-9" style="margin: 0 auto; text-align:center">
                     <div class="row" style="margin: 0 auto; text-align:center">
-                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
+                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 40px; ">
                             <button type="button" class="btn btn-warning"
                             v-if="packageDetail"
-                                    style="color: red; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #FFFF00">
+                                    style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB">
                                 GÓI
                                 CÂU HỎI SỐ: {{this.packageDetail.name}}
                             </button>
                             <button
-                                style="background-color:#009688;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%;"
+                                style="background-color:#094EAB;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%;"
                                 type="button" class="btn btn-primary"
                                 v-for="(item,index) in question_data"
                                 @click="change_question(index)"
@@ -168,27 +195,27 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                             </button>
                         </div>
                         <div class="col-md-12 min-height"
-                             style="display: inline-block; border: 2px solid yellow; border-radius: 40px;background-image:url('/anh/nencauhoi.jpg');background-size:100% 100%; ">
+                             style="display: inline-block; border: 3px solid black; border-radius: 40px;background-color: #E5E7E9;background-size:100% 100%; ">
                             <div v-for="(item,index) in question_data" v-if="index==turn"
-                                 style="color: white;font-size: 28px">
-                                <div style="color: yellow; font-family:'time new roman'; font-weight: bold;">Câu {{index
+                                 style="color: black;font-size: 28px">
+                                <div style="color: black; font-family:'time new roman'; font-weight: bold;">Câu {{index
                                     +1}}
                                 </div>
-                                <p style="font-family:'time new roman';font-size: 26px">{{item.name}}</p>
+                                <p style="font-family:'time new roman';font-size: 29px">{{item.name}}</p>
                             </div>
                         </div>
-                        <div class="col-md-12" style="height: auto;">
+                        <div class="col-md-12" style="height: 100%;">
                             <div>
                                 <div style="width: 100%;float: left; background-color: #ffffff00" class="grid-container"
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:95%; border: yellow solid 2px; font-family:'time new roman'; font-weight: bold;font-size: 20px;background-image:url('/anh/nencautraloi.jpg');background-size:100% 100%; "
+                                        style="width:95%; border: black solid 2px; font-family:'time new roman';color:black; font-weight: bold;font-size: 26px;background-color: #F2F3F4;background-size:100% 100%;"
                                         type="button" class="btn btn-primary answer-min-height"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick}">
                                         <p><span
-                                            style="color: white; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
+                                            style="color: black; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
                                         </p>
                                     </button>
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -241,7 +268,7 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12" style="margin-top:5px;">
+                        <!-- <div class="col-md-12" style="margin-top:5px;">
                             <button style="font-weight: bold; font-family: 'time new roman'; float: left" type="button"
                                     class="btn btn-success"
                                     data-toggle="modal"
@@ -256,7 +283,7 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
                                     v-bind:class="{'btn-max-height': height_a}">
                                 {{this.continute}}
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -579,15 +606,15 @@ PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ KỸ THUẬT ATVSLĐ
     }
 
     .red {
-        background-color: red !important;
+        background-color: #C12701 !important;
     }
 
     .min-height {
-        height: 200px;
-        margin-bottom: 50px;
+        height: 180px;
+        margin-bottom: 25px;
     }
     .answer-min-height {
-        height: 85px;
+        height: 160px;
         border-radius: 40px;
     }
     .point-width {

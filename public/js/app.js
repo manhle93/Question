@@ -2161,6 +2161,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2207,6 +2211,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
 //
 //
 //
@@ -2534,6 +2542,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2548,6 +2585,8 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     var _ref;
 
     return _ref = {
+      statusaudio: false,
+      audiodongho: undefined,
       loading: false,
       isLoading: true,
       onclick: undefined,
@@ -2637,6 +2676,10 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     }
   },
   methods: {
+    change_question: function change_question(index) {
+      this.turn = index;
+      this.success = false;
+    },
     runTime: function runTime() {
       if (this.loading == false) {
         this.startTimer();
@@ -2649,17 +2692,26 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     startTimer: function startTimer() {
       var _this2 = this;
 
+      this.playSoundTickTock();
       this.timer = setInterval(function () {
         return _this2.countdown();
       }, 1000);
       this.resetButton = true;
     },
     stopTimer: function stopTimer() {
+      if (this.statusaudio == true) {
+        this.audiodongho.pause();
+      }
+
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = true;
     },
     resetTimer: function resetTimer() {
+      if (this.statusaudio == true) {
+        this.audiodongho.pause();
+      }
+
       this.totalTime = 10;
       clearInterval(this.timer);
       this.timer = null;
@@ -2721,6 +2773,11 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
 
       audio.play();
     },
+    playSoundTickTock: function playSoundTickTock() {
+      this.audiodongho = new Audio('/sound/ticktock.mp3');
+      this.statusaudio = true;
+      this.audiodongho.play();
+    },
     activePoint: function activePoint(team) {
       if (this.teamAct == team && this.teamAct != undefined) {
         this.teamAct = undefined;
@@ -2763,8 +2820,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
               this.isLoading = false;
             } else {
               this.tinker = false;
-              this.playSoundError();
-              this.question_data[this.index].answer.splice(this.ind, 1);
+              this.playSoundError(); // this.question_data[this.index].answer.splice(this.ind, 1)
             }
           } else {
             if (this.current_answer !== this.answer) {
@@ -2791,8 +2847,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
                 this.isLoading = false;
               } else {
                 this.tinker = false;
-                this.playSoundError();
-                this.question_data[this.index].answer.splice(this.ind, 1);
+                this.playSoundError(); // this.question_data[this.index].answer.splice(this.ind, 1)
               }
             }
           }
@@ -7388,7 +7443,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('/anh/nenchoncautraloi.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: red !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 200px;\n    margin-bottom: 50px;\n}\n.max-height[data-v-e318d6e6] {\n    height: 300px;\n    margin-bottom: 30px;\n}\n.answer-max-height[data-v-e318d6e6] {\n    height: 130px;\n    border-radius: 80px;\n    margin-top: 30px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 85px;\n    border-radius: 40px;\n}\n.btn-max-height[data-v-e318d6e6] {\n    margin-top: 30px;\n    height: 70px;\n    width: 125px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.point-fullwidth[data-v-e318d6e6] {\n    width: 120px;\n    height: 120px;\n}\n.bor-max-height[data-v-e318d6e6] {\n    height: 18%;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.team-max-height[data-v-e318d6e6] {\n    width: 200px;\n    height: 100px;\n    margin-left:20px;\n}\n.teampoint-fullwidth[data-v-e318d6e6]{\n    padding-top: 32px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('/anh/nenchoncautraloi.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: #C12701 !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 180px;\n    margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 160px;\n    border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
 
 // exports
 
@@ -43174,45 +43229,7 @@ var render = function() {
     _vm._v(" "),
     this.start == true && this.play == false
       ? _c("div", { staticClass: "full-width" }, [
-          _c(
-            "div",
-            {
-              staticStyle: {
-                "background-color": "#1d68a7",
-                width: "100%",
-                "font-weight": "bold",
-                height: "35%",
-                "text-align": "center",
-                "font-size": "50px",
-                "padding-top": "20px"
-              }
-            },
-            [
-              _c("img", {
-                staticStyle: {
-                  width: "150px",
-                  height: "140px",
-                  "padding-bottom": "25px"
-                },
-                attrs: { src: "anh/logovuong.gif" }
-              }),
-              _vm._v(" "),
-              _c(
-                "H4",
-                {
-                  staticStyle: {
-                    "font-family": "'time new roman'",
-                    "font-weight": "bold",
-                    "text-align": "center",
-                    "font-size": "50px",
-                    color: "white"
-                  }
-                },
-                [_vm._v("GÓI CÂU HỎI")]
-              )
-            ],
-            1
-          ),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
@@ -43225,6 +43242,20 @@ var render = function() {
               }
             },
             [
+              _c(
+                "H4",
+                {
+                  staticStyle: {
+                    "font-family": "'time new roman'",
+                    "font-weight": "bold",
+                    "text-align": "center",
+                    "font-size": "30px",
+                    color: "white"
+                  }
+                },
+                [_vm._v("GÓI CÂU HỎI")]
+              ),
+              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -43266,13 +43297,100 @@ var render = function() {
                   )
                 ]
               )
-            ]
+            ],
+            1
           )
         ])
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticStyle: {
+          "background-color": "#1d68a7",
+          width: "100%",
+          "font-weight": "bold",
+          height: "47%",
+          "text-align": "center",
+          "font-size": "50px",
+          "padding-top": "20px"
+        }
+      },
+      [
+        _c("img", {
+          staticStyle: {
+            width: "150px",
+            height: "140px",
+            "padding-bottom": "25px"
+          },
+          attrs: { src: "anh/logovuong.gif" }
+        }),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "30px",
+              color: "yellow"
+            }
+          },
+          [_vm._v("HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "30px",
+              color: "yellow"
+            }
+          },
+          [_vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "25px",
+              color: "white"
+            }
+          },
+          [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "25px",
+              color: "white"
+            }
+          },
+          [_vm._v("KỸ THUẬT ATVSLĐ")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -43296,48 +43414,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "full-width" }, [
     _c("div", { staticClass: "full-width" }, [
-      _c(
-        "div",
-        {
-          staticStyle: {
-            "background-color": "#1d68a7",
-            width: "100%",
-            "font-weight": "bold",
-            height: "35%",
-            "text-align": "center",
-            "font-size": "50px",
-            "padding-top": "20px"
-          }
-        },
-        [
-          _c("img", {
-            staticStyle: {
-              width: "150px",
-              height: "120px",
-              "padding-bottom": "25px"
-            },
-            attrs: {
-              src:
-                "https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "H4",
-            {
-              staticStyle: {
-                "font-family": "'time new roman'",
-                "font-weight": "bold",
-                "text-align": "center",
-                "font-size": "50px",
-                color: "white"
-              }
-            },
-            [_vm._v("GÓI CÂU HỎI")]
-          )
-        ],
-        1
-      ),
+      _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
@@ -43350,6 +43427,20 @@ var render = function() {
           }
         },
         [
+          _c(
+            "H4",
+            {
+              staticStyle: {
+                "font-family": "'time new roman'",
+                "font-weight": "bold",
+                "text-align": "center",
+                "font-size": "40px",
+                color: "red"
+              }
+            },
+            [_vm._v("GÓI CÂU HỎI")]
+          ),
+          _vm._v(" "),
           _c(
             "div",
             {
@@ -43391,12 +43482,102 @@ var render = function() {
               )
             ]
           )
-        ]
+        ],
+        1
       )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticStyle: {
+          "background-color": "#1d68a7",
+          width: "100%",
+          "font-weight": "bold",
+          height: "47%",
+          "text-align": "center",
+          "font-size": "50px",
+          "padding-top": "20px"
+        }
+      },
+      [
+        _c("img", {
+          staticStyle: {
+            width: "150px",
+            height: "120px",
+            "padding-bottom": "25px"
+          },
+          attrs: {
+            src:
+              "https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "30px",
+              color: "yellow"
+            }
+          },
+          [_vm._v("HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "30px",
+              color: "yellow"
+            }
+          },
+          [_vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "20px",
+              color: "white"
+            }
+          },
+          [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "h4",
+          {
+            staticStyle: {
+              "font-family": "'time new roman'",
+              "font-weight": "bold",
+              "text-align": "center",
+              "font-size": "20px",
+              color: "white"
+            }
+          },
+          [_vm._v("KỸ THUẬT ATVSLĐ")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -43425,7 +43606,7 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-image": "url('/anh/nen2.jpg')",
+        "background-image": "url('/anh/nen3.png')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
@@ -43468,7 +43649,7 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "blue",
+                                "background-color": "#28B463",
                                 border: "5px red solid",
                                 width: "250px",
                                 height: "200px",
@@ -43489,7 +43670,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                ĐỘI I"
+                                    "\n                                ĐỘI 1"
                                   )
                                 ]
                               ),
@@ -43518,7 +43699,7 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "green",
+                                "background-color": "#C0392B",
                                 border: "5px red solid",
                                 width: "250px",
                                 height: "200px",
@@ -43539,7 +43720,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                ĐỘI II"
+                                    "\n                                ĐỘI 2"
                                   )
                                 ]
                               ),
@@ -43568,7 +43749,7 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "red",
+                                "background-color": "blue",
                                 border: "5px green solid",
                                 width: "250px",
                                 height: "200px",
@@ -43589,7 +43770,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                ĐỘI III"
+                                    "\n                                ĐỘI 3"
                                   )
                                 ]
                               ),
@@ -43682,9 +43863,88 @@ var render = function() {
               }
             },
             [
-              _vm._m(1),
-              _vm._v(" "),
-              _vm._m(2),
+              _c(
+                "div",
+                {
+                  staticClass: "row",
+                  staticStyle: {
+                    margin: "0 auto",
+                    "margin-top": "15px",
+                    height: "5%",
+                    "margin-bottom": "70px"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-3",
+                      staticStyle: { margin: "0 auto" }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "bor-max-height": _vm.height_a,
+                            "bor-min-height": _vm.height_b
+                          },
+                          staticStyle: { margin: "auto", "margin-top": "10px" },
+                          on: { click: _vm.runTime }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticStyle: {
+                                "padding-top": "55px",
+                                width: "210px",
+                                height: "210px",
+                                margin: "auto",
+                                "text-align": "center",
+                                "background-image": "url('/anh/dongho.png')",
+                                "background-size": "100% 100%",
+                                color: "white",
+                                "font-family": "'Tahoma'",
+                                "font-weight": "bold",
+                                "font-size": "72px"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                    " +
+                                  _vm._s(_vm.totalTime) +
+                                  "\n                "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-9",
+                      staticStyle: {
+                        margin: "0 auto",
+                        color: "black",
+                        "font-family": "'Garamond'",
+                        "font-weight": "bold",
+                        "font-size": "60px",
+                        "text-align": "center"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    PHẦN THI TRẮC NGHIỆM\n            "
+                      )
+                    ]
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
@@ -43697,29 +43957,23 @@ var render = function() {
                     "div",
                     {
                       staticClass: "col-md-3",
-                      staticStyle: { "padding-top": "30px" }
+                      staticStyle: { "padding-top": "150px" }
                     },
                     [
                       _c(
                         "div",
                         {
-                          staticClass: "row",
-                          class: {
-                            "bor-max-height": _vm.height_a,
-                            "bor-min-height": _vm.height_b
-                          },
+                          staticClass: "row bor-min-height",
                           staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
-                              class: {
-                                "point-fullwidth": _vm.height_a,
-                                "point-width": _vm.height_b
-                              },
+                              staticClass: "point-width",
                               staticStyle: {
-                                border: "2px solid yellow",
+                                border: "2px solid black",
+                                "background-color": "#28B463",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43756,13 +44010,10 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: {
-                                boder: _vm.teamAct == 1,
-                                "team-max-height": _vm.height_a,
-                                "team-min-height": _vm.height_b
-                              },
+                              staticClass: "team-min-height",
+                              class: { boder: _vm.teamAct == 1 },
                               staticStyle: {
-                                "background-color": "#043368",
+                                "background-color": "#28B463",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
@@ -43770,7 +44021,7 @@ var render = function() {
                                 "font-size": "18px",
                                 color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid yellow",
+                                border: "2px solid black",
                                 "border-radius": "5px"
                               },
                               on: {
@@ -43779,7 +44030,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI I\n                    ")]
+                            [_vm._v("ĐỘI 1\n                    ")]
                           ),
                           _vm._v(" "),
                           _vm.teamAct == 1
@@ -43799,26 +44050,22 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
                       _c(
                         "div",
                         {
-                          staticClass: "row",
-                          class: {
-                            "bor-max-height": _vm.height_a,
-                            "bor-min-height": _vm.height_b
-                          },
+                          staticClass: "row bor-min-height",
                           staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
-                              class: {
-                                "point-fullwidth": _vm.height_a,
-                                "point-width": _vm.height_b
-                              },
+                              staticClass: "point-width",
                               staticStyle: {
-                                border: "2px solid yellow",
+                                border: "2px solid black",
+                                "background-color": "#C0392B",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43838,7 +44085,8 @@ var render = function() {
                                     color: "white",
                                     "font-family": "'Tahoma'",
                                     "font-weight": "bold",
-                                    "font-size": "30px"
+                                    "font-size": "30px",
+                                    "padding-top": "10px"
                                   }
                                 },
                                 [
@@ -43855,13 +44103,10 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: {
-                                boder: _vm.teamAct == 2,
-                                "team-max-height": _vm.height_a,
-                                "team-min-height": _vm.height_b
-                              },
+                              staticClass: "team-min-height",
+                              class: { boder: _vm.teamAct == 2 },
                               staticStyle: {
-                                "background-color": "#043368",
+                                "background-color": "#C0392B",
                                 "background-size": "100% 100%",
                                 "margin-top": "10px",
                                 "text-align": "center",
@@ -43870,7 +44115,7 @@ var render = function() {
                                 "font-size": "18px",
                                 color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid yellow",
+                                border: "2px solid black",
                                 "border-radius": "5px"
                               },
                               on: {
@@ -43879,45 +44124,40 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI II\n                    ")]
+                            [_vm._v("ĐỘI 2\n                    ")]
                           ),
                           _vm._v(" "),
                           _vm.teamAct == 2
                             ? _c("div", [
                                 _c("img", {
                                   staticStyle: {
-                                    width: "50px",
-                                    height: "50px",
-                                    "margin-top": "15px",
-                                    "margin-left": "10px"
+                                    width: "60px",
+                                    height: "60px",
+                                    "margin-top": "15px"
                                   },
-                                  attrs: { src: "/anh/bell.png" }
+                                  attrs: { src: "/anh/bell2.gif" }
                                 })
                               ])
                             : _vm._e()
                         ]
                       ),
                       _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
                       _c(
                         "div",
                         {
-                          staticClass: "row",
-                          class: {
-                            "bor-max-height": _vm.height_a,
-                            "bor-min-height": _vm.height_b
-                          },
+                          staticClass: "row bor-min-height",
                           staticStyle: { margin: "auto" }
                         },
                         [
                           _c(
                             "div",
                             {
-                              class: {
-                                "point-fullwidth": _vm.height_a,
-                                "point-width": _vm.height_b
-                              },
+                              staticClass: "point-width",
                               staticStyle: {
-                                border: "2px solid yellow",
+                                border: "2px solid black",
+                                "background-color": "blue",
                                 margin: "0px auto",
                                 "border-radius": "50%",
                                 "margin-right": "5px",
@@ -43929,10 +44169,7 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  class: {
-                                    "teampoint-fullwidth": _vm.height_a,
-                                    "teampoint-width": _vm.height_b
-                                  },
+                                  staticClass: "teampoint-width",
                                   staticStyle: {
                                     color: "white",
                                     "font-family": "'Tahoma'",
@@ -43954,13 +44191,10 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              class: {
-                                boder: _vm.teamAct == 3,
-                                "team-max-height": _vm.height_a,
-                                "team-min-height": _vm.height_b
-                              },
+                              staticClass: "team-min-height",
+                              class: { boder: _vm.teamAct == 3 },
                               staticStyle: {
-                                "background-color": "#043368",
+                                "background-color": "blue",
                                 "background-size": "100% 100%",
                                 "margin-top": "10px",
                                 "text-align": "center",
@@ -43969,7 +44203,7 @@ var render = function() {
                                 "font-size": "18px",
                                 color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid yellow",
+                                border: "2px solid black",
                                 "border-radius": "5px"
                               },
                               on: {
@@ -43978,19 +44212,18 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI III\n                    ")]
+                            [_vm._v("ĐỘI 3\n                    ")]
                           ),
                           _vm._v(" "),
                           _vm.teamAct == 3
                             ? _c("div", [
                                 _c("img", {
                                   staticStyle: {
-                                    width: "50px",
-                                    height: "50px",
-                                    "margin-top": "15px",
-                                    "margin-left": "10px"
+                                    width: "60px",
+                                    height: "60px",
+                                    "margin-top": "15px"
                                   },
-                                  attrs: { src: "/anh/bell.png" }
+                                  attrs: { src: "/anh/bell2.gif" }
                                 })
                               ])
                             : _vm._e()
@@ -44000,36 +44233,50 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass: "row",
-                          class: {
-                            "bor-max-height": _vm.height_a,
-                            "bor-min-height": _vm.height_b
-                          },
-                          staticStyle: { margin: "auto", "margin-top": "10px" },
-                          on: { click: _vm.runTime }
+                          staticClass: "col-md-12",
+                          staticStyle: { "margin-top": "130px" }
                         },
                         [
                           _c(
-                            "div",
+                            "button",
                             {
+                              staticClass: "btn btn-success",
+                              class: { "btn-max-height": _vm.height_a },
                               staticStyle: {
-                                "padding-top": "55px",
-                                width: "210px",
-                                height: "210px",
-                                margin: "auto",
-                                "text-align": "center",
-                                "background-image": "url('/anh/dongho.png')",
-                                "background-size": "100% 100%",
-                                color: "white",
-                                "font-family": "'Tahoma'",
                                 "font-weight": "bold",
-                                "font-size": "72px"
-                              }
+                                "font-family": "'time new roman'",
+                                float: "left"
+                              },
+                              attrs: {
+                                type: "button",
+                                "data-toggle": "modal",
+                                "data-target": "#exampleModalCenter"
+                              },
+                              on: { click: _vm.addPoint }
+                            },
+                            [
+                              _vm._v(
+                                "\n                        KẾT QUẢ\n                    "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-danger",
+                              class: { "btn-max-height": _vm.height_a },
+                              staticStyle: {
+                                "font-family": "'time new roman'",
+                                float: "right"
+                              },
+                              attrs: { type: "button" },
+                              on: { click: _vm.next }
                             },
                             [
                               _vm._v(
                                 "\n                        " +
-                                  _vm._s(_vm.totalTime) +
+                                  _vm._s(this.continute) +
                                   "\n                    "
                               )
                             ]
@@ -44062,7 +44309,7 @@ var render = function() {
                               staticClass: "col-md-12",
                               staticStyle: {
                                 margin: "0 auto",
-                                "margin-bottom": "10px"
+                                "margin-bottom": "40px"
                               }
                             },
                             [
@@ -44072,11 +44319,11 @@ var render = function() {
                                     {
                                       staticClass: "btn btn-warning",
                                       staticStyle: {
-                                        color: "red",
+                                        color: "white",
                                         "font-family": "'Tahoma'",
                                         "font-weight": "bold",
                                         "font-size": "18 px",
-                                        background: "#FFFF00"
+                                        background: "#094EAB"
                                       },
                                       attrs: { type: "button" }
                                     },
@@ -44097,14 +44344,19 @@ var render = function() {
                                     staticClass: "btn btn-primary",
                                     class: { red: index <= _vm.turn },
                                     staticStyle: {
-                                      "background-color": "#009688",
+                                      "background-color": "#094EAB",
                                       width: "40px",
                                       height: "40px",
                                       "margin-right": "10px",
                                       "font-weight": "bold",
                                       "border-radius": "50%"
                                     },
-                                    attrs: { type: "button" }
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.change_question(index)
+                                      }
+                                    }
                                   },
                                   [
                                     _c("p", [
@@ -44124,16 +44376,12 @@ var render = function() {
                           _c(
                             "div",
                             {
-                              staticClass: "col-md-12",
-                              class: {
-                                "max-height": _vm.height_a,
-                                "min-height": _vm.height_b
-                              },
+                              staticClass: "col-md-12 min-height",
                               staticStyle: {
                                 display: "inline-block",
-                                border: "2px solid yellow",
+                                border: "3px solid black",
                                 "border-radius": "40px",
-                                "background-image": "url('/anh/nencauhoi.jpg')",
+                                "background-color": "#E5E7E9",
                                 "background-size": "100% 100%"
                               }
                             },
@@ -44143,7 +44391,7 @@ var render = function() {
                                     "div",
                                     {
                                       staticStyle: {
-                                        color: "white",
+                                        color: "black",
                                         "font-size": "28px"
                                       }
                                     },
@@ -44152,7 +44400,7 @@ var render = function() {
                                         "div",
                                         {
                                           staticStyle: {
-                                            color: "yellow",
+                                            color: "black",
                                             "font-family": "'time new roman'",
                                             "font-weight": "bold"
                                           }
@@ -44171,7 +44419,7 @@ var render = function() {
                                         {
                                           staticStyle: {
                                             "font-family": "'time new roman'",
-                                            "font-size": "26px"
+                                            "font-size": "29px"
                                           }
                                         },
                                         [_vm._v(_vm._s(item.name))]
@@ -44187,7 +44435,7 @@ var render = function() {
                             "div",
                             {
                               staticClass: "col-md-12",
-                              staticStyle: { height: "auto" }
+                              staticStyle: { height: "100%" }
                             },
                             [
                               _c(
@@ -44215,23 +44463,20 @@ var render = function() {
                                             return _c(
                                               "button",
                                               {
-                                                staticClass: "btn btn-primary",
+                                                staticClass:
+                                                  "btn btn-primary answer-min-height",
                                                 class: {
-                                                  "ind--0": ind === _vm.onclick,
-                                                  "answer-max-height":
-                                                    _vm.height_a,
-                                                  "answer-min-height":
-                                                    _vm.height_b
+                                                  "ind--0": ind === _vm.onclick
                                                 },
                                                 staticStyle: {
                                                   width: "95%",
-                                                  border: "yellow solid 2px",
+                                                  border: "black solid 2px",
                                                   "font-family":
                                                     "'time new roman'",
+                                                  color: "black",
                                                   "font-weight": "bold",
-                                                  "font-size": "18px",
-                                                  "background-image":
-                                                    "url('/anh/nencautraloi.jpg')",
+                                                  "font-size": "26px",
+                                                  "background-color": "#F2F3F4",
                                                   "background-size": "100% 100%"
                                                 },
                                                 attrs: { type: "button" },
@@ -44251,7 +44496,7 @@ var render = function() {
                                                     "span",
                                                     {
                                                       staticStyle: {
-                                                        color: "white",
+                                                        color: "black",
                                                         "margin-left": "20px",
                                                         float: "left",
                                                         "font-weight": "bold",
@@ -44288,7 +44533,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(3, true)]
+                                                [_vm._m(1, true)]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -44307,7 +44552,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(4, true)]
+                                                [_vm._m(2, true)]
                                               )
                                             : _vm._e()
                                         ],
@@ -44316,60 +44561,6 @@ var render = function() {
                                     : _vm._e()
                                 }),
                                 0
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "col-md-12",
-                              staticStyle: { "margin-top": "5px" }
-                            },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-success",
-                                  class: { "btn-max-height": _vm.height_a },
-                                  staticStyle: {
-                                    "font-weight": "bold",
-                                    "font-family": "'time new roman'",
-                                    float: "left"
-                                  },
-                                  attrs: {
-                                    type: "button",
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleModalCenter"
-                                  },
-                                  on: { click: _vm.addPoint }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                            KẾT QUẢ\n                        "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-danger",
-                                  class: { "btn-max-height": _vm.height_a },
-                                  staticStyle: {
-                                    "font-family": "'time new roman'",
-                                    float: "right"
-                                  },
-                                  attrs: { type: "button" },
-                                  on: { click: _vm.next }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(this.continute) +
-                                      "\n                        "
-                                  )
-                                ]
                               )
                             ]
                           )
@@ -44400,19 +44591,10 @@ var staticRenderFns = [
           height: "35%",
           "text-align": "center",
           "font-size": "50px",
-          "padding-top": "20px"
+          "padding-top": "50px"
         }
       },
       [
-        _c("img", {
-          staticStyle: {
-            width: "150px",
-            height: "120px",
-            "padding-bottom": "25px"
-          },
-          attrs: { src: "anh/logovuong.png" }
-        }),
-        _vm._v(" "),
         _c(
           "h4",
           {
@@ -44425,136 +44607,6 @@ var staticRenderFns = [
             }
           },
           [_vm._v("\n                    KẾT QUẢ")]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row", staticStyle: { height: "15%" } }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c(
-          "div",
-          { staticClass: "row", staticStyle: { "margin-top": "10px" } },
-          [
-            _c(
-              "div",
-              {
-                staticClass: "col-md-2",
-                staticStyle: { "text-align": "center", "padding-left": "50px" }
-              },
-              [
-                _c("div", {}, [
-                  _c("img", {
-                    staticStyle: { height: "90px", width: "100px" },
-                    attrs: { src: "/anh/logovuong.gif" }
-                  })
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "col-md-10",
-                staticStyle: { "margin-top": "15px", "padding-left": "70px" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticStyle: {
-                      "font-size": "20px",
-                      "font-family": "'Tahoma'",
-                      color: "yellow",
-                      "font-weight": "bold",
-                      "padding-bottom": "1px"
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            CÔNG ĐOÀN XÂY DỰNG VIỆT NAM\n                        "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticStyle: {
-                      "font-size": "20px",
-                      "font-family": "'time new roman'",
-                      color: "#797D7F",
-                      "font-weight": "bold"
-                    }
-                  },
-                  [
-                    _vm._v(
-                      "\n                            Vietnam National Union of Building Workers\n                        "
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-4", staticStyle: { margin: "auto" } }, [
-        _c(
-          "div",
-          {
-            staticStyle: {
-              color: "yellow",
-              "font-family": "'Tahoma'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "22px"
-            }
-          },
-          [
-            _vm._v("\n                    HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI "),
-            _c("br"),
-            _vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG\n                ")
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "row",
-        staticStyle: {
-          margin: "0 auto",
-          "margin-top": "15px",
-          height: "5%",
-          "margin-bottom": "40px"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticStyle: {
-              margin: "0 auto",
-              color: "yellow",
-              "font-family": "'Garamond'",
-              "font-weight": "bold",
-              "font-size": "38px"
-            }
-          },
-          [
-            _vm._v(
-              "\n                PHẦN THI TRẮC NGHIỆM KIẾN THỨC\n            "
-            )
-          ]
         )
       ]
     )
