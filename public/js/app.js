@@ -43360,19 +43360,56 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "full-width" }, [
     _c("div", { staticClass: "full-width" }, [
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "div",
         {
           staticStyle: {
+            "background-color": "#ECF0F1",
             width: "100%",
-            height: "70%",
-            "background-color": "#F1C40F",
-            "padding-top": "30px"
+            "font-weight": "bold",
+            height: "100%",
+            "text-align": "center",
+            "font-size": "50px",
+            "padding-top": "20px"
           }
         },
         [
+          _c(
+            "h4",
+            {
+              staticStyle: {
+                "font-family": "'time new roman'",
+                "font-weight": "bold",
+                "text-align": "center",
+                "font-size": "25px",
+                color: "black"
+              }
+            },
+            [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT")]
+          ),
+          _vm._v(" "),
+          _c(
+            "h4",
+            {
+              staticStyle: {
+                "font-family": "'time new roman'",
+                "font-weight": "bold",
+                "text-align": "center",
+                "font-size": "25px",
+                color: "black"
+              }
+            },
+            [_vm._v("VÀ KỸ THUẬT AN TOÀN VỆ SINH LAO ĐỘNG")]
+          ),
+          _vm._v(" "),
+          _c("div", {
+            staticStyle: {
+              "border-bottom": "black solid 2px",
+              width: "35%",
+              display: "inline-block"
+            }
+          }),
+          _vm._v(" "),
           _c(
             "H4",
             {
@@ -43380,8 +43417,9 @@ var render = function() {
                 "font-family": "'time new roman'",
                 "font-weight": "bold",
                 "text-align": "center",
-                "font-size": "40px",
-                color: "red"
+                "font-size": "50px",
+                color: "BLACK",
+                "margin-top": "70px"
               }
             },
             [_vm._v("GÓI CÂU HỎI")]
@@ -43393,9 +43431,10 @@ var render = function() {
               staticClass: "row",
               staticStyle: {
                 "border-radius": "20px",
-                "margin-top": "10px",
+                "margin-top": "25px",
                 width: "50%",
-                "margin-left": "25%"
+                "margin-left": "25%",
+                "background-color": "#ECF0F1"
               }
             },
             [
@@ -43405,9 +43444,8 @@ var render = function() {
                   staticClass: "col-md-12 grid-container",
                   staticStyle: {
                     align: "center",
-                    "background-color": "white",
                     "border-radius": "20px",
-                    border: "5px solid #F10F0F"
+                    "background-color": "#ECF0F1"
                   }
                 },
                 _vm._l(_vm.package, function(item, index) {
@@ -43434,96 +43472,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: {
-          "background-color": "#1d68a7",
-          width: "100%",
-          "font-weight": "bold",
-          height: "47%",
-          "text-align": "center",
-          "font-size": "50px",
-          "padding-top": "20px"
-        }
-      },
-      [
-        _c("img", {
-          staticStyle: {
-            width: "150px",
-            height: "120px",
-            "padding-bottom": "25px"
-          },
-          attrs: {
-            src:
-              "https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png"
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "30px",
-              color: "yellow"
-            }
-          },
-          [_vm._v("HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "30px",
-              color: "yellow"
-            }
-          },
-          [_vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "20px",
-              color: "white"
-            }
-          },
-          [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "20px",
-              color: "white"
-            }
-          },
-          [_vm._v("KỸ THUẬT ATVSLĐ")]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

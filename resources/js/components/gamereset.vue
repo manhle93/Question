@@ -1,17 +1,17 @@
 <template>
     <div class="full-width">
         <div class="full-width">
-            <div style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 47%; text-align: center;font-size: 50px;padding-top: 20px;" >
-                <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
+            <div style="background-color:#ECF0F1;width: 100%;font-weight: bold; height: 100%; text-align: center;font-size: 50px;padding-top: 20px;" >
+                <!-- <img src="https://congdoantphochiminh.org.vn/wp-content/uploads/2018/11/logo_canvas-960x750.png" style="width: 150px; height: 120px; padding-bottom: 25px">
                                 <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: yellow;" >HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI</h4>
-                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: yellow;" >TOÀN QUỐC NGÀNH XÂY DỰNG</h4>
-                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 20px; color: white;" >PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ</h4>
-                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 20px; color: white;" >KỸ THUẬT ATVSLĐ</h4>
-            </div>
-            <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
-                <H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 40px; color: red;" >GÓI CÂU HỎI</h4>
-                <div style="border-radius: 20px; margin-top: 10px; width: 50%;margin-left: 25%;" class="row" >
-                    <div class="col-md-12 grid-container" style="align: center; background-color: white;border-radius: 20px; border: 5px solid #F10F0F">
+                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 30px; color: yellow;" >TOÀN QUỐC NGÀNH XÂY DỰNG</h4> -->
+                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 25px; color: black;" >PHẦN THI KIẾN THỨC PHÁP LUẬT</h4>
+                <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 25px; color: black;" >VÀ KỸ THUẬT AN TOÀN VỆ SINH LAO ĐỘNG</h4>
+                <div style="border-bottom: black solid 2px; width: 35%; display: inline-block;"></div>
+<H4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: BLACK; margin-top: 70px" >GÓI CÂU HỎI</h4>
+                <div style="border-radius: 20px; margin-top: 25px; width: 50%;margin-left: 25%;background-color:#ECF0F1  " class="row">
+                    <div class="col-md-12 grid-container"
+                         style="align: center;border-radius: 20px; background-color:#ECF0F1 ">
                         <div class="grid-item package-quest" v-for="(item,index) in package" @click="selectPakage(item.id)">{{item.name}}</div>
                     </div>
                 </div>
