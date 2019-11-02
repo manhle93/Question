@@ -1,51 +1,46 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nen3.png');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nenmoi.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
-                    style="background-color:#1d68a7;width: 100%;font-weight: bold; height: 35%; text-align: center;font-size: 50px;padding-top: 50px;">
+                    style="background-color:#F0F3F4;width: 100%;font-weight: bold; height: 100%; text-align: center;font-size: 50px;padding-top: 50px;">
                     <!-- <img src="anh/logovuong.png"
                          style="width: 150px; height: 120px; padding-bottom: 25px"> -->
                          
-                    <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: white">
-                        KẾT QUẢ</h4>
-                </div>
-                <div style="width: 100%; height: 70%; background-color:#F1C40F;padding-top: 30px;">
-                    <div class="col-md-10" style=" margin: auto">
+                    <h4 style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: black">
+                        KẾT QUẢ THI</h4>
+                    <div class="col-md-10" style="margin: auto; margin-top: 100px">
                         <div class="row">
                             <div
-                                style="background-color: #28B463;border: 5px red solid; width: 250px; height: 200px; margin: auto; text-align: center">
-                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                style="background-color: #21618C;border-radius: 10px; width: 250px; height: 200px; margin: auto; text-align: center">
+                                <p style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 1</p>
-                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                <p style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team1}}</p>
                             </div>
                             <div
-                                style="background-color: #C0392B;border: 5px red solid; width: 250px; height: 200px; margin: auto;  text-align: center">
-                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                style="background-color: #CB4335;border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                <p style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 2</p>
-                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                <p style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team2}}</p>
                             </div>
                             <div
-                                style="background-color: blue; border: 5px green solid; width: 250px; height: 200px; margin: auto;  text-align: center">
-                                <p style="font-size: 28px; font-family:'time new roman'; font-weight: bold;color:white ">
+                                style="background-color: #239B56; border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center">
+                                <p style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 3</p>
-                                <p style="font-size:60px; font-family:'time new roman'; font-weight: bold;color:white">
+                                <p style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white">
                                     {{this.team3}}</p>
                             </div>
                         </div>
-                        <br><br><br><br>
+                        <br><br><br>
                         <div class="row">
                             <button type="button"
-                                    style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;"
+                                    style="margin: auto; font-size: 18px;height: 100px; background-color:#F5B041; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color: black"
                                     class="btn btn-dark" @click="chongoi">TIẾP TỤC
                             </button>
-                        </div>
-                        <br>
-                        <div class="row">
                             <button type="button"
-                                    style="margin: auto; font-size: 18px;height: 70px; width: 280px; font-family:'time new roman'; font-weight: bold;"
+                                    style="margin: auto; background-color:#3498DB; font-size: 18px;height: 100px; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color:black"
                                     class="btn btn-dark" @click="resetContinute">LƯỢT CHƠI MỚI
                             </button>
                         </div>
@@ -80,12 +75,12 @@
                     </div>
                 </div>
             </div> -->
-            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px">
+            <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px;">
                 <div class="col-md-3" style="margin: 0 auto">
                 <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto; margin-top: 10px; " @click="runTime">
                     <div
-                        style="padding-top:55px;width: 210px; height: 210px; margin:auto; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
+                        style="padding-top:55px;width: 210px; height: 210px; margin-left:25px; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
                         {{totalTime }}
                     </div>
                 </div>
@@ -176,7 +171,7 @@
                 </div>
                 <div class="col-md-9" style="margin: 0 auto; text-align:center">
                     <div class="row" style="margin: 0 auto; text-align:center">
-                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 40px; ">
+                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 60px; ">
                             <button type="button" class="btn btn-warning"
                             v-if="packageDetail"
                                     style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB">

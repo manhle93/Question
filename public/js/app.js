@@ -2164,7 +2164,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2278,11 +2277,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
 //
 //
 //
@@ -7405,7 +7399,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.full-width {\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest {\n    width: 110px;\n    height: 60px;\n    border: 1px solid red;\n    border-radius: 5px;\n    background-color: #1901bbc2;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
+exports.push([module.i, "\n.full-width {\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-columns: auto auto auto auto auto;\n    /* background-color:#D7DBDD; */\n    padding: 20px;\n}\n.package-quest {\n    width: 110px;\n    height: 60px;\n    border-radius: 10px;\n    line-height: 60px;\n    background-color: #015BC1;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
 
 // exports
 
@@ -7424,7 +7418,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.full-width{\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap:20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest{\n    width: 110px;\n    height: 60px;\n    border: 1px solid red;\n    border-radius: 5px;\n    background-color: #1901bbc2;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
+exports.push([module.i, "\n.full-width{\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap:20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest{\n    width: 110px;\n    height: 60px;\n    border: 1px solid black;\n    border-radius: 10px;\n    line-height: 60px;\n    background-color: #015BC1;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
 
 // exports
 
@@ -43229,19 +43223,56 @@ var render = function() {
     _vm._v(" "),
     this.start == true && this.play == false
       ? _c("div", { staticClass: "full-width" }, [
-          _vm._m(0),
-          _vm._v(" "),
           _c(
             "div",
             {
               staticStyle: {
+                "background-color": "#ECF0F1",
                 width: "100%",
-                height: "70%",
-                "background-color": "#F1C40F",
-                "padding-top": "30px"
+                "font-weight": "bold",
+                height: "100%",
+                "text-align": "center",
+                "font-size": "50px",
+                "padding-top": "20px"
               }
             },
             [
+              _c(
+                "h4",
+                {
+                  staticStyle: {
+                    "font-family": "'time new roman'",
+                    "font-weight": "bold",
+                    "text-align": "center",
+                    "font-size": "25px",
+                    color: "black"
+                  }
+                },
+                [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h4",
+                {
+                  staticStyle: {
+                    "font-family": "'time new roman'",
+                    "font-weight": "bold",
+                    "text-align": "center",
+                    "font-size": "25px",
+                    color: "black"
+                  }
+                },
+                [_vm._v("VÀ KỸ THUẬT AN TOÀN VỆ SINH LAO ĐỘNG")]
+              ),
+              _vm._v(" "),
+              _c("div", {
+                staticStyle: {
+                  "border-bottom": "black solid 2px",
+                  width: "35%",
+                  display: "inline-block"
+                }
+              }),
+              _vm._v(" "),
               _c(
                 "H4",
                 {
@@ -43249,8 +43280,9 @@ var render = function() {
                     "font-family": "'time new roman'",
                     "font-weight": "bold",
                     "text-align": "center",
-                    "font-size": "30px",
-                    color: "white"
+                    "font-size": "50px",
+                    color: "BLACK",
+                    "margin-top": "70px"
                   }
                 },
                 [_vm._v("GÓI CÂU HỎI")]
@@ -43262,9 +43294,10 @@ var render = function() {
                   staticClass: "row",
                   staticStyle: {
                     "border-radius": "20px",
-                    "margin-top": "10px",
+                    "margin-top": "25px",
                     width: "50%",
-                    "margin-left": "25%"
+                    "margin-left": "25%",
+                    "background-color": "#ECF0F1"
                   }
                 },
                 [
@@ -43274,9 +43307,8 @@ var render = function() {
                       staticClass: "col-md-12 grid-container",
                       staticStyle: {
                         align: "center",
-                        "background-color": "white",
                         "border-radius": "20px",
-                        border: "5px solid #F10F0F"
+                        "background-color": "#ECF0F1"
                       }
                     },
                     _vm._l(_vm.package, function(item, index) {
@@ -43304,93 +43336,7 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: {
-          "background-color": "#1d68a7",
-          width: "100%",
-          "font-weight": "bold",
-          height: "47%",
-          "text-align": "center",
-          "font-size": "50px",
-          "padding-top": "20px"
-        }
-      },
-      [
-        _c("img", {
-          staticStyle: {
-            width: "150px",
-            height: "140px",
-            "padding-bottom": "25px"
-          },
-          attrs: { src: "anh/logovuong.gif" }
-        }),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "30px",
-              color: "yellow"
-            }
-          },
-          [_vm._v("HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "30px",
-              color: "yellow"
-            }
-          },
-          [_vm._v("TOÀN QUỐC NGÀNH XÂY DỰNG")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "25px",
-              color: "white"
-            }
-          },
-          [_vm._v("PHẦN THI KIẾN THỨC PHÁP LUẬT VÀ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "25px",
-              color: "white"
-            }
-          },
-          [_vm._v("KỸ THUẬT ATVSLĐ")]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -43606,7 +43552,7 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-image": "url('/anh/nen3.png')",
+        "background-image": "url('/anh/nenmoi.jpg')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
@@ -43624,24 +43570,39 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "full-width" }, [
-                _vm._m(0),
-                _vm._v(" "),
                 _c(
                   "div",
                   {
                     staticStyle: {
+                      "background-color": "#F0F3F4",
                       width: "100%",
-                      height: "70%",
-                      "background-color": "#F1C40F",
-                      "padding-top": "30px"
+                      "font-weight": "bold",
+                      height: "100%",
+                      "text-align": "center",
+                      "font-size": "50px",
+                      "padding-top": "50px"
                     }
                   },
                   [
                     _c(
+                      "h4",
+                      {
+                        staticStyle: {
+                          "font-family": "'time new roman'",
+                          "font-weight": "bold",
+                          "text-align": "center",
+                          "font-size": "50px",
+                          color: "black"
+                        }
+                      },
+                      [_vm._v("\n                    KẾT QUẢ THI")]
+                    ),
+                    _vm._v(" "),
+                    _c(
                       "div",
                       {
                         staticClass: "col-md-10",
-                        staticStyle: { margin: "auto" }
+                        staticStyle: { margin: "auto", "margin-top": "100px" }
                       },
                       [
                         _c("div", { staticClass: "row" }, [
@@ -43649,8 +43610,8 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "#28B463",
-                                border: "5px red solid",
+                                "background-color": "#21618C",
+                                "border-radius": "10px",
                                 width: "250px",
                                 height: "200px",
                                 margin: "auto",
@@ -43662,7 +43623,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "28px",
+                                    "font-size": "35px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43679,7 +43640,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "60px",
+                                    "font-size": "70px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43699,8 +43660,8 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "#C0392B",
-                                border: "5px red solid",
+                                "background-color": "#CB4335",
+                                "border-radius": "10px",
                                 width: "250px",
                                 height: "200px",
                                 margin: "auto",
@@ -43712,7 +43673,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "28px",
+                                    "font-size": "35px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43729,7 +43690,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "60px",
+                                    "font-size": "70px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43749,8 +43710,8 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "background-color": "blue",
-                                border: "5px green solid",
+                                "background-color": "#239B56",
+                                "border-radius": "10px",
                                 width: "250px",
                                 height: "200px",
                                 margin: "auto",
@@ -43762,7 +43723,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "28px",
+                                    "font-size": "35px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43779,7 +43740,7 @@ var render = function() {
                                 "p",
                                 {
                                   staticStyle: {
-                                    "font-size": "60px",
+                                    "font-size": "70px",
                                     "font-family": "'time new roman'",
                                     "font-weight": "bold",
                                     color: "white"
@@ -43799,7 +43760,6 @@ var render = function() {
                         _c("br"),
                         _c("br"),
                         _c("br"),
-                        _c("br"),
                         _vm._v(" "),
                         _c("div", { staticClass: "row" }, [
                           _c(
@@ -43809,32 +43769,34 @@ var render = function() {
                               staticStyle: {
                                 margin: "auto",
                                 "font-size": "18px",
-                                height: "70px",
-                                width: "280px",
+                                height: "100px",
+                                "background-color": "#F5B041",
+                                width: "250px",
+                                "border-radius": "50px",
                                 "font-family": "'time new roman'",
-                                "font-weight": "bold"
+                                "font-weight": "bold",
+                                color: "black"
                               },
                               attrs: { type: "button" },
                               on: { click: _vm.chongoi }
                             },
                             [_vm._v("TIẾP TỤC\n                        ")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
+                          ),
+                          _vm._v(" "),
                           _c(
                             "button",
                             {
                               staticClass: "btn btn-dark",
                               staticStyle: {
                                 margin: "auto",
+                                "background-color": "#3498DB",
                                 "font-size": "18px",
-                                height: "70px",
-                                width: "280px",
+                                height: "100px",
+                                width: "250px",
+                                "border-radius": "50px",
                                 "font-family": "'time new roman'",
-                                "font-weight": "bold"
+                                "font-weight": "bold",
+                                color: "black"
                               },
                               attrs: { type: "button" },
                               on: { click: _vm.resetContinute }
@@ -43901,7 +43863,7 @@ var render = function() {
                                 "padding-top": "55px",
                                 width: "210px",
                                 height: "210px",
-                                margin: "auto",
+                                "margin-left": "25px",
                                 "text-align": "center",
                                 "background-image": "url('/anh/dongho.png')",
                                 "background-size": "100% 100%",
@@ -44309,7 +44271,7 @@ var render = function() {
                               staticClass: "col-md-12",
                               staticStyle: {
                                 margin: "0 auto",
-                                "margin-bottom": "40px"
+                                "margin-bottom": "60px"
                               }
                             },
                             [
@@ -44533,7 +44495,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(1, true)]
+                                                [_vm._m(0, true)]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -44552,7 +44514,7 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(2, true)]
+                                                [_vm._m(1, true)]
                                               )
                                             : _vm._e()
                                         ],
@@ -44577,40 +44539,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: {
-          "background-color": "#1d68a7",
-          width: "100%",
-          "font-weight": "bold",
-          height: "35%",
-          "text-align": "center",
-          "font-size": "50px",
-          "padding-top": "50px"
-        }
-      },
-      [
-        _c(
-          "h4",
-          {
-            staticStyle: {
-              "font-family": "'time new roman'",
-              "font-weight": "bold",
-              "text-align": "center",
-              "font-size": "50px",
-              color: "white"
-            }
-          },
-          [_vm._v("\n                    KẾT QUẢ")]
-        )
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

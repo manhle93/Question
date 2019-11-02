@@ -64,9 +64,10 @@
     .package-quest{
         width: 110px;
         height: 60px;
-        border: 1px solid red;
-        border-radius: 5px;
-        background-color: #1901bbc2;
+        border: 1px solid black;
+        border-radius: 10px;
+        line-height: 60px;
+        background-color: #015BC1;
         color: white;
         text-align: center;
         font-size: 28px;
