@@ -2066,7 +2066,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (confirm("Xóa câu hỏi")) {
-        axios["delete"]("question/" + id + "/delete").then(function (res) {
+        axios["delete"]("/question/" + id + "/delete").then(function (res) {
           $(_this.$el).fadeOut(800, function () {
             window.location.href = "/question/" + _this.package_id;
           });
