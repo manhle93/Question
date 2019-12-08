@@ -45,7 +45,7 @@ export default {
   methods: {
     xoa(id) {
       if (confirm("Xóa câu hỏi")) {
-        axios.delete("/question/" + id + "/delete").then(res => {
+        axios.delete("question/" + id + "/delete").then(res => {
           $(this.$el).fadeOut(800, () => {
             window.location.href = "/question/" + this.package_id;
           });
