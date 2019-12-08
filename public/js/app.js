@@ -2066,7 +2066,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (confirm("Xóa câu hỏi")) {
-        axios["delete"]("/question/" + id + "/delete/").then(function (res) {
+        axios["delete"]("/question/" + id + "/delete").then(function (res) {
           $(_this.$el).fadeOut(800, function () {
             window.location.href = "/question/" + _this.package_id;
           });
@@ -2101,7 +2101,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this2 = this;
 
-    axios.get("/answer/").then(function (res) {
+    axios.get("/answer").then(function (res) {
       _this2.answers = res.data.resuft;
     });
     console.log(this.questions);
@@ -7437,7 +7437,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('/anh/nenchoncautraloi.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: #C12701 !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 180px;\n    margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 160px;\n    border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: #C12701 !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 180px;\n    margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 160px;\n    border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
 
 // exports
 
@@ -43501,7 +43501,8 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-image": "url('/anh/nenmoi.jpg')",
+        "background-image":
+          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/nenmoi_icrti0.jpg')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }

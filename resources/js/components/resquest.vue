@@ -1,5 +1,5 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('/anh/nenmoi.jpg');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/nenmoi_icrti0.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
@@ -585,7 +585,7 @@
     }
 
     .ind--0 {
-        background-image: url('/anh/nenchoncautraloi.jpg') !important;
+        background-image: url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg') !important;
         color: blue;
         font-weight: bold;
     }
