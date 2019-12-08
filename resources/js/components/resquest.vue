@@ -104,7 +104,7 @@
                              style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI 1
                         </div>
-                        <div v-if="teamAct==1"><img src="/anh/bell2.gif"
+                        <div v-if="teamAct==1"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                              style="background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
-                        <div v-if="teamAct==2"><img src="/anh/bell2.gif"
+                        <div v-if="teamAct==2"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                              style="background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
-                        <div v-if="teamAct==3"><img src="/anh/bell2.gif"
+                        <div v-if="teamAct==3"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
                         </div>
 

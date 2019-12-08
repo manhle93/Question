@@ -43955,7 +43955,10 @@ var render = function() {
                                     "margin-left": "0px",
                                     "object-fit": "fill"
                                   },
-                                  attrs: { src: "/anh/bell2.gif" }
+                                  attrs: {
+                                    src:
+                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                                  }
                                 })
                               ])
                             : _vm._e()
@@ -44047,7 +44050,10 @@ var render = function() {
                                     height: "60px",
                                     "margin-top": "15px"
                                   },
-                                  attrs: { src: "/anh/bell2.gif" }
+                                  attrs: {
+                                    src:
+                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                                  }
                                 })
                               ])
                             : _vm._e()
@@ -44135,7 +44141,10 @@ var render = function() {
                                     height: "60px",
                                     "margin-top": "15px"
                                   },
-                                  attrs: { src: "/anh/bell2.gif" }
+                                  attrs: {
+                                    src:
+                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                                  }
                                 })
                               ])
                             : _vm._e()
