@@ -1,6 +1,6 @@
 <template >
     <div>
-        <h2 style="font-family: 'Times New Roman'">{{name.name}}</h2>
+        <h2 style="font-family: 'Times New Roman'">Gói {{name.name}}</h2>
         <br>
         <a href="/home"><button type="button" style="width: 450px; height: 50px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 20px;" class="btn btn-success">Trang chủ</button></a>
         <a href="/package"><button type="button" style="width: 450px; height: 50px; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 20px;" class="btn btn-warning">Các gói câu hỏi</button></a>
