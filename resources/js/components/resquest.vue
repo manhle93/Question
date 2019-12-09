@@ -12,7 +12,7 @@
                     <div class="col-md-10" style="margin: auto; margin-top: 100px">
                         <div class="row">
                             <div
-                                style="background-color: #21618C;border-radius: 10px; width: 250px; height: 200px; margin: auto; text-align: center">
+                                style="background-color: #21618C;border-radius: 10px; width: 250px; height: 200px; margin: auto; text-align: center;">
                                 <p style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white ">
                                     ĐỘI 1</p>
                                 <p style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white">
@@ -76,11 +76,11 @@
                 </div>
             </div> -->
             <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px;">
-                <div class="col-md-3" style="margin: 0 auto">
-                <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
-                         style="margin: auto; margin-top: 10px; " @click="runTime">
+                <div class="col-md-3" style="margin: 0 auto; cursor: pointer;" >
+                <div  @click="runTime" v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
+                         style="margin: auto; margin-top: 10px; cursor: pointer;">
                     <div
-                        style="padding-top:55px;width: 210px; height: 210px; margin-left:25px; text-align:center;background-image:url('/anh/dongho.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
+                        style="padding-top:55px;width: 210px; height: 210px; margin-left:25px; text-align:center;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541417/hoithi/dongho_mv6mjb.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;">
                         {{totalTime }}
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div
-                             style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
+                             style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI 1
                         </div>
                         <div v-if="teamAct==1"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <div
-                             style="background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
+                             style="cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
                         <div v-if="teamAct==2"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                         <div
-                             style="background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
+                             style="cursor: pointer; background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
                         <div v-if="teamAct==3"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"

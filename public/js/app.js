@@ -42525,7 +42525,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h2", { staticStyle: { "font-family": "'Times New Roman'" } }, [
-      _vm._v(_vm._s(_vm.name.name))
+      _vm._v("Gói " + _vm._s(_vm.name.name))
     ]),
     _vm._v(" "),
     _c("br"),
@@ -43791,7 +43791,7 @@ var render = function() {
                     "div",
                     {
                       staticClass: "col-md-3",
-                      staticStyle: { margin: "0 auto" }
+                      staticStyle: { margin: "0 auto", cursor: "pointer" }
                     },
                     [
                       _c(
@@ -43802,7 +43802,11 @@ var render = function() {
                             "bor-max-height": _vm.height_a,
                             "bor-min-height": _vm.height_b
                           },
-                          staticStyle: { margin: "auto", "margin-top": "10px" },
+                          staticStyle: {
+                            margin: "auto",
+                            "margin-top": "10px",
+                            cursor: "pointer"
+                          },
                           on: { click: _vm.runTime }
                         },
                         [
@@ -43815,7 +43819,8 @@ var render = function() {
                                 height: "210px",
                                 "margin-left": "25px",
                                 "text-align": "center",
-                                "background-image": "url('/anh/dongho.png')",
+                                "background-image":
+                                  "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541417/hoithi/dongho_mv6mjb.png')",
                                 "background-size": "100% 100%",
                                 color: "white",
                                 "font-family": "'Tahoma'",
@@ -43934,7 +43939,8 @@ var render = function() {
                                 color: "white",
                                 "padding-top": "12px",
                                 border: "2px solid black",
-                                "border-radius": "5px"
+                                "border-radius": "5px",
+                                cursor: "pointer"
                               },
                               on: {
                                 click: function($event) {
@@ -44021,6 +44027,7 @@ var render = function() {
                               staticClass: "team-min-height",
                               class: { boder: _vm.teamAct == 2 },
                               staticStyle: {
+                                cursor: "pointer",
                                 "background-color": "#C0392B",
                                 "background-size": "100% 100%",
                                 "margin-top": "10px",
@@ -44112,6 +44119,7 @@ var render = function() {
                               staticClass: "team-min-height",
                               class: { boder: _vm.teamAct == 3 },
                               staticStyle: {
+                                cursor: "pointer",
                                 "background-color": "blue",
                                 "background-size": "100% 100%",
                                 "margin-top": "10px",
