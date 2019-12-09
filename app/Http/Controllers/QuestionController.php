@@ -9,7 +9,10 @@ use App\Package;
 
 class QuestionController extends Controller
 {
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function showFormAdd($id)
     {
         $info = Package::where('id', $id)->first();
