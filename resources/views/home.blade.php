@@ -8,7 +8,7 @@
             <h2>CÔNG ĐOÀN XÂY DỰNG VIỆT NAM</h2>
             <hr>
             <div>
-                <img src="./anh/logovuong.gif" style="width: 150px; height: 150px">
+                <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif" style="width: 150px; height: 150px">
                 <br><br>
                 <H4 style="font-weight:bold">HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI</H4>
                 <H4 style="font-weight:bold">TOÀN QUỐC NGÀNH XÂY DỰNG</H4>
