@@ -2,7 +2,7 @@
     <div class="full-width">
         <div id="welcome" class="full-width" v-if="this.start == false ">
             <div
-                style="width: 100%; height: 40%; background-image: url('/img/panel.JPG'); background-size: 50% 100%; background-repeat: no-repeat;background-position: center; "></div>
+                style="width: 100%; height: 40%; background-image: url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575951672/hoithi/panel_qw5jn2.jpg'); background-size: 50% 100%; background-repeat: no-repeat;background-position: center; "></div>
             <div style="width: 100%; height: 60%;background-color: #1d68a7;padding-top: 30px;">
                 <div id="start" style="margin-left: 45%; border-radius: 5px; width: 150px;height:70px;cursor: pointer;">
                     <button
