@@ -45590,7 +45590,10 @@ var staticRenderFns = [
             [
               _c("img", {
                 staticStyle: { width: "350px", height: "300px" },
-                attrs: { src: "/anh/sai.gif" }
+                attrs: {
+                  src:
+                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif"
+                }
               }),
               _vm._v(" "),
               _c("br"),
@@ -45660,7 +45663,10 @@ var staticRenderFns = [
             [
               _c("img", {
                 staticStyle: { width: "350px", height: "300px" },
-                attrs: { src: "/anh/dung.gif" }
+                attrs: {
+                  src:
+                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif"
+                }
               }),
               _vm._v(" "),
               _c("br"),

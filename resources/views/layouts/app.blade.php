@@ -3,11 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
+    <title>Hội Thi ATVSVG</title>
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

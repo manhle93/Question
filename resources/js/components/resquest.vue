@@ -226,7 +226,7 @@
                                                 </div>
                                                 <div class="modal-body"
                                                      style="width: 500px;height: 500px;font-size: 30px;text-align: center">
-                                                    <img src="/anh/sai.gif" style="width: 350px;height: 300px;">
+                                                    <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif" style="width: 350px;height: 300px;">
                                                     <br>
                                                     <p>
                                                     <h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG
@@ -250,7 +250,7 @@
                                                 </div>
                                                 <div class="modal-body"
                                                      style="width: 500px;height: 450px;font-size: 30px;text-align: center">
-                                                    <img src="/anh/dung.gif" style="width: 350px;height: 300px;">
+                                                    <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif" style="width: 350px;height: 300px;">
                                                     <br>
                                                     <p>
                                                     <h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN

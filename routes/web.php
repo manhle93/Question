@@ -40,6 +40,6 @@ Route::get('gettotalpoint/{id}','PlayController@getTotalPoint')->name('ge.total'
 Route::post('resetpoint/{id}','PlayController@resetPoint')->name('reset.point');
 Route::get('getdetailpackage/{id}','PlayController@getDetailPackage')->name('get.detailPackage');
 
-Route::get('doimatkhau','QuestionController@formChangePass');
-Route::post('doipass','QuestionController@changePass');
+Route::get('doimatkhau','ResetPasswordController@formChangePass');
+Route::post('doipass','ResetPasswordController@changePass');
 
