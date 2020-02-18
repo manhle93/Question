@@ -2689,6 +2689,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -44927,45 +44931,62 @@ var render = function() {
                           staticStyle: { margin: "auto" }
                         },
                         [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "point-width",
-                              staticStyle: {
-                                border: "2px solid black",
-                                "background-color": "#28B463",
-                                margin: "0px auto",
-                                "border-radius": "50%",
-                                "margin-right": "5px",
-                                "margin-left": "20px",
-                                "text-align": "center"
-                              }
-                            },
-                            [
-                              _c(
+                          _vm.teamAct != 1
+                            ? _c(
                                 "div",
                                 {
-                                  class: {
-                                    "teampoint-fullwidth": _vm.height_a,
-                                    "teampoint-width": _vm.height_b
-                                  },
+                                  staticClass: "point-width",
                                   staticStyle: {
-                                    color: "white",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "30px"
+                                    border: "2px solid black",
+                                    "background-color": "#28B463",
+                                    margin: "0px auto",
+                                    "border-radius": "50%",
+                                    "margin-right": "5px",
+                                    "margin-left": "20px",
+                                    "text-align": "center"
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(this.team1) +
-                                      "\n                        "
+                                  _c(
+                                    "div",
+                                    {
+                                      class: {
+                                        "teampoint-fullwidth": _vm.height_a,
+                                        "teampoint-width": _vm.height_b
+                                      },
+                                      staticStyle: {
+                                        color: "white",
+                                        "font-family": "'Tahoma'",
+                                        "font-weight": "bold",
+                                        "font-size": "30px"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            " +
+                                          _vm._s(this.team1) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   )
                                 ]
                               )
-                            ]
-                          ),
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.teamAct == 1
+                            ? _c("img", {
+                                staticStyle: {
+                                  "margin-right": "5px",
+                                  "margin-left": "20px",
+                                  height: "80px",
+                                  width: "80px"
+                                },
+                                attrs: {
+                                  src:
+                                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
+                                }
+                              })
+                            : _vm._e(),
                           _vm._v(" "),
                           _c(
                             "div",
@@ -44992,25 +45013,7 @@ var render = function() {
                               }
                             },
                             [_vm._v("ĐỘI 1\n                    ")]
-                          ),
-                          _vm._v(" "),
-                          _vm.teamAct == 1
-                            ? _c("div", [
-                                _c("img", {
-                                  staticStyle: {
-                                    width: "60px",
-                                    height: "60px",
-                                    "margin-top": "15px",
-                                    "margin-left": "0px",
-                                    "object-fit": "fill"
-                                  },
-                                  attrs: {
-                                    src:
-                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
-                                  }
-                                })
-                              ])
-                            : _vm._e()
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -45023,46 +45026,63 @@ var render = function() {
                           staticStyle: { margin: "auto" }
                         },
                         [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "point-width",
-                              staticStyle: {
-                                border: "2px solid black",
-                                "background-color": "#C0392B",
-                                margin: "0px auto",
-                                "border-radius": "50%",
-                                "margin-right": "5px",
-                                "margin-left": "20px",
-                                "text-align": "center"
-                              }
-                            },
-                            [
-                              _c(
+                          _vm.teamAct != 2
+                            ? _c(
                                 "div",
                                 {
-                                  class: {
-                                    "teampoint-fullwidth": _vm.height_a,
-                                    "teampoint-width": _vm.height_b
-                                  },
+                                  staticClass: "point-width",
                                   staticStyle: {
-                                    color: "white",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "30px",
-                                    "padding-top": "10px"
+                                    border: "2px solid black",
+                                    "background-color": "#C0392B",
+                                    margin: "0px auto",
+                                    "border-radius": "50%",
+                                    "margin-right": "5px",
+                                    "margin-left": "20px",
+                                    "text-align": "center"
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(this.team2) +
-                                      "\n                        "
+                                  _c(
+                                    "div",
+                                    {
+                                      class: {
+                                        "teampoint-fullwidth": _vm.height_a,
+                                        "teampoint-width": _vm.height_b
+                                      },
+                                      staticStyle: {
+                                        color: "white",
+                                        "font-family": "'Tahoma'",
+                                        "font-weight": "bold",
+                                        "font-size": "30px",
+                                        "padding-top": "10px"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            " +
+                                          _vm._s(this.team2) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   )
                                 ]
                               )
-                            ]
-                          ),
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.teamAct == 2
+                            ? _c("img", {
+                                staticStyle: {
+                                  "margin-right": "5px",
+                                  "margin-left": "20px",
+                                  height: "80px",
+                                  width: "80px"
+                                },
+                                attrs: {
+                                  src:
+                                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
+                                }
+                              })
+                            : _vm._e(),
                           _vm._v(" "),
                           _c(
                             "div",
@@ -45090,23 +45110,7 @@ var render = function() {
                               }
                             },
                             [_vm._v("ĐỘI 2\n                    ")]
-                          ),
-                          _vm._v(" "),
-                          _vm.teamAct == 2
-                            ? _c("div", [
-                                _c("img", {
-                                  staticStyle: {
-                                    width: "60px",
-                                    height: "60px",
-                                    "margin-top": "15px"
-                                  },
-                                  attrs: {
-                                    src:
-                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
-                                  }
-                                })
-                              ])
-                            : _vm._e()
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -45119,42 +45123,59 @@ var render = function() {
                           staticStyle: { margin: "auto" }
                         },
                         [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "point-width",
-                              staticStyle: {
-                                border: "2px solid black",
-                                "background-color": "blue",
-                                margin: "0px auto",
-                                "border-radius": "50%",
-                                "margin-right": "5px",
-                                "margin-left": "20px",
-                                "text-align": "center"
-                              }
-                            },
-                            [
-                              _c(
+                          _vm.teamAct != 3
+                            ? _c(
                                 "div",
                                 {
-                                  staticClass: "teampoint-width",
+                                  staticClass: "point-width",
                                   staticStyle: {
-                                    color: "white",
-                                    "font-family": "'Tahoma'",
-                                    "font-weight": "bold",
-                                    "font-size": "30px"
+                                    border: "2px solid black",
+                                    "background-color": "blue",
+                                    margin: "0px auto",
+                                    "border-radius": "50%",
+                                    "margin-right": "5px",
+                                    "margin-left": "20px",
+                                    "text-align": "center"
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(this.team3) +
-                                      "\n                        "
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "teampoint-width",
+                                      staticStyle: {
+                                        color: "white",
+                                        "font-family": "'Tahoma'",
+                                        "font-weight": "bold",
+                                        "font-size": "30px"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            " +
+                                          _vm._s(this.team3) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   )
                                 ]
                               )
-                            ]
-                          ),
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.teamAct == 3
+                            ? _c("img", {
+                                staticStyle: {
+                                  "margin-right": "5px",
+                                  "margin-left": "20px",
+                                  height: "80px",
+                                  width: "80px"
+                                },
+                                attrs: {
+                                  src:
+                                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
+                                }
+                              })
+                            : _vm._e(),
                           _vm._v(" "),
                           _c(
                             "div",
@@ -45182,23 +45203,7 @@ var render = function() {
                               }
                             },
                             [_vm._v("ĐỘI 3\n                    ")]
-                          ),
-                          _vm._v(" "),
-                          _vm.teamAct == 3
-                            ? _c("div", [
-                                _c("img", {
-                                  staticStyle: {
-                                    width: "60px",
-                                    height: "60px",
-                                    "margin-top": "15px"
-                                  },
-                                  attrs: {
-                                    src:
-                                      "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
-                                  }
-                                })
-                              ])
-                            : _vm._e()
+                          )
                         ]
                       ),
                       _vm._v(" "),

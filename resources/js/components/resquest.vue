@@ -93,56 +93,60 @@
                 <div class="col-md-3" style="padding-top: 150px;">
                     <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div class="point-width"
+                        <div v-if="teamAct!=1" class="point-width"
                              style="border: 2px solid black;background-color: #28B463; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team1}}
                             </div>
                         </div>
+                        <img v-if="teamAct==1" src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif" style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px">
                         <div
                              style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
                              @click="activePoint(1)" v-bind:class="{boder:teamAct==1}" class="team-min-height">ĐỘI 1
                         </div>
-                        <div v-if="teamAct==1"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                        <!-- <div v-if="teamAct==1"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px; margin-left: 0px;object-fit: fill"/>
-                        </div>
+                        </div> -->
                     </div>
                     <br>
                     <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div class="point-width"
+                        <div v-if="teamAct!=2" class="point-width"
                              style="border: 2px solid black;background-color: #C0392B ; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 10px">
                                 {{this.team2}}
                             </div>
                         </div>
+                        <img v-if="teamAct==2" src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif" style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px">
                         <div
                              style="cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
-                        <div v-if="teamAct==2"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                        <!-- <div v-if="teamAct==2"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
-                        </div>
+                        </div> -->
                     </div>
                     <br>
                     <div class="row bor-min-height"
                          style="margin: auto;">
-                        <div class="point-width"
+                        <div v-if="teamAct!=3" class="point-width"
                              style="border: 2px solid black;background-color: blue; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div class="teampoint-width"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
                             </div>
                         </div>
+                       <img v-if="teamAct==3" src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif" style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px">
+
                         <div
                              style="cursor: pointer; background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
-                        <div v-if="teamAct==3"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
+                        <!-- <div v-if="teamAct==3"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
                                                     style="width: 60px; height: 60px;margin-top: 15px;"/>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
