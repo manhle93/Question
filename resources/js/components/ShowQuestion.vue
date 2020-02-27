@@ -5,6 +5,7 @@
       <h5>Câu {{index+1}}</h5>
       <button type="button" class="btn btn-danger" @click="xoa(question.id)">Xóa</button>
       <p>{{question.name}}</p>
+      <img v-if="question.image_url != null && question.image_url != ''" :src="question.image_url" style="width: 100%; height: auto">
       <h6>Đáp án</h6>
       <div>
         <table

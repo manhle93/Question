@@ -1837,8 +1837,66 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['id', 'name'],
+  props: ["id", "name"],
   data: function data() {
     return {
       noidung: null,
@@ -1850,27 +1908,46 @@ __webpack_require__.r(__webpack_exports__);
       dapanB: null,
       dapanC: null,
       dapanD: null,
-      data: []
+      data: [],
+      imageUrl: null,
+      loadAnh: false
     };
   },
   methods: {
+    handleChange: function handleChange(e) {
+      var _this = this;
+
+      var files = e.target.files;
+      var data = new FormData();
+      data.append("file", files[0]);
+      data.append("upload_preset", "u84rblt8");
+      data.append("api_key", "599747191334322");
+      this.loadAnh = true;
+      axios.post("https://api.cloudinary.com/v1_1/dsobei3hp/image/upload", data).then(function (res) {
+        console.log(res);
+        _this.imageUrl = res.data.url;
+        _this.loadAnh = false; // axios
+        //   .post("/uploadavatarclound", { image_url: this.imageUrl })
+        //   .then(_ => location.reload());
+      })["catch"](function (err) {});
+    },
     nhap: function nhap() {
       this.data = [];
       this.data.push({
-        'name': this.dapanA,
-        'dap_an': this.dapandungA
+        name: this.dapanA,
+        dap_an: this.dapandungA
       });
       this.data.push({
-        'name': this.dapanB,
-        'dap_an': this.dapandungB
+        name: this.dapanB,
+        dap_an: this.dapandungB
       });
       this.data.push({
-        'name': this.dapanC,
-        'dap_an': this.dapandungC
+        name: this.dapanC,
+        dap_an: this.dapandungC
       });
       this.data.push({
-        'name': this.dapanD,
-        'dap_an': this.dapandungD
+        name: this.dapanD,
+        dap_an: this.dapandungD
       });
 
       if (this.dapandungA == this.dapandungB && this.dapandungB == this.dapandungC && this.dapandungC == this.dapandungD) {
@@ -1879,9 +1956,10 @@ __webpack_require__.r(__webpack_exports__);
         if (this.noidung == null || this.dapanA == null || this.dapanB == null || this.dapanC == null || this.dapanD == null || this.noidung == "" || this.dapanA == "" || this.dapanB == "" || this.dapanC == "" || this.dapanD == "") {
           alert("Chưa nhập đủ nội dung");
         } else {
-          axios.post('/questionadd', {
+          axios.post("/questionadd", {
             package_id: this.id,
             noidung: this.noidung,
+            image_url: this.imageUrl,
             dapan: this.data
           }).then(function (res) {
             alert("Nhập câu hỏi thành công");
@@ -2030,6 +2108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -43431,6 +43510,34 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
+    _c("h6", [_vm._v("Hình ảnh đính kèm")]),
+    _vm._v(" "),
+    _c("img", {
+      directives: [
+        {
+          name: "loading",
+          rawName: "v-loading",
+          value: _vm.loadAnh,
+          expression: "loadAnh"
+        }
+      ],
+      staticStyle: { width: "180px", height: "180px" },
+      attrs: { src: _vm.imageUrl }
+    }),
+    _vm._v(" "),
+    _c("input", {
+      ref: "upload-image",
+      staticClass: "upload-image",
+      attrs: { type: "file" },
+      on: {
+        change: function($event) {
+          return _vm.handleChange($event)
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c("label", { staticClass: "label" }, [_vm._v("Câu trả lời")]),
     _vm._v(" "),
     _c(
@@ -43951,6 +44058,13 @@ var render = function() {
           ),
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(question.name))]),
+          _vm._v(" "),
+          question.image_url != null && question.image_url != ""
+            ? _c("img", {
+                staticStyle: { width: "100%", height: "auto" },
+                attrs: { src: question.image_url }
+              })
+            : _vm._e(),
           _vm._v(" "),
           _c("h6", [_vm._v("Đáp án")]),
           _vm._v(" "),
@@ -58640,8 +58754,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Question\Question\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Question\Question\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Du an\Question\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Du an\Question\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

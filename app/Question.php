@@ -8,7 +8,8 @@ class Question extends Model
 {
     protected $fillable = [
         'name',
-        'package_id'
+        'package_id',
+        'image_url'
 
     ];
     public function package() {

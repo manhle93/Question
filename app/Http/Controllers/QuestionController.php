@@ -25,7 +25,8 @@ class QuestionController extends Controller
         $data = $request->all();
         $question = Question::query()->create([
             'name' => $data['noidung'],
-            'package_id' => $data['package_id']
+            'package_id' => $data['package_id'],
+            'image_url' => $data['image_url']
         ]);
         foreach ($data['dapan'] as $item) {
             if ($item['dap_an'] == "true") {
