@@ -1,5 +1,5 @@
 <template>
-    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/nenmoi_icrti0.jpg');background-size:100% 100%;  overflow-x:hidden;">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583161049/hoithi/Presentation1_lzbioa.jpg');background-size:100% 100%;  overflow-x:hidden;">
         <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
             <div class="full-width">
                 <div
@@ -50,31 +50,7 @@
         </div>
         <div v-if="hidden== false"
              style="height: 100%; width: 100%; overflow-y:hidden; overflow-x:hidden;">
-            <!-- <div class="row" style="height: 15%;">
-                <div class="col-md-8">
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-md-2" style="text-align:center; padding-left: 50px">
-                            <div style=""><img src="/anh/logovuong.gif" style="height: 90px; width: 100px"></div>
-                        </div>
-                        <div class="col-md-10" style="margin-top: 15px; padding-left: 70px">
-                            <div
-                                style="font-size: 20px; font-family: 'Tahoma'; color: yellow; font-weight: bold; padding-bottom: 1px">
-                                CÔNG ĐOÀN XÂY DỰNG VIỆT NAM
-                            </div>
-                            <div
-                                style="font-size: 20px; font-family: 'time new roman'; color: #797D7F; font-weight: bold;">
-                                Vietnam National Union of Building Workers
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin: auto">
-                    <div
-                        style="color: yellow; font-family: 'Tahoma';font-weight: bold; text-align: center;font-size: 22px;">
-                        HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI <br>TOÀN QUỐC NGÀNH XÂY DỰNG
-                    </div>
-                </div>
-            </div> -->
+
             <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px;">
                 <div class="col-md-3" style="margin: 0 auto; cursor: pointer;" >
                 <div  @click="runTime" v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
@@ -86,7 +62,7 @@
                 </div>
                 </div>
                 <div class="col-md-9" style="margin: 0 auto;color: black; font-family: 'Garamond';font-weight: bold; font-size: 60px; text-align:center">
-                        PHẦN THI TRẮC NGHIỆM
+                       <span style=" color: red;"> PHẦN THI </span><span style="color: #03289C; padding-left: 20px; padding-right: 20px; border: 2px solid black; border-radius: 50px; background-color:#adf">TRẮC NGHIỆM</span>
                 </div>
             </div>
             <div class="row" style="margin-top: 10px;height: 90%">
@@ -124,15 +100,12 @@
                              style="cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(2)" v-bind:class="{boder:teamAct==2}" class="team-min-height">ĐỘI 2
                         </div>
-                        <!-- <div v-if="teamAct==2"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
-                                                    style="width: 60px; height: 60px;margin-top: 15px;"/>
-                        </div> -->
                     </div>
                     <br>
                     <div class="row bor-min-height"
                          style="margin: auto;">
                         <div v-if="teamAct!=3" class="point-width"
-                             style="border: 2px solid black;background-color: blue; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
+                             style="border: 2px solid black;background-color: #D4AC0D; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center">
                             <div class="teampoint-width"
                                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px">
                                 {{this.team3}}
@@ -141,13 +114,17 @@
                        <img v-if="teamAct==3" src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif" style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px">
 
                         <div
-                             style="cursor: pointer; background-color: blue;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
+                             style="cursor: pointer; background-color: #D4AC0D;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
                              @click="activePoint(3)" v-bind:class="{boder:teamAct==3}" class="team-min-height">ĐỘI 3
                         </div>
-                        <!-- <div v-if="teamAct==3"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
-                                                    style="width: 60px; height: 60px;margin-top: 15px;"/>
-                        </div> -->
 
+                    </div>
+                    <br>
+                    <div class="row"
+                    @click="chonKhanGia"
+                         style="margin: auto; margin-left:30px; cursor: pointer">
+                            <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583167257/hoithi/undraw_fans_gr54__1_-removebg-preview_asoeo2.png" style="height: 100px; width: auto" v-if="!khanGia">
+                            <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583167255/hoithi/source_ltzcjy.gif" style="height: 100px; width: auto" v-if="khanGia">
                     </div>
                     <!-- <div v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}" class="row"
                          style="margin: auto; margin-top: 10px; " @click="runTime">
@@ -156,7 +133,7 @@
                             {{totalTime }}
                         </div>
                     </div> -->
-                    <div class="col-md-12" style="margin-top:130px;">
+                    <div class="col-md-12" style="margin-top:50px;">
                         <button style="font-weight: bold; font-family: 'time new roman'; float: left" type="button"
                                 class="btn btn-success"
                                 data-toggle="modal"
@@ -175,15 +152,16 @@
                 </div>
                 <div class="col-md-9" style="margin: 0 auto; text-align:center">
                     <div class="row" style="margin: 0 auto; text-align:center">
-                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 60px; ">
+                        <div class="col-md-12" style="margin: 0 auto; margin-bottom: 10px; ">
                             <button type="button" class="btn btn-warning"
                             v-if="packageDetail"
-                                    style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB">
-                                GÓI
-                                CÂU HỎI SỐ: {{this.packageDetail.name}}
+                                    style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB; border-radius: 50px">
+                                    CÁC CÂU HỎI
+                                <!-- GÓI
+                                CÂU HỎI SỐ: {{this.packageDetail.name}} -->
                             </button>
                             <button
-                                style="background-color:#094EAB;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%;"
+                                style="background-color:#094EAB;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%; border: 2px solid white"
                                 type="button" class="btn btn-primary"
                                 v-for="(item,index) in question_data"
                                 @click="change_question(index)"
@@ -193,33 +171,49 @@
                                 </p>
                             </button>
                         </div>
-                        <div class="col-md-12 min-height"
-                             style="display: inline-block; border: 3px solid black; border-radius: 40px;background-color: #E5E7E9;background-size:100% 100%; ">
-                            <div v-for="(item,index) in question_data" v-if="index==turn"
-                                 style="color: black;font-size: 28px">
-                                <div style="color: black; font-family:'time new roman'; font-weight: bold;">Câu {{index
+                        <div class="col-md-12 min-height" v-if="question_data.length > 0 &&check"
+                             style="margin-top: 20px;display: inline-block; border: 10px double white; border-radius: 10px;background-color: rgba(248, 249, 250, 0.55);background-size:100% 100%; ">
+                            <div v-for="(item,index) in question_data" v-if="index==turn" 
+                                 style="color: white;font-size: 28px;">
+                                <div style="color: white; font-family:'time new roman'; font-weight: bold;">Câu {{index
                                     +1}}
                                 </div>
-                                <p style="font-family:'time new roman';font-size: 29px">{{item.name}}</p>
+                                <p style="font-family:'time new roman';font-size: 29px; opacity: 1 !important">{{item.name}}</p>
                             </div>
                         </div>
-                        <div class="col-md-12" style="height: 100%;">
+                        <div class="col-md-12" v-if="question_data.length > 0 && !check"
+                             style="display: inline-block; height: 320px">
+                            <div v-for="(item,index) in question_data" v-if="index==turn" 
+                                 style="color: white;font-size: 28px;">
+                                 <div>
+                                    <span style="color: white; font-family:'time new roman'; font-weight: bold;">Câu {{index
+                                    +1}}
+                                    </span>
+                                    <span style="font-family:'time new roman';font-size: 29px; opacity: 1 !important">{{item.name}}</span>
+                                 </div>
+                                 <div>
+                                     <img :src="item.image_url" style="height: 86%; width: 86%">
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="height: 100%;margin-top: 20px">
                             <div>
                                 <div style="width: 100%;float: left; background-color: #ffffff00" class="grid-container"
                                      v-for="(item,index) in question_data"
                                      v-if="index==turn">
                                     <button
-                                        style="width:95%; border: black solid 2px; font-family:'time new roman';color:black; font-weight: bold;font-size: 26px;background-color: #F2F3F4;background-size:100% 100%;"
+                                        style="border-radius: 80px; width:95%; font-family:'time new roman';color:white; font-weight: bold;font-size: 26px;background-color: rgba(248, 249, 250, 0.55);background-size:100% 100%;"
                                         type="button" class="btn btn-primary answer-min-height"
                                         v-for="(data,ind) in item.answer" @click="addAnswer(data,ind,index)"
                                         v-bind:class="{'ind--0':ind === onclick}">
-                                        <p><span
-                                            style="color: black; margin-left: 20px; float: left; font-weight: bold; font-size: 28px">{{data.phuong_an}}:</span><span>{{data.name}}</span>
+                                        <p><div
+                                            style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px">{{data.phuong_an}}</div>
+                                            <span>{{data.name}}</span>
                                         </p>
                                     </button>
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                                          aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
-                                         v-if="tinker == false && teamAct !=undefined ">
+                                         v-if="tinker == false && teamAct !=undefined">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -264,25 +258,57 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                         v-if="tinker == false && khanGia == true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body"
+                                                     style="width: 500px;height: 500px;font-size: 30px;text-align: center">
+                                                    <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif" style="width: 350px;height: 300px;">
+                                                    <br>
+                                                    <p>
+                                                    <h2 style="font-family:'time new roman'; font-weight: bold;">KHÔNG
+                                                        CHÍNH XÁC</h2></p>
+                                                    <p>+ 0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+                                         v-if="tinker == true && khanGia == true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body"
+                                                     style="width: 500px;height: 450px;font-size: 30px;text-align: center">
+                                                    <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif" style="width: 350px;height: 300px;">
+                                                    <br>
+                                                    <p>
+                                                    <h2 style="font-family:'time new roman'; font-weight: bold;">ĐÁP ÁN
+                                                        CHÍNH XÁC</h2></p>
+                                                    <p>+ 10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-md-12" style="margin-top:5px;">
-                            <button style="font-weight: bold; font-family: 'time new roman'; float: left" type="button"
-                                    class="btn btn-success"
-                                    data-toggle="modal"
-                                    data-target="#exampleModalCenter"
-                                    @click="addPoint"
-                                    v-bind:class="{'btn-max-height': height_a}">
-                                KẾT QUẢ
-                            </button>
-                            <button style="font-family: 'time new roman'; float: right" type="button"
-                                    class="btn btn-danger"
-                                    @click="next"
-                                    v-bind:class="{'btn-max-height': height_a}">
-                                {{this.continute}}
-                            </button>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -306,6 +332,7 @@
         name: "question",
         data: function () {
             return {
+                khanGia: false,
                 statusaudio: false,
                 audiodongho: undefined,
                 loading: false,
@@ -321,7 +348,7 @@
                 team3: 0,
                 time: 60,
                 time_start: true,
-                question_data: undefined,
+                question_data: [],
                 continute: "KẾ TIẾP",
                 restart: undefined,
                 disable: undefined,
@@ -354,7 +381,6 @@
             axios.get('/getdetailpackage/' + this.old_id)
                 .then(res => {
                     this.packageDetail = res.data.result;
-                    console.log(this.packageDetail)
                 });
             axios.get('/gettotalpoint/' + this.old_id)
                 .then(res => {
@@ -385,6 +411,16 @@
             })
         },
         computed: {
+            check () {
+            
+                if (this.question_data[this.turn].image_url){
+                    console.log(1)
+                    return false
+                } else {
+                    console.log(2)
+                    return true
+                }
+            },
             minutes: function () {
                 const minutes = Math.floor(this.totalTime / 60);
                 return this.padTime(minutes);
@@ -395,6 +431,9 @@
             }
         },
         methods: {
+            chonKhanGia () {
+                this.khanGia =! this.khanGia
+            },
             change_question (index) {
                 this.turn = index
                 this.success = false
@@ -453,6 +492,7 @@
                 this.mauvang = !this.mauvang
             },
             next() {
+                this.khanGia = false
                 this.loading =false
                 this.onclick = undefined
                 this.answer = undefined
@@ -488,15 +528,32 @@
                 this.audiodongho.play()
             },
             activePoint(team) {
+                this.khanGia = false
                 if (this.teamAct == team && this.teamAct != undefined) {
                     this.teamAct = undefined
+                    this.time_start = false
+                    this.stopTimer()
+                    this.border = !this.border
+                    this.loading = false
+                } else if (this.teamAct == undefined) {
+                    this.teamAct = team
                     this.time_start = true
+                    if (this.loading == false) {
                     this.startTimer()
+                    } else {
+                        this.stopTimer()
+                    }
+                    this.border = !this.border
+                    this.loading = true
+                } else if (this.teamAct != team && this.teamAct != undefined) {
+                    this.teamAct = team
+                    this.loading = true
                     this.border = !this.border
                 } else {
                     this.teamAct = team
                     this.ads = true
                     this.time_start = false
+                    this.loading = false
                     this.stopTimer()
                 }
             },
@@ -553,7 +610,43 @@
                         }
                         this.hidden == false
                     }
+                } else  if (this.khanGia) {
+                    if (this.success == false) {
+                        if (this.current_answer == undefined) {
+                            this.current_answer = this.answer
+                            if (this.answer.dap_an == 1) {
+                                this.tinker = true
+                                this.success = true
+                                this.question_data[this.index].answer = [this.answer]
+                                this.playsound()
+                                this.isLoading = false
+                                // this.khanGia = false
+                            } else {
+                                this.tinker = false
+                                this.playSoundError()
+                                // this.question_data[this.index].answer.splice(this.ind, 1)
+                            }
+                        } else {
+                            if (this.current_answer !== this.answer) {
+                                this.current_answer = this.answer
+                                if (this.answer.dap_an == 1) {
+                                    this.tinker = true
+                                    this.success = true
+                                    this.question_data[this.index].answer = [this.answer]
+                                    this.playsound()
+                                    this.isLoading = false
+                                    // this.khanGia = false
+                                } else {
+                                    this.tinker = false
+                                    this.playSoundError()
+                                    // this.question_data[this.index].answer.splice(this.ind, 1)
+                                }
+                            }
+                        }
+                        this.hidden == false
+                    }
                 }
+                this.activePoint(this.teamAct)
             },
             timeStart() {
 

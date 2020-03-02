@@ -43,10 +43,12 @@ class PlayController extends Controller
         }
         $totalpoint=Turn::query()->findOrFail($turn_id);
         $package = Package::query()->whereNotIn('id', $data)->get();
+        $packageOld = Package::query()->whereIn('id', $data)->get();
         return view('resetgame', [
             'package' => $package,
             'turn' => $turn_id,
-            'totalpoint' =>$totalpoint
+            'totalpoint' =>$totalpoint,
+            'packageOld' =>$packageOld
         ]);
     }
 
