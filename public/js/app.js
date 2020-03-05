@@ -2799,15 +2799,179 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_circular_count_down_timer__WEBPACK_IMPORTED_MODULE_3___default.a);
 
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default.a, 'vac');
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default.a, "vac");
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['question', 'old_id'],
+  props: ["question", "old_id"],
   name: "question",
   data: function data() {
     var _ref;
@@ -2858,10 +3022,10 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.height_b = true;
     }
 
-    axios.get('/getdetailpackage/' + this.old_id).then(function (res) {
+    axios.get("/getdetailpackage/" + this.old_id).then(function (res) {
       _this.packageDetail = res.data.result;
     });
-    axios.get('/gettotalpoint/' + this.old_id).then(function (res) {
+    axios.get("/gettotalpoint/" + this.old_id).then(function (res) {
       var data = res.data.result;
       _this.team1 = data.total_point1;
       _this.team2 = data.total_point2;
@@ -3002,20 +3166,20 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.teamAct = undefined;
     },
     playsound: function playsound() {
-      var audio = new Audio('/sound/dung.mp3'); // path to file
+      var audio = new Audio("/sound/dung.mp3"); // path to file
 
       audio.play();
-      var audio = new Audio('/sound/votay.mp3'); // path to file
+      var audio = new Audio("/sound/votay.mp3"); // path to file
 
       audio.play();
     },
     playSoundError: function playSoundError() {
-      var audio = new Audio('/sound/sai.mp3'); // path to file
+      var audio = new Audio("/sound/sai.mp3"); // path to file
 
       audio.play();
     },
     playSoundTickTock: function playSoundTickTock() {
-      this.audiodongho = new Audio('/sound/ticktock.mp3');
+      this.audiodongho = new Audio("/sound/ticktock.mp3");
       this.statusaudio = true;
       this.audiodongho.play();
     },
@@ -3149,9 +3313,8 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
 
           this.hidden == false;
         }
-      }
+      } //   this.activePoint(this.teamAct);
 
-      this.activePoint(this.teamAct);
     },
     timeStart: function timeStart() {
       return restart;
@@ -3159,7 +3322,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     chongoi: function chongoi() {
       var _this3 = this;
 
-      axios.post('/updatepoint/' + this.old_id, {
+      axios.post("/updatepoint/" + this.old_id, {
         point1: this.team1,
         point2: this.team2,
         point3: this.team3
@@ -3170,7 +3333,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     resetContinute: function resetContinute() {
       var _this4 = this;
 
-      axios.post('/resetpoint/' + this.old_id).then(function (res) {
+      axios.post("/resetpoint/" + this.old_id).then(function (res) {
         window.location.href = "/getallpackge/" + _this4.old_id;
       });
     }
@@ -7740,7 +7903,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\n    display: grid;\n    grid-column-gap: 50px;\n    grid-row-gap: 10px;\n    grid-template-columns: auto auto;\n    padding: 10px;\n    clear: both;\n    background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\n    background-image: url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg') !important;\n    color: blue;\n    font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\n    font-size: 55px;\n    line-height: 1;\n    font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\n    border: 4px white solid\n}\n.red[data-v-e318d6e6] {\n    background-color: #C12701 !important;\n}\n.min-height[data-v-e318d6e6] {\n    height: 180px;\n    margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\n    height: 160px;\n    border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\n    width: 80px;\n    height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\n    height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\n    width: 150px;\n    height: 60px;\n}\n.teampoint-width[data-v-e318d6e6]{\n    padding-top: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg\") !important;\r\n  color: blue;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #c12701 !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 80px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 150px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
 
 // exports
 
@@ -43609,14 +43772,6 @@ var render = function() {
     _c("h6", [_vm._v("Hình ảnh đính kèm")]),
     _vm._v(" "),
     _c("img", {
-      directives: [
-        {
-          name: "loading",
-          rawName: "v-loading",
-          value: _vm.loadAnh,
-          expression: "loadAnh"
-        }
-      ],
       staticStyle: { width: "180px", height: "180px" },
       attrs: { src: _vm.imageUrl }
     }),
@@ -44759,7 +44914,7 @@ var render = function() {
         width: "100%",
         "overflow-y": "hidden",
         "background-image":
-          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583161049/hoithi/Presentation1_lzbioa.jpg')",
+          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583422247/hoithi/Presentation1_lzbioa_vhg2oz.jpg')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
@@ -44802,7 +44957,7 @@ var render = function() {
                           color: "black"
                         }
                       },
-                      [_vm._v("\n                    KẾT QUẢ THI")]
+                      [_vm._v("KẾT QUẢ THI")]
                     ),
                     _vm._v(" "),
                     _c(
@@ -44836,11 +44991,7 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                ĐỘI 1"
-                                  )
-                                ]
+                                [_vm._v("ĐỘI 1")]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44853,12 +45004,7 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(this.team1)
-                                  )
-                                ]
+                                [_vm._v(_vm._s(this.team1))]
                               )
                             ]
                           ),
@@ -44886,11 +45032,7 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                ĐỘI 2"
-                                  )
-                                ]
+                                [_vm._v("ĐỘI 2")]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44903,12 +45045,7 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(this.team2)
-                                  )
-                                ]
+                                [_vm._v(_vm._s(this.team2))]
                               )
                             ]
                           ),
@@ -44936,11 +45073,7 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                ĐỘI 3"
-                                  )
-                                ]
+                                [_vm._v("ĐỘI 3")]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44953,19 +45086,16 @@ var render = function() {
                                     color: "white"
                                   }
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(this.team3)
-                                  )
-                                ]
+                                [_vm._v(_vm._s(this.team3))]
                               )
                             ]
                           )
                         ]),
                         _vm._v(" "),
                         _c("br"),
+                        _vm._v(" "),
                         _c("br"),
+                        _vm._v(" "),
                         _c("br"),
                         _vm._v(" "),
                         _c("div", { staticClass: "row" }, [
@@ -44987,7 +45117,7 @@ var render = function() {
                               attrs: { type: "button" },
                               on: { click: _vm.chongoi }
                             },
-                            [_vm._v("TIẾP TỤC\n                        ")]
+                            [_vm._v("TIẾP TỤC")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -45008,7 +45138,7 @@ var render = function() {
                               attrs: { type: "button" },
                               on: { click: _vm.resetContinute }
                             },
-                            [_vm._v("LƯỢT CHƠI MỚI\n                        ")]
+                            [_vm._v("LƯỢT CHƠI MỚI")]
                           )
                         ])
                       ]
@@ -45085,13 +45215,7 @@ var render = function() {
                                 "font-size": "72px"
                               }
                             },
-                            [
-                              _vm._v(
-                                "\n                    " +
-                                  _vm._s(_vm.totalTime) +
-                                  "\n                "
-                              )
-                            ]
+                            [_vm._v(_vm._s(_vm.totalTime))]
                           )
                         ]
                       )
@@ -45153,13 +45277,7 @@ var render = function() {
                                         "font-size": "30px"
                                       }
                                     },
-                                    [
-                                      _vm._v(
-                                        "\n                            " +
-                                          _vm._s(this.team1) +
-                                          "\n                        "
-                                      )
-                                    ]
+                                    [_vm._v(_vm._s(this.team1))]
                                   )
                                 ]
                               )
@@ -45204,7 +45322,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI 1\n                    ")]
+                            [_vm._v("ĐỘI 1")]
                           )
                         ]
                       ),
@@ -45249,13 +45367,7 @@ var render = function() {
                                         "padding-top": "10px"
                                       }
                                     },
-                                    [
-                                      _vm._v(
-                                        "\n                            " +
-                                          _vm._s(this.team2) +
-                                          "\n                        "
-                                      )
-                                    ]
+                                    [_vm._v(_vm._s(this.team2))]
                                   )
                                 ]
                               )
@@ -45301,7 +45413,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI 2\n                    ")]
+                            [_vm._v("ĐỘI 2")]
                           )
                         ]
                       ),
@@ -45342,13 +45454,7 @@ var render = function() {
                                         "font-size": "30px"
                                       }
                                     },
-                                    [
-                                      _vm._v(
-                                        "\n                            " +
-                                          _vm._s(this.team3) +
-                                          "\n                        "
-                                      )
-                                    ]
+                                    [_vm._v(_vm._s(this.team3))]
                                   )
                                 ]
                               )
@@ -45394,7 +45500,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("ĐỘI 3\n                    ")]
+                            [_vm._v("ĐỘI 3")]
                           )
                         ]
                       ),
@@ -45459,11 +45565,7 @@ var render = function() {
                               },
                               on: { click: _vm.addPoint }
                             },
-                            [
-                              _vm._v(
-                                "\n                        KẾT QUẢ\n                    "
-                              )
-                            ]
+                            [_vm._v("KẾT QUẢ")]
                           ),
                           _vm._v(" "),
                           _c(
@@ -45478,13 +45580,7 @@ var render = function() {
                               attrs: { type: "button" },
                               on: { click: _vm.next }
                             },
-                            [
-                              _vm._v(
-                                "\n                        " +
-                                  _vm._s(this.continute) +
-                                  "\n                    "
-                              )
-                            ]
+                            [_vm._v(_vm._s(this.continute))]
                           )
                         ]
                       )
@@ -45535,7 +45631,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                CÁC CÂU HỎI\n                            "
+                                        "\n              CÁC CÂU HỎI\n              "
                                       )
                                     ]
                                   )
@@ -45545,6 +45641,7 @@ var render = function() {
                                 return _c(
                                   "button",
                                   {
+                                    key: item.id,
                                     staticClass: "btn btn-primary",
                                     class: { red: index <= _vm.turn },
                                     staticStyle: {
@@ -45586,10 +45683,10 @@ var render = function() {
                                   staticStyle: {
                                     "margin-top": "20px",
                                     display: "inline-block",
-                                    border: "10px double white",
+                                    border: "6px double white",
                                     "border-radius": "10px",
-                                    "background-color":
-                                      "rgba(248, 249, 250, 0.55)",
+                                    "background-image":
+                                      "linear-gradient(to right, #3A7AEE, #072B6C, #052660, #0745B5, #266EEF)",
                                     "background-size": "100% 100%"
                                   }
                                 },
@@ -45601,6 +45698,7 @@ var render = function() {
                                     ? _c(
                                         "div",
                                         {
+                                          key: item.id,
                                           staticStyle: {
                                             color: "white",
                                             "font-size": "28px"
@@ -45619,9 +45717,9 @@ var render = function() {
                                             },
                                             [
                                               _vm._v(
-                                                "Câu " +
+                                                "\n                Câu " +
                                                   _vm._s(index + 1) +
-                                                  "\n                            "
+                                                  "\n              "
                                               )
                                             ]
                                           ),
@@ -45664,6 +45762,7 @@ var render = function() {
                                     ? _c(
                                         "div",
                                         {
+                                          key: item.id,
                                           staticStyle: {
                                             color: "white",
                                             "font-size": "28px"
@@ -45683,9 +45782,9 @@ var render = function() {
                                               },
                                               [
                                                 _vm._v(
-                                                  "Câu " +
+                                                  "\n                  Câu " +
                                                     _vm._s(index + 1) +
-                                                    "\n                                "
+                                                    "\n                "
                                                 )
                                               ]
                                             ),
@@ -45741,6 +45840,7 @@ var render = function() {
                                     ? _c(
                                         "div",
                                         {
+                                          key: item.id,
                                           staticClass: "grid-container",
                                           staticStyle: {
                                             width: "100%",
@@ -45756,22 +45856,25 @@ var render = function() {
                                             return _c(
                                               "button",
                                               {
+                                                key: data.id,
                                                 staticClass:
                                                   "btn btn-primary answer-min-height",
                                                 class: {
                                                   "ind--0": ind === _vm.onclick
                                                 },
                                                 staticStyle: {
-                                                  "border-radius": "80px",
-                                                  width: "95%",
+                                                  "border-radius": "40px",
+                                                  width: "32vw",
                                                   "font-family":
                                                     "'time new roman'",
                                                   color: "white",
                                                   "font-weight": "bold",
-                                                  "font-size": "26px",
-                                                  "background-color":
-                                                    "rgba(248, 249, 250, 0.55)",
-                                                  "background-size": "100% 100%"
+                                                  "font-size": "20px",
+                                                  "background-image":
+                                                    "linear-gradient(to right, #072B6C,#052660, #0745B5)",
+                                                  "background-size":
+                                                    "100% 100%",
+                                                  border: "2px solid white"
                                                 },
                                                 attrs: { type: "button" },
                                                 on: {
@@ -45785,38 +45888,25 @@ var render = function() {
                                                 }
                                               },
                                               [
-                                                _c("p"),
                                                 _c(
                                                   "div",
                                                   {
                                                     staticStyle: {
-                                                      color: "white",
-                                                      "margin-left": "20px",
-                                                      "margin-bottom": "20px",
                                                       float: "left",
-                                                      "font-weight": "bold",
-                                                      "font-size": "42px",
-                                                      border: "5px solid white",
-                                                      "background-color":
-                                                        "#066F4D",
-                                                      width: "100px",
-                                                      height: "100px",
-                                                      "border-radius": "50%",
-                                                      "line-height": "90px"
+                                                      color: "red"
                                                     }
                                                   },
                                                   [
                                                     _vm._v(
-                                                      _vm._s(data.phuong_an)
+                                                      _vm._s(data.phuong_an) +
+                                                        ": "
                                                     )
                                                   ]
                                                 ),
                                                 _vm._v(" "),
                                                 _c("span", [
                                                   _vm._v(_vm._s(data.name))
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("p")
+                                                ])
                                               ]
                                             )
                                           }),
@@ -45936,7 +46026,8 @@ var staticRenderFns = [
         }
       },
       [
-        _c("span", { staticStyle: { color: "red" } }, [_vm._v(" PHẦN THI ")]),
+        _c("span", { staticStyle: { color: "red" } }, [_vm._v("PHẦN THI")]),
+        _vm._v(" "),
         _c(
           "span",
           {
@@ -46003,7 +46094,6 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
-              _c("p"),
               _c(
                 "h2",
                 {
@@ -46014,11 +46104,10 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "KHÔNG\n                                                    CHÍNH XÁC"
+                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
                   )
                 ]
               ),
-              _c("p"),
               _vm._v(" "),
               _c("p", [_vm._v("+ 0")])
             ]
@@ -46076,7 +46165,6 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
-              _c("p"),
               _c(
                 "h2",
                 {
@@ -46087,11 +46175,10 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "ĐÁP ÁN\n                                                    CHÍNH XÁC"
+                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
                   )
                 ]
               ),
-              _c("p"),
               _vm._v(" "),
               _c("p", [_vm._v("+ 10")])
             ]
@@ -46149,7 +46236,6 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
-              _c("p"),
               _c(
                 "h2",
                 {
@@ -46160,11 +46246,10 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "KHÔNG\n                                                    CHÍNH XÁC"
+                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
                   )
                 ]
               ),
-              _c("p"),
               _vm._v(" "),
               _c("p", [_vm._v("+ 0")])
             ]
@@ -46222,7 +46307,6 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
-              _c("p"),
               _c(
                 "h2",
                 {
@@ -46233,11 +46317,10 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "ĐÁP ÁN\n                                                    CHÍNH XÁC"
+                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
                   )
                 ]
               ),
-              _c("p"),
               _vm._v(" "),
               _c("p", [_vm._v("+ 10")])
             ]

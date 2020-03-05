@@ -24,7 +24,7 @@
     </div>
     <br />
     <h6>Hình ảnh đính kèm</h6>
-    <img :src="imageUrl" v-loading="loadAnh" style="width: 180px; height:180px" />
+    <img :src="imageUrl" style="width: 180px; height:180px" />
     <input ref="upload-image" class="upload-image" type="file" @change="handleChange($event)" />
     <br />
     <label class="label">Câu trả lời</label>
