@@ -9,60 +9,74 @@
         >
           <!-- <img src="anh/logovuong.png"
           style="width: 150px; height: 120px; padding-bottom: 25px">-->
+          <div style="padding-bottom: 20px; cursor: pointer" @click="showDiem = !showDiem">
+          <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583684727/hoithi/london-eye_wy9kui.png" style="height: 50px; width: auto">
+          </div>
+          <div v-show="showDiem">
+            <h4
+              style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: black"
+            >KẾT QUẢ THI</h4>
+            <div class="col-md-10" style="margin: auto; margin-top: 100px">
+              <div class="row">
+                <div
+                  style="background-color: #21618C;border-radius: 10px; width: 250px; height: 200px; margin: auto; text-align: center;"
+                >
+                  <p
+                    style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
+                  >ĐỘI 1</p>
+                  <p
+                    style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
+                  >{{this.team1}}</p>
+                </div>
+                <div
+                  style="background-color: #CB4335;border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
+                >
+                  <p
+                    style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
+                  >ĐỘI 2</p>
+                  <p
+                    style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
+                  >{{this.team2}}</p>
+                </div>
+                <div
+                  style="background-color: #239B56; border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
+                >
+                  <p
+                    style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
+                  >ĐỘI 3</p>
+                  <p
+                    style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
+                  >{{this.team3}}</p>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+          <div v-show="!showDiem">
+            <img
+              style="height: 60%; width: auto"
+              src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583509864/hoithi/undraw_anonymous_feedback_y3co_uqvf7s.png"
+            />
+            <br />
+            <br />
+          </div>
 
-          <h4
-            style="font-family: 'time new roman';font-weight: bold; text-align: center;font-size: 50px; color: black"
-          >KẾT QUẢ THI</h4>
-          <div class="col-md-10" style="margin: auto; margin-top: 100px">
-            <div class="row">
-              <div
-                style="background-color: #21618C;border-radius: 10px; width: 250px; height: 200px; margin: auto; text-align: center;"
-              >
-                <p
-                  style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
-                >ĐỘI 1</p>
-                <p
-                  style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                >{{this.team1}}</p>
-              </div>
-              <div
-                style="background-color: #CB4335;border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
-              >
-                <p
-                  style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
-                >ĐỘI 2</p>
-                <p
-                  style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                >{{this.team2}}</p>
-              </div>
-              <div
-                style="background-color: #239B56; border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
-              >
-                <p
-                  style="font-size: 35px; font-family:'time new roman'; font-weight: bold;color:white "
-                >ĐỘI 3</p>
-                <p
-                  style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                >{{this.team3}}</p>
-              </div>
-            </div>
-            <br />
-            <br />
-            <br />
-            <div class="row">
-              <button
-                type="button"
-                style="margin: auto; font-size: 18px;height: 100px; background-color:#F5B041; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color: black"
-                class="btn btn-dark"
-                @click="chongoi"
-              >TIẾP TỤC</button>
-              <button
-                type="button"
-                style="margin: auto; background-color:#3498DB; font-size: 18px;height: 100px; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color:black"
-                class="btn btn-dark"
-                @click="resetContinute"
-              >LƯỢT CHƠI MỚI</button>
-            </div>
+          <div class="row">
+                        <button
+              type="button"
+              style="margin: auto; background-color:#3498DB; font-size: 18px;height: 100px; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color:black"
+              class="btn btn-dark"
+              @click="resetContinute"
+            >LƯỢT CHƠI MỚI</button>
+            <button
+              type="button"
+              style="margin: auto; font-size: 18px;height: 100px; background-color:#F5B041; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color: black"
+              class="btn btn-dark"
+              @click="chongoi"
+            >TIẾP TỤC</button>
+
           </div>
         </div>
       </div>
@@ -70,7 +84,7 @@
     <div
       v-if="hidden== false"
       style="height: 100%; width: 100%; overflow-y:hidden; overflow-x:hidden;"
-      >
+    >
       <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px;">
         <div class="col-md-3" style="margin: 0 auto; cursor: pointer;">
           <div
@@ -113,7 +127,7 @@
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
-              style="background-color: #28B463; margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
+              style="background-image: linear-gradient(to right, #196F3D, #239B56, #21CA8E); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
               @click="activePoint(1)"
               v-bind:class="{boder:teamAct==1}"
               class="team-min-height"
@@ -165,7 +179,7 @@
             />
 
             <div
-              style="cursor: pointer; background-color: #D4AC0D;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; color: white; border: 2px solid black; border-radius: 5px"
+              style="cursor: pointer; background-image: linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F);background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: black; padding-top:12px; border: 2px solid black; border-radius: 5px"
               @click="activePoint(3)"
               v-bind:class="{boder:teamAct==3}"
               class="team-min-height"
@@ -282,7 +296,9 @@
                   >{{item.name}}</span>
                 </div>
                 <div>
-                  <img :src="item.image_url" style="height: 86%; width: 86%" />
+                  <a :href="item.image_url">
+                    <img :src="item.image_url" style="height: 86%; width: 86%" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -306,8 +322,8 @@
                   >
                     <!-- <div
                       style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px"
-                    >{{data.phuong_an}}</div> -->
-                    <div style="float: left; color: red">{{data.phuong_an}}: </div>
+                    >{{data.phuong_an}}</div>-->
+                    <div style="float: left; color: red">{{data.phuong_an}}:</div>
                     <span>{{data.name}}</span>
                   </button>
                   <div
@@ -496,6 +512,7 @@ export default {
   name: "question",
   data: function() {
     return {
+      showDiem: false,
       khanGia: false,
       statusaudio: false,
       audiodongho: undefined,
@@ -594,6 +611,10 @@ export default {
   methods: {
     chonKhanGia() {
       this.khanGia = !this.khanGia;
+      if (this.khanGia) {
+        this.teamAct = undefined;
+        this.border = false;
+      }
     },
     change_question(index) {
       this.turn = index;
@@ -644,6 +665,10 @@ export default {
     addAnswer(answer, ind, index) {
       this.onclick = ind;
       // if (this.teamAct != undefined) {
+      if (this.loading) {
+        this.stopTimer();
+        this.loading = false;
+      }
       this.answer = answer;
       this.ind = ind;
       this.index = index;
@@ -695,18 +720,20 @@ export default {
         this.border = !this.border;
         this.loading = false;
       } else if (this.teamAct == undefined) {
-        this.teamAct = team;
-        this.time_start = true;
-        if (this.loading == false) {
-          this.startTimer();
-        } else {
+        if (this.loading) {
           this.stopTimer();
+          this.loading = false;
         }
-        this.border = !this.border;
-        this.loading = true;
-      } else if (this.teamAct != team && this.teamAct != undefined) {
         this.teamAct = team;
-        this.loading = true;
+        this.border = !this.border;
+        this.time_start = true;
+      } else if (this.teamAct != team && this.teamAct != undefined) {
+        if (this.loading) {
+          this.stopTimer();
+          this.loading = false;
+        }
+        this.teamAct = team;
+        this.loading = false;
         this.border = !this.border;
       } else {
         this.teamAct = team;
@@ -805,7 +832,7 @@ export default {
           this.hidden == false;
         }
       }
-    //   this.activePoint(this.teamAct);
+      //   this.activePoint(this.teamAct);
     },
     timeStart() {
       return restart;
