@@ -10,7 +10,10 @@
           <!-- <img src="anh/logovuong.png"
           style="width: 150px; height: 120px; padding-bottom: 25px">-->
           <div style="padding-bottom: 20px; cursor: pointer" @click="showDiem = !showDiem">
-          <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583684727/hoithi/london-eye_wy9kui.png" style="height: 50px; width: auto">
+            <img
+              src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583684727/hoithi/london-eye_wy9kui.png"
+              style="height: 50px; width: auto"
+            />
           </div>
           <div v-show="showDiem">
             <h4
@@ -55,16 +58,20 @@
             </div>
           </div>
           <div v-show="!showDiem">
-            <img
+            <!-- <img
               style="height: 60%; width: auto"
               src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583509864/hoithi/undraw_anonymous_feedback_y3co_uqvf7s.png"
+            />-->
+            <img
+              style="height: 65%; width: auto"
+              src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583767169/hoithi/undraw_selected_options_42hx_hpeucn.png"
             />
             <br />
             <br />
           </div>
 
           <div class="row">
-                        <button
+            <button
               type="button"
               style="margin: auto; background-color:#3498DB; font-size: 18px;height: 100px; width: 250px;border-radius: 50px; font-family:'time new roman'; font-weight: bold; color:black"
               class="btn btn-dark"
@@ -76,7 +83,6 @@
               class="btn btn-dark"
               @click="chongoi"
             >TIẾP TỤC</button>
-
           </div>
         </div>
       </div>
@@ -296,7 +302,7 @@
                   >{{item.name}}</span>
                 </div>
                 <div>
-                  <a :href="item.image_url">
+                  <a :href="item.image_url" target="_blank">
                     <img :src="item.image_url" style="height: 86%; width: 86%" />
                   </a>
                 </div>
@@ -351,10 +357,7 @@
                           class="modal-body"
                           style="width: 500px;height: 500px;font-size: 30px;text-align: center"
                         >
-                          <img
-                            src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif"
-                            style="width: 350px;height: 300px;"
-                          />
+                          <img :src="anhSai[numberRandom]" style="width: 350px;height: 300px;" />
                           <br />
                           <h2 style="font-family:'time new roman'; font-weight: bold;">
                             KHÔNG
@@ -392,7 +395,7 @@
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
                           <img
-                            src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif"
+                            :src="anhDung[numberRandom]"
                             style="width: 350px;height: 300px;"
                           />
                           <br />
@@ -432,10 +435,7 @@
                           class="modal-body"
                           style="width: 500px;height: 500px;font-size: 30px;text-align: center"
                         >
-                          <img
-                            src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif"
-                            style="width: 350px;height: 300px;"
-                          />
+                          <img :src="anhSai[numberRandom]" style="width: 350px;height: 300px;" />
                           <br />
                           <h2 style="font-family:'time new roman'; font-weight: bold;">
                             KHÔNG
@@ -473,7 +473,7 @@
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
                           <img
-                            src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif"
+                            :src="anhDung[numberRandom]"
                             style="width: 350px;height: 300px;"
                           />
                           <br />
@@ -544,7 +544,22 @@ export default {
       hidden: false,
       packageDetail: undefined,
       height_a: undefined,
-      height_b: undefined
+      height_b: undefined,
+      numberRandom: 0,
+      anhSai: [
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"
+      ],
+      anhDung: [
+        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif',
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif",
+        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif',
+        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif'
+      ]
     };
   },
   created() {
@@ -676,6 +691,8 @@ export default {
       this.mauvang = !this.mauvang;
     },
     next() {
+      this.numberRandom = Math.floor(Math.random() * 5);
+      console.log("random", this.numberRandom);
       this.khanGia = false;
       this.loading = false;
       this.onclick = undefined;

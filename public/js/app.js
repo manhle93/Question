@@ -3022,7 +3022,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       index: undefined,
       hidden: true,
       totalTime: 10
-    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _ref;
+    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _defineProperty(_ref, "numberRandom", 0), _defineProperty(_ref, "anhSai", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"]), _defineProperty(_ref, "anhDung", ['https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif', "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif", 'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif', 'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif']), _ref;
   },
   created: function created() {
     this.tinker = false;
@@ -3169,6 +3169,8 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       this.mauvang = !this.mauvang;
     },
     next: function next() {
+      this.numberRandom = Math.floor(Math.random() * 5);
+      console.log("random", this.numberRandom);
       this.khanGia = false;
       this.loading = false;
       this.onclick = undefined;
@@ -45201,10 +45203,10 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: { height: "60%", width: "auto" },
+                          staticStyle: { height: "65%", width: "auto" },
                           attrs: {
                             src:
-                              "https://res.cloudinary.com/dsobei3hp/image/upload/v1583509864/hoithi/undraw_anonymous_feedback_y3co_uqvf7s.png"
+                              "https://res.cloudinary.com/dsobei3hp/image/upload/v1583767169/hoithi/undraw_selected_options_42hx_hpeucn.png"
                           }
                         }),
                         _vm._v(" "),
@@ -45923,7 +45925,10 @@ var render = function() {
                                             _c(
                                               "a",
                                               {
-                                                attrs: { href: item.image_url }
+                                                attrs: {
+                                                  href: item.image_url,
+                                                  target: "_blank"
+                                                }
                                               },
                                               [
                                                 _c("img", {
@@ -46050,7 +46055,86 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(1, true)]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "modal-dialog modal-dialog-centered",
+                                                      attrs: {
+                                                        role: "document"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "modal-content"
+                                                        },
+                                                        [
+                                                          _vm._m(1, true),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-body",
+                                                              staticStyle: {
+                                                                width: "500px",
+                                                                height: "500px",
+                                                                "font-size":
+                                                                  "30px",
+                                                                "text-align":
+                                                                  "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                staticStyle: {
+                                                                  width:
+                                                                    "350px",
+                                                                  height:
+                                                                    "300px"
+                                                                },
+                                                                attrs: {
+                                                                  src:
+                                                                    _vm.anhSai[
+                                                                      _vm
+                                                                        .numberRandom
+                                                                    ]
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("br"),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "h2",
+                                                                {
+                                                                  staticStyle: {
+                                                                    "font-family":
+                                                                      "'time new roman'",
+                                                                    "font-weight":
+                                                                      "bold"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c("p", [
+                                                                _vm._v("+ 0")
+                                                              ])
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -46069,7 +46153,86 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(2, true)]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "modal-dialog modal-dialog-centered",
+                                                      attrs: {
+                                                        role: "document"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "modal-content"
+                                                        },
+                                                        [
+                                                          _vm._m(2, true),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-body",
+                                                              staticStyle: {
+                                                                width: "500px",
+                                                                height: "450px",
+                                                                "font-size":
+                                                                  "30px",
+                                                                "text-align":
+                                                                  "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                staticStyle: {
+                                                                  width:
+                                                                    "350px",
+                                                                  height:
+                                                                    "300px"
+                                                                },
+                                                                attrs: {
+                                                                  src:
+                                                                    _vm.anhDung[
+                                                                      _vm
+                                                                        .numberRandom
+                                                                    ]
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("br"),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "h2",
+                                                                {
+                                                                  staticStyle: {
+                                                                    "font-family":
+                                                                      "'time new roman'",
+                                                                    "font-weight":
+                                                                      "bold"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c("p", [
+                                                                _vm._v("+ 10")
+                                                              ])
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -46088,7 +46251,86 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(3, true)]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "modal-dialog modal-dialog-centered",
+                                                      attrs: {
+                                                        role: "document"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "modal-content"
+                                                        },
+                                                        [
+                                                          _vm._m(3, true),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-body",
+                                                              staticStyle: {
+                                                                width: "500px",
+                                                                height: "500px",
+                                                                "font-size":
+                                                                  "30px",
+                                                                "text-align":
+                                                                  "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                staticStyle: {
+                                                                  width:
+                                                                    "350px",
+                                                                  height:
+                                                                    "300px"
+                                                                },
+                                                                attrs: {
+                                                                  src:
+                                                                    _vm.anhSai[
+                                                                      _vm
+                                                                        .numberRandom
+                                                                    ]
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("br"),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "h2",
+                                                                {
+                                                                  staticStyle: {
+                                                                    "font-family":
+                                                                      "'time new roman'",
+                                                                    "font-weight":
+                                                                      "bold"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c("p", [
+                                                                _vm._v("+ 0")
+                                                              ])
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
                                             : _vm._e(),
                                           _vm._v(" "),
@@ -46107,7 +46349,86 @@ var render = function() {
                                                     "aria-hidden": "true"
                                                   }
                                                 },
-                                                [_vm._m(4, true)]
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "modal-dialog modal-dialog-centered",
+                                                      attrs: {
+                                                        role: "document"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "modal-content"
+                                                        },
+                                                        [
+                                                          _vm._m(4, true),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "modal-body",
+                                                              staticStyle: {
+                                                                width: "500px",
+                                                                height: "450px",
+                                                                "font-size":
+                                                                  "30px",
+                                                                "text-align":
+                                                                  "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                staticStyle: {
+                                                                  width:
+                                                                    "350px",
+                                                                  height:
+                                                                    "300px"
+                                                                },
+                                                                attrs: {
+                                                                  src:
+                                                                    _vm.anhDung[
+                                                                      _vm
+                                                                        .numberRandom
+                                                                    ]
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("br"),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "h2",
+                                                                {
+                                                                  staticStyle: {
+                                                                    "font-family":
+                                                                      "'time new roman'",
+                                                                    "font-weight":
+                                                                      "bold"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c("p", [
+                                                                _vm._v("+ 10")
+                                                              ])
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
                                               )
                                             : _vm._e()
                                         ],
@@ -46173,285 +46494,77 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal-dialog modal-dialog-centered",
-        attrs: { role: "document" }
-      },
-      [
-        _c("div", { staticClass: "modal-content" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c(
-              "button",
-              {
-                staticClass: "close",
-                attrs: {
-                  type: "button",
-                  "data-dismiss": "modal",
-                  "aria-label": "Close"
-                }
-              },
-              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "modal-body",
-              staticStyle: {
-                width: "500px",
-                height: "500px",
-                "font-size": "30px",
-                "text-align": "center"
-              }
-            },
-            [
-              _c("img", {
-                staticStyle: { width: "350px", height: "300px" },
-                attrs: {
-                  src:
-                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif"
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticStyle: {
-                    "font-family": "'time new roman'",
-                    "font-weight": "bold"
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("p", [_vm._v("+ 0")])
-            ]
-          )
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal-dialog modal-dialog-centered",
-        attrs: { role: "document" }
-      },
-      [
-        _c("div", { staticClass: "modal-content" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c(
-              "button",
-              {
-                staticClass: "close",
-                attrs: {
-                  type: "button",
-                  "data-dismiss": "modal",
-                  "aria-label": "Close"
-                }
-              },
-              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "modal-body",
-              staticStyle: {
-                width: "500px",
-                height: "450px",
-                "font-size": "30px",
-                "text-align": "center"
-              }
-            },
-            [
-              _c("img", {
-                staticStyle: { width: "350px", height: "300px" },
-                attrs: {
-                  src:
-                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif"
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticStyle: {
-                    "font-family": "'time new roman'",
-                    "font-weight": "bold"
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("p", [_vm._v("+ 10")])
-            ]
-          )
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal-dialog modal-dialog-centered",
-        attrs: { role: "document" }
-      },
-      [
-        _c("div", { staticClass: "modal-content" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c(
-              "button",
-              {
-                staticClass: "close",
-                attrs: {
-                  type: "button",
-                  "data-dismiss": "modal",
-                  "aria-label": "Close"
-                }
-              },
-              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "modal-body",
-              staticStyle: {
-                width: "500px",
-                height: "500px",
-                "font-size": "30px",
-                "text-align": "center"
-              }
-            },
-            [
-              _c("img", {
-                staticStyle: { width: "350px", height: "300px" },
-                attrs: {
-                  src:
-                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541419/hoithi/sai_huda9l.gif"
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticStyle: {
-                    "font-family": "'time new roman'",
-                    "font-weight": "bold"
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("p", [_vm._v("+ 0")])
-            ]
-          )
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal-dialog modal-dialog-centered",
-        attrs: { role: "document" }
-      },
-      [
-        _c("div", { staticClass: "modal-content" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c(
-              "button",
-              {
-                staticClass: "close",
-                attrs: {
-                  type: "button",
-                  "data-dismiss": "modal",
-                  "aria-label": "Close"
-                }
-              },
-              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "modal-body",
-              staticStyle: {
-                width: "500px",
-                height: "450px",
-                "font-size": "30px",
-                "text-align": "center"
-              }
-            },
-            [
-              _c("img", {
-                staticStyle: { width: "350px", height: "300px" },
-                attrs: {
-                  src:
-                    "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/dung_xaymtk.gif"
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "h2",
-                {
-                  staticStyle: {
-                    "font-family": "'time new roman'",
-                    "font-weight": "bold"
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("p", [_vm._v("+ 10")])
-            ]
-          )
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
   }
 ]
 render._withStripped = true
