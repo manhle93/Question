@@ -45977,14 +45977,14 @@ var render = function() {
                                                     staticClass:
                                                       "modal-dialog modal-dialog-centered",
                                                     staticStyle: {
-                                                      "max-width": "90vw",
-                                                      "max-height": "90vh"
+                                                      "max-width": "90vw"
                                                     }
                                                   },
                                                   [
                                                     _c("img", {
                                                       staticStyle: {
-                                                        width: "100%"
+                                                        width: "100%",
+                                                        "max-height": "90vh"
                                                       },
                                                       attrs: {
                                                         src: item.image_url
