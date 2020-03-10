@@ -60,9 +60,9 @@ class PlayController extends Controller
         $package->update($data);
         $turn = Turn::query()->findOrFail($package->turn_id);
         $turn->update([
-            'total_point1' => $turn->total_point1 + $data['point1'],
-            'total_point2' => $turn->total_point2 + $data['point2'],
-            'total_point3' => $turn->total_point3 + $data['point3'],
+            'total_point1' => $data['point1'],
+            'total_point2' => $data['point2'],
+            'total_point3' => $data['point3'],
         ]);
         return response()->json([
             'message' => 'thành công',
