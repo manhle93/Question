@@ -1918,6 +1918,12 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var files = e.target.files;
+      console.log(files[0].size);
+
+      if (files[0].size > 10000000) {
+        return alert('Ảnh quá lớn , dung lượng ảnh tối đa 10Mb');
+      }
+
       var data = new FormData();
       data.append("file", files[0]);
       data.append("upload_preset", "u84rblt8");
@@ -2481,6 +2487,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_countdown__WEBPACK_IMPORTED_MODULE_4__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -45914,8 +45941,9 @@ var render = function() {
                                               "a",
                                               {
                                                 attrs: {
-                                                  href: item.image_url,
-                                                  target: "_blank"
+                                                  "data-toggle": "modal",
+                                                  "data-target":
+                                                    "#exampleModalCenterImage"
                                                 }
                                               },
                                               [
@@ -45926,6 +45954,43 @@ var render = function() {
                                                   },
                                                   attrs: { src: item.image_url }
                                                 })
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass: "modal fade",
+                                                attrs: {
+                                                  id: "exampleModalCenterImage",
+                                                  tabindex: "-1",
+                                                  role: "dialog",
+                                                  "aria-labelledby":
+                                                    "exampleModalCenterTitle",
+                                                  "aria-hidden": "true"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "modal-dialog modal-dialog-centered",
+                                                    staticStyle: {
+                                                      "max-width": "90vw"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("img", {
+                                                      staticStyle: {
+                                                        width: "100%"
+                                                      },
+                                                      attrs: {
+                                                        src: item.image_url
+                                                      }
+                                                    })
+                                                  ]
+                                                )
                                               ]
                                             )
                                           ])

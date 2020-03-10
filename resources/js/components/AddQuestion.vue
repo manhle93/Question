@@ -128,6 +128,10 @@ export default {
   methods: {
     handleChange(e) {
       let files = e.target.files;
+      console.log(files[0].size)
+      if (files[0].size > 10000000) {
+          return alert('Ảnh quá lớn , dung lượng ảnh tối đa 10Mb')
+      }
       let data = new FormData();
       data.append("file", files[0]);
       data.append("upload_preset", "u84rblt8");

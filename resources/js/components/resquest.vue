@@ -295,13 +295,33 @@
                 v-if="index==turn"
                 style="color: black; font-size: 14px; font-weight: bold"
               >
-                <div style="width: 100%; border: 2px solid black;text-align: justify; background-image: linear-gradient(to right, #283747, #072B6C, #0E195F); color: white">
-                  <div style="font-family:'time new roman';font-size: 20px; padding-left: 10px">{{item.name}}</div>
+                <div
+                  style="width: 100%; border: 2px solid black;text-align: justify; background-image: linear-gradient(to right, #283747, #072B6C, #0E195F); color: white"
+                >
+                  <div
+                    style="font-family:'time new roman';font-size: 20px; padding-left: 10px"
+                  >{{item.name}}</div>
                 </div>
                 <div>
-                  <a :href="item.image_url" target="_blank">
+                  <!-- <a :href="item.image_url" target="_blank">
+                    <img :src="item.image_url" style="height: 86%; width: 100%" />
+                  </a>-->
+
+                  <a data-toggle="modal" data-target="#exampleModalCenterImage">
                     <img :src="item.image_url" style="height: 86%; width: 100%" />
                   </a>
+                                    <div
+                    class="modal fade"
+                    id="exampleModalCenterImage"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 90vw">
+                      <img :src="item.image_url" style="width: 100%"/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -331,6 +351,7 @@
                       <span>{{data.name}}</span>
                     </div>
                   </button>
+
                   <div
                     class="modal fade"
                     id="exampleModalCenter"
