@@ -45977,7 +45977,8 @@ var render = function() {
                                                     staticClass:
                                                       "modal-dialog modal-dialog-centered",
                                                     staticStyle: {
-                                                      "max-width": "90vw"
+                                                      "max-width": "90vw",
+                                                      "max-height": "90vh"
                                                     }
                                                   },
                                                   [

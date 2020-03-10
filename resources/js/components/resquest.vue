@@ -318,7 +318,7 @@
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"
                   >
-                    <div class="modal-dialog modal-dialog-centered" style="max-width: 90vw">
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 90vw; max-height: 90vh">
                       <img :src="item.image_url" style="width: 100%"/>
                     </div>
                   </div>
