@@ -2972,13 +2972,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -3022,7 +3015,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       index: undefined,
       hidden: true,
       totalTime: 10
-    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _defineProperty(_ref, "numberRandom", 0), _defineProperty(_ref, "anhSai", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"]), _defineProperty(_ref, "anhDung", ['https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif', "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif", 'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif', 'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif']), _ref;
+    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _defineProperty(_ref, "numberRandom", 0), _defineProperty(_ref, "anhSai", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"]), _defineProperty(_ref, "anhDung", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif"]), _ref;
   },
   created: function created() {
     this.tinker = false;
@@ -44961,7 +44954,7 @@ var render = function() {
         width: "100%",
         "overflow-y": "hidden",
         "background-image":
-          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583422247/hoithi/Presentation1_lzbioa_vhg2oz.jpg')",
+          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583758350/hoithi/Giao_di%E1%BB%87n_thi_ch%C3%ADnh_gczcds.jpg')",
         "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
@@ -45317,18 +45310,18 @@ var render = function() {
                             "div",
                             {
                               staticStyle: {
-                                "padding-top": "55px",
+                                "padding-top": "30px",
                                 width: "210px",
                                 height: "210px",
                                 "margin-left": "25px",
                                 "text-align": "center",
-                                "background-image":
-                                  "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541417/hoithi/dongho_mv6mjb.png')",
+                                border: "4px solid #1F618D",
+                                "border-radius": "50%",
                                 "background-size": "100% 100%",
-                                color: "white",
+                                color: "black",
                                 "font-family": "'Tahoma'",
                                 "font-weight": "bold",
-                                "font-size": "72px"
+                                "font-size": "100px"
                               }
                             },
                             [_vm._v(_vm._s(_vm.totalTime))]
@@ -45338,7 +45331,22 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(0)
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-9",
+                      staticStyle: {
+                        margin: "0 auto",
+                        color: "#111F78",
+                        "font-family": "'Garamond'",
+                        "font-weight": "bold",
+                        "font-size": "65px",
+                        "text-align": "center",
+                        "text-shadow": "3px 3px #909497"
+                      }
+                    },
+                    [_vm._v("\n        PHẦN THI TRẮC NGHIỆM\n        ")]
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -45743,13 +45751,15 @@ var render = function() {
                                         "font-weight": "bold",
                                         "font-size": "18 px",
                                         background: "#094EAB",
-                                        "border-radius": "50px"
+                                        "border-radius": "10px"
                                       },
                                       attrs: { type: "button" }
                                     },
                                     [
                                       _vm._v(
-                                        "\n              CÁC CÂU HỎI\n              "
+                                        "\n              GÓI\n              CÂU HỎI SỐ: " +
+                                          _vm._s(this.packageDetail.name) +
+                                          "\n            "
                                       )
                                     ]
                                   )
@@ -45763,12 +45773,12 @@ var render = function() {
                                     staticClass: "btn btn-primary",
                                     class: { red: index <= _vm.turn },
                                     staticStyle: {
-                                      "background-color": "#094EAB",
+                                      "background-color": "#2E86C1",
                                       width: "40px",
                                       height: "40px",
                                       "margin-right": "10px",
                                       "font-weight": "bold",
-                                      "border-radius": "50%",
+                                      "border-radius": "10px",
                                       border: "2px solid white"
                                     },
                                     attrs: { type: "button" },
@@ -45802,9 +45812,9 @@ var render = function() {
                                     "margin-top": "20px",
                                     display: "inline-block",
                                     border: "6px double white",
-                                    "border-radius": "10px",
+                                    "border-radius": "30px",
                                     "background-image":
-                                      "linear-gradient(to right, #3A7AEE, #072B6C, #052660, #0745B5, #266EEF)",
+                                      "linear-gradient(to right, #283747, #072B6C, #0E195F)",
                                     "background-size": "100% 100%"
                                   }
                                 },
@@ -45824,32 +45834,15 @@ var render = function() {
                                         },
                                         [
                                           _c(
-                                            "div",
-                                            {
-                                              staticStyle: {
-                                                color: "white",
-                                                "font-family":
-                                                  "'time new roman'",
-                                                "font-weight": "bold"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                Câu " +
-                                                  _vm._s(index + 1) +
-                                                  "\n              "
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
                                             "p",
                                             {
                                               staticStyle: {
                                                 "font-family":
                                                   "'time new roman'",
-                                                "font-size": "29px",
-                                                opacity: "1 !important"
+                                                "font-size": "30px",
+                                                float: "left",
+                                                "padding-top": "10px",
+                                                "text-align": "justify"
                                               }
                                             },
                                             [_vm._v(_vm._s(item.name))]
@@ -45882,44 +45875,39 @@ var render = function() {
                                         {
                                           key: item.id,
                                           staticStyle: {
-                                            color: "white",
-                                            "font-size": "28px"
+                                            color: "black",
+                                            "font-size": "14px",
+                                            "font-weight": "bold"
                                           }
                                         },
                                         [
-                                          _c("div", [
-                                            _c(
-                                              "span",
-                                              {
-                                                staticStyle: {
-                                                  color: "white",
-                                                  "font-family":
-                                                    "'time new roman'",
-                                                  "font-weight": "bold"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "\n                  Câu " +
-                                                    _vm._s(index + 1) +
-                                                    "\n                "
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "span",
-                                              {
-                                                staticStyle: {
-                                                  "font-family":
-                                                    "'time new roman'",
-                                                  "font-size": "29px",
-                                                  opacity: "1 !important"
-                                                }
-                                              },
-                                              [_vm._v(_vm._s(item.name))]
-                                            )
-                                          ]),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticStyle: {
+                                                width: "100%",
+                                                border: "2px solid black",
+                                                "text-align": "justify",
+                                                "background-image":
+                                                  "linear-gradient(to right, #283747, #072B6C, #0E195F)",
+                                                color: "white"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "div",
+                                                {
+                                                  staticStyle: {
+                                                    "font-family":
+                                                      "'time new roman'",
+                                                    "font-size": "20px",
+                                                    "padding-left": "10px"
+                                                  }
+                                                },
+                                                [_vm._v(_vm._s(item.name))]
+                                              )
+                                            ]
+                                          ),
                                           _vm._v(" "),
                                           _c("div", [
                                             _c(
@@ -45934,7 +45922,7 @@ var render = function() {
                                                 _c("img", {
                                                   staticStyle: {
                                                     height: "86%",
-                                                    width: "86%"
+                                                    width: "100%"
                                                   },
                                                   attrs: { src: item.image_url }
                                                 })
@@ -45955,7 +45943,7 @@ var render = function() {
                               staticClass: "col-md-12",
                               staticStyle: {
                                 height: "100%",
-                                "margin-top": "20px"
+                                "margin-top": "10px"
                               }
                             },
                             [
@@ -45992,18 +45980,21 @@ var render = function() {
                                                   "ind--0": ind === _vm.onclick
                                                 },
                                                 staticStyle: {
-                                                  "border-radius": "40px",
+                                                  "box-shadow":
+                                                    "2px 2px #888888",
+                                                  "border-radius": "25px",
                                                   width: "32vw",
                                                   "font-family":
                                                     "'time new roman'",
                                                   color: "white",
                                                   "font-weight": "bold",
                                                   "font-size": "20px",
+                                                  "background-color": "#3968aa",
                                                   "background-image":
-                                                    "linear-gradient(to right, #072B6C,#052660, #0745B5)",
+                                                    "linear-gradient(#4187d5, #3968aa, #21618C )",
                                                   "background-size":
                                                     "100% 100%",
-                                                  border: "2px solid white"
+                                                  border: "1px solid #21618C"
                                                 },
                                                 attrs: { type: "button" },
                                                 on: {
@@ -46022,20 +46013,22 @@ var render = function() {
                                                   {
                                                     staticStyle: {
                                                       float: "left",
-                                                      color: "red"
+                                                      "text-align": "justify"
                                                     }
                                                   },
                                                   [
-                                                    _vm._v(
-                                                      _vm._s(data.phuong_an) +
-                                                        ":"
-                                                    )
+                                                    _c("span", [
+                                                      _vm._v(
+                                                        _vm._s(data.phuong_an) +
+                                                          ":"
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("span", [
+                                                      _vm._v(_vm._s(data.name))
+                                                    ])
                                                   ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("span", [
-                                                  _vm._v(_vm._s(data.name))
-                                                ])
+                                                )
                                               ]
                                             )
                                           }),
@@ -46073,7 +46066,7 @@ var render = function() {
                                                             "modal-content"
                                                         },
                                                         [
-                                                          _vm._m(1, true),
+                                                          _vm._m(0, true),
                                                           _vm._v(" "),
                                                           _c(
                                                             "div",
@@ -46171,7 +46164,7 @@ var render = function() {
                                                             "modal-content"
                                                         },
                                                         [
-                                                          _vm._m(2, true),
+                                                          _vm._m(1, true),
                                                           _vm._v(" "),
                                                           _c(
                                                             "div",
@@ -46269,7 +46262,7 @@ var render = function() {
                                                             "modal-content"
                                                         },
                                                         [
-                                                          _vm._m(3, true),
+                                                          _vm._m(2, true),
                                                           _vm._v(" "),
                                                           _c(
                                                             "div",
@@ -46367,7 +46360,7 @@ var render = function() {
                                                             "modal-content"
                                                         },
                                                         [
-                                                          _vm._m(4, true),
+                                                          _vm._m(3, true),
                                                           _vm._v(" "),
                                                           _c(
                                                             "div",
@@ -46453,43 +46446,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "col-md-9",
-        staticStyle: {
-          margin: "0 auto",
-          color: "black",
-          "font-family": "'Garamond'",
-          "font-weight": "bold",
-          "font-size": "60px",
-          "text-align": "center"
-        }
-      },
-      [
-        _c("span", { staticStyle: { color: "red" } }, [_vm._v("PHẦN THI")]),
-        _vm._v(" "),
-        _c(
-          "span",
-          {
-            staticStyle: {
-              color: "#03289C",
-              "padding-left": "20px",
-              "padding-right": "20px",
-              border: "2px solid black",
-              "border-radius": "50px",
-              "background-color": "#adf"
-            }
-          },
-          [_vm._v("TRẮC NGHIỆM")]
-        )
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

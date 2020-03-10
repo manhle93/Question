@@ -1,6 +1,6 @@
 <template>
   <div
-    style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583422247/hoithi/Presentation1_lzbioa_vhg2oz.jpg');background-size:100% 100%;  overflow-x:hidden;"
+    style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583758350/hoithi/Giao_di%E1%BB%87n_thi_ch%C3%ADnh_gczcds.jpg');background-size:100% 100%;  overflow-x:hidden;"
   >
     <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
       <div class="full-width">
@@ -99,19 +99,23 @@
             class="row"
             style="margin: auto; margin-top: 10px; cursor: pointer;"
           >
-            <div
+            <!-- <div
               style="padding-top:55px;width: 210px; height: 210px; margin-left:25px; text-align:center;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1575541417/hoithi/dongho_mv6mjb.png'); background-size:100% 100%;color: white; font-family: 'Tahoma';font-weight: bold;font-size: 72px;"
+            >{{totalTime }}</div>-->
+            <div
+              style="padding-top:30px;width: 210px; height: 210px; margin-left:25px; text-align:center;border: 4px solid #1F618D ; border-radius: 50%; background-size:100% 100%;color: black; font-family: 'Tahoma';font-weight: bold;font-size: 100px;"
             >{{totalTime }}</div>
           </div>
         </div>
         <div
           class="col-md-9"
-          style="margin: 0 auto;color: black; font-family: 'Garamond';font-weight: bold; font-size: 60px; text-align:center"
+          style="margin: 0 auto;color: #111F78 ; font-family: 'Garamond';font-weight: bold; font-size: 65px; text-align:center; text-shadow: 3px 3px #909497 ;"
         >
-          <span style=" color: red;">PHẦN THI</span>
+          PHẦN THI TRẮC NGHIỆM
+          <!-- <span style=" color: red;">PHẦN THI</span>
           <span
             style="color: #03289C; padding-left: 20px; padding-right: 20px; border: 2px solid black; border-radius: 50px; background-color:#adf"
-          >TRẮC NGHIỆM</span>
+          >TRẮC NGHIỆM</span>-->
         </div>
       </div>
       <div class="row" style="margin-top: 10px;height: 90%">
@@ -241,14 +245,13 @@
                 type="button"
                 class="btn btn-warning"
                 v-if="packageDetail"
-                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB; border-radius: 50px"
+                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB; border-radius: 10px"
               >
-                CÁC CÂU HỎI
-                <!-- GÓI
-                CÂU HỎI SỐ: {{this.packageDetail.name}}-->
+                GÓI
+                CÂU HỎI SỐ: {{this.packageDetail.name}}
               </button>
               <button
-                style="background-color:#094EAB;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:50%; border: 2px solid white"
+                style="background-color:#2E86C1;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:10px; border: 2px solid white"
                 type="button"
                 class="btn btn-primary"
                 v-for="(item,index) in question_data"
@@ -264,7 +267,7 @@
             <div
               class="col-md-12 min-height"
               v-if="question_data.length > 0 &&check"
-              style="margin-top: 20px;display: inline-block; border: 6px double white; border-radius: 10px;background-image: linear-gradient(to right, #3A7AEE, #072B6C, #052660, #0745B5, #266EEF);background-size:100% 100%; "
+              style="margin-top: 20px;display: inline-block; border: 6px double white; border-radius: 30px;background-image: linear-gradient(to right, #283747, #072B6C, #0E195F);background-size:100% 100%; "
             >
               <div
                 v-for="(item,index) in question_data"
@@ -272,12 +275,12 @@
                 v-if="index==turn"
                 style="color: white;font-size: 28px;"
               >
-                <div style="color: white; font-family:'time new roman'; font-weight: bold;">
+                <!-- <div style="color: white; font-family:'time new roman'; font-weight: bold;">
                   Câu {{index
                   +1}}
-                </div>
+                </div>-->
                 <p
-                  style="font-family:'time new roman';font-size: 29px; opacity: 1 !important"
+                  style="font-family:'time new roman';font-size: 30px; float: left; padding-top: 10px; text-align: justify;"
                 >{{item.name}}</p>
               </div>
             </div>
@@ -290,25 +293,19 @@
                 v-for="(item,index) in question_data"
                 v-bind:key="item.id"
                 v-if="index==turn"
-                style="color: white;font-size: 28px;"
+                style="color: black; font-size: 14px; font-weight: bold"
               >
-                <div>
-                  <span style="color: white; font-family:'time new roman'; font-weight: bold;">
-                    Câu {{index
-                    +1}}
-                  </span>
-                  <span
-                    style="font-family:'time new roman';font-size: 29px; opacity: 1 !important"
-                  >{{item.name}}</span>
+                <div style="width: 100%; border: 2px solid black;text-align: justify; background-image: linear-gradient(to right, #283747, #072B6C, #0E195F); color: white">
+                  <div style="font-family:'time new roman';font-size: 20px; padding-left: 10px">{{item.name}}</div>
                 </div>
                 <div>
                   <a :href="item.image_url" target="_blank">
-                    <img :src="item.image_url" style="height: 86%; width: 86%" />
+                    <img :src="item.image_url" style="height: 86%; width: 100%" />
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-md-12" style="height: 100%;margin-top: 20px">
+            <div class="col-md-12" style="height: 100%;margin-top: 10px">
               <div>
                 <div
                   style="width: 100%;float: left; background-color: #ffffff00"
@@ -318,7 +315,7 @@
                   v-if="index==turn"
                 >
                   <button
-                    style="border-radius: 40px; width:32vw; font-family:'time new roman';color:white; font-weight: bold;font-size: 20px; background-image: linear-gradient(to right, #072B6C,#052660, #0745B5);background-size:100% 100%; border: 2px solid white"
+                    style="box-shadow: 2px 2px #888888; border-radius: 25px; width:32vw; font-family:'time new roman'; color:white; font-weight: bold;font-size: 20px;background-color:#3968aa; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; border: 1px solid #21618C"
                     type="button"
                     class="btn btn-primary answer-min-height"
                     v-for="(data,ind) in item.answer"
@@ -329,8 +326,10 @@
                     <!-- <div
                       style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px"
                     >{{data.phuong_an}}</div>-->
-                    <div style="float: left; color: red">{{data.phuong_an}}:</div>
-                    <span>{{data.name}}</span>
+                    <div style="float: left; text-align: justify;">
+                      <span>{{data.phuong_an}}:</span>
+                      <span>{{data.name}}</span>
+                    </div>
                   </button>
                   <div
                     class="modal fade"
@@ -394,10 +393,7 @@
                           class="modal-body"
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
-                          <img
-                            :src="anhDung[numberRandom]"
-                            style="width: 350px;height: 300px;"
-                          />
+                          <img :src="anhDung[numberRandom]" style="width: 350px;height: 300px;" />
                           <br />
 
                           <h2 style="font-family:'time new roman'; font-weight: bold;">
@@ -472,10 +468,7 @@
                           class="modal-body"
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
-                          <img
-                            :src="anhDung[numberRandom]"
-                            style="width: 350px;height: 300px;"
-                          />
+                          <img :src="anhDung[numberRandom]" style="width: 350px;height: 300px;" />
                           <br />
                           <h2 style="font-family:'time new roman'; font-weight: bold;">
                             ĐÁP ÁN
@@ -554,11 +547,11 @@ export default {
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"
       ],
       anhDung: [
-        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif',
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif",
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif",
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif",
-        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif',
-        'https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif'
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif",
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif"
       ]
     };
   },
