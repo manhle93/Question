@@ -26,7 +26,7 @@
                 <div style="border-radius: 20px; margin-top: 25px; width: 50%;margin-left: 25%;background-color:#ECF0F1  " class="row">
                     <div class="col-md-12 grid-container"
                          style="align: center;border-radius: 20px; background-color:#ECF0F1 ">
-                        <div class="grid-item package-quest" v-for="(item,index) in package"
+                        <div class="grid-item package-quest" v-for="(item,index) in package" style="cursor: pointer"
                              @click="selectPakage(item.id)">{{item.name}}
                         </div>
                     </div>

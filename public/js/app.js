@@ -2458,8 +2458,10 @@ __webpack_require__.r(__webpack_exports__);
     console.log(this.packageOlds);
   },
   methods: {
-    selectPakage: function selectPakage(id) {
-      window.location.href = "/request/" + id + '/' + this.turn;
+    selectPakage: function selectPakage(item) {
+      if (!item.da_choi) {
+        window.location.href = "/request/" + item.id + '/' + this.turn;
+      }
     }
   }
 });
@@ -44795,6 +44797,7 @@ var render = function() {
                         "div",
                         {
                           staticClass: "grid-item package-quest",
+                          staticStyle: { cursor: "pointer" },
                           on: {
                             click: function($event) {
                               return _vm.selectPakage(item.id)
@@ -44932,9 +44935,15 @@ var render = function() {
                     "div",
                     {
                       staticClass: "grid-item package-quest",
+                      style: {
+                        "background-color": item.da_choi
+                          ? "#717D7E"
+                          : "#015BC1",
+                        cursor: item.da_choi ? "" : "pointer"
+                      },
                       on: {
                         click: function($event) {
-                          return _vm.selectPakage(item.id)
+                          return _vm.selectPakage(item)
                         }
                       }
                     },

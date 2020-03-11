@@ -12,7 +12,7 @@
                 <div style="border-radius: 20px; margin-top: 25px; width: 50%;margin-left: 25%;background-color:#ECF0F1  " class="row">
                     <div class="col-md-12 grid-container"
                          style="align: center;border-radius: 20px; background-color:#ECF0F1 ">
-                        <div class="grid-item package-quest" v-for="(item,index) in package"  @click="selectPakage(item.id)" >{{item.name}}</div>
+                        <div v-bind:style="{'background-color': item.da_choi ? '#717D7E' : '#015BC1', 'cursor':  item.da_choi ? '' : 'pointer' }" class="grid-item package-quest" v-for="(item,index) in package"  @click="selectPakage(item)" >{{item.name}}</div>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,10 @@
         },
         methods: {
 
-            selectPakage(id){
-                window.location.href = "/request/"+id +'/'+ this.turn
+            selectPakage(item){
+                if (!item.da_choi) {
+                window.location.href = "/request/"+item.id +'/'+ this.turn
+                }
             }
         }
     };
