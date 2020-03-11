@@ -124,7 +124,7 @@
             <div
               v-if="teamAct!=1"
               class="point-width"
-              style="border: 2px solid black;background-color: #28B463; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #28B463; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
@@ -137,7 +137,7 @@
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
-              style="background-image: linear-gradient(to right, #196F3D, #239B56, #21CA8E); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
+              style="box-shadow: 4px 4px #909497; background-image: linear-gradient(to right, #196F3D, #239B56, #21CA8E); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
               @click="activePoint(1)"
               v-bind:class="{boder:teamAct==1}"
               class="team-min-height"
@@ -151,7 +151,7 @@
             <div
               v-if="teamAct!=2"
               class="point-width"
-              style="border: 2px solid black;background-color: #C0392B ; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #C0392B ; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
@@ -164,7 +164,7 @@
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
-              style="cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
+              style="box-shadow: 4px 4px #909497; cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
               @click="activePoint(2)"
               v-bind:class="{boder:teamAct==2}"
               class="team-min-height"
@@ -175,7 +175,7 @@
             <div
               v-if="teamAct!=3"
               class="point-width"
-              style="border: 2px solid black;background-color: #D4AC0D; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #D4AC0D; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 class="teampoint-width"
@@ -189,7 +189,7 @@
             />
 
             <div
-              style="cursor: pointer; background-image: linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F);background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: black; padding-top:12px; border: 2px solid black; border-radius: 5px"
+              style="box-shadow: 4px 4px #909497; cursor: pointer; background-image: linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F);background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: black; padding-top:12px; border: 2px solid black; border-radius: 5px"
               @click="activePoint(3)"
               v-bind:class="{boder:teamAct==3}"
               class="team-min-height"
@@ -245,13 +245,13 @@
                 type="button"
                 class="btn btn-warning"
                 v-if="packageDetail"
-                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background: #094EAB; border-radius: 10px"
+                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background-image: linear-gradient(to bottom right, #2C93D8 , #075E98 );; border-radius: 10px"
               >
                 GÓI
-                CÂU HỎI SỐ: {{this.packageDetail.name}}
+                CÂU HỎI SỐ {{this.packageDetail.name}}
               </button>
               <button
-                style="background-color:#2E86C1;width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:10px; border: 2px solid white"
+                style="background-color:#2E86C1; width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:10px; border: 2px solid white;"
                 type="button"
                 class="btn btn-primary"
                 v-for="(item,index) in question_data"
@@ -347,7 +347,7 @@
                       style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px"
                     >{{data.phuong_an}}</div>-->
                     <div style="float: left; text-align: justify;">
-                      <span>{{data.phuong_an}}:</span>
+                      <span style="font-size: 24px">{{data.phuong_an}}. </span>
                       <span>{{data.name}}</span>
                     </div>
                   </button>
@@ -900,8 +900,8 @@ export default {
 }
 
 .ind--0 {
-  background-image: url("https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg") !important;
-  color: blue;
+  background-image: url("https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg") !important;
+  color: black !important;
   font-weight: bold;
 }
 
@@ -916,7 +916,7 @@ export default {
 }
 
 .red {
-  background-color: #c12701 !important;
+  background-color: #EB890B !important;
 }
 
 .min-height {

@@ -7956,7 +7956,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/nenchoncautraloi_id0eza.jpg\") !important;\r\n  color: blue;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #c12701 !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 80px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 150px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #EB890B !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 80px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 150px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
 
 // exports
 
@@ -44863,7 +44863,7 @@ var render = function() {
                 "font-family": "'time new roman'",
                 "font-weight": "bold",
                 "text-align": "center",
-                "font-size": "25px",
+                "font-size": "50px",
                 color: "black"
               }
             },
@@ -44877,7 +44877,7 @@ var render = function() {
                 "font-family": "'time new roman'",
                 "font-weight": "bold",
                 "text-align": "center",
-                "font-size": "25px",
+                "font-size": "50px",
                 color: "black"
               }
             },
@@ -44899,7 +44899,7 @@ var render = function() {
                 "font-family": "'time new roman'",
                 "font-weight": "bold",
                 "text-align": "center",
-                "font-size": "50px",
+                "font-size": "70px",
                 color: "BLACK",
                 "margin-top": "70px"
               }
@@ -45413,6 +45413,7 @@ var render = function() {
                                 {
                                   staticClass: "point-width",
                                   staticStyle: {
+                                    "box-shadow": "2px 4px #909497",
                                     border: "2px solid black",
                                     "background-color": "#28B463",
                                     margin: "0px auto",
@@ -45464,6 +45465,7 @@ var render = function() {
                               staticClass: "team-min-height",
                               class: { boder: _vm.teamAct == 1 },
                               staticStyle: {
+                                "box-shadow": "4px 4px #909497",
                                 "background-image":
                                   "linear-gradient(to right, #196F3D, #239B56, #21CA8E)",
                                 "margin-top": "10px",
@@ -45503,6 +45505,7 @@ var render = function() {
                                 {
                                   staticClass: "point-width",
                                   staticStyle: {
+                                    "box-shadow": "2px 4px #909497",
                                     border: "2px solid black",
                                     "background-color": "#C0392B",
                                     margin: "0px auto",
@@ -45555,6 +45558,7 @@ var render = function() {
                               staticClass: "team-min-height",
                               class: { boder: _vm.teamAct == 2 },
                               staticStyle: {
+                                "box-shadow": "4px 4px #909497",
                                 cursor: "pointer",
                                 "background-color": "#C0392B",
                                 "background-size": "100% 100%",
@@ -45594,6 +45598,7 @@ var render = function() {
                                 {
                                   staticClass: "point-width",
                                   staticStyle: {
+                                    "box-shadow": "2px 4px #909497",
                                     border: "2px solid black",
                                     "background-color": "#D4AC0D",
                                     margin: "0px auto",
@@ -45642,6 +45647,7 @@ var render = function() {
                               staticClass: "team-min-height",
                               class: { boder: _vm.teamAct == 3 },
                               staticStyle: {
+                                "box-shadow": "4px 4px #909497",
                                 cursor: "pointer",
                                 "background-image":
                                   "linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F)",
@@ -45786,14 +45792,15 @@ var render = function() {
                                         "font-family": "'Tahoma'",
                                         "font-weight": "bold",
                                         "font-size": "18 px",
-                                        background: "#094EAB",
+                                        "background-image":
+                                          "linear-gradient(to bottom right, #2C93D8 , #075E98 )",
                                         "border-radius": "10px"
                                       },
                                       attrs: { type: "button" }
                                     },
                                     [
                                       _vm._v(
-                                        "\n              GÓI\n              CÂU HỎI SỐ: " +
+                                        "\n              GÓI\n              CÂU HỎI SỐ " +
                                           _vm._s(this.packageDetail.name) +
                                           "\n            "
                                       )
@@ -46092,12 +46099,21 @@ var render = function() {
                                                     }
                                                   },
                                                   [
-                                                    _c("span", [
-                                                      _vm._v(
-                                                        _vm._s(data.phuong_an) +
-                                                          ":"
-                                                      )
-                                                    ]),
+                                                    _c(
+                                                      "span",
+                                                      {
+                                                        staticStyle: {
+                                                          "font-size": "24px"
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(
+                                                            data.phuong_an
+                                                          ) + ". "
+                                                        )
+                                                      ]
+                                                    ),
                                                     _vm._v(" "),
                                                     _c("span", [
                                                       _vm._v(_vm._s(data.name))
