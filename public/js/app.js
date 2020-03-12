@@ -3044,7 +3044,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
       index: undefined,
       hidden: true,
       totalTime: 10
-    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _defineProperty(_ref, "numberRandom", 0), _defineProperty(_ref, "anhSai", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"]), _defineProperty(_ref, "anhDung", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif"]), _ref;
+    }, _defineProperty(_ref, "hidden", false), _defineProperty(_ref, "packageDetail", undefined), _defineProperty(_ref, "height_a", undefined), _defineProperty(_ref, "height_b", undefined), _defineProperty(_ref, "numberRandom", 0), _defineProperty(_ref, "anhSai", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583769939/hoithi/attachment_3713250_yerjzl.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768584/hoithi/71c76025a232b42e8a458ac1656cab65_ybvrwr.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768582/hoithi/HsUNv_tbfqlv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769938/hoithi/ed1e81dd9cbfbfab1e5c70e7c143dbef_yfxpmv.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583769936/hoithi/picture-of-shocked-face-6_lulwz9.gif"]), _defineProperty(_ref, "anhDung", ["https://res.cloudinary.com/dsobei3hp/image/upload/v1583770445/hoithi/trump_Yes_sjsiwo.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif", "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770624/hoithi/giphy_1_avfpgu.gif"]), _ref;
   },
   created: function created() {
     this.tinker = false;
@@ -45435,7 +45435,8 @@ var render = function() {
                                         color: "white",
                                         "font-family": "'Tahoma'",
                                         "font-weight": "bold",
-                                        "font-size": "30px"
+                                        "font-size": "30px",
+                                        "padding-top": "15px"
                                       }
                                     },
                                     [_vm._v(_vm._s(this.team1))]
@@ -45528,7 +45529,7 @@ var render = function() {
                                         "font-family": "'Tahoma'",
                                         "font-weight": "bold",
                                         "font-size": "30px",
-                                        "padding-top": "10px"
+                                        "padding-top": "15px"
                                       }
                                     },
                                     [_vm._v(_vm._s(this.team2))]
@@ -45713,7 +45714,7 @@ var render = function() {
                         "div",
                         {
                           staticClass: "col-md-12",
-                          staticStyle: { "margin-top": "50px" }
+                          staticStyle: { "margin-top": "30px" }
                         },
                         [
                           _c(
@@ -46023,10 +46024,7 @@ var render = function() {
                             "div",
                             {
                               staticClass: "col-md-12",
-                              staticStyle: {
-                                height: "100%",
-                                "margin-top": "10px"
-                              }
+                              staticStyle: { height: "100%" }
                             },
                             [
                               _c(

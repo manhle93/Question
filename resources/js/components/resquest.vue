@@ -128,7 +128,7 @@
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
-                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px"
+                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 15px"
               >{{this.team1}}</div>
             </div>
             <img
@@ -155,7 +155,7 @@
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
-                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 10px"
+                style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 15px"
               >{{this.team2}}</div>
             </div>
             <img
@@ -219,7 +219,7 @@
                             {{totalTime }}
                         </div>
           </div>-->
-          <div class="col-md-12" style="margin-top:50px;">
+          <div class="col-md-12" style="margin-top:30px;">
             <button
               style="font-weight: bold; font-family: 'time new roman'; float: left"
               type="button"
@@ -325,7 +325,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12" style="height: 100%;margin-top: 10px">
+            <div class="col-md-12" style="height: 100%;">
               <div>
                 <div
                   style="width: 100%;float: left; background-color: #ffffff00"
@@ -572,7 +572,7 @@ export default {
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif",
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583768585/hoithi/tenor_vgzb33.gif",
         "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770447/hoithi/tenor_2_elybag.gif",
-        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770455/hoithi/giphy_rp85ty.gif"
+        "https://res.cloudinary.com/dsobei3hp/image/upload/v1583770624/hoithi/giphy_1_avfpgu.gif"
       ]
     };
   },
