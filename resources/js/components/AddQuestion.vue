@@ -28,11 +28,11 @@
     <input ref="upload-image" class="upload-image" type="file" @change="handleChange($event)" />
     <br />
     <br>  
-    <div style="width: 180px; height: 10px; border: 1px solid black;">
+    <div v-if="tienTrinh" style="width: 180px; height: 10px; border: 1px solid black;">
       <div v-bind:style="{'width': tienTrinh + '%', 'background-color': 'green', 'height': '100%'}"></div>
     </div>
-        <div > Đang tải ảnh lên: {{tienTrinh}} % </div>
-
+        <div v-if="tienTrinh && tienTrinh < 100" > Đang tải ảnh lên: {{tienTrinh}} % </div>
+        <div v-if="tienTrinh == 100">Hình ảnh đã được tải lên</div>
     <br>
     <label class="label">Câu trả lời</label>
     <table

@@ -43880,27 +43880,37 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticStyle: {
-          width: "180px",
-          height: "10px",
-          border: "1px solid black"
-        }
-      },
-      [
-        _c("div", {
-          style: {
-            width: _vm.tienTrinh + "%",
-            "background-color": "green",
-            height: "100%"
-          }
-        })
-      ]
-    ),
+    _vm.tienTrinh
+      ? _c(
+          "div",
+          {
+            staticStyle: {
+              width: "180px",
+              height: "10px",
+              border: "1px solid black"
+            }
+          },
+          [
+            _c("div", {
+              style: {
+                width: _vm.tienTrinh + "%",
+                "background-color": "green",
+                height: "100%"
+              }
+            })
+          ]
+        )
+      : _vm._e(),
     _vm._v(" "),
-    _c("div", [_vm._v(" Đang tải ảnh lên: " + _vm._s(_vm.tienTrinh) + " % ")]),
+    _vm.tienTrinh && _vm.tienTrinh < 100
+      ? _c("div", [
+          _vm._v(" Đang tải ảnh lên: " + _vm._s(_vm.tienTrinh) + " % ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.tienTrinh == 100
+      ? _c("div", [_vm._v("Hình ảnh đã được tải lên")])
+      : _vm._e(),
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
