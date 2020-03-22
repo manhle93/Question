@@ -26,7 +26,7 @@
                 <div style="border-radius: 20px; margin-top: 25px; width: 50%;margin-left: 25%;background-color:#ECF0F1  " class="row">
                     <div class="col-md-12 grid-container"
                          style="align: center;border-radius: 20px; background-color:#ECF0F1 ">
-                        <div class="grid-item package-quest" v-for="(item,index) in package" style="cursor: pointer"
+                        <div class="grid-item package-quest" v-for="(item,index) in package" style="cursor: pointer; background-image: linear-gradient(#4187d5, #3968aa, #21618C )"
                              @click="selectPakage(item.id)">{{item.name}}
                         </div>
                     </div>
@@ -92,7 +92,6 @@
         height: 60px;
         border-radius: 10px;
         line-height: 60px;
-        background-color: #015BC1;
         color: white;
         text-align: center;
         font-size: 28px;

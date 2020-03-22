@@ -64,7 +64,7 @@
             />-->
             <img
               style="height: 65%; width: auto"
-              src="https://res.cloudinary.com/dsobei3hp/image/upload/v1583767169/hoithi/undraw_selected_options_42hx_hpeucn.png"
+              src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif"
             />
             <br />
             <br />
@@ -124,7 +124,7 @@
             <div
               v-if="teamAct!=1"
               class="point-width"
-              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #28B463; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 1px 2px #909497; border: 1px solid #CCD1D1; background-image: linear-gradient(#ABE183, #9AE066, #588A33); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
@@ -137,7 +137,7 @@
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
-              style="box-shadow: 4px 4px #909497; background-image: linear-gradient(to right, #196F3D, #239B56, #21CA8E); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px; cursor: pointer;"
+              style="box-shadow: 4px 4px #909497; background-image: linear-gradient(to right, #ABE183, #9AE066, #588A33); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid #BFC9CA; border-radius: 10px; cursor: pointer;"
               @click="activePoint(1)"
               v-bind:class="{boder:teamAct==1}"
               class="team-min-height"
@@ -151,7 +151,7 @@
             <div
               v-if="teamAct!=2"
               class="point-width"
-              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #C0392B ; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 2px 4px #909497; border: 1px solid CCD1D1; background-image: linear-gradient( #EC7063 , #C0392B, #B03A2E); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
@@ -164,7 +164,7 @@
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
-              style="box-shadow: 4px 4px #909497; cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 2px solid black; border-radius: 5px"
+              style="box-shadow: 4px 4px #909497; cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid #99A3A4; border-radius: 10px"
               @click="activePoint(2)"
               v-bind:class="{boder:teamAct==2}"
               class="team-min-height"
@@ -175,7 +175,7 @@
             <div
               v-if="teamAct!=3"
               class="point-width"
-              style="box-shadow: 2px 4px #909497; border: 2px solid black;background-color: #D4AC0D; margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
+              style="box-shadow: 2px 4px #909497; border: 1px solid #99A3A4; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 class="teampoint-width"
@@ -189,7 +189,7 @@
             />
 
             <div
-              style="box-shadow: 4px 4px #909497; cursor: pointer; background-image: linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F);background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: black; padding-top:12px; border: 2px solid black; border-radius: 5px"
+              style="box-shadow: 4px 4px #909497; cursor: pointer; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid 99A3A4; border-radius: 10px"
               @click="activePoint(3)"
               v-bind:class="{boder:teamAct==3}"
               class="team-min-height"
@@ -335,7 +335,7 @@
                   v-if="index==turn"
                 >
                   <button
-                    style="box-shadow: 2px 2px #888888; border-radius: 25px; width:32vw; font-family:'time new roman'; color:white; font-weight: bold;font-size: 20px;background-color:#3968aa; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; border: 1px solid #21618C"
+                    style="box-shadow: 2px 2px #888888; border-radius: 25px; width:32vw; font-family:'time new roman'; color:white; font-weight: bold;font-size: 20px;background-color:#3968aa; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; border: 1px solid #21618C;"
                     type="button"
                     class="btn btn-primary answer-min-height"
                     v-for="(data,ind) in item.answer"
@@ -928,7 +928,7 @@ export default {
   border-radius: 40px;
 }
 .point-width {
-  width: 80px;
+  width: 100px;
   height: 80px;
 }
 .bor-min-height {
@@ -936,7 +936,7 @@ export default {
 }
 
 .team-min-height {
-  width: 150px;
+  width: 130px;
   height: 60px;
 }
 .teampoint-width {

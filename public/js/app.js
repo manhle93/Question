@@ -1895,6 +1895,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "name"],
   data: function data() {
@@ -1910,7 +1917,8 @@ __webpack_require__.r(__webpack_exports__);
       dapanD: null,
       data: [],
       imageUrl: null,
-      loadAnh: false
+      loadAnh: false,
+      tienTrinh: 0
     };
   },
   methods: {
@@ -1929,7 +1937,19 @@ __webpack_require__.r(__webpack_exports__);
       data.append("upload_preset", "u84rblt8");
       data.append("api_key", "599747191334322");
       this.loadAnh = true;
-      axios.post("https://api.cloudinary.com/v1_1/dsobei3hp/image/upload", data).then(function (res) {
+      var config = {
+        onUploadProgress: function onUploadProgress(progressEvent) {
+          return console.log(progressEvent.loaded);
+        }
+      };
+      axios.post("https://api.cloudinary.com/v1_1/dsobei3hp/image/upload", data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        onUploadProgress: function (progressEvent) {
+          this.tienTrinh = parseInt(Math.round(progressEvent.loaded / progressEvent.total * 100));
+        }.bind(this)
+      }).then(function (res) {
         console.log(res);
         _this.imageUrl = res.data.url;
         _this.loadAnh = false; // axios
@@ -7918,7 +7938,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.full-width {\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-columns: auto auto auto auto auto;\n    /* background-color:#D7DBDD; */\n    padding: 20px;\n}\n.package-quest {\n    width: 110px;\n    height: 60px;\n    border-radius: 10px;\n    line-height: 60px;\n    background-color: #015BC1;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
+exports.push([module.i, "\n.full-width {\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-columns: auto auto auto auto auto;\n    /* background-color:#D7DBDD; */\n    padding: 20px;\n}\n.package-quest {\n    width: 110px;\n    height: 60px;\n    border-radius: 10px;\n    line-height: 60px;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
 
 // exports
 
@@ -7937,7 +7957,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.full-width{\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap:20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest{\n    width: 110px;\n    height: 60px;\n    border: 1px solid black;\n    border-radius: 10px;\n    line-height: 60px;\n    background-color: #015BC1;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman'\n}\n\n", ""]);
+exports.push([module.i, "\n.full-width{\n    height: 100%;\n    width: 100%;\n}\n.grid-container {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap:20px;\n    grid-template-columns: auto auto auto auto auto;\n    background-color: #2196F3;\n    padding: 20px;\n}\n.package-quest{\n    width: 110px;\n    height: 60px;\n    border: 1px solid #B2BABB;\n    border-radius: 10px;\n    line-height: 60px;\n    color: white;\n    text-align: center;\n    font-size: 28px;\n    font-weight: bold;\n    font-family: 'time new roman';\n    box-shadow: 2px 4px #888888;\n}\n\n", ""]);
 
 // exports
 
@@ -7956,7 +7976,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #EB890B !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 80px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 150px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #EB890B !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 100px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 130px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
 
 // exports
 
@@ -43858,6 +43878,32 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticStyle: {
+          width: "180px",
+          height: "10px",
+          border: "1px solid black"
+        }
+      },
+      [
+        _c("div", {
+          style: {
+            width: _vm.tienTrinh + "%",
+            "background-color": "green",
+            height: "100%"
+          }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", [_vm._v(" Đang tải ảnh lên: " + _vm._s(_vm.tienTrinh) + " % ")]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c("label", { staticClass: "label" }, [_vm._v("Câu trả lời")]),
     _vm._v(" "),
     _c(
@@ -44797,7 +44843,11 @@ var render = function() {
                         "div",
                         {
                           staticClass: "grid-item package-quest",
-                          staticStyle: { cursor: "pointer" },
+                          staticStyle: {
+                            cursor: "pointer",
+                            "background-image":
+                              "linear-gradient(#4187d5, #3968aa, #21618C )"
+                          },
                           on: {
                             click: function($event) {
                               return _vm.selectPakage(item.id)
@@ -44936,9 +44986,9 @@ var render = function() {
                     {
                       staticClass: "grid-item package-quest",
                       style: {
-                        "background-color": item.da_choi
-                          ? "#717D7E"
-                          : "#015BC1",
+                        "background-image": item.da_choi
+                          ? "linear-gradient(#717D7E, #717D7E)"
+                          : "linear-gradient(#4187d5, #3968aa, #21618C )",
                         cursor: item.da_choi ? "" : "pointer"
                       },
                       on: {
@@ -45235,7 +45285,7 @@ var render = function() {
                           staticStyle: { height: "65%", width: "auto" },
                           attrs: {
                             src:
-                              "https://res.cloudinary.com/dsobei3hp/image/upload/v1583767169/hoithi/undraw_selected_options_42hx_hpeucn.png"
+                              "https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif"
                           }
                         }),
                         _vm._v(" "),
@@ -45413,9 +45463,10 @@ var render = function() {
                                 {
                                   staticClass: "point-width",
                                   staticStyle: {
-                                    "box-shadow": "2px 4px #909497",
-                                    border: "2px solid black",
-                                    "background-color": "#28B463",
+                                    "box-shadow": "1px 2px #909497",
+                                    border: "1px solid #CCD1D1",
+                                    "background-image":
+                                      "linear-gradient(#ABE183, #9AE066, #588A33)",
                                     margin: "0px auto",
                                     "border-radius": "50%",
                                     "margin-right": "5px",
@@ -45468,7 +45519,7 @@ var render = function() {
                               staticStyle: {
                                 "box-shadow": "4px 4px #909497",
                                 "background-image":
-                                  "linear-gradient(to right, #196F3D, #239B56, #21CA8E)",
+                                  "linear-gradient(to right, #ABE183, #9AE066, #588A33)",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
@@ -45476,8 +45527,8 @@ var render = function() {
                                 "font-size": "18px",
                                 color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid black",
-                                "border-radius": "5px",
+                                border: "1px solid #BFC9CA",
+                                "border-radius": "10px",
                                 cursor: "pointer"
                               },
                               on: {
@@ -45507,8 +45558,9 @@ var render = function() {
                                   staticClass: "point-width",
                                   staticStyle: {
                                     "box-shadow": "2px 4px #909497",
-                                    border: "2px solid black",
-                                    "background-color": "#C0392B",
+                                    border: "1px solid CCD1D1",
+                                    "background-image":
+                                      "linear-gradient( #EC7063 , #C0392B, #B03A2E)",
                                     margin: "0px auto",
                                     "border-radius": "50%",
                                     "margin-right": "5px",
@@ -45570,8 +45622,8 @@ var render = function() {
                                 "font-size": "18px",
                                 color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid black",
-                                "border-radius": "5px"
+                                border: "1px solid #99A3A4",
+                                "border-radius": "10px"
                               },
                               on: {
                                 click: function($event) {
@@ -45600,8 +45652,9 @@ var render = function() {
                                   staticClass: "point-width",
                                   staticStyle: {
                                     "box-shadow": "2px 4px #909497",
-                                    border: "2px solid black",
-                                    "background-color": "#D4AC0D",
+                                    border: "1px solid #99A3A4",
+                                    "background-image":
+                                      "linear-gradient(#4187d5, #3968aa, #21618C )",
                                     margin: "0px auto",
                                     "border-radius": "50%",
                                     "margin-right": "5px",
@@ -45651,17 +45704,17 @@ var render = function() {
                                 "box-shadow": "4px 4px #909497",
                                 cursor: "pointer",
                                 "background-image":
-                                  "linear-gradient(to right, #B7950B, #F7DC6F, #F4D03F)",
+                                  "linear-gradient(#4187d5, #3968aa, #21618C )",
                                 "background-size": "100% 100%",
                                 "margin-top": "10px",
                                 "text-align": "center",
                                 "font-family": "'Tahoma'",
                                 "font-weight": "bold",
                                 "font-size": "18px",
-                                color: "black",
+                                color: "white",
                                 "padding-top": "12px",
-                                border: "2px solid black",
-                                "border-radius": "5px"
+                                border: "1px solid 99A3A4",
+                                "border-radius": "10px"
                               },
                               on: {
                                 click: function($event) {

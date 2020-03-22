@@ -12,7 +12,7 @@
                 <div style="border-radius: 20px; margin-top: 25px; width: 50%;margin-left: 25%;background-color:#ECF0F1  " class="row">
                     <div class="col-md-12 grid-container"
                          style="align: center;border-radius: 20px; background-color:#ECF0F1 ">
-                        <div v-bind:style="{'background-color': item.da_choi ? '#717D7E' : '#015BC1', 'cursor':  item.da_choi ? '' : 'pointer' }" class="grid-item package-quest" v-for="(item,index) in package"  @click="selectPakage(item)" >{{item.name}}</div>
+                        <div v-bind:style="{'background-image': item.da_choi ? 'linear-gradient(#717D7E, #717D7E)' : 'linear-gradient(#4187d5, #3968aa, #21618C )', 'cursor':  item.da_choi ? '' : 'pointer' }" class="grid-item package-quest" v-for="(item,index) in package"  @click="selectPakage(item)" >{{item.name}}</div>
                     </div>
                 </div>
             </div>
@@ -67,15 +67,15 @@
     .package-quest{
         width: 110px;
         height: 60px;
-        border: 1px solid black;
+        border: 1px solid #B2BABB;
         border-radius: 10px;
         line-height: 60px;
-        background-color: #015BC1;
         color: white;
         text-align: center;
         font-size: 28px;
         font-weight: bold;
-        font-family: 'time new roman'
+        font-family: 'time new roman';
+        box-shadow: 2px 4px #888888;
     }
 
 </style>

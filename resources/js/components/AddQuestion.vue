@@ -27,6 +27,13 @@
     <img :src="imageUrl" style="width: 180px; height:180px" />
     <input ref="upload-image" class="upload-image" type="file" @change="handleChange($event)" />
     <br />
+    <br>  
+    <div style="width: 180px; height: 10px; border: 1px solid black;">
+      <div v-bind:style="{'width': tienTrinh + '%', 'background-color': 'green', 'height': '100%'}"></div>
+    </div>
+        <div > Đang tải ảnh lên: {{tienTrinh}} % </div>
+
+    <br>
     <label class="label">Câu trả lời</label>
     <table
       class="table table-bordered table-striped dataTable"
@@ -122,7 +129,8 @@ export default {
       dapanD: null,
       data: [],
       imageUrl: null,
-      loadAnh: false
+      loadAnh: false,
+      tienTrinh: 0,
     };
   },
   methods: {
@@ -137,8 +145,18 @@ export default {
       data.append("upload_preset", "u84rblt8");
       data.append("api_key", "599747191334322");
       this.loadAnh = true
+      const config = {
+        onUploadProgress: progressEvent => console.log(progressEvent.loaded)
+      }
       axios
-        .post("https://api.cloudinary.com/v1_1/dsobei3hp/image/upload", data)
+        .post("https://api.cloudinary.com/v1_1/dsobei3hp/image/upload", data, {
+          headers: {
+              'Content-Type': 'multipart/form-data'
+          },
+          onUploadProgress: function( progressEvent ) {
+           this.tienTrinh = parseInt( Math.round( ( progressEvent.loaded / progressEvent.total ) * 100 ))
+          }.bind(this)
+        })
         .then(res => {
           console.log(res);
           this.imageUrl = res.data.url;
