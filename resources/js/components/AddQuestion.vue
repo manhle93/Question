@@ -22,6 +22,11 @@
     <div class="row">
       <textarea placeholder="Nội dung câu hỏi" rows="5" style="width: 100%" v-model="noidung"></textarea>
     </div>
+    <br>
+    <h6>Số thứ tự câu hỏi</h6>
+    <div class="row">
+      <input placeholder=" Nhập số thứ tự câu hỏi" type="number" style="width: 20%" v-model="stt">
+    </div>
     <br />
     <h6>Hình ảnh đính kèm</h6>
     <img :src="imageUrl" style="width: 180px; height:180px" />
@@ -119,6 +124,7 @@ export default {
   data() {
     return {
       noidung: null,
+      stt: null,
       dapandungA: "false",
       dapandungB: "false",
       dapandungC: "false",
@@ -199,7 +205,8 @@ export default {
               package_id: this.id,
               noidung: this.noidung,
               image_url: this.imageUrl,
-              dapan: this.data
+              dapan: this.data,
+              stt: this.stt
             })
             .then(res => {
               alert("Nhập câu hỏi thành công");

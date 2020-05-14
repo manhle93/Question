@@ -1902,11 +1902,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["id", "name"],
   data: function data() {
     return {
       noidung: null,
+      stt: null,
       dapandungA: "false",
       dapandungB: "false",
       dapandungC: "false",
@@ -1986,7 +1992,8 @@ __webpack_require__.r(__webpack_exports__);
             package_id: this.id,
             noidung: this.noidung,
             image_url: this.imageUrl,
-            dapan: this.data
+            dapan: this.data,
+            stt: this.stt
           }).then(function (res) {
             alert("Nhập câu hỏi thành công");
             location.reload();
@@ -2169,6 +2176,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["questions", "package_id"],
   data: function data() {
@@ -2189,6 +2198,13 @@ __webpack_require__.r(__webpack_exports__);
           });
         });
       }
+    },
+    updateSTT: function updateSTT(id, stt) {
+      axios.post("/question/" + id + "/updatestt", {
+        stt: stt
+      }).then(function (res) {
+        alert('Cập nhật số thứ tự thành công');
+      });
     },
     phuongAn: function phuongAn(a) {
       if (a == 0) {
@@ -43858,6 +43874,34 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
+    _c("h6", [_vm._v("Số thứ tự câu hỏi")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.stt,
+            expression: "stt"
+          }
+        ],
+        staticStyle: { width: "20%" },
+        attrs: { placeholder: " Nhập số thứ tự câu hỏi", type: "number" },
+        domProps: { value: _vm.stt },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.stt = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c("h6", [_vm._v("Hình ảnh đính kèm")]),
     _vm._v(" "),
     _c("img", {
@@ -44431,6 +44475,43 @@ var render = function() {
               }
             },
             [_vm._v("Xóa")]
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("div", [_vm._v("STT câu hỏi: ")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: question.stt,
+                expression: "question.stt"
+              }
+            ],
+            attrs: { type: "number" },
+            domProps: { value: question.stt },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(question, "stt", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              on: {
+                click: function($event) {
+                  return _vm.updateSTT(question.id, question.stt)
+                }
+              }
+            },
+            [_vm._v("Cập nhật STT")]
           ),
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(question.name))]),
@@ -59619,8 +59700,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Du an\Question\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Du an\Question\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Test\Question\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Test\Question\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

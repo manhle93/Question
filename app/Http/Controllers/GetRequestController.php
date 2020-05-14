@@ -21,7 +21,7 @@ class GetRequestController extends Controller
                 'point2' => 0,
                 'point3' => 0
             ]);
-        $question = Question::query()->where('package_id', $id)->with('answer')->get();
+        $question = Question::query()->where('package_id', $id)->with('answer')->orderBy('stt', 'ASC')->get();
         return view('request', [
             'question' => $question,
             'package_old_id' => $package_old->id

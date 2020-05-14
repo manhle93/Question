@@ -26,7 +26,8 @@ class QuestionController extends Controller
         $question = Question::query()->create([
             'name' => $data['noidung'],
             'package_id' => $data['package_id'],
-            'image_url' => $data['image_url']
+            'image_url' => $data['image_url'],
+            'stt' =>$data['stt']
         ]);
         foreach ($data['dapan'] as $item) {
             if ($item['dap_an'] == "true") {
@@ -61,6 +62,13 @@ class QuestionController extends Controller
         return response()->json([
             'message'=>'thành công'
         ]);
+    }
+    public function updateSTT($id, Request $request){
+        $stt = $request->get('stt');
+        Question::where('id', $id)->update([
+            'stt' => $stt
+        ]);
+        return response(['message' => 'Thành công'], 200);
     }
 
 }

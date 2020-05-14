@@ -25,6 +25,7 @@ Route::get('answer', 'QuestionController@showAnswer');
 Route::get('question/add/{id}', 'QuestionController@showFormAdd');
 Route::post('question/{id}/edit', 'QuestionController@edit');
 Route::delete('question/{id}/delete', 'QuestionController@delete');
+Route::post('question/{id}/updatestt', 'QuestionController@updateSTT');
 
 
 
@@ -42,4 +43,3 @@ Route::get('getdetailpackage/{id}','PlayController@getDetailPackage')->name('get
 
 Route::get('doimatkhau','ResetPasswordController@formChangePass');
 Route::post('doipass','ResetPasswordController@changePass');
-

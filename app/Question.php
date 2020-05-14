@@ -9,8 +9,8 @@ class Question extends Model
     protected $fillable = [
         'name',
         'package_id',
-        'image_url'
-
+        'image_url',
+        'stt'
     ];
     public function package() {
         return $this->belongsTo('App\Package');
