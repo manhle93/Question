@@ -46262,11 +46262,7 @@ var render = function() {
                                                       },
                                                       [
                                                         _vm._v(
-                                                          _vm._s(data.name) +
-                                                            " " +
-                                                            _vm._s(
-                                                              data.name.length
-                                                            )
+                                                          _vm._s(data.name)
                                                         )
                                                       ]
                                                     )

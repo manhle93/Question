@@ -350,7 +350,7 @@
                       <span :style="{fontSize: tinhFontSize(data.name.length) }">{{data.phuong_an}}.</span>
                       <span
                         :style="{fontSize: tinhFontSize(data.name.length) }"
-                      >{{data.name}} {{data.name.length}}</span>
+                      >{{data.name}}</span>
                     </div>
                   </button>
 
