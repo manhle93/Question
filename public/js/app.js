@@ -3037,6 +3037,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -3152,6 +3154,16 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     }
   },
   methods: {
+    tinhFontSize: function tinhFontSize(length) {
+      if (length) {
+        if (length <= 10) return "46px";
+        if (10 < length && length <= 16) return "38px";
+        if (15 < length && length <= 38) return "32px";
+        if (38 < length && length <= 80) return "28px";
+        if (80 < length && length <= 100) return "22px";
+        return "21px";
+      } else return "21px";
+    },
     chonKhanGia: function chonKhanGia() {
       this.khanGia = !this.khanGia;
 
@@ -7992,7 +8004,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #EB890B !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 100px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 130px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\r\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #eb890b !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 100px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 130px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\n.dapAn[data-v-e318d6e6] {\r\n  box-shadow: 2px 2px #888888;\r\n  border-radius: 25px;\r\n  width: 32vw;\r\n  font-family: \"time new roman\";\r\n  color: white;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  background-color: #3968aa;\r\n  background-image: linear-gradient(#4187d5, #3968aa, #21618c);\r\n  background-size: 100% 100%;\r\n  border: 1px solid #21618c;\n}\r\n", ""]);
 
 // exports
 
@@ -45130,9 +45142,6 @@ var render = function() {
         height: "100%",
         width: "100%",
         "overflow-y": "hidden",
-        "background-image":
-          "url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583758350/hoithi/Giao_di%E1%BB%87n_thi_ch%C3%ADnh_gczcds.jpg')",
-        "background-size": "100% 100%",
         "overflow-x": "hidden"
       }
     },
@@ -46199,26 +46208,9 @@ var render = function() {
                                               {
                                                 key: data.id,
                                                 staticClass:
-                                                  "btn btn-primary answer-min-height",
+                                                  "btn btn-primary answer-min-height dapAn",
                                                 class: {
                                                   "ind--0": ind === _vm.onclick
-                                                },
-                                                staticStyle: {
-                                                  "box-shadow":
-                                                    "2px 2px #888888",
-                                                  "border-radius": "25px",
-                                                  width: "32vw",
-                                                  "font-family":
-                                                    "'time new roman'",
-                                                  color: "white",
-                                                  "font-weight": "bold",
-                                                  "font-size": "20px",
-                                                  "background-color": "#3968aa",
-                                                  "background-image":
-                                                    "linear-gradient(#4187d5, #3968aa, #21618C )",
-                                                  "background-size":
-                                                    "100% 100%",
-                                                  border: "1px solid #21618C"
                                                 },
                                                 attrs: { type: "button" },
                                                 on: {
@@ -46244,22 +46236,40 @@ var render = function() {
                                                     _c(
                                                       "span",
                                                       {
-                                                        staticStyle: {
-                                                          "font-size": "24px"
+                                                        style: {
+                                                          fontSize: _vm.tinhFontSize(
+                                                            data.name.length
+                                                          )
                                                         }
                                                       },
                                                       [
                                                         _vm._v(
                                                           _vm._s(
                                                             data.phuong_an
-                                                          ) + ". "
+                                                          ) + "."
                                                         )
                                                       ]
                                                     ),
                                                     _vm._v(" "),
-                                                    _c("span", [
-                                                      _vm._v(_vm._s(data.name))
-                                                    ])
+                                                    _c(
+                                                      "span",
+                                                      {
+                                                        style: {
+                                                          fontSize: _vm.tinhFontSize(
+                                                            data.name.length
+                                                          )
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(data.name) +
+                                                            " " +
+                                                            _vm._s(
+                                                              data.name.length
+                                                            )
+                                                        )
+                                                      ]
+                                                    )
                                                   ]
                                                 )
                                               ]
@@ -59700,8 +59710,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Test\Question\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Test\Question\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Du an\Question\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Du an\Question\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

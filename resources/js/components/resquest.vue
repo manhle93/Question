@@ -1,7 +1,8 @@
 <template>
-  <div
+  <!-- <div
     style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583758350/hoithi/Giao_di%E1%BB%87n_thi_ch%C3%ADnh_gczcds.jpg');background-size:100% 100%;  overflow-x:hidden;"
-  >
+  >-->
+  <div style="height: 100%; width: 100%; overflow-y:hidden;  overflow-x:hidden;">
     <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
       <div class="full-width">
         <div
@@ -310,7 +311,7 @@
                   <a data-toggle="modal" data-target="#exampleModalCenterImage">
                     <img :src="item.image_url" style="height: 86%; width: 100%" />
                   </a>
-                                    <div
+                  <div
                     class="modal fade"
                     id="exampleModalCenterImage"
                     tabindex="-1"
@@ -319,7 +320,7 @@
                     aria-hidden="true"
                   >
                     <div class="modal-dialog modal-dialog-centered" style="max-width: 90vw;">
-                      <img :src="item.image_url" style="width: 100%; max-height: 90vh"/>
+                      <img :src="item.image_url" style="width: 100%; max-height: 90vh" />
                     </div>
                   </div>
                 </div>
@@ -335,9 +336,8 @@
                   v-if="index==turn"
                 >
                   <button
-                    style="box-shadow: 2px 2px #888888; border-radius: 25px; width:32vw; font-family:'time new roman'; color:white; font-weight: bold;font-size: 20px;background-color:#3968aa; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; border: 1px solid #21618C;"
                     type="button"
-                    class="btn btn-primary answer-min-height"
+                    class="btn btn-primary answer-min-height dapAn"
                     v-for="(data,ind) in item.answer"
                     @click="addAnswer(data,ind,index)"
                     v-bind:key="data.id"
@@ -347,8 +347,10 @@
                       style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px"
                     >{{data.phuong_an}}</div>-->
                     <div style="float: left; text-align: justify;">
-                      <span style="font-size: 24px">{{data.phuong_an}}. </span>
-                      <span>{{data.name}}</span>
+                      <span :style="{fontSize: tinhFontSize(data.name.length) }">{{data.phuong_an}}.</span>
+                      <span
+                        :style="{fontSize: tinhFontSize(data.name.length) }"
+                      >{{data.name}} {{data.name.length}}</span>
                     </div>
                   </button>
 
@@ -638,6 +640,16 @@ export default {
     }
   },
   methods: {
+    tinhFontSize(length) {
+      if (length) {
+        if (length <= 10) return "46px";
+        if (10 < length && length <= 16) return "38px";
+        if (15 < length && length <= 38) return "32px";
+        if (38 < length && length <= 80) return "28px";
+        if (80 < length && length <= 100) return "22px";
+        return "21px";
+      } else return "21px";
+    },
     chonKhanGia() {
       this.khanGia = !this.khanGia;
       if (this.khanGia) {
@@ -916,7 +928,7 @@ export default {
 }
 
 .red {
-  background-color: #EB890B !important;
+  background-color: #eb890b !important;
 }
 
 .min-height {
@@ -941,5 +953,19 @@ export default {
 }
 .teampoint-width {
   padding-top: 15px;
+}
+
+.dapAn {
+  box-shadow: 2px 2px #888888;
+  border-radius: 25px;
+  width: 32vw;
+  font-family: "time new roman";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #3968aa;
+  background-image: linear-gradient(#4187d5, #3968aa, #21618c);
+  background-size: 100% 100%;
+  border: 1px solid #21618c;
 }
 </style>
