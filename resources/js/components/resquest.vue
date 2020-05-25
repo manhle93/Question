@@ -313,7 +313,7 @@
                   <div
                     class="cauhoihinhanh"
                     :style="{fontSize: tinhFontSizeCauHoiHinhAnh(item.name.length)}"
-                  >{{ item.name }} {{item.name.length}}</div>
+                  >{{ item.name }}</div>
                 </div>
                 <div>
                   <!-- <a :href="item.image_url" target="_blank">
@@ -376,7 +376,6 @@
                                                 }"
                       >
                         {{ data.name }}
-                        {{ data.name.length }}
                       </span>
                     </div>
                   </button>
