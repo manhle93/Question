@@ -3,7 +3,7 @@
     style="height: 100%; width: 100%; overflow-y:hidden;background-image:url('https://res.cloudinary.com/dsobei3hp/image/upload/v1583758350/hoithi/Giao_di%E1%BB%87n_thi_ch%C3%ADnh_gczcds.jpg');background-size:100% 100%;  overflow-x:hidden;"
   >-->
   <div style="height: 100%; width: 100%; overflow-y:hidden;  overflow-x:hidden;">
-    <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden== true">
+    <div style="height: 100%; width: 100%; overflow-y:hidden;" v-if="hidden == true">
       <div class="full-width">
         <div
           style="background-color:#F0F3F4;width: 100%;font-weight: bold; height: 100%; text-align: center;font-size: 50px;padding-top: 50px;"
@@ -30,7 +30,7 @@
                   >ĐỘI 1</p>
                   <p
                     style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                  >{{this.team1}}</p>
+                  >{{ this.team1 }}</p>
                 </div>
                 <div
                   style="background-color: #CB4335;border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
@@ -40,7 +40,7 @@
                   >ĐỘI 2</p>
                   <p
                     style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                  >{{this.team2}}</p>
+                  >{{ this.team2 }}</p>
                 </div>
                 <div
                   style="background-color: #239B56; border-radius: 10px; width: 250px; height: 200px; margin: auto;  text-align: center"
@@ -50,7 +50,7 @@
                   >ĐỘI 3</p>
                   <p
                     style="font-size:70px; font-family:'time new roman'; font-weight: bold;color:white"
-                  >{{this.team3}}</p>
+                  >{{ this.team3 }}</p>
                 </div>
               </div>
               <br />
@@ -89,14 +89,17 @@
       </div>
     </div>
     <div
-      v-if="hidden== false"
+      v-if="hidden == false"
       style="height: 100%; width: 100%; overflow-y:hidden; overflow-x:hidden;"
     >
       <div class="row" style="margin: 0 auto; margin-top: 15px;height: 5%; margin-bottom: 70px;">
         <div class="col-md-3" style="margin: 0 auto; cursor: pointer;">
           <div
             @click="runTime"
-            v-bind:class="{'bor-max-height':height_a,'bor-min-height':height_b}"
+            v-bind:class="{
+                            'bor-max-height': height_a,
+                            'bor-min-height': height_b
+                        }"
             class="row"
             style="margin: auto; margin-top: 10px; cursor: pointer;"
           >
@@ -105,7 +108,7 @@
             >{{totalTime }}</div>-->
             <div
               style="padding-top:30px;width: 210px; height: 210px; margin-left:25px; text-align:center;border: 4px solid #1F618D ; border-radius: 50%; background-size:100% 100%;color: black; font-family: 'Tahoma';font-weight: bold;font-size: 100px;"
-            >{{totalTime }}</div>
+            >{{ totalTime }}</div>
           </div>
         </div>
         <div
@@ -123,24 +126,27 @@
         <div class="col-md-3" style="padding-top: 150px;">
           <div class="row bor-min-height" style="margin: auto;">
             <div
-              v-if="teamAct!=1"
+              v-if="teamAct != 1"
               class="point-width"
               style="box-shadow: 1px 2px #909497; border: 1px solid #CCD1D1; background-image: linear-gradient(#ABE183, #9AE066, #588A33); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
-                v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                v-bind:class="{
+                                    'teampoint-fullwidth': height_a,
+                                    'teampoint-width': height_b
+                                }"
                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 15px"
-              >{{this.team1}}</div>
+              >{{ this.team1 }}</div>
             </div>
             <img
-              v-if="teamAct==1"
+              v-if="teamAct == 1"
               src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
               style="box-shadow: 4px 4px #909497; background-image: linear-gradient(to right, #ABE183, #9AE066, #588A33); margin-top: 10px;text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid #BFC9CA; border-radius: 10px; cursor: pointer;"
               @click="activePoint(1)"
-              v-bind:class="{boder:teamAct==1}"
+              v-bind:class="{ boder: teamAct == 1 }"
               class="team-min-height"
             >ĐỘI 1</div>
             <!-- <div v-if="teamAct==1"><img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541416/hoithi/bell2_v3bat1.gif"
@@ -150,41 +156,44 @@
           <br />
           <div class="row bor-min-height" style="margin: auto;">
             <div
-              v-if="teamAct!=2"
+              v-if="teamAct != 2"
               class="point-width"
               style="box-shadow: 2px 4px #909497; border: 1px solid CCD1D1; background-image: linear-gradient( #EC7063 , #C0392B, #B03A2E); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
-                v-bind:class="{'teampoint-fullwidth': height_a,'teampoint-width':height_b}"
+                v-bind:class="{
+                                    'teampoint-fullwidth': height_a,
+                                    'teampoint-width': height_b
+                                }"
                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px; padding-top: 15px"
-              >{{this.team2}}</div>
+              >{{ this.team2 }}</div>
             </div>
             <img
-              v-if="teamAct==2"
+              v-if="teamAct == 2"
               src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
             <div
               style="box-shadow: 4px 4px #909497; cursor: pointer; background-color: #C0392B ;background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid #99A3A4; border-radius: 10px"
               @click="activePoint(2)"
-              v-bind:class="{boder:teamAct==2}"
+              v-bind:class="{ boder: teamAct == 2 }"
               class="team-min-height"
             >ĐỘI 2</div>
           </div>
           <br />
           <div class="row bor-min-height" style="margin: auto;">
             <div
-              v-if="teamAct!=3"
+              v-if="teamAct != 3"
               class="point-width"
               style="box-shadow: 2px 4px #909497; border: 1px solid #99A3A4; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); margin:0px auto; border-radius: 50%; margin-right:5px; margin-left: 20px; text-align:center"
             >
               <div
                 class="teampoint-width"
                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 30px"
-              >{{this.team3}}</div>
+              >{{ this.team3 }}</div>
             </div>
             <img
-              v-if="teamAct==3"
+              v-if="teamAct == 3"
               src="https://res.cloudinary.com/dsobei3hp/image/upload/v1581500420/hoithi/source_txcynv.gif"
               style="margin-right:5px; margin-left: 20px; height: 80px; width: 80px"
             />
@@ -192,7 +201,7 @@
             <div
               style="box-shadow: 4px 4px #909497; cursor: pointer; background-image: linear-gradient(#4187d5, #3968aa, #21618C ); background-size:100% 100%; margin-top: 10px; text-align:center; font-family: 'Tahoma';font-weight: bold;font-size: 18px; color: white; padding-top:12px; border: 1px solid 99A3A4; border-radius: 10px"
               @click="activePoint(3)"
-              v-bind:class="{boder:teamAct==3}"
+              v-bind:class="{ boder: teamAct == 3 }"
               class="team-min-height"
             >ĐỘI 3</div>
           </div>
@@ -228,15 +237,15 @@
               data-toggle="modal"
               data-target="#exampleModalCenter"
               @click="addPoint"
-              v-bind:class="{'btn-max-height': height_a}"
+              v-bind:class="{ 'btn-max-height': height_a }"
             >KẾT QUẢ</button>
             <button
               style="font-family: 'time new roman'; float: right"
               type="button"
               class="btn btn-danger"
               @click="next"
-              v-bind:class="{'btn-max-height': height_a}"
-            >{{this.continute}}</button>
+              v-bind:class="{ 'btn-max-height': height_a }"
+            >{{ this.continute }}</button>
           </div>
         </div>
         <div class="col-md-9" style="margin: 0 auto; text-align:center">
@@ -247,33 +256,34 @@
                 class="btn btn-warning"
                 v-if="packageDetail"
                 style="color: white; font-family: 'Tahoma';font-weight: bold;font-size: 18 px; background-image: linear-gradient(to bottom right, #2C93D8 , #075E98 );; border-radius: 10px"
-              >
-                GÓI
-                CÂU HỎI SỐ {{this.packageDetail.name}}
-              </button>
+              >GÓI CÂU HỎI SỐ {{ this.packageDetail.name }}</button>
               <button
                 style="background-color:#2E86C1; width:40px;height:40px;margin-right:10px;font-weight: bold;border-radius:10px; border: 2px solid white;"
                 type="button"
                 class="btn btn-primary"
-                v-for="(item,index) in question_data"
+                v-for="(item, index) in question_data"
                 v-bind:key="item.id"
                 @click="change_question(index)"
-                v-bind:class="{'red':index <= turn}"
+                v-bind:class="{ red: index <= turn }"
               >
                 <p>
-                  <span style="color: white;">{{index+1}}</span>
+                  <span style="color: white;">
+                    {{
+                    index + 1
+                    }}
+                  </span>
                 </p>
               </button>
             </div>
             <div
               class="col-md-12 min-height"
-              v-if="question_data.length > 0 &&check"
+              v-if="question_data.length > 0 && check"
               style="margin-top: 20px;display: inline-block; border: 6px double white; border-radius: 30px;background-image: linear-gradient(to right, #283747, #072B6C, #0E195F);background-size:100% 100%; "
             >
               <div
-                v-for="(item,index) in question_data"
+                v-for="(item, index) in question_data"
                 v-bind:key="item.id"
-                v-if="index==turn"
+                v-if="index == turn"
                 style="color: white;font-size: 28px;"
               >
                 <!-- <div style="color: white; font-family:'time new roman'; font-weight: bold;">
@@ -281,8 +291,9 @@
                   +1}}
                 </div>-->
                 <p
-                  style="font-family:'time new roman';font-size: 30px; float: left; padding-top: 10px; text-align: justify;"
-                >{{item.name}}</p>
+                  class="cauhoi"
+                  :style="{fontSize: tinhFontSizeCauHoi(item.name.length)}"
+                >{{ item.name }}</p>
               </div>
             </div>
             <div
@@ -291,17 +302,18 @@
               style="display: inline-block; height: 320px"
             >
               <div
-                v-for="(item,index) in question_data"
+                v-for="(item, index) in question_data"
                 v-bind:key="item.id"
-                v-if="index==turn"
+                v-if="index == turn"
                 style="color: black; font-size: 14px; font-weight: bold"
               >
                 <div
                   style="width: 100%; border: 2px solid black;text-align: justify; background-image: linear-gradient(to right, #283747, #072B6C, #0E195F); color: white"
                 >
                   <div
-                    style="font-family:'time new roman';font-size: 20px; padding-left: 10px"
-                  >{{item.name}}</div>
+                    class="cauhoihinhanh"
+                    :style="{fontSize: tinhFontSizeCauHoiHinhAnh(item.name.length)}"
+                  >{{ item.name }} {{item.name.length}}</div>
                 </div>
                 <div>
                   <!-- <a :href="item.image_url" target="_blank">
@@ -331,26 +343,41 @@
                 <div
                   style="width: 100%;float: left; background-color: #ffffff00"
                   class="grid-container"
-                  v-for="(item,index) in question_data"
+                  v-for="(item, index) in question_data"
                   v-bind:key="item.id"
-                  v-if="index==turn"
+                  v-if="index == turn"
                 >
                   <button
                     type="button"
                     class="btn btn-primary answer-min-height dapAn"
-                    v-for="(data,ind) in item.answer"
-                    @click="addAnswer(data,ind,index)"
+                    v-for="(data, ind) in item.answer"
+                    @click="addAnswer(data, ind, index)"
                     v-bind:key="data.id"
-                    v-bind:class="{'ind--0':ind === onclick}"
+                    v-bind:class="{
+                                            'ind--0': ind === onclick
+                                        }"
                   >
                     <!-- <div
                       style="color: white; margin-left: 20px; margin-bottom: 20px; float: left; font-weight: bold; font-size: 42px; border: 5px solid white; background-color: #066F4D; width: 100px; height: 100px; border-radius: 50%; line-height: 90px"
                     >{{data.phuong_an}}</div>-->
                     <div style="float: left; text-align: justify;">
-                      <span :style="{fontSize: tinhFontSize(data.name.length) }">{{data.phuong_an}}.</span>
                       <span
-                        :style="{fontSize: tinhFontSize(data.name.length) }"
-                      >{{data.name}}</span>
+                        :style="{
+                                                    fontSize: tinhFontSize(
+                                                        data.name.length
+                                                    )
+                                                }"
+                      >{{ data.phuong_an }}.</span>
+                      <span
+                        :style="{
+                                                    fontSize: tinhFontSize(
+                                                        data.name.length
+                                                    )
+                                                }"
+                      >
+                        {{ data.name }}
+                        {{ data.name.length }}
+                      </span>
                     </div>
                   </button>
 
@@ -361,7 +388,10 @@
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"
-                    v-if="tinker == false && teamAct !=undefined"
+                    v-if="
+                                            tinker == false &&
+                                                teamAct != undefined
+                                        "
                   >
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
@@ -379,12 +409,16 @@
                           class="modal-body"
                           style="width: 500px;height: 500px;font-size: 30px;text-align: center"
                         >
-                          <img :src="anhSai[numberRandom]" style="width: 350px;height: 300px;" />
+                          <img
+                            :src="
+                                                            anhSai[numberRandom]
+                                                        "
+                            style="width: 350px;height: 300px;"
+                          />
                           <br />
-                          <h2 style="font-family:'time new roman'; font-weight: bold;">
-                            KHÔNG
-                            CHÍNH XÁC
-                          </h2>
+                          <h2
+                            style="font-family:'time new roman'; font-weight: bold;"
+                          >KHÔNG CHÍNH XÁC</h2>
                           <p>+ 0</p>
                         </div>
                       </div>
@@ -398,7 +432,10 @@
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"
-                    v-if="tinker == true && teamAct != undefined "
+                    v-if="
+                                            tinker == true &&
+                                                teamAct != undefined
+                                        "
                   >
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
@@ -416,13 +453,19 @@
                           class="modal-body"
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
-                          <img :src="anhDung[numberRandom]" style="width: 350px;height: 300px;" />
+                          <img
+                            :src="
+                                                            anhDung[
+                                                                numberRandom
+                                                            ]
+                                                        "
+                            style="width: 350px;height: 300px;"
+                          />
                           <br />
 
-                          <h2 style="font-family:'time new roman'; font-weight: bold;">
-                            ĐÁP ÁN
-                            CHÍNH XÁC
-                          </h2>
+                          <h2
+                            style="font-family:'time new roman'; font-weight: bold;"
+                          >ĐÁP ÁN CHÍNH XÁC</h2>
                           <p>+ 10</p>
                         </div>
                       </div>
@@ -436,7 +479,9 @@
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"
-                    v-if="tinker == false && khanGia == true"
+                    v-if="
+                                            tinker == false && khanGia == true
+                                        "
                   >
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
@@ -454,12 +499,16 @@
                           class="modal-body"
                           style="width: 500px;height: 500px;font-size: 30px;text-align: center"
                         >
-                          <img :src="anhSai[numberRandom]" style="width: 350px;height: 300px;" />
+                          <img
+                            :src="
+                                                            anhSai[numberRandom]
+                                                        "
+                            style="width: 350px;height: 300px;"
+                          />
                           <br />
-                          <h2 style="font-family:'time new roman'; font-weight: bold;">
-                            KHÔNG
-                            CHÍNH XÁC
-                          </h2>
+                          <h2
+                            style="font-family:'time new roman'; font-weight: bold;"
+                          >KHÔNG CHÍNH XÁC</h2>
                           <p>+ 0</p>
                         </div>
                       </div>
@@ -491,12 +540,18 @@
                           class="modal-body"
                           style="width: 500px;height: 450px;font-size: 30px;text-align: center"
                         >
-                          <img :src="anhDung[numberRandom]" style="width: 350px;height: 300px;" />
+                          <img
+                            :src="
+                                                            anhDung[
+                                                                numberRandom
+                                                            ]
+                                                        "
+                            style="width: 350px;height: 300px;"
+                          />
                           <br />
-                          <h2 style="font-family:'time new roman'; font-weight: bold;">
-                            ĐÁP ÁN
-                            CHÍNH XÁC
-                          </h2>
+                          <h2
+                            style="font-family:'time new roman'; font-weight: bold;"
+                          >ĐÁP ÁN CHÍNH XÁC</h2>
                           <p>+ 10</p>
                         </div>
                       </div>
@@ -640,15 +695,38 @@ export default {
     }
   },
   methods: {
+    tinhFontSizeCauHoi(length) {
+      if (length) {
+        if (length <= 10) return "68px";
+        if (10 < length && length <= 20) return "60px";
+        if (20 < length && length <= 38) return "56px";
+        if (38 < length && length <= 60) return "50px";
+        if (60 < length && length <= 90) return "46px";
+        if (90 < length && length <= 100) return "40px";
+        if (100 < length && length <= 190) return "36px";
+        return "32px";
+      } else return "32px";
+    },
+    tinhFontSizeCauHoiHinhAnh(length) {
+      if (length) {
+        if (length <= 10) return "55px";
+        if (10 < length && length <= 20) return "44px";
+        if (20 < length && length <= 40) return "38px";
+        if (40 < length && length <= 60) return "30px";
+        if (60 < length && length <= 80) return "20px";
+        return "16px";
+      } else return "16px";
+    },
     tinhFontSize(length) {
       if (length) {
         if (length <= 10) return "46px";
-        if (10 < length && length <= 16) return "38px";
-        if (15 < length && length <= 38) return "32px";
-        if (38 < length && length <= 80) return "28px";
-        if (80 < length && length <= 100) return "22px";
-        return "21px";
-      } else return "21px";
+        if (10 < length && length <= 20) return "38px";
+        if (20 < length && length <= 38) return "34px";
+        if (38 < length && length <= 60) return "34px";
+        if (60 < length && length <= 90) return "28px";
+        if (90 < length && length <= 100) return "24px";
+        return "22px";
+      } else return "22px";
     },
     chonKhanGia() {
       this.khanGia = !this.khanGia;
@@ -967,5 +1045,17 @@ export default {
   background-image: linear-gradient(#4187d5, #3968aa, #21618c);
   background-size: 100% 100%;
   border: 1px solid #21618c;
+}
+.cauhoi {
+  font-family: "time new roman";
+  font-size: 30px;
+  float: left;
+  padding-top: 10px;
+  text-align: justify;
+}
+.cauhoihinhanh {
+  font-family: "time new roman";
+  font-size: 20px;
+  padding-left: 10px;
 }
 </style>

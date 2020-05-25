@@ -3039,6 +3039,61 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3154,15 +3209,38 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_awesome_countdown__WEBPACK_IM
     }
   },
   methods: {
+    tinhFontSizeCauHoi: function tinhFontSizeCauHoi(length) {
+      if (length) {
+        if (length <= 10) return "68px";
+        if (10 < length && length <= 20) return "60px";
+        if (20 < length && length <= 38) return "56px";
+        if (38 < length && length <= 60) return "50px";
+        if (60 < length && length <= 90) return "46px";
+        if (90 < length && length <= 100) return "40px";
+        if (100 < length && length <= 190) return "36px";
+        return "32px";
+      } else return "32px";
+    },
+    tinhFontSizeCauHoiHinhAnh: function tinhFontSizeCauHoiHinhAnh(length) {
+      if (length) {
+        if (length <= 10) return "55px";
+        if (10 < length && length <= 20) return "44px";
+        if (20 < length && length <= 40) return "38px";
+        if (40 < length && length <= 60) return "30px";
+        if (60 < length && length <= 80) return "20px";
+        return "16px";
+      } else return "16px";
+    },
     tinhFontSize: function tinhFontSize(length) {
       if (length) {
         if (length <= 10) return "46px";
-        if (10 < length && length <= 16) return "38px";
-        if (15 < length && length <= 38) return "32px";
-        if (38 < length && length <= 80) return "28px";
-        if (80 < length && length <= 100) return "22px";
-        return "21px";
-      } else return "21px";
+        if (10 < length && length <= 20) return "38px";
+        if (20 < length && length <= 38) return "34px";
+        if (38 < length && length <= 60) return "34px";
+        if (60 < length && length <= 90) return "28px";
+        if (90 < length && length <= 100) return "24px";
+        return "22px";
+      } else return "22px";
     },
     chonKhanGia: function chonKhanGia() {
       this.khanGia = !this.khanGia;
@@ -8004,7 +8082,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #eb890b !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 100px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 130px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\n.dapAn[data-v-e318d6e6] {\r\n  box-shadow: 2px 2px #888888;\r\n  border-radius: 25px;\r\n  width: 32vw;\r\n  font-family: \"time new roman\";\r\n  color: white;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  background-color: #3968aa;\r\n  background-image: linear-gradient(#4187d5, #3968aa, #21618c);\r\n  background-size: 100% 100%;\r\n  border: 1px solid #21618c;\n}\r\n", ""]);
+exports.push([module.i, "\n.grid-container[data-v-e318d6e6] {\r\n  display: grid;\r\n  grid-column-gap: 50px;\r\n  grid-row-gap: 10px;\r\n  grid-template-columns: auto auto;\r\n  padding: 10px;\r\n  clear: both;\r\n  background-color: white;\n}\n.ind--0[data-v-e318d6e6] {\r\n  background-image: url(\"https://res.cloudinary.com/dsobei3hp/image/upload/v1583939700/hoithi/sup_14_forsythia_yellow_euhsx0.jpg\") !important;\r\n  color: black !important;\r\n  font-weight: bold;\n}\n#seconds[data-v-e318d6e6] {\r\n  font-size: 55px;\r\n  line-height: 1;\r\n  font-weight: bold;\n}\n.boder[data-v-e318d6e6] {\r\n  border: 4px white solid;\n}\n.red[data-v-e318d6e6] {\r\n  background-color: #eb890b !important;\n}\n.min-height[data-v-e318d6e6] {\r\n  height: 180px;\r\n  margin-bottom: 25px;\n}\n.answer-min-height[data-v-e318d6e6] {\r\n  height: 160px;\r\n  border-radius: 40px;\n}\n.point-width[data-v-e318d6e6] {\r\n  width: 100px;\r\n  height: 80px;\n}\n.bor-min-height[data-v-e318d6e6] {\r\n  height: 15%;\n}\n.team-min-height[data-v-e318d6e6] {\r\n  width: 130px;\r\n  height: 60px;\n}\n.teampoint-width[data-v-e318d6e6] {\r\n  padding-top: 15px;\n}\n.dapAn[data-v-e318d6e6] {\r\n  box-shadow: 2px 2px #888888;\r\n  border-radius: 25px;\r\n  width: 32vw;\r\n  font-family: \"time new roman\";\r\n  color: white;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n  background-color: #3968aa;\r\n  background-image: linear-gradient(#4187d5, #3968aa, #21618c);\r\n  background-size: 100% 100%;\r\n  border: 1px solid #21618c;\n}\n.cauhoi[data-v-e318d6e6] {\r\n  font-family: \"time new roman\";\r\n  font-size: 30px;\r\n  float: left;\r\n  padding-top: 10px;\r\n  text-align: justify;\n}\n.cauhoihinhanh[data-v-e318d6e6] {\r\n  font-family: \"time new roman\";\r\n  font-size: 20px;\r\n  padding-left: 10px;\n}\r\n", ""]);
 
 // exports
 
@@ -45954,9 +46032,8 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n              GÓI\n              CÂU HỎI SỐ " +
-                                          _vm._s(this.packageDetail.name) +
-                                          "\n            "
+                                        "GÓI CÂU HỎI SỐ " +
+                                          _vm._s(this.packageDetail.name)
                                       )
                                     ]
                                   )
@@ -45990,7 +46067,13 @@ var render = function() {
                                       _c(
                                         "span",
                                         { staticStyle: { color: "white" } },
-                                        [_vm._v(_vm._s(index + 1))]
+                                        [
+                                          _vm._v(
+                                            "\n                  " +
+                                              _vm._s(index + 1) +
+                                              "\n                "
+                                          )
+                                        ]
                                       )
                                     ])
                                   ]
@@ -46033,13 +46116,11 @@ var render = function() {
                                           _c(
                                             "p",
                                             {
-                                              staticStyle: {
-                                                "font-family":
-                                                  "'time new roman'",
-                                                "font-size": "30px",
-                                                float: "left",
-                                                "padding-top": "10px",
-                                                "text-align": "justify"
+                                              staticClass: "cauhoi",
+                                              style: {
+                                                fontSize: _vm.tinhFontSizeCauHoi(
+                                                  item.name.length
+                                                )
                                               }
                                             },
                                             [_vm._v(_vm._s(item.name))]
@@ -46094,14 +46175,20 @@ var render = function() {
                                               _c(
                                                 "div",
                                                 {
-                                                  staticStyle: {
-                                                    "font-family":
-                                                      "'time new roman'",
-                                                    "font-size": "20px",
-                                                    "padding-left": "10px"
+                                                  staticClass: "cauhoihinhanh",
+                                                  style: {
+                                                    fontSize: _vm.tinhFontSizeCauHoiHinhAnh(
+                                                      item.name.length
+                                                    )
                                                   }
                                                 },
-                                                [_vm._v(_vm._s(item.name))]
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(item.name) +
+                                                      " " +
+                                                      _vm._s(item.name.length)
+                                                  )
+                                                ]
                                               )
                                             ]
                                           ),
@@ -46262,7 +46349,13 @@ var render = function() {
                                                       },
                                                       [
                                                         _vm._v(
-                                                          _vm._s(data.name)
+                                                          "\n                      " +
+                                                            _vm._s(data.name) +
+                                                            "\n                      " +
+                                                            _vm._s(
+                                                              data.name.length
+                                                            ) +
+                                                            "\n                    "
                                                         )
                                                       ]
                                                     )
@@ -46352,7 +46445,7 @@ var render = function() {
                                                                 },
                                                                 [
                                                                   _vm._v(
-                                                                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
+                                                                    "KHÔNG CHÍNH XÁC"
                                                                   )
                                                                 ]
                                                               ),
@@ -46450,7 +46543,7 @@ var render = function() {
                                                                 },
                                                                 [
                                                                   _vm._v(
-                                                                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
+                                                                    "ĐÁP ÁN CHÍNH XÁC"
                                                                   )
                                                                 ]
                                                               ),
@@ -46548,7 +46641,7 @@ var render = function() {
                                                                 },
                                                                 [
                                                                   _vm._v(
-                                                                    "\n                          KHÔNG\n                          CHÍNH XÁC\n                        "
+                                                                    "KHÔNG CHÍNH XÁC"
                                                                   )
                                                                 ]
                                                               ),
@@ -46646,7 +46739,7 @@ var render = function() {
                                                                 },
                                                                 [
                                                                   _vm._v(
-                                                                    "\n                          ĐÁP ÁN\n                          CHÍNH XÁC\n                        "
+                                                                    "ĐÁP ÁN CHÍNH XÁC"
                                                                   )
                                                                 ]
                                                               ),
@@ -59706,8 +59799,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Du an\Question\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Du an\Question\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Test\Question\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Test\Question\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
