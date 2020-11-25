@@ -3868,9 +3868,9 @@ hex-color-regex@^1.1.0:
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
 highlight.js@^9.6.0:
-  version "9.15.9"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.15.9.tgz#865257da1dbb4a58c4552d46c4b3854f77f0e6d5"
-  integrity sha512-M0zZvfLr5p0keDMCAhNBp03XJbKBxUx5AfyfufMdFMEP4N/Xj6dh0IqC75ys7BAzceR34NgcvXjupRVaHBPPVQ==
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -7921,6 +7921,11 @@ vue-circular-count-down-timer@^1.0.4:
   dependencies:
     core-js "^2.6.5"
     vue "^2.6.10"
+
+vue-easy-lightbox@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/vue-easy-lightbox/-/vue-easy-lightbox-0.10.3.tgz#665a1285e9965c95594d79edc412a374f1cf586d"
+  integrity sha512-MmLQxzaE+Tn8WbmGD4H2sCq6XvfVvilMmuRu0iid5XJ8vykV2u3R8wYCpP3htTyh+EndUDx2/Nzpi64JU1C6ww==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
