@@ -4,7 +4,6 @@
 </p>
 <p align="center">
     <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif" height="180">
-     HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI TOÀN QUỐC NGÀNH XÂY DỰNG
 </p>
 
 ## HỘI THI AN TOÀN VỆ SINH VIÊN GIỎI TOÀN QUỐC NGÀNH XÂY DỰNG - CÔNG ĐOÀN XÂY DỰNG VIỆT NAM
