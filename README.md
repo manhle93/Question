@@ -1,5 +1,10 @@
 <p align="center">
     <img src="https://laravel.com/assets/img/components/logo-laravel.svg">
-    <img src="https://vuejs.org/images/logo.png" style="height: 50px"></p>
+</p>
+<p align="center">
+    <img src="https://res.cloudinary.com/dsobei3hp/image/upload/v1575541418/hoithi/logovuong_x7frmn.gif">
+</p>
+
+## 
 
 
